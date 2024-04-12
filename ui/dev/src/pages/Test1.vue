@@ -1,6 +1,6 @@
 <template>
   <q-page>
-    <HtmlBuilder ref="editor" :config="config" />
+    <QHtmlBuilder ref="editor" :config="config" />
   </q-page>
 </template>
 

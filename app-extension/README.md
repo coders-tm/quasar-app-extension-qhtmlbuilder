@@ -1,6 +1,6 @@
 # Quasar App Extension qhtmlbuilder
 
-> Add a short description of your App Extension. What does it do? How is it beneficial? Why would someone want to use it?
+> A Quasar app extension for integrating GrapesJS HTML builder into Quasar applications.
 
 [![npm](https://img.shields.io/npm/v/quasar-app-extension-qhtmlbuilder.svg?label=quasar-app-extension-qhtmlbuilder)](https://www.npmjs.com/package/quasar-app-extension-qhtmlbuilder)
 [![npm](https://img.shields.io/npm/dt/quasar-app-extension-qhtmlbuilder.svg)](https://www.npmjs.com/package/quasar-app-extension-qhtmlbuilder)

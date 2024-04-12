@@ -29,7 +29,7 @@ export const defaultConfig = {
 };
 
 export default {
-  name: "HtmlBuilder",
+  name: "QHtmlBuilder",
   props: {
     config: Object, // Configuration options for GrapesJS
   },

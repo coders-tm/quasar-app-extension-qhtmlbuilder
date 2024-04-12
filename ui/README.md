@@ -7,7 +7,7 @@
 
 
 # Component HtmlBuilder
-> Short description of the component
+> A Quasar app extension for integrating GrapesJS HTML builder into Quasar applications.
 
 
 
