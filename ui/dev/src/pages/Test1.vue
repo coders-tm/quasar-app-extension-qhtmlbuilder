@@ -52,7 +52,7 @@ const config = {
               css: editor.getCss({ component }),
             };
           });
-          return { id: 2, data, pagesHtml };
+          return { id: 1, data, pagesHtml };
         },
         onLoad: (result) => result.data,
       },
@@ -63,11 +63,11 @@ const config = {
 onMounted(() => {
   editor.value.addRemote({
     async load() {
-      return await loadData(2);
+      return await loadData(1);
     },
 
     async store(data) {
-      return await storeData(2, data);
+      return await storeData(1, data);
     },
   });
 });
