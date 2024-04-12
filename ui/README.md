@@ -1,4 +1,4 @@
-# Component HtmlBuilder
+# Component QHtmlBuilder
 
 [![npm](https://img.shields.io/npm/v/quasar-ui-qhtmlbuilder.svg?label=quasar-ui-qhtmlbuilder)](https://www.npmjs.com/package/quasar-ui-qhtmlbuilder)
 [![npm](https://img.shields.io/npm/dt/quasar-ui-qhtmlbuilder.svg)](https://www.npmjs.com/package/quasar-ui-qhtmlbuilder)
@@ -6,7 +6,7 @@
 **Compatible with Quasar UI v2 and Vue 3**.
 
 
-# Component HtmlBuilder
+# Component QHtmlBuilder
 > A Quasar app extension for integrating GrapesJS HTML builder into Quasar applications.
 
 
@@ -38,12 +38,12 @@ Vue.use(Plugin)
 <style src="quasar-ui-qhtmlbuilder/dist/index.css"></style>
 
 <script>
-import { Component as HtmlBuilder } from 'quasar-ui-qhtmlbuilder'
+import { Component as QHtmlBuilder } from 'quasar-ui-qhtmlbuilder'
 
 export default {
   
   components: {
-    HtmlBuilder
+    QHtmlBuilder
   }
   
   
@@ -67,12 +67,12 @@ Vue.use(Plugin)
 <style src="quasar-ui-qhtmlbuilder/dist/index.css"></style>
 
 <script>
-import { Component as HtmlBuilder } from 'quasar-ui-qhtmlbuilder'
+import { Component as QHtmlBuilder } from 'quasar-ui-qhtmlbuilder'
 
 export default {
   
   components: {
-    HtmlBuilder
+    QHtmlBuilder
   }
   
   
