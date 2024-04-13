@@ -1,14 +1,8 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="hHr LpR lFr">
     <q-header elevated>
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          to="/"
-          icon="home"
-        />
+        <q-btn flat dense round to="/" icon="home" />
 
         <q-toolbar-title>
           quasar-ui-qhtmlbuilder v{{ version }}
@@ -30,7 +24,7 @@ import { version } from 'ui' // "ui" is aliased in quasar.conf.js
 export default {
   name: 'MyLayout',
 
-  setup () {
+  setup() {
     return {
       version
     }

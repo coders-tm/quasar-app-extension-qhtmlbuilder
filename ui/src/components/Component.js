@@ -31,11 +31,13 @@ export const defaultConfig = {
 export default {
   name: 'QHtmlBuilder',
   props: {
-    config: Object // Configuration options for GrapesJS
+    config: Object, // Configuration options for GrapesJS
+    pages: Array
   },
-  setup(props, { attrs, expose }) {
+  setup(props, { attrs, expose, emit }) {
     const editorRef = ref(null)
     let editor = null
+    let Pages = null
 
     onMounted(() => {
       // Initialize GrapesJS editor when the component is mounted
@@ -96,6 +98,34 @@ export default {
           }
         }
       })
+
+      Pages = editor.Pages
+
+      // Running commands from panels
+      const pn = editor.Panels
+      pn.addButton('options', {
+        id: 'open-templates',
+        className: 'fa fa-folder-o',
+        attributes: {
+          title: 'Open projects and templates'
+        },
+        command: 'open-templates' //Open modal
+      })
+      pn.addButton('views', {
+        id: 'open-pages',
+        className: 'fa fa-file-o',
+        attributes: {
+          title: 'Take Screenshot'
+        },
+        command: 'open-pages',
+        togglable: false
+      })
+
+      emit('update:pages', [...Pages.getAll()])
+
+      editor.on('page', () => {
+        emit('update:pages', [...Pages.getAll()])
+      })
     })
 
     onBeforeUnmount(() => {
@@ -112,10 +142,42 @@ export default {
       Storage.add('remote', options)
     }
 
+    const isSelected = (page) => {
+      return Pages.getSelected().id == page.id
+    }
+
+    const renamePage = (pageId, name) => {
+      const page = Pages.get(pageId)
+      return page.setName(name)
+    }
+
+    const selectPage = (pageId) => {
+      return Pages.select(pageId)
+    }
+
+    const removePage = (pageId) => {
+      Pages.remove(pageId)
+      const pages = [...Pages.getAll()]
+      return Pages.select(pages[0].id)
+    }
+
+    const addPage = () => {
+      const len = Pages.getAll().length
+      Pages.add({
+        name: `Page ${len + 1}`,
+        component: '<div>New page</div>'
+      })
+    }
+
     expose({
       editor,
       addRemote,
-      loadProjectData
+      loadProjectData,
+      isSelected,
+      selectPage,
+      removePage,
+      renamePage,
+      addPage
     })
 
     return () => h('div', { ref: editorRef, ...attrs })
