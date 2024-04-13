@@ -40,35 +40,14 @@ const storeData = (id, data) => {
 
 const config = {
   height: "calc(100vh - 50px)",
-  storageManager: {
-    type: "remote",
-    options: {
-      remote: {
-        onStore: (data, editor) => {
-          const pagesHtml = editor.Pages.getAll().map((page) => {
-            const component = page.getMainComponent();
-            return {
-              html: editor.getHtml({ component }),
-              css: editor.getCss({ component }),
-            };
-          });
-          return { id: 1, data, pagesHtml };
-        },
-        onLoad: (result) => result.data,
-      },
-    },
-  },
+  storageManager: false,
+  // CSS or a JSON of styles
+  style: '.my-el { color: red }',
+  // HTML string or a JSON of components
+  components: '<div class="my-el">Hello world!</div>',
 };
 
 onMounted(() => {
-  editor.value.addRemote({
-    async load() {
-      return await loadData(1);
-    },
-
-    async store(data) {
-      return await storeData(1, data);
-    },
-  });
+  //
 });
 </script>

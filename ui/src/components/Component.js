@@ -2,7 +2,7 @@ import { styleManager } from "./config";
 import { h, ref, onMounted, onBeforeUnmount } from "vue";
 import grapesjs from "grapesjs";
 import webpage from "grapesjs-preset-webpage";
-// import forms from "grapesjs-plugin-forms";
+import forms from "grapesjs-plugin-forms";
 // import ckeditor from "grapesjs-plugin-ckeditor";
 // import postCss from 'grapesjs-parser-postcss';
 import blocksBasic from "grapesjs-blocks-basic";
@@ -47,7 +47,7 @@ export default {
         ...props.config,
         plugins: [
           blocksBasic,
-          // forms,
+          forms,
           // ckeditor,
           navbar,
           countdown,
