@@ -209,6 +209,7 @@ onMounted(() => {
       background: var(--gjs-main-light-color)
   .q-icon
     color: $grey-5
+    font-size: 1.15rem
   .gjs-pages
     .q-field--dense .q-field__control, .q-field--dense .q-field__marginal
       height: auto
