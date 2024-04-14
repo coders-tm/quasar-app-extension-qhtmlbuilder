@@ -2,7 +2,7 @@
 
 :root
   --gjs-main-font: "Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif
-  --gjs-font-size: 0.8rem
+  --gjs-font-size: 0.77rem
   --gjs-main-color: #444
   --gjs-main-color: #444
   --gjs-primary-color: #444
@@ -15,10 +15,20 @@ body
 
 [class^="gjs-"],
 [class^="gjs-"] > *
-  font-weight: 400
+  font-weight: 400 !important
+
+[class^="gjs-btn-"]
+  font-weight: 500 !important
 
 .gjs-two-color
   color: $grey-5 !important
+
+.gjs-block-label
+  font-family: var(--gjs-main-font)
+  font-size: var(--gjs-font-size)
+
+.gjs-three-bg
+  background-color: var(--gjs-tertiary-color) !important
 
 .gjs-four-color
   color: var(--gjs-secondary-color) !important
