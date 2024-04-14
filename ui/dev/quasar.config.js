@@ -8,13 +8,9 @@ module.exports = function (ctx) {
   return {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
-    boot: [
-      'register.js'
-    ],
+    boot: ['register.js'],
 
-    css: [
-      'app.sass'
-    ],
+    css: ['app.sass'],
 
     extras: [
       // 'ionicons-v4',
@@ -36,7 +32,7 @@ module.exports = function (ctx) {
       config: {},
 
       // Quasar plugins
-      plugins: []
+      plugins: ['Dialog']
     },
 
     // animations: 'all', // --- includes all animations
@@ -46,15 +42,16 @@ module.exports = function (ctx) {
     build: {
       vueRouterMode: 'history',
 
-      chainWebpack (chain) {
+      chainWebpack(chain) {
         chain.resolve.alias.merge({
           ui: path.resolve(__dirname, `../src/index.esm.js`)
         })
 
-        chain.plugin('define-ui')
-          .use(webpack.DefinePlugin, [{
+        chain.plugin('define-ui').use(webpack.DefinePlugin, [
+          {
             __UI_VERSION__: `'${require('../package.json').version}'`
-          }])
+          }
+        ])
       }
     },
 

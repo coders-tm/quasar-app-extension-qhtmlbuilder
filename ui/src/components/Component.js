@@ -1,5 +1,6 @@
 import { styleManager } from './config'
 import { h, ref, onMounted, onBeforeUnmount } from 'vue'
+import { Dialog } from 'quasar'
 import grapesjs from 'grapesjs'
 import webpage from 'grapesjs-preset-webpage'
 import forms from 'grapesjs-plugin-forms'
@@ -15,7 +16,7 @@ import tooltip from 'grapesjs-tooltip'
 import imageEditor from 'grapesjs-tui-image-editor'
 import typed from 'grapesjs-typed'
 import styleBg from 'grapesjs-style-bg'
-import navbar from 'grapesjs-navbar'
+import pages from 'grapesjs-pages'
 
 export const defaultConfig = {
   fromElement: true,
@@ -51,7 +52,6 @@ export default {
           blocksBasic,
           forms,
           // ckeditor,
-          navbar,
           countdown,
           pluginExport,
           tabs,
@@ -62,7 +62,8 @@ export default {
           imageEditor,
           typed,
           styleBg,
-          webpage
+          webpage,
+          pages
         ],
         pluginsOpts: {
           [blocksBasic]: { flexGrid: true },
@@ -101,31 +102,15 @@ export default {
 
       Pages = editor.Pages
 
-      // Running commands from panels
-      const pn = editor.Panels
-      pn.addButton('options', {
-        id: 'open-templates',
-        className: 'fa fa-folder-o',
-        attributes: {
-          title: 'Open projects and templates'
-        },
-        command: 'open-templates' //Open modal
-      })
-      pn.addButton('views', {
-        id: 'open-pages',
-        className: 'fa fa-file-o',
-        attributes: {
-          title: 'Take Screenshot'
-        },
-        command: 'open-pages',
-        togglable: false
-      })
-
-      emit('update:pages', [...Pages.getAll()])
+      if (props.config?.layerManager?.appendTo) {
+        editor.Panels.removeButton('views', { id: 'open-layers' })
+      }
 
       editor.on('page', () => {
         emit('update:pages', [...Pages.getAll()])
       })
+
+      emit('update:pages', [...Pages.getAll()])
     })
 
     onBeforeUnmount(() => {
@@ -156,9 +141,11 @@ export default {
     }
 
     const removePage = (pageId) => {
-      Pages.remove(pageId)
-      const pages = [...Pages.getAll()]
-      return Pages.select(pages[0].id)
+      confirm('Are you sure, you want to delete?').then(() => {
+        Pages.remove(pageId)
+        const pages = [...Pages.getAll()]
+        return Pages.select(pages[0].id)
+      })
     }
 
     const addPage = () => {
@@ -166,6 +153,19 @@ export default {
       Pages.add({
         name: `Page ${len + 1}`,
         component: '<div>New page</div>'
+      })
+    }
+
+    const confirm = (message = 'Would you like to process?') => {
+      return new Promise((resolve) => {
+        Dialog.create({
+          title: 'Confirm',
+          message,
+          cancel: true,
+          persistent: true
+        }).onOk(() => {
+          resolve(true)
+        })
       })
     }
 

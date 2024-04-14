@@ -1,264 +1,32 @@
 @import 'grapesjs/src/styles/scss/main.scss'
 
-.gjs-devices-c
-  padding: 0
-
-// stylesheets/js-preset-webpage.css
-.gjs-block-svg
-  width: 61%
-
-.gjs-clm-tags .gjs-sm-title, .gjs-sm-sector .gjs-sm-title
-  border-top: none
-
-.gjs-clm-tags .gjs-clm-tag
-  /* background-color: $tag-color;
-  border: none
-  box-shadow: none
-  padding: 5px 8px
-  text-shadow: none
-
-.gjs-trt-trait
-  font-size: 11px
-
-.gjs-btnt.gjs-pn-active
-  box-shadow: none
-
-.gjs-pn-btn
-  &.gjs-pn-active
-    box-shadow: none
-
-  &:hover
-    color: rgba(255, 255, 255, 0.75)
-
-.gjs-btnt.gjs-pn-active, .gjs-color-active, .gjs-color-hl
-  color: #d97aa6
-  fill: #d97aa6
-
-.gjs-pn-btn
-  &.gjs-pn-active, &:active
-    color: #d97aa6
-    fill: #d97aa6
-
-.gjs-block:hover
-  color: #d97aa6
-  fill: #d97aa6
-
-  .gjs-block-svg-path
-    color: #d97aa6
-    fill: #d97aa6
-
-#gjs-rte-toolbar .gjs-rte-btn, .gjs-btn-prim, .gjs-btnt
-  color: #b9a5a6
-  fill: #b9a5a6
-
-.gjs-clm-tags
-  .gjs-sm-composite.gjs-clm-field, .gjs-sm-field.gjs-sm-composite, .gjs-sm-stack #gjs-sm-add
-    color: #b9a5a6
-    fill: #b9a5a6
-
-.gjs-color-main, .gjs-mdl-dialog, .gjs-off-prv, .gjs-pn-btn, .gjs-pn-panel, .gjs-block-svg-path
-  color: #b9a5a6
-  fill: #b9a5a6
-
-.gjs-sm-sector
-  .gjs-sm-composite.gjs-clm-field, .gjs-sm-field.gjs-sm-composite, .gjs-sm-stack #gjs-sm-add
-    color: #b9a5a6
-    fill: #b9a5a6
-
-#gjs-rte-toolbar, .gjs-bg-main, .gjs-clm-select option, .gjs-clm-tags .gjs-sm-colorp-c, .gjs-editor, .gjs-mdl-dialog, .gjs-nv-item .gjs-nv-title-c, .gjs-off-prv, .gjs-pn-panel, .gjs-select option, .gjs-sm-sector .gjs-sm-colorp-c, .gjs-sm-select option, .gjs-sm-unit option, .sp-container, .gjs-block
-  background-color: #463a3c
-
-.gjs-import-label, .gjs-export-label
-  margin-bottom: 10px
-  font-size: 13px
-
-.gjs-mdl-dialog .gjs-btn-import
-  margin-top: 10px
-
-.CodeMirror
-  border-radius: 3px
-  height: 450px
-  font-family: sans-serif, monospace
-  letter-spacing: 0.3px
-  font-size: 12px
-
-/* Extra
-
-.gjs-block
-  border: 1px solid rgba(0, 0, 0, 0.2)
-  border-radius: 3px
-  margin: 10px 2.5% 5px
-  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15)
-  transition: box-shadow 0.2s ease 0s
-
-  &:hover
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.15)
-
-#gjs-pn-views-container.gjs-pn-panel
-  padding: 39px 0 0
-
-#gjs-pn-views
-  &.gjs-pn-panel
-    padding: 0
-    border: none
-
-  .gjs-pn-btn
-    margin: 0
-    height: 40px
-    padding: 10px
-    width: 33.3333%
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3)
-
-  .gjs-pn-active
-    /*
-     *color: rgba(255, 255, 255, 0.9);
-     *border-bottom: 2px solid $active-color;
-    border-radius: 0
-
-#gjs-pn-devices-c
-  padding-left: 30px
-
-#gjs-pn-options
-  padding-right: 30px
-
-.gjs-sm-composite .gjs-sm-properties
-  display: flex
-  flex-flow: row wrap
-  justify-content: space-between
-
-#gjs-sm-border-top-left-radius, #gjs-sm-border-top-right-radius, #gjs-sm-border-bottom-left-radius, #gjs-sm-border-bottom-right-radius, #gjs-sm-margin-top, #gjs-sm-margin-bottom, #gjs-sm-margin-right, #gjs-sm-margin-left, #gjs-sm-padding-top, #gjs-sm-padding-bottom, #gjs-sm-padding-right, #gjs-sm-padding-left
-  flex: 999 1 60px
-
-#gjs-sm-border-width, #gjs-sm-border-style, #gjs-sm-border-color
-  flex: 999 1 80px
-
-#gjs-sm-margin-left, #gjs-sm-padding-left
-  order: 2
-
-#gjs-sm-margin-right, #gjs-sm-padding-right
-  order: 3
-
-#gjs-sm-margin-bottom, #gjs-sm-padding-bottom
-  order: 4
-
-.gjs-field-radio
-  width: 100%
-
-  #gjs-sm-input-holder
-    display: flex
-    width: 100%
-
-    > div
-      display: flex
-      width: 100%
-
-.gjs-radio-item
-  flex: 1 0 auto
-  text-align: center
-
-.gjs-sm-sector .gjs-sm-property.gjs-sm-list
-  width: 50%
-
-.gjs-mdl-content
-  border-top: none
-
-.gjs-sm-sector .gjs-sm-property .gjs-sm-layer.gjs-sm-active
-  background-color: rgba(255, 255, 255, 0.09)
-
-.gjs-pn-panel
-  &#gjs-pn-views-container, &.gjs-pn-views-container
-    height: 100% !important
-
-.gjs-f-button::before
-  content: "B"
-
-.gjs-f-divider::before
-  content: "D"
-
-.gjs-mdl-dialog-sm
-  width: 300px
-
-.gjs-mdl-dialog form
-  .gjs-sm-property
-    font-size: 12px
-    margin-bottom: 15px
-
-  .gjs-sm-label
-    margin-bottom: 5px
-
-.anim-spin
-  animation: 0.5s linear 0s normal none infinite running spin
-
-.form-status
-  float: right
-  font-size: 14px
-
-.text-danger
-  color: #f92929
-
-@keyframes spin
-  0%
-    transform: rotate(0deg)
-
-  100%
-    transform: rotate(360deg)
-
-// stylesheets/demos.css
-
-body, html
-  height: 100%
-  margin: 0
-  overflow: hidden
-
-#toast-container
-  font-size: 13px
-  font-weight: lighter
-
-  > div
-    opacity: 0.95
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1)
-    font-family: Helvetica, sans-serif
-
-    &:hover
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1)
-      font-family: Helvetica, sans-serif
-
-/* LOGO VERSION
-
-.gjs-pn-commands .gjs-pn-buttons, #gjs-pn-commands .gjs-pn-buttons
-  display: none
-
-.gjs-logo
-  height: 25px
-
-.gjs-logo-cont
-  position: relative
-  display: inline-block
-  top: 3px
-
-.gjs-logo-version
-  position: absolute
-  font-size: 10px
-  padding: 1px 7px
-  border-radius: 15px
-  bottom: 2px
-  right: -43px
-
-.gjs-block-label svg,
-.gjs-block__media svg
-  width: 54px
-
-/* Temporary fix #2490 */
-
-.gjs-clm-tag-status, .gjs-clm-tag-close
-  width: 12px
-  height: 12px
-
-.gjs-clm-tags-btn
-  width: 24px
+:root
+  --gjs-main-font: "Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif
+  --gjs-font-size: 0.8rem
+  --gjs-main-color: #444
+  --gjs-main-color: #444
+  --gjs-primary-color: #444
+  --gjs-secondary-color: #ddd
+  --gjs-tertiary-color: #3b7be3
+  --gjs-quaternary-color: #6c9ff0
+
+body
+  line-height: 1
+
+[class^="gjs-"],
+[class^="gjs-"] > *
+  font-weight: 400
+
+.gjs-two-color
+  color: $grey-5 !important
+
+.gjs-four-color
+  color: var(--gjs-secondary-color) !important
+
+.gjs-four-color-h:hover
+  color: var(--gjs-quaternary-color) !important
 
 /* Flex Settings */
-
 .icons-flex
   background-size: 30% 65% !important
   height: 25px
@@ -312,9 +80,6 @@ body, html
 #gjs-sm-float
   display: none
 
-.gjs-logo-version
-  background-color: #756467
-
 .gjs-pn-btn.gjs-pn-active
   box-shadow: none
 
@@ -324,7 +89,7 @@ body, html
 
 .grp-handler-close
   background-color: transparent
-  color: #ddd
+  // color: #ddd
 
 .grp-handler-cp-wrap
   border-color: transparent

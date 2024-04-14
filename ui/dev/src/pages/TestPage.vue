@@ -1,19 +1,15 @@
 <template>
   <q-page>
     <q-drawer
-      bordered
       side="left"
       :width="200"
       :breakpoint="500"
       :model-value="true"
+      class="gjs-panel-left gjs-one-bg gjs-two-color"
     >
-      <q-item
-        style="background: #463a3c; height: 40px"
-        class="text-white"
-        dense
-      >
+      <q-item style="height: 40px" dense>
         <q-item-section>
-          <q-item-label>Pages</q-item-label>
+          <q-item-label><q-icon name="newspaper" /> Pages</q-item-label>
         </q-item-section>
         <q-item-section side>
           <q-item-label>
@@ -21,65 +17,85 @@
               dense
               round
               flat
-              icon="add_circle"
-              color="white"
+              size="sm"
+              icon="add"
               @click="editor.addPage()"
             />
           </q-item-label>
         </q-item-section>
       </q-item>
-      <q-list dense>
-        <q-item
-          @click.stop="editor.selectPage(item.id)"
-          v-for="(item, index) in pages"
-          :key="index"
-          clickable
-          v-ripple
-          :active="editor.isSelected(item)"
-        >
+      <q-scroll-area style="height: 200px">
+        <q-list class="gjs-pages" dense>
+          <q-item
+            @click.stop="editor.selectPage(item.id)"
+            v-for="(item, index) in pages"
+            :key="index"
+            clickable
+            v-ripple
+            :active="editor.isSelected(item)"
+          >
+            <q-item-section>
+              <q-item-label>
+                <q-input
+                  dense
+                  borderless
+                  v-if="rename.id == item.id"
+                  v-model="originalName"
+                  debounce="500"
+                  @update:model-value="onRenameDone"
+                />
+                <template v-else>
+                  {{ item.get('name') || item.id }}
+                </template>
+              </q-item-label>
+            </q-item-section>
+            <q-item-section v-if="editor.isSelected(item)" side>
+              <q-item-label>
+                <q-btn
+                  class="gjs-menu"
+                  @click.stop
+                  round
+                  flat
+                  dense
+                  size="sm"
+                  icon="more_vert"
+                >
+                  <q-menu class="gjs-one-bg gjs-two-color">
+                    <q-list bordered dense style="min-width: 100px">
+                      <q-item
+                        @click.stop="onRename(item)"
+                        clickable
+                        v-close-popup
+                      >
+                        <q-item-section>Rename</q-item-section>
+                      </q-item>
+                      <q-separator />
+                      <q-item
+                        @click.stop="editor.removePage(item.id)"
+                        clickable
+                        v-close-popup
+                        v-show="canDelete"
+                      >
+                        <q-item-section>Remove</q-item-section>
+                      </q-item>
+                    </q-list>
+                  </q-menu>
+                </q-btn>
+              </q-item-label>
+            </q-item-section>
+          </q-item>
+        </q-list>
+      </q-scroll-area>
+      <q-separator />
+      <div class="panel-left gjs-one-bg gjs-two-color">
+        <q-item dense>
           <q-item-section>
-            <q-item-label>
-              <q-input
-                dense
-                borderless
-                v-if="rename.id == item.id"
-                v-model="originalName"
-                debounce="500"
-                @update:model-value="onRenameDone"
-              />
-              <template v-else>
-                {{ item.get('name') || item.id }}
-              </template>
-            </q-item-label>
-          </q-item-section>
-          <q-item-section v-if="editor.isSelected(item)" side>
-            <q-item-label>
-              <q-btn @click.stop round flat dense icon="more_vert">
-                <q-menu>
-                  <q-list style="min-width: 100px">
-                    <q-item
-                      @click.stop="onRename(item)"
-                      clickable
-                      v-close-popup
-                    >
-                      <q-item-section>Rename</q-item-section>
-                    </q-item>
-                    <q-separator />
-                    <q-item
-                      @click.stop="editor.removePage(item.id)"
-                      clickable
-                      v-close-popup
-                      v-show="canDelete"
-                    >
-                      <q-item-section>Remove</q-item-section>
-                    </q-item>
-                  </q-list>
-                </q-menu>
-              </q-btn>
-            </q-item-label>
+            <q-item-label> <q-icon name="layers" /> Layers </q-item-label>
           </q-item-section>
         </q-item>
-      </q-list>
+        <q-separator />
+        <div class="layers-container"></div>
+      </div>
     </q-drawer>
 
     <QHtmlBuilder v-model:pages="pages" ref="editor" :config="config" />
@@ -135,7 +151,10 @@ const storeData = (id, data) => {
 
 const config = {
   height: 'calc(100vh - 50px)',
-  // storageManager: false,
+  layerManager: {
+    appendTo: '.layers-container'
+  },
+  storageManager: false,
   // CSS or a JSON of styles
   style: '.my-el { color: red }',
   // HTML string or a JSON of components
@@ -172,3 +191,28 @@ onMounted(() => {
   //
 })
 </script>
+
+<style lang="sass">
+.gjs-panel-left
+  line-height: 1
+  .layers-container
+    .gjs-category-title, .gjs-layer-title, .gjs-block-category .gjs-title, .gjs-sm-sector-title, .gjs-trait-category .gjs-title
+      font-weight: 400
+      font-size: var(--gjs-font-size)
+  .q-item
+    padding: 0 10px
+  .gjs-pages .q-item,
+  .gjs-pages .q-field
+    font-size: var(--gjs-font-size)
+    &.q-item--active
+      color: $grey-5
+      background: var(--gjs-main-light-color)
+  .q-icon
+    color: $grey-5
+  .gjs-pages
+    .q-field--dense .q-field__control, .q-field--dense .q-field__marginal
+      height: auto
+    .q-field__native
+      padding: 0
+      color: $grey-5
+</style>
