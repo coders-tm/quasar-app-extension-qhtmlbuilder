@@ -155,10 +155,6 @@ const config = {
     appendTo: '.layers-container'
   },
   storageManager: false,
-  // CSS or a JSON of styles
-  style: '.my-el { color: red }',
-  // HTML string or a JSON of components
-  components: '<div class="my-el">Hello world!</div>',
   pageManager: {
     pages: [
       {

@@ -1,4 +1,5 @@
 import { styleManager } from './config'
+import TemplateDialog from './TemplateDialog.vue'
 import { h, ref, onMounted, onBeforeUnmount } from 'vue'
 import { Dialog } from 'quasar'
 import grapesjs from 'grapesjs'
@@ -108,6 +109,15 @@ export default {
 
       editor.on('page', () => {
         emit('update:pages', [...Pages.getAll()])
+      })
+
+      editor.on('templates:open', () => {
+        Dialog.create({
+          component: TemplateDialog,
+          componentProps: {}
+        }).onOk((data) => {
+          loadProjectData(data)
+        })
       })
 
       emit('update:pages', [...Pages.getAll()])
