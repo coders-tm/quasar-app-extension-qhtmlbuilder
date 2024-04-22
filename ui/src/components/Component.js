@@ -1,5 +1,4 @@
 import { styleManager } from './config'
-import TemplateDialog from './TemplateDialog.vue'
 import { h, ref, onMounted, onBeforeUnmount } from 'vue'
 import { Dialog } from 'quasar'
 import grapesjs from 'grapesjs'
@@ -18,6 +17,67 @@ import imageEditor from 'grapesjs-tui-image-editor'
 import typed from 'grapesjs-typed'
 import styleBg from 'grapesjs-style-bg'
 import pages from 'grapesjs-pages'
+
+const plugin = (editor) => {
+  const componentType = 'header' // Type of the component
+  const componentName = 'Header' // Name of the component
+
+  // Define the component model
+  editor.DomComponents.addType(componentType, {
+    // Define HTML template for the component
+    model: {
+      defaults: {
+        traits: [
+          // Define traits for logo, menus, and sticky
+          { type: 'text', name: 'logoSrc', label: 'Logo URL' },
+          {
+            type: 'array',
+            name: 'menus',
+            label: 'Menus',
+            // Define the children of the array (menu items)
+            childType: 'menu-item',
+            // Define labels for the children
+            labels: [
+              { name: 'label', label: 'Label' },
+              { name: 'url', label: 'URL' }
+            ]
+          },
+          { type: 'checkbox', name: 'sticky', label: 'Sticky' }
+        ],
+        // Define the initial structure of the component
+        content: `
+          <header>
+            <div class="logo"><img src="{[ logoSrc ]}" alt="Logo"></div>
+            <nav>
+              <ul>
+                {[ menus.map((menu) =>'<li><a href="{[ menu.url ]}">{[ menu.label ]}</a></li>').join('') ]}
+              </ul>
+            </nav>
+          </header>
+        `
+      }
+    }
+  })
+
+  // Define how the component looks in the editor
+  editor.BlockManager.add(componentType, {
+    label: componentName,
+    content: {
+      type: componentType
+    }
+  })
+
+  // Make the component responsive
+  editor.on('component:add', (component) => {
+    if (component.get('type') === componentType) {
+      // Define responsive rules for the component
+      // component.addDevice('desktop')
+      // component.addDevice('tablet')
+      // component.addDevice('mobile')
+      // You can define CSS rules for each device to adjust the layout as needed
+    }
+  })
+}
 
 export const defaultConfig = {
   fromElement: true,
@@ -64,7 +124,8 @@ export default {
           typed,
           styleBg,
           webpage,
-          pages
+          pages,
+          plugin
         ],
         pluginsOpts: {
           [blocksBasic]: { flexGrid: true },
@@ -111,15 +172,6 @@ export default {
         emit('update:pages', [...Pages.getAll()])
       })
 
-      editor.on('templates:open', () => {
-        Dialog.create({
-          component: TemplateDialog,
-          componentProps: {}
-        }).onOk((data) => {
-          loadProjectData(data)
-        })
-      })
-
       emit('update:pages', [...Pages.getAll()])
     })
 
@@ -128,29 +180,29 @@ export default {
       editor.destroy()
     })
 
-    const loadProjectData = (data) => {
+    function loadProjectData(data) {
       editor.loadProjectData(data)
     }
 
-    const addRemote = (options) => {
+    function addRemote(options) {
       const { Storage } = editor
       Storage.add('remote', options)
     }
 
-    const isSelected = (page) => {
+    function isSelected(page) {
       return Pages.getSelected().id == page.id
     }
 
-    const renamePage = (pageId, name) => {
+    function renamePage(pageId, name) {
       const page = Pages.get(pageId)
       return page.setName(name)
     }
 
-    const selectPage = (pageId) => {
+    function selectPage(pageId) {
       return Pages.select(pageId)
     }
 
-    const removePage = (pageId) => {
+    function removePage(pageId) {
       confirm('Are you sure, you want to delete?').then(() => {
         Pages.remove(pageId)
         const pages = [...Pages.getAll()]
@@ -158,15 +210,15 @@ export default {
       })
     }
 
-    const addPage = () => {
+    function addPage() {
       const len = Pages.getAll().length
       Pages.add({
         name: `Page ${len + 1}`,
-        component: '<div>New page</div>'
+        component: ''
       })
     }
 
-    const confirm = (message = 'Would you like to process?') => {
+    function confirm(message = 'Would you like to process?') {
       return new Promise((resolve) => {
         Dialog.create({
           title: 'Confirm',
@@ -182,14 +234,25 @@ export default {
     expose({
       editor,
       addRemote,
-      loadProjectData,
+      addPage,
+      removePage,
       isSelected,
       selectPage,
-      removePage,
       renamePage,
-      addPage
+      loadProjectData
     })
 
-    return () => h('div', { ref: editorRef, ...attrs })
+    return () =>
+      h('div', { class: 'htmlbuilder__container' }, [
+        h('div', {
+          id: 'htmlbuilder__left-panel',
+          class: 'htmlbuilder__left-panel'
+        }),
+        h('div', {
+          id: 'htmlbuilder__editor',
+          class: 'htmlbuilder__editor',
+          ref: editorRef
+        })
+      ])
   }
 }

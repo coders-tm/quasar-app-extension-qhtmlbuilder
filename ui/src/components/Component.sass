@@ -10,9 +10,6 @@
   --gjs-tertiary-color: #3b7be3
   --gjs-quaternary-color: #6c9ff0
 
-body
-  line-height: 1
-
 [class^="gjs-"],
 [class^="gjs-"] > *
   font-weight: 400 !important
@@ -43,13 +40,21 @@ body
   width: 50%
 
 .gjs-pn-devices-c
-  padding-top: 7px
+  padding-top: 2px
 
 /* Flex Settings */
 .icons-flex
   background-size: 30% 65% !important
   height: 25px
   opacity: 0.9
+
+/* Small devices (landscape phones, 600px and up) */
+@media (min-width: 600px)
+  .gjs-sm-4
+    flex: 0 0 33.333% !important
+    max-width: 33.333% !important
+    padding-left: 10px !important
+    padding-top: 10px !important
 
 .icon-dir-row
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAQAAABu4E3oAAAAmElEQVR42mNgGFTgv9F/XlK1VP9vIVVLxf///9f85wIxL/1/SBT8+B8Ebv03Yfj/9z9pYBbD/5D/UUTBNf/////zP4MUv9T/f/PfnDTvW/+Xom+sTv8/HwMmQ+WSschNZ8AakCugWlZgk2T4/wmL6HyolvlY5D6NaiFdyx8swkuhWpZikfvD8H/T/90YsBSqpRSL3Cb6pEoApipfvWlasv4AAAAASUVORK5CYII=") no-repeat center
