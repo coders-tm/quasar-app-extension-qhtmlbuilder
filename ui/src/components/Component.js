@@ -18,67 +18,6 @@ import typed from 'grapesjs-typed'
 import styleBg from 'grapesjs-style-bg'
 import pages from 'grapesjs-pages'
 
-const plugin = (editor) => {
-  const componentType = 'header' // Type of the component
-  const componentName = 'Header' // Name of the component
-
-  // Define the component model
-  editor.DomComponents.addType(componentType, {
-    // Define HTML template for the component
-    model: {
-      defaults: {
-        traits: [
-          // Define traits for logo, menus, and sticky
-          { type: 'text', name: 'logoSrc', label: 'Logo URL' },
-          {
-            type: 'array',
-            name: 'menus',
-            label: 'Menus',
-            // Define the children of the array (menu items)
-            childType: 'menu-item',
-            // Define labels for the children
-            labels: [
-              { name: 'label', label: 'Label' },
-              { name: 'url', label: 'URL' }
-            ]
-          },
-          { type: 'checkbox', name: 'sticky', label: 'Sticky' }
-        ],
-        // Define the initial structure of the component
-        content: `
-          <header>
-            <div class="logo"><img src="{[ logoSrc ]}" alt="Logo"></div>
-            <nav>
-              <ul>
-                {[ menus.map((menu) =>'<li><a href="{[ menu.url ]}">{[ menu.label ]}</a></li>').join('') ]}
-              </ul>
-            </nav>
-          </header>
-        `
-      }
-    }
-  })
-
-  // Define how the component looks in the editor
-  editor.BlockManager.add(componentType, {
-    label: componentName,
-    content: {
-      type: componentType
-    }
-  })
-
-  // Make the component responsive
-  editor.on('component:add', (component) => {
-    if (component.get('type') === componentType) {
-      // Define responsive rules for the component
-      // component.addDevice('desktop')
-      // component.addDevice('tablet')
-      // component.addDevice('mobile')
-      // You can define CSS rules for each device to adjust the layout as needed
-    }
-  })
-}
-
 export const defaultConfig = {
   fromElement: true,
   showOffsets: true,
@@ -124,8 +63,7 @@ export default {
           typed,
           styleBg,
           webpage,
-          pages,
-          plugin
+          pages
         ],
         pluginsOpts: {
           [blocksBasic]: { flexGrid: true },
@@ -163,10 +101,6 @@ export default {
       })
 
       Pages = editor.Pages
-
-      if (props.config?.layerManager?.appendTo) {
-        editor.Panels.removeButton('views', { id: 'open-layers' })
-      }
 
       editor.on('page', () => {
         emit('update:pages', [...Pages.getAll()])
@@ -251,7 +185,8 @@ export default {
         h('div', {
           id: 'htmlbuilder__editor',
           class: 'htmlbuilder__editor',
-          ref: editorRef
+          ref: editorRef,
+          ...attrs
         })
       ])
   }
