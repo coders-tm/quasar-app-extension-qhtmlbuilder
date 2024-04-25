@@ -33,7 +33,10 @@ export default {
   name: 'QHtmlBuilder',
   props: {
     config: Object, // Configuration options for GrapesJS
-    pages: Array
+    pages: Array,
+    onLoad: Function,
+    onStore: Function,
+    onDelete: Function
   },
   setup(props, { attrs, expose, emit }) {
     const editorRef = ref(null)
@@ -96,6 +99,11 @@ export default {
             modalImportContent: function (editor) {
               return editor.getHtml() + '<style>' + editor.getCss() + '</style>'
             }
+          },
+          [pages]: {
+            onLoad: props.onLoad,
+            onStore: props.onStore,
+            onDelete: props.onDelete
           }
         }
       })

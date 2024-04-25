@@ -1,6 +1,12 @@
 <template>
   <q-page>
-    <QHtmlBuilder ref="editor" :config="config" />
+    <QHtmlBuilder
+      @load="onLoad"
+      @store="onStore"
+      @delete="onDelete"
+      ref="editor"
+      :config="config"
+    />
   </q-page>
 </template>
 
@@ -10,6 +16,19 @@ import { ref, onMounted } from 'vue'
 
 const editor = ref(null)
 
+const loadTemplates = (type) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`http://localhost:3000/${type}`)
+      .then(({ data }) => {
+        resolve(data)
+      })
+      .catch((error) => {
+        console.error(error)
+        reject(error)
+      })
+  })
+}
 const loadData = (id) => {
   return new Promise((resolve, reject) => {
     axios
@@ -37,6 +56,19 @@ const storeData = (id, data) => {
       })
   })
 }
+const deleteData = (id) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .delete(`http://localhost:3000/projects/${id}`)
+      .then(({ data }) => {
+        resolve(data)
+      })
+      .catch((error) => {
+        console.error(error)
+        reject(error)
+      })
+  })
+}
 
 const config = {
   height: 'calc(100vh - 50px)',
@@ -55,6 +87,28 @@ const config = {
       }
     }
   }
+}
+
+async function onLoad(payload) {
+  return loadTemplates(payload)
+}
+function onStore(payload) {
+  return storeData(payload.id, payload)
+    .then(() => {
+      return true
+    })
+    .catch(() => {
+      return false
+    })
+}
+function onDelete(payload) {
+  return deleteData(payload)
+    .then(() => {
+      return true
+    })
+    .catch(() => {
+      return false
+    })
 }
 
 onMounted(() => {
