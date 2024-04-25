@@ -16,7 +16,7 @@ import tooltip from 'grapesjs-tooltip'
 import imageEditor from 'grapesjs-tui-image-editor'
 import typed from 'grapesjs-typed'
 import styleBg from 'grapesjs-style-bg'
-import pages from 'grapesjs-pages'
+import templates from 'grapesjs-templates'
 
 export const defaultConfig = {
   fromElement: true,
@@ -66,7 +66,7 @@ export default {
           typed,
           styleBg,
           webpage,
-          pages
+          templates
         ],
         pluginsOpts: {
           [blocksBasic]: { flexGrid: true },
@@ -100,7 +100,7 @@ export default {
               return editor.getHtml() + '<style>' + editor.getCss() + '</style>'
             }
           },
-          [pages]: {
+          [templates]: {
             onLoad: props.onLoad,
             onStore: props.onStore,
             onDelete: props.onDelete
