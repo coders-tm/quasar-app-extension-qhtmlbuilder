@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    .button-link {
+      font-size: 13px;
+      line-height: 13px;
+      padding: 15px 30px;
+      display: inline-block;
+      border-radius: 0;
+      background-color: #f34e3a;
+      font-family: "Muli", Arial, Helvetica, sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      position: relative;
+      text-decoration: none;
+      color: #fff;
+      z-index: 1;
+    }
+
+    .button-link:hover:before {
+      left: 0;
+      width: 100%;
+      right: auto;
+    }
+
+    .button-link:before {
+      background-color: #29282d;
+    }
+
+    .button-link:before {
+      top: 0;
+      width: 0;
+      left: auto;
+      right: 0;
+      z-index: -1;
+      bottom: 0;
+      content: "";
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button-link.size-md {
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    .button-link:focus,
+    .button-link:hover,
+    .button-link:visited {
+      color: #fff;
+    }
+
+    .button-content-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    .button-link .button-icon {
+      -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+      flex-grow: 0;
+      -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+      order: 5;
+    }
+
+    .button-link .align-icon-right {
+      margin-left: 10px;
+      -webkit-box-ordinal-group: 16;
+      -ms-flex-order: 15;
+      order: 15;
+    }
+
+    .button-link span {
+      text-decoration: inherit;
+    }
+
+    .button-link .button-text {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      -webkit-box-ordinal-group: 11;
+      -ms-flex-order: 10;
+      order: 10;
+      display: inline-block;
+    }
+
+    .button-link.button-outlined {
+      border: 1px solid #29282d;
+      color: #29282d;
+      background: transparent;
+    }
+
+    .button-link.button-outlined:hover {
+      color: #fff;
+    }
+
+    /* icon box */
+    @media (min-width: 768px) {
+
+      .icon-box-wrapper,
+      .icon-box-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      .icon-box-wrapper .icon-box-icon,
+      .icon-box-wrapper .icon-box-icon {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+      }
+
+      .icon-box-wrapper {
+        text-align: left;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+      }
+    }
+
+    .icon-box-wrapper .icon-box-icon {
+      margin-right: 15px;
+      font-size: 25px;
+      color: #007bff
+    }
+
+    .icon-box-content {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+    }
+
+    .icon-box-title {
+      margin: 0px;
+      font-family: "Teko", Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 35px;
+      color: #29282d;
+    }
+
+    .icon-box-description {
+      margin: 0;
+      font-family: "Teko", Arial, Helvetica, sans-serif;
+    }
+
+    .icon-box-wrapper.position-left {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .icon-box-wrapper.icon-md .icon {
+      font-size: 35px;
+    }
+
+    .icon-box-wrapper.icon-lg .icon {
+      font-size: 45px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="icon-box-wrapper position-left icon-md">
+    <div class="icon-box-icon">
+      <span class="icon">
+        <i aria-hidden="true" class="fa far fa-check-square"></i> </span>
+    </div>
+    <div class="icon-box-content">
+      <h3 class="icon-box-title">
+        <span>02. Virtual Training</span>
+      </h3>
+      <p class="icon-box-description">Meet us online for more than 50 virtual group training sessions each
+        week offered to target different goals.
+      </p>
+    </div>
+  </div>
+
+  <a href="javascript:void(0);" class="button-link button-outlined" role="button">
+    <span class="button-content-wrapper">
+      <span class="button-icon align-icon-right">
+        <i aria-hidden="true" class="fa fas fa-angle-double-right"></i>
+      </span>
+      <span class="button-text">view more</span>
+    </span>
+  </a>
+</body>
+
+</html>

@@ -17,6 +17,7 @@ import imageEditor from 'grapesjs-tui-image-editor'
 import typed from 'grapesjs-typed'
 import styleBg from 'grapesjs-style-bg'
 import templates from 'grapesjs-templates'
+import plugins from './plugins'
 
 export const defaultConfig = {
   fromElement: true,
@@ -26,7 +27,12 @@ export const defaultConfig = {
     assets: []
   },
   selectorManager: { componentFirst: true },
-  styleManager
+  styleManager,
+  canvas: {
+    styles: [
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'
+    ]
+  }
 }
 
 export default {
@@ -66,7 +72,8 @@ export default {
           typed,
           styleBg,
           webpage,
-          templates
+          templates,
+          plugins
         ],
         pluginsOpts: {
           [blocksBasic]: { flexGrid: true },
@@ -104,7 +111,8 @@ export default {
             onLoad: props.onLoad,
             onStore: props.onStore,
             onDelete: props.onDelete
-          }
+          },
+          [plugins]: {}
         }
       })
 

@@ -57,7 +57,15 @@ module.exports = function (ctx) {
 
     devServer: {
       // port: 8080,
-      open: true // opens browser window automatically
+      open: true, // opens browser window automatically
+      proxy: {
+        // Using the proxy instance
+        '/statics/': {
+          target: 'https://nitrofit28.coderstm.com/statics/',
+          secure: true,
+          changeOrigin: true
+        }
+      }
     },
 
     ssr: {
