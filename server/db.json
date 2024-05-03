@@ -5986,6 +5986,23 @@
         ],
         "styles": [
           {
+            "selectors": [],
+            "selectorsAdd": "*",
+            "style": {
+              "box-sizing": "border-box"
+            }
+          },
+          {
+            "selectors": [],
+            "selectorsAdd": "body",
+            "style": {
+              "margin-top": "0px",
+              "margin-right": "0px",
+              "margin-bottom": "0px",
+              "margin-left": "0px"
+            }
+          },
+          {
             "selectors": [
               {
                 "name": "gjs-row",
@@ -6006,19 +6023,6 @@
           {
             "selectors": [
               {
-                "name": "gjs-row",
-                "private": 1
-              }
-            ],
-            "style": {
-              "flex-wrap": "wrap"
-            },
-            "mediaText": "(max-width: 768px)",
-            "atRuleType": "media"
-          },
-          {
-            "selectors": [
-              {
                 "name": "gjs-cell",
                 "private": 1
               }
@@ -6028,6 +6032,19 @@
               "flex-grow": "1",
               "flex-basis": "100%"
             }
+          },
+          {
+            "selectors": [
+              {
+                "name": "gjs-row",
+                "private": 1
+              }
+            ],
+            "style": {
+              "flex-wrap": "wrap"
+            },
+            "mediaText": "(max-width: 768px)",
+            "atRuleType": "media"
           }
         ],
         "pages": [
@@ -6070,7 +6087,7 @@
                               "components": [
                                 {
                                   "type": "textnode",
-                                  "content": "LATEST BLOG POST!"
+                                  "content": "LATEST BLOG POST!\n      "
                                 }
                               ]
                             },
@@ -6086,7 +6103,7 @@
                               "components": [
                                 {
                                   "type": "textnode",
-                                  "content": "What’s Happening Around Gym!"
+                                  "content": "What’s Happening Around Gym!\n      "
                                 }
                               ]
                             }
@@ -6114,7 +6131,7 @@
                         }
                       ],
                       "attributes": {
-                        "id": "i52a"
+                        "id": "i9wni"
                       },
                       "components": [
                         {
@@ -6145,8 +6162,123 @@
                               "name": "gjs-cell",
                               "private": 1
                             }
+                          ]
+                        },
+                        {
+                          "name": "Cell",
+                          "draggable": ".gjs-row",
+                          "stylable-require": [
+                            "flex-basis"
                           ],
+                          "unstylable": [
+                            "width"
+                          ],
+                          "resizable": {
+                            "tl": 0,
+                            "tc": 0,
+                            "tr": 0,
+                            "cl": 0,
+                            "cr": 1,
+                            "bl": 0,
+                            "br": 0,
+                            "minDim": 1,
+                            "bc": 0,
+                            "currentUnit": 1,
+                            "step": 0.2,
+                            "keyWidth": "flex-basis"
+                          },
+                          "classes": [
+                            {
+                              "name": "gjs-cell",
+                              "private": 1
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Cell",
+                          "draggable": ".gjs-row",
+                          "stylable-require": [
+                            "flex-basis"
+                          ],
+                          "unstylable": [
+                            "width"
+                          ],
+                          "resizable": {
+                            "tl": 0,
+                            "tc": 0,
+                            "tr": 0,
+                            "cl": 0,
+                            "cr": 1,
+                            "bl": 0,
+                            "br": 0,
+                            "minDim": 1,
+                            "bc": 0,
+                            "currentUnit": 1,
+                            "step": 0.2,
+                            "keyWidth": "flex-basis"
+                          },
+                          "classes": [
+                            {
+                              "name": "gjs-cell",
+                              "private": 1
+                            }
+                          ],
+                          "attributes": {
+                            "id": "i201h"
+                          },
                           "components": [
+                            {
+                              "type": "button-link",
+                              "classes": [
+                                "button-link"
+                              ],
+                              "attributes": {
+                                "href": "javascript:void(0);"
+                              },
+                              "components": [
+                                {
+                                  "tagName": "span",
+                                  "classes": [
+                                    "button-content-wrapper"
+                                  ],
+                                  "components": [
+                                    {
+                                      "tagName": "span",
+                                      "classes": [
+                                        "button-icon",
+                                        "align-icon-right"
+                                      ],
+                                      "components": [
+                                        {
+                                          "tagName": "i",
+                                          "classes": [
+                                            "fa",
+                                            "fas",
+                                            "fa-angle-double-right"
+                                          ],
+                                          "attributes": {
+                                            "aria-hidden": "true"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tagName": "span",
+                                      "type": "text",
+                                      "classes": [
+                                        "button-text"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "view more"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "featured-icon-box",
                               "classes": [
@@ -6172,7 +6304,7 @@
                                           "tagName": "i",
                                           "classes": [
                                             "fa",
-                                            "fa-check-square-o",
+                                            "fa-check-square",
                                             "base-textcolor-skincolor"
                                           ]
                                         }
@@ -6215,70 +6347,54 @@
                                   ]
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Cell",
-                          "draggable": ".gjs-row",
-                          "stylable-require": [
-                            "flex-basis"
-                          ],
-                          "unstylable": [
-                            "width"
-                          ],
-                          "resizable": {
-                            "tl": 0,
-                            "tc": 0,
-                            "tr": 0,
-                            "cl": 0,
-                            "cr": 1,
-                            "bl": 0,
-                            "br": 0,
-                            "minDim": 1,
-                            "bc": 0,
-                            "currentUnit": 1,
-                            "step": 0.2,
-                            "keyWidth": "flex-basis"
-                          },
-                          "classes": [
+                            },
                             {
-                              "name": "gjs-cell",
-                              "private": 1
-                            }
-                          ],
-                          "components": [
-                            {
-                              "type": "featured-icon-box",
+                              "type": "widget",
                               "classes": [
-                                "featured-icon-box",
-                                "icon-align-before-content"
+                                "widget",
+                                "widget_text",
+                                "clearfix"
                               ],
                               "attributes": {},
                               "components": [
                                 {
                                   "classes": [
-                                    "featured-icon"
+                                    "footer-logo"
                                   ],
                                   "components": [
                                     {
+                                      "type": "image",
+                                      "resizable": {
+                                        "ratioDefault": 1
+                                      },
                                       "classes": [
-                                        "base-icon",
-                                        "base-icon_element-onlytxt",
-                                        "base-icon_element-color-skincolor",
-                                        "base-icon_element-size-sm"
+                                        "img-center"
+                                      ],
+                                      "attributes": {
+                                        "id": "footer-logo-img",
+                                        "src": "https://placehold.co/311x92",
+                                        "alt": ""
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "classes": [
+                                    "textwidget",
+                                    "widget-text"
+                                  ],
+                                  "components": [
+                                    {
+                                      "tagName": "p",
+                                      "type": "text",
+                                      "classes": [
+                                        "pb-10",
+                                        "pr-30"
                                       ],
                                       "components": [
                                         {
-                                          "type": "icon",
-                                          "classes": [
-                                            "fa",
-                                            "fas",
-                                            "fa-house"
-                                          ],
-                                          "attributes": {
-                                            "id": "iy9zu"
-                                          }
+                                          "type": "textnode",
+                                          "content": "After you decide to start training we will make sure you get the best fitness\n              program."
                                         }
                                       ]
                                     }
@@ -6286,34 +6402,125 @@
                                 },
                                 {
                                   "classes": [
-                                    "featured-content"
+                                    "order-3"
                                   ],
                                   "components": [
                                     {
                                       "classes": [
-                                        "featured-title"
+                                        "social-icons",
+                                        "square"
                                       ],
                                       "components": [
                                         {
-                                          "tagName": "h3",
-                                          "type": "text",
+                                          "tagName": "ul",
+                                          "classes": [
+                                            "social-icons",
+                                            "list-inline"
+                                          ],
                                           "components": [
                                             {
-                                              "type": "textnode",
-                                              "content": "Comprehensive"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tagName": "p",
-                                          "type": "text",
-                                          "attributes": {
-                                            "id": "iib4j"
-                                          },
-                                          "components": [
+                                              "tagName": "li",
+                                              "components": [
+                                                {
+                                                  "type": "link",
+                                                  "classes": [
+                                                    "tooltip-top"
+                                                  ],
+                                                  "attributes": {
+                                                    "rel": "noopener",
+                                                    "aria-label": "facebook",
+                                                    "data-tooltip": "Facebook",
+                                                    "target": "_blank"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "tagName": "i",
+                                                      "classes": [
+                                                        "fa",
+                                                        "fa-facebook"
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
                                             {
-                                              "type": "textnode",
-                                              "content": "A Clear and concise customer correspondence including."
+                                              "tagName": "li",
+                                              "components": [
+                                                {
+                                                  "type": "link",
+                                                  "classes": [
+                                                    "tooltip-top"
+                                                  ],
+                                                  "attributes": {
+                                                    "rel": "noopener",
+                                                    "aria-label": "twitter",
+                                                    "data-tooltip": "Twitter",
+                                                    "target": "_blank"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "tagName": "i",
+                                                      "classes": [
+                                                        "fa",
+                                                        "fa-twitter"
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tagName": "li",
+                                              "components": [
+                                                {
+                                                  "type": "link",
+                                                  "classes": [
+                                                    "tooltip-top"
+                                                  ],
+                                                  "attributes": {
+                                                    "rel": "noopener",
+                                                    "aria-label": "flickr",
+                                                    "data-tooltip": "Flickr",
+                                                    "target": "_blank"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "tagName": "i",
+                                                      "classes": [
+                                                        "fa",
+                                                        "fa-flickr"
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tagName": "li",
+                                              "components": [
+                                                {
+                                                  "type": "link",
+                                                  "classes": [
+                                                    "tooltip-top"
+                                                  ],
+                                                  "attributes": {
+                                                    "rel": "noopener",
+                                                    "aria-label": "linkedin",
+                                                    "data-tooltip": "Linkedin",
+                                                    "target": "_blank"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "tagName": "i",
+                                                      "classes": [
+                                                        "fa",
+                                                        "fa-linkedin"
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
                                             }
                                           ]
                                         }
@@ -6353,6 +6560,222 @@
                               "name": "gjs-cell",
                               "private": 1
                             }
+                          ],
+                          "attributes": {
+                            "id": "iiq4z"
+                          },
+                          "components": [
+                            {
+                              "type": "team",
+                              "classes": [
+                                "team",
+                                "featured-imagebox-team",
+                                "featured-imagebox",
+                                "style1"
+                              ],
+                              "attributes": {
+                                "id": "igj1s"
+                              },
+                              "components": [
+                                {
+                                  "classes": [
+                                    "base-box-view-overlay"
+                                  ],
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "featured-thumbnail"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "image",
+                                          "resizable": {
+                                            "ratioDefault": 1
+                                          },
+                                          "classes": [
+                                            "img-fluid"
+                                          ],
+                                          "attributes": {
+                                            "src": "https://placehold.co/450x470",
+                                            "alt": "image"
+                                          }
+                                        },
+                                        {
+                                          "classes": [
+                                            "featured-iconbox",
+                                            "base-media-link"
+                                          ],
+                                          "components": [
+                                            {
+                                              "classes": [
+                                                "media-block"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "tagName": "ul",
+                                                  "classes": [
+                                                    "social-icons"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "tagName": "li",
+                                                      "components": [
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "tooltip-top"
+                                                          ],
+                                                          "attributes": {
+                                                            "rel": "noopener",
+                                                            "aria-label": "facebook",
+                                                            "data-tooltip": "Facebook",
+                                                            "target": "_blank"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "tagName": "i",
+                                                              "classes": [
+                                                                "fa",
+                                                                "fa-facebook"
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tagName": "li",
+                                                      "components": [
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "tooltip-top"
+                                                          ],
+                                                          "attributes": {
+                                                            "rel": "noopener",
+                                                            "aria-label": "twitter",
+                                                            "data-tooltip": "Twitter",
+                                                            "target": "_blank"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "tagName": "i",
+                                                              "classes": [
+                                                                "fa",
+                                                                "fa-twitter"
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tagName": "li",
+                                                      "components": [
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "tooltip-top"
+                                                          ],
+                                                          "attributes": {
+                                                            "rel": "noopener",
+                                                            "aria-label": "flickr",
+                                                            "data-tooltip": "Flickr",
+                                                            "target": "_blank"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "tagName": "i",
+                                                              "classes": [
+                                                                "fa",
+                                                                "fa-flickr"
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tagName": "li",
+                                                      "components": [
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "tooltip-top"
+                                                          ],
+                                                          "attributes": {
+                                                            "rel": "noopener",
+                                                            "aria-label": "linkedin",
+                                                            "data-tooltip": "Linkedin",
+                                                            "target": "_blank"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "tagName": "i",
+                                                              "classes": [
+                                                                "fa",
+                                                                "fa-linkedin"
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "classes": [
+                                    "featured-content"
+                                  ],
+                                  "attributes": {
+                                    "id": "i4s2y"
+                                  },
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "featured-title"
+                                      ],
+                                      "components": [
+                                        {
+                                          "tagName": "h3",
+                                          "components": [
+                                            {
+                                              "type": "link",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "David Smitgh"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "classes": [
+                                        "team-position"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "Consultant"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -6368,8 +6791,8 @@
         ]
       },
       "pagesHtml": {
-        "html": "<body id=\"i33v\"><div class=\"section-title\"><div class=\"title-header\"><h4 id=\"i17v\">LATEST BLOG POST!</h4><h2 id=\"igvi\" class=\"title\">What’s Happening Around Gym!</h2></div></div><div id=\"i52a\" class=\"gjs-row\"><div class=\"gjs-cell\"><div class=\"featured-icon-box icon-align-before-content\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-sm\"><i class=\"fa fa-check-square-o base-textcolor-skincolor\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3>Comprehensive</h3><p>A Clear and concise customer correspondence including.</p></div></div></div></div><div class=\"gjs-cell\"><div class=\"featured-icon-box icon-align-before-content\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-sm\"><i class=\"fa fas fa-house\" id=\"iy9zu\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3>Comprehensive</h3><p id=\"iib4j\">A Clear and concise customer correspondence including.</p></div></div></div></div><div class=\"gjs-cell\"></div></div></body>",
-        "css": "* { box-sizing: border-box; } body {margin: 0;}.gjs-row{display:flex;justify-content:flex-start;align-items:stretch;flex-wrap:nowrap;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;}.gjs-cell{min-height:75px;flex-grow:1;flex-basis:100%;}@media (max-width: 768px){.gjs-row{flex-wrap:wrap;}}"
+        "html": "<body id=\"i33v\"><div class=\"section-title\"><div class=\"title-header\"><h4 id=\"i17v\">LATEST BLOG POST!\n      </h4><h2 id=\"igvi\" class=\"title\">What’s Happening Around Gym!\n      </h2></div></div><div id=\"i9wni\" class=\"gjs-row\"><div class=\"gjs-cell\"></div><div class=\"gjs-cell\"></div><div id=\"i201h\" class=\"gjs-cell\"><a href=\"javascript:void(0);\" class=\"button-link\"><span class=\"button-content-wrapper\"><span class=\"button-icon align-icon-right\"><i aria-hidden=\"true\" class=\"fa fas fa-angle-double-right\"></i></span><span class=\"button-text\">view more</span></span></a><div class=\"featured-icon-box icon-align-before-content\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-sm\"><i class=\"fa fa-check-square base-textcolor-skincolor\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3>Comprehensive</h3><p>A Clear and concise customer correspondence including.</p></div></div></div><div class=\"widget widget_text clearfix\"><div class=\"footer-logo\"><img id=\"footer-logo-img\" src=\"https://placehold.co/311x92\" alt=\"\" class=\"img-center\"/></div><div class=\"textwidget widget-text\"><p class=\"pb-10 pr-30\">After you decide to start training we will make sure you get the best fitness\n              program.</p></div><div class=\"order-3\"><div class=\"social-icons square\"><ul class=\"social-icons list-inline\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-facebook\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-twitter\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-flickr\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-linkedin\"></i></a></li></ul></div></div></div></div><div id=\"iiq4z\" class=\"gjs-cell\"><div id=\"igj1s\" class=\"team featured-imagebox-team featured-imagebox style1\"><div class=\"base-box-view-overlay\"><div class=\"featured-thumbnail\"><img src=\"https://placehold.co/450x470\" alt=\"image\" class=\"img-fluid\"/><div class=\"featured-iconbox base-media-link\"><div class=\"media-block\"><ul class=\"social-icons\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-facebook\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-twitter\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-flickr\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-linkedin\"></i></a></li></ul></div></div></div></div><div id=\"i4s2y\" class=\"featured-content\"><div class=\"featured-title\"><h3><a>David Smitgh</a></h3></div><div class=\"team-position\">Consultant</div></div></div></div></div></body>",
+        "css": "* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}.gjs-row{display:flex;justify-content:flex-start;align-items:stretch;flex-wrap:nowrap;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;}.gjs-cell{min-height:75px;flex-grow:1;flex-basis:100%;}@media (max-width: 768px){.gjs-row{flex-wrap:wrap;}}"
       }
     }
   ]

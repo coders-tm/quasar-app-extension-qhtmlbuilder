@@ -12,7 +12,7 @@ import pluginExport from 'grapesjs-plugin-export'
 import tabs from 'grapesjs-tabs'
 import customCode from 'grapesjs-custom-code'
 import touch from 'grapesjs-touch'
-import tooltip from 'grapesjs-tooltip'
+// import tooltip from 'grapesjs-tooltip'
 import imageEditor from 'grapesjs-tui-image-editor'
 import typed from 'grapesjs-typed'
 import styleBg from 'grapesjs-style-bg'
@@ -62,7 +62,7 @@ export default {
           customCode,
           touch,
           // postCss,
-          tooltip,
+          // tooltip,
           imageEditor,
           typed,
           styleBg,
