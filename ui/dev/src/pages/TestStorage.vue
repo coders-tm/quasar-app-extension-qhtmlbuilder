@@ -86,12 +86,19 @@ const config = {
         onLoad: (result) => result.data
       }
     }
+  },
+  canvas: {
+    styles: [
+      'https://cdn.coderstm.com/fontawesome/css/all.min.css',
+      'https://cdn.coderstm.com/css/styles.min.css'
+    ]
   }
 }
 
 async function onLoad(payload) {
   return loadTemplates(payload)
 }
+
 function onStore(payload) {
   return storeData(payload.id, payload)
     .then(() => {
@@ -101,6 +108,7 @@ function onStore(payload) {
       return false
     })
 }
+
 function onDelete(payload) {
   return deleteData(payload)
     .then(() => {

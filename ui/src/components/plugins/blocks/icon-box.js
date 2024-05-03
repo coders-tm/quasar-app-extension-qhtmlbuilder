@@ -3,7 +3,7 @@ import { isComponent } from '../utils'
 export default (editor, options = {}) => {
   const { category } = options
   const { Blocks, Components } = editor
-  const type = 'icon-box-wrapper'
+  const type = 'featured-icon-box'
   const componentName = 'Icon Box'
   const defaultType = Components.getType('default')
 
@@ -20,91 +20,20 @@ export default (editor, options = {}) => {
       defaults: {
         ...defaultType.model.prototype.defaults,
         'custom-name': componentName,
-        attributes: { class: type },
+        attributes: { class: type + ' icon-align-before-content' },
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
-          <div class="icon-box-icon">
-            <span class="icon">
-              <i aria-hidden="true" class="fa far fa-check-square"></i>
-            </span>
+          <div class="featured-icon">
+              <div class="base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-sm">
+                  <i class="fa fa-check-square base-textcolor-skincolor"></i>
+              </div>
           </div>
-          <div class="icon-box-content">
-            <h4 class="icon-box-title">
-              <span>Trustworthy</span>
-            </h4>
-            <p class="icon-box-description">Bacs-approved Bureau with a robust reputation</p>
+          <div class="featured-content">
+              <div class="featured-title">
+                  <h3>Comprehensive</h3>
+                  <p>A Clear and concise customer correspondence including.</p>
+              </div>
           </div>
-        `,
-        styles: `
-          @media (min-width: 768px) {
-            .icon-box-wrapper,
-            .icon-box-wrapper {
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex;
-            }
-
-            .icon-box-wrapper .icon-box-icon,
-            .icon-box-wrapper .icon-box-icon {
-              display: -webkit-inline-box;
-              display: -ms-inline-flexbox;
-              display: inline-flex;
-              -webkit-box-flex: 0;
-              -ms-flex: 0 0 auto;
-              flex: 0 0 auto;
-            }
-
-            .icon-box-wrapper {
-              text-align: left;
-              -webkit-box-orient: horizontal;
-              -webkit-box-direction: normal;
-              -ms-flex-direction: row;
-              flex-direction: row;
-            }
-          }
-
-          .icon-box-wrapper .icon-box-icon {
-            margin-right: 15px;
-            font-size: 25px;
-            color: #007bff
-          }
-
-          .icon-box-content {
-            -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-            flex-grow: 1;
-          }
-
-          .icon-box-title {
-            margin: 0px;
-            font-family: "Teko", Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            font-size: 25px;
-            line-height: 35px;
-            color: #29282d;
-          }
-
-          .icon-box-description {
-            margin: 0;
-            font-family: "Teko", Arial, Helvetica, sans-serif;
-          }
-
-          .icon-box-wrapper.position-left {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-          }
-
-          .icon-box-wrapper.icon-md .icon {
-            font-size: 35px;
-          }
-
-          .icon-box-wrapper.icon-lg .icon {
-            font-size: 45px;
-          }
         `
       }
     }

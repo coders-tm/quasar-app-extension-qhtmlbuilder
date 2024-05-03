@@ -5986,314 +5986,6 @@
         ],
         "styles": [
           {
-            "selectors": [],
-            "selectorsAdd": "*",
-            "style": {
-              "box-sizing": "border-box"
-            }
-          },
-          {
-            "selectors": [],
-            "selectorsAdd": "body",
-            "style": {
-              "margin-top": "0px",
-              "margin-right": "0px",
-              "margin-bottom": "0px",
-              "margin-left": "0px"
-            }
-          },
-          {
-            "selectors": [
-              "gjs-heading"
-            ],
-            "style": {
-              "margin-top": "0px",
-              "margin-right": "0px",
-              "margin-bottom": "0px",
-              "margin-left": "0px",
-              "color": "rgb(29, 40, 55)"
-            }
-          },
-          {
-            "selectors": [
-              "gjs-grid-column"
-            ],
-            "style": {
-              "flex-grow": "1",
-              "flex-shrink": "1",
-              "flex-basis": "0%",
-              "padding-top": "5px",
-              "padding-right": "0px",
-              "padding-bottom": "5px",
-              "padding-left": "0px"
-            }
-          },
-          {
-            "selectors": [
-              "gjs-grid-row"
-            ],
-            "style": {
-              "display": "flex",
-              "justify-content": "flex-start",
-              "align-items": "stretch",
-              "flex-direction": "row",
-              "min-height": "auto",
-              "padding-top": "10px",
-              "padding-right": "0px",
-              "padding-bottom": "10px",
-              "padding-left": "0px"
-            }
-          },
-          {
-            "selectors": [
-              "gjs-link-box"
-            ],
-            "style": {
-              "color": "inherit",
-              "display": "inline-block",
-              "vertical-align": "top",
-              "padding-top": "10px",
-              "padding-right": "10px",
-              "padding-bottom": "10px",
-              "padding-left": "10px",
-              "max-width": "100%",
-              "text-decoration-line": "none",
-              "text-decoration-thickness": "initial",
-              "text-decoration-style": "initial",
-              "text-decoration-color": "initial"
-            }
-          },
-          {
-            "selectors": [
-              "gjs-link"
-            ],
-            "style": {
-              "vertical-align": "top",
-              "max-width": "100%",
-              "display": "inline-block",
-              "text-decoration-line": "none",
-              "text-decoration-thickness": "initial",
-              "text-decoration-style": "initial",
-              "text-decoration-color": "initial",
-              "color": "inherit",
-              "transition-behavior": "normal",
-              "transition-duration": "0.3s",
-              "transition-timing-function": "ease",
-              "transition-delay": "0s",
-              "transition-property": "color"
-            }
-          },
-          {
-            "selectors": [
-              "text-main-content"
-            ],
-            "style": {
-              "line-height": "30px",
-              "font-size": "1.2rem"
-            }
-          },
-          {
-            "selectors": [
-              "#iau9"
-            ],
-            "style": {
-              "font-family": "Arial, Helvetica, sans-serif",
-              "background-image": "linear-gradient(rgba(59, 130, 245, 0.11), white 14%)",
-              "background-position-x": "0px",
-              "background-position-y": "0px",
-              "background-size": "100% 100%",
-              "background-repeat": "repeat",
-              "background-attachment": "scroll",
-              "background-origin": "padding-box",
-              "color": "rgb(71, 85, 105)"
-            }
-          },
-          {
-            "selectors": [
-              "gjs-grid-column",
-              "feature-item"
-            ],
-            "style": {
-              "padding-top": "15px",
-              "padding-right": "15px",
-              "padding-bottom": "15px",
-              "padding-left": "15px",
-              "display": "flex",
-              "flex-direction": "column",
-              "row-gap": "15px",
-              "column-gap": "15px",
-              "min-width": "30%"
-            }
-          },
-          {
-            "selectors": [
-              "gjs-grid-column",
-              "testimonial-item"
-            ],
-            "style": {
-              "padding-top": "15px",
-              "padding-right": "15px",
-              "padding-bottom": "15px",
-              "padding-left": "15px",
-              "display": "flex",
-              "flex-direction": "column",
-              "row-gap": "15px",
-              "column-gap": "15px",
-              "min-width": "45%",
-              "background-color": "rgba(247, 247, 247, 0.23)",
-              "border-top-left-radius": "5px",
-              "border-top-right-radius": "5px",
-              "border-bottom-right-radius": "5px",
-              "border-bottom-left-radius": "5px",
-              "align-items": "flex-start",
-              "border-top-width": "1px",
-              "border-right-width": "1px",
-              "border-bottom-width": "1px",
-              "border-left-width": "1px",
-              "border-top-style": "solid",
-              "border-right-style": "solid",
-              "border-bottom-style": "solid",
-              "border-left-style": "solid",
-              "border-top-color": "rgba(0, 0, 0, 0.06)",
-              "border-right-color": "rgba(0, 0, 0, 0.06)",
-              "border-bottom-color": "rgba(0, 0, 0, 0.06)",
-              "border-left-color": "rgba(0, 0, 0, 0.06)"
-            }
-          },
-          {
-            "selectors": [
-              "gjs-button"
-            ],
-            "style": {
-              "vertical-align": "top",
-              "max-width": "100%",
-              "display": "inline-block",
-              "text-decoration-line": "none",
-              "text-decoration-thickness": "initial",
-              "text-decoration-style": "initial",
-              "text-decoration-color": "initial",
-              "color": "white",
-              "padding-right": "15px",
-              "padding-bottom": "10px",
-              "padding-left": "15px",
-              "background-color": "rgb(36, 99, 235)",
-              "border-top-left-radius": "5px",
-              "border-top-right-radius": "5px",
-              "border-bottom-right-radius": "5px",
-              "border-bottom-left-radius": "5px",
-              "padding-top": "10px",
-              "font-size": "1.1rem",
-              "text-align": "center"
-            }
-          },
-          {
-            "selectors": [
-              "gjs-text-blue"
-            ],
-            "style": {
-              "color": "rgb(36, 99, 235)"
-            }
-          },
-          {
-            "selectors": [
-              "gjs-link"
-            ],
-            "style": {
-              "color": "rgb(36, 99, 235)",
-              "text-decoration-line": "underline",
-              "text-decoration-thickness": "initial",
-              "text-decoration-style": "initial",
-              "text-decoration-color": "initial"
-            },
-            "state": "hover"
-          },
-          {
-            "selectors": [
-              "gjs-icon"
-            ],
-            "style": {
-              "display": "inline-block",
-              "text-decoration-line": "none",
-              "text-decoration-thickness": "initial",
-              "text-decoration-style": "initial",
-              "text-decoration-color": "initial",
-              "color": "inherit",
-              "vertical-align": "middle",
-              "fill": "currentcolor",
-              "width": "50px",
-              "height": "50px"
-            }
-          },
-          {
-            "selectors": [
-              "gjs-icon",
-              "gjs-feature-icon"
-            ],
-            "style": {
-              "padding-top": "10px",
-              "padding-right": "10px",
-              "padding-bottom": "10px",
-              "padding-left": "10px",
-              "background-color": "rgb(36, 99, 235)",
-              "color": "white",
-              "border-top-left-radius": "10px",
-              "border-top-right-radius": "10px",
-              "border-bottom-right-radius": "10px",
-              "border-bottom-left-radius": "10px"
-            }
-          },
-          {
-            "selectors": [
-              "gjs-grid-row"
-            ],
-            "style": {
-              "flex-direction": "column"
-            },
-            "mediaText": "(max-width: 992px)",
-            "atRuleType": "media"
-          },
-          {
-            "selectors": [
-              "heading"
-            ],
-            "style": {
-              "padding-top": "10px",
-              "padding-right": "10px",
-              "padding-bottom": "10px",
-              "padding-left": "10px"
-            },
-            "group": "cmp:heading"
-          },
-          {
-            "selectors": [],
-            "selectorsAdd": ".heading .subtitle",
-            "style": {
-              "margin-top": "0px",
-              "margin-bottom": "15px",
-              "line-height": "13px",
-              "font-size": "14px",
-              "font-family": "Mulish, Arial, Helvetica, sans-serif",
-              "color": "rgb(63, 136, 232)",
-              "text-transform": "uppercase",
-              "letter-spacing": "0.1px"
-            },
-            "group": "cmp:heading"
-          },
-          {
-            "selectors": [],
-            "selectorsAdd": ".heading .title",
-            "style": {
-              "margin-top": "0px",
-              "margin-bottom": "15px",
-              "line-height": "56px",
-              "font-size": "53px",
-              "font-family": "Teko, Arial, Helvetica, sans-serif",
-              "color": "rgb(41, 40, 45)",
-              "letter-spacing": "0.1px"
-            },
-            "group": "cmp:heading"
-          },
-          {
             "selectors": [
               {
                 "name": "gjs-row",
@@ -6336,302 +6028,6 @@
               "flex-grow": "1",
               "flex-basis": "100%"
             }
-          },
-          {
-            "selectors": [
-              "icon-box-wrapper"
-            ],
-            "style": {
-              "display": "flex"
-            },
-            "mediaText": "(min-width: 768px)",
-            "atRuleType": "media",
-            "group": "cmp:icon-box-wrapper"
-          },
-          {
-            "selectors": [],
-            "selectorsAdd": ".icon-box-wrapper .icon-box-icon, .icon-box-wrapper .icon-box-icon",
-            "style": {
-              "display": "inline-flex",
-              "-webkit-box-flex": "0",
-              "flex-grow": "0",
-              "flex-shrink": "0",
-              "flex-basis": "auto"
-            },
-            "mediaText": "(min-width: 768px)",
-            "atRuleType": "media",
-            "group": "cmp:icon-box-wrapper"
-          },
-          {
-            "selectors": [],
-            "selectorsAdd": ".icon-box-wrapper .icon-box-icon",
-            "style": {
-              "margin-right": "15px",
-              "font-size": "25px",
-              "color": "rgb(0, 123, 255)"
-            },
-            "group": "cmp:icon-box-wrapper"
-          },
-          {
-            "selectors": [
-              "icon-box-content"
-            ],
-            "style": {
-              "-webkit-box-flex": "1",
-              "flex-grow": "1"
-            },
-            "group": "cmp:icon-box-wrapper"
-          },
-          {
-            "selectors": [
-              "icon-box-title"
-            ],
-            "style": {
-              "margin-top": "0px",
-              "margin-right": "0px",
-              "margin-bottom": "0px",
-              "margin-left": "0px",
-              "font-family": "Teko, Arial, Helvetica, sans-serif",
-              "font-weight": "600",
-              "font-size": "25px",
-              "line-height": "35px",
-              "color": "rgb(41, 40, 45)"
-            },
-            "group": "cmp:icon-box-wrapper"
-          },
-          {
-            "selectors": [
-              "icon-box-description"
-            ],
-            "style": {
-              "margin-top": "0px",
-              "margin-right": "0px",
-              "margin-bottom": "0px",
-              "margin-left": "0px",
-              "font-family": "Teko, Arial, Helvetica, sans-serif"
-            },
-            "group": "cmp:icon-box-wrapper"
-          },
-          {
-            "selectors": [
-              "button-link"
-            ],
-            "style": {
-              "font-size": "13px",
-              "line-height": "13px",
-              "padding-top": "15px",
-              "padding-right": "30px",
-              "padding-bottom": "15px",
-              "padding-left": "30px",
-              "display": "inline-block",
-              "border-top-left-radius": "0px",
-              "border-top-right-radius": "0px",
-              "border-bottom-right-radius": "0px",
-              "border-bottom-left-radius": "0px",
-              "background-color": "rgb(243, 78, 58)",
-              "font-family": "Muli, Arial, Helvetica, sans-serif",
-              "font-weight": "800",
-              "text-transform": "uppercase",
-              "position": "relative",
-              "text-decoration-line": "none",
-              "text-decoration-thickness": "initial",
-              "text-decoration-style": "initial",
-              "text-decoration-color": "initial",
-              "color": "rgb(255, 255, 255)",
-              "z-index": "1"
-            },
-            "group": "cmp:button-link"
-          },
-          {
-            "selectors": [],
-            "selectorsAdd": ".button-link:hover::before",
-            "style": {
-              "left": "0px",
-              "width": "100%",
-              "right": "auto"
-            },
-            "group": "cmp:button-link"
-          },
-          {
-            "selectors": [
-              "button-link"
-            ],
-            "style": {
-              "background-color": "rgb(41, 40, 45)"
-            },
-            "state": ":before",
-            "group": "cmp:button-link"
-          },
-          {
-            "selectors": [
-              "button-link",
-              "size-md"
-            ],
-            "style": {
-              "font-size": "16px",
-              "line-height": "16px"
-            },
-            "group": "cmp:button-link"
-          },
-          {
-            "selectors": [
-              "button-link"
-            ],
-            "style": {
-              "color": "rgb(255, 255, 255)"
-            },
-            "state": "focus",
-            "group": "cmp:button-link"
-          },
-          {
-            "selectors": [
-              "button-link"
-            ],
-            "style": {
-              "color": "rgb(255, 255, 255)"
-            },
-            "state": "hover",
-            "group": "cmp:button-link"
-          },
-          {
-            "selectors": [
-              "button-link"
-            ],
-            "style": {
-              "color": "rgb(255, 255, 255)"
-            },
-            "state": "visited",
-            "group": "cmp:button-link"
-          },
-          {
-            "selectors": [
-              "button-content-wrapper"
-            ],
-            "style": {
-              "display": "flex",
-              "-webkit-box-pack": "center",
-              "justify-content": "center"
-            },
-            "group": "cmp:button-link"
-          },
-          {
-            "selectors": [],
-            "selectorsAdd": ".button-link .button-icon",
-            "style": {
-              "-webkit-box-flex": "0",
-              "flex-grow": "0",
-              "-webkit-box-ordinal-group": "6",
-              "order": "5"
-            },
-            "group": "cmp:button-link"
-          },
-          {
-            "selectors": [],
-            "selectorsAdd": ".button-link .align-icon-right",
-            "style": {
-              "margin-left": "10px",
-              "-webkit-box-ordinal-group": "16",
-              "order": "15"
-            },
-            "group": "cmp:button-link"
-          },
-          {
-            "selectors": [],
-            "selectorsAdd": ".button-link span",
-            "style": {
-              "text-decoration-line": "inherit",
-              "text-decoration-thickness": "inherit",
-              "text-decoration-style": "inherit",
-              "text-decoration-color": "inherit"
-            },
-            "group": "cmp:button-link"
-          },
-          {
-            "selectors": [],
-            "selectorsAdd": ".button-link .button-text",
-            "style": {
-              "-webkit-box-flex": "1",
-              "flex-grow": "1",
-              "-webkit-box-ordinal-group": "11",
-              "order": "10",
-              "display": "inline-block"
-            },
-            "group": "cmp:button-link"
-          },
-          {
-            "selectors": [
-              "icon-box-wrapper",
-              "position-left"
-            ],
-            "style": {
-              "display": "flex",
-              "-webkit-box-align": "center",
-              "align-items": "center"
-            },
-            "group": "cmp:icon-box-wrapper"
-          },
-          {
-            "selectors": [],
-            "selectorsAdd": ".icon-box-wrapper.icon-md .icon",
-            "style": {
-              "font-size": "35px"
-            },
-            "group": "cmp:icon-box-wrapper"
-          },
-          {
-            "selectors": [],
-            "selectorsAdd": ".icon-box-wrapper.icon-lg .icon",
-            "style": {
-              "font-size": "45px"
-            },
-            "group": "cmp:icon-box-wrapper"
-          },
-          {
-            "selectors": [
-              "button-link",
-              "button-outlined"
-            ],
-            "style": {
-              "border-top-width": "1px",
-              "border-right-width": "1px",
-              "border-bottom-width": "1px",
-              "border-left-width": "1px",
-              "border-top-style": "solid",
-              "border-right-style": "solid",
-              "border-bottom-style": "solid",
-              "border-left-style": "solid",
-              "border-top-color": "rgb(41, 40, 45)",
-              "border-right-color": "rgb(41, 40, 45)",
-              "border-bottom-color": "rgb(41, 40, 45)",
-              "border-left-color": "rgb(41, 40, 45)",
-              "border-image-source": "initial",
-              "border-image-slice": "initial",
-              "border-image-width": "initial",
-              "border-image-outset": "initial",
-              "border-image-repeat": "initial",
-              "color": "rgb(41, 40, 45)",
-              "background-image": "initial",
-              "background-position-x": "initial",
-              "background-position-y": "initial",
-              "background-size": "initial",
-              "background-repeat": "initial",
-              "background-attachment": "initial",
-              "background-origin": "initial",
-              "background-clip": "initial",
-              "background-color": "transparent"
-            },
-            "group": "cmp:button-link"
-          },
-          {
-            "selectors": [
-              "button-link",
-              "button-outlined"
-            ],
-            "style": {
-              "color": "rgb(255, 255, 255)"
-            },
-            "state": "hover",
-            "group": "cmp:button-link"
           }
         ],
         "pages": [
@@ -6654,43 +6050,45 @@
                   },
                   "components": [
                     {
-                      "type": "heading",
+                      "type": "section-title",
                       "classes": [
-                        "heading"
+                        "section-title"
                       ],
-                      "attributes": {
-                        "id": "iy4fg"
-                      },
+                      "attributes": {},
                       "components": [
                         {
-                          "tagName": "h4",
-                          "type": "text",
                           "classes": [
-                            "subtitle"
+                            "title-header"
                           ],
-                          "attributes": {
-                            "id": "il8lq"
-                          },
                           "components": [
                             {
-                              "type": "textnode",
-                              "content": "WHY CHOOSE US!"
-                            }
-                          ]
-                        },
-                        {
-                          "tagName": "h2",
-                          "type": "text",
-                          "classes": [
-                            "title"
-                          ],
-                          "attributes": {
-                            "id": "isgo9"
-                          },
-                          "components": [
+                              "tagName": "h4",
+                              "type": "text",
+                              "attributes": {
+                                "id": "i17v"
+                              },
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "LATEST BLOG POST!"
+                                }
+                              ]
+                            },
                             {
-                              "type": "textnode",
-                              "content": "We Let You Feel The Difference"
+                              "tagName": "h2",
+                              "type": "text",
+                              "classes": [
+                                "title"
+                              ],
+                              "attributes": {
+                                "id": "igvi"
+                              },
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "What’s Happening Around Gym!"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -6716,7 +6114,7 @@
                         }
                       ],
                       "attributes": {
-                        "id": "i35fx"
+                        "id": "i52a"
                       },
                       "components": [
                         {
@@ -6748,41 +6146,35 @@
                               "private": 1
                             }
                           ],
-                          "attributes": {
-                            "id": "icyth"
-                          },
                           "components": [
                             {
-                              "type": "icon-box-wrapper",
+                              "type": "featured-icon-box",
                               "classes": [
-                                "icon-box-wrapper"
+                                "featured-icon-box",
+                                "icon-align-before-content"
                               ],
-                              "attributes": {
-                                "id": "irgdv"
-                              },
+                              "attributes": {},
                               "components": [
                                 {
                                   "classes": [
-                                    "icon-box-icon"
+                                    "featured-icon"
                                   ],
                                   "components": [
                                     {
-                                      "tagName": "span",
                                       "classes": [
-                                        "icon",
-                                        "animation-"
+                                        "base-icon",
+                                        "base-icon_element-onlytxt",
+                                        "base-icon_element-color-skincolor",
+                                        "base-icon_element-size-sm"
                                       ],
                                       "components": [
                                         {
                                           "tagName": "i",
                                           "classes": [
                                             "fa",
-                                            "far",
-                                            "fa-check-square"
-                                          ],
-                                          "attributes": {
-                                            "aria-hidden": "true"
-                                          }
+                                            "fa-check-square-o",
+                                            "base-textcolor-skincolor"
+                                          ]
                                         }
                                       ]
                                     }
@@ -6790,93 +6182,140 @@
                                 },
                                 {
                                   "classes": [
-                                    "icon-box-content"
+                                    "featured-content"
                                   ],
                                   "components": [
                                     {
-                                      "tagName": "h4",
                                       "classes": [
-                                        "icon-box-title"
+                                        "featured-title"
                                       ],
                                       "components": [
                                         {
-                                          "tagName": "span",
+                                          "tagName": "h3",
                                           "type": "text",
                                           "components": [
                                             {
                                               "type": "textnode",
-                                              "content": "Trustworthy"
+                                              "content": "Comprehensive"
                                             }
                                           ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tagName": "p",
-                                      "type": "text",
-                                      "classes": [
-                                        "icon-box-description"
-                                      ],
-                                      "components": [
+                                        },
                                         {
-                                          "type": "textnode",
-                                          "content": "Bacs-approved Bureau with a robust reputation"
+                                          "tagName": "p",
+                                          "type": "text",
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "A Clear and concise customer correspondence including."
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
                                   ]
                                 }
                               ]
-                            },
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Cell",
+                          "draggable": ".gjs-row",
+                          "stylable-require": [
+                            "flex-basis"
+                          ],
+                          "unstylable": [
+                            "width"
+                          ],
+                          "resizable": {
+                            "tl": 0,
+                            "tc": 0,
+                            "tr": 0,
+                            "cl": 0,
+                            "cr": 1,
+                            "bl": 0,
+                            "br": 0,
+                            "minDim": 1,
+                            "bc": 0,
+                            "currentUnit": 1,
+                            "step": 0.2,
+                            "keyWidth": "flex-basis"
+                          },
+                          "classes": [
                             {
-                              "type": "button-link",
+                              "name": "gjs-cell",
+                              "private": 1
+                            }
+                          ],
+                          "components": [
+                            {
+                              "type": "featured-icon-box",
                               "classes": [
-                                "button-link"
+                                "featured-icon-box",
+                                "icon-align-before-content"
                               ],
-                              "attributes": {
-                                "href": "javascript:void(0);",
-                                "id": "ibdm5"
-                              },
+                              "attributes": {},
                               "components": [
                                 {
-                                  "tagName": "span",
                                   "classes": [
-                                    "button-content-wrapper"
+                                    "featured-icon"
                                   ],
                                   "components": [
                                     {
-                                      "tagName": "span",
                                       "classes": [
-                                        "button-icon",
-                                        "align-icon-right"
+                                        "base-icon",
+                                        "base-icon_element-onlytxt",
+                                        "base-icon_element-color-skincolor",
+                                        "base-icon_element-size-sm"
                                       ],
                                       "components": [
                                         {
-                                          "tagName": "i",
+                                          "type": "icon",
                                           "classes": [
                                             "fa",
                                             "fas",
-                                            "fa-angle-double-right"
+                                            "fa-house"
                                           ],
                                           "attributes": {
-                                            "aria-hidden": "true"
+                                            "id": "iy9zu"
                                           }
                                         }
                                       ]
-                                    },
+                                    }
+                                  ]
+                                },
+                                {
+                                  "classes": [
+                                    "featured-content"
+                                  ],
+                                  "components": [
                                     {
-                                      "tagName": "span",
-                                      "type": "text",
                                       "classes": [
-                                        "button-text"
+                                        "featured-title"
                                       ],
-                                      "attributes": {
-                                        "id": "ik1qk"
-                                      },
                                       "components": [
                                         {
-                                          "type": "textnode",
-                                          "content": "view more"
+                                          "tagName": "h3",
+                                          "type": "text",
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Comprehensive"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "p",
+                                          "type": "text",
+                                          "attributes": {
+                                            "id": "iib4j"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "A Clear and concise customer correspondence including."
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -6913,324 +6352,6 @@
                             {
                               "name": "gjs-cell",
                               "private": 1
-                            }
-                          ],
-                          "attributes": {
-                            "id": "i26pa"
-                          },
-                          "components": [
-                            {
-                              "type": "icon-box-wrapper",
-                              "classes": [
-                                "icon-box-wrapper"
-                              ],
-                              "attributes": {
-                                "id": "ihea1"
-                              },
-                              "components": [
-                                {
-                                  "classes": [
-                                    "icon-box-icon"
-                                  ],
-                                  "components": [
-                                    {
-                                      "tagName": "span",
-                                      "classes": [
-                                        "icon",
-                                        "animation-"
-                                      ],
-                                      "attributes": {
-                                        "id": "iafpv"
-                                      },
-                                      "components": [
-                                        {
-                                          "tagName": "i",
-                                          "classes": [
-                                            "fa",
-                                            "far",
-                                            "fa-check-square"
-                                          ],
-                                          "attributes": {
-                                            "aria-hidden": "true"
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "classes": [
-                                    "icon-box-content"
-                                  ],
-                                  "components": [
-                                    {
-                                      "tagName": "h4",
-                                      "classes": [
-                                        "icon-box-title"
-                                      ],
-                                      "components": [
-                                        {
-                                          "tagName": "span",
-                                          "type": "text",
-                                          "components": [
-                                            {
-                                              "type": "textnode",
-                                              "content": "Trustworthy"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tagName": "p",
-                                      "type": "text",
-                                      "classes": [
-                                        "icon-box-description"
-                                      ],
-                                      "attributes": {
-                                        "id": "iflwg"
-                                      },
-                                      "components": [
-                                        {
-                                          "type": "textnode",
-                                          "content": "Bacs-approved Bureau with a robust reputation"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Cell",
-                          "draggable": ".gjs-row",
-                          "stylable-require": [
-                            "flex-basis"
-                          ],
-                          "unstylable": [
-                            "width"
-                          ],
-                          "resizable": {
-                            "tl": 0,
-                            "tc": 0,
-                            "tr": 0,
-                            "cl": 0,
-                            "cr": 1,
-                            "bl": 0,
-                            "br": 0,
-                            "minDim": 1,
-                            "bc": 0,
-                            "currentUnit": 1,
-                            "step": 0.2,
-                            "keyWidth": "flex-basis"
-                          },
-                          "classes": [
-                            {
-                              "name": "gjs-cell",
-                              "private": 1
-                            }
-                          ],
-                          "attributes": {
-                            "id": "itx0i"
-                          },
-                          "components": [
-                            {
-                              "type": "icon-box-wrapper",
-                              "classes": [
-                                "icon-box-wrapper"
-                              ],
-                              "attributes": {
-                                "id": "iblvo"
-                              },
-                              "components": [
-                                {
-                                  "classes": [
-                                    "icon-box-icon"
-                                  ],
-                                  "components": [
-                                    {
-                                      "tagName": "span",
-                                      "classes": [
-                                        "icon",
-                                        "animation-"
-                                      ],
-                                      "attributes": {
-                                        "id": "io6ll"
-                                      },
-                                      "components": [
-                                        {
-                                          "tagName": "i",
-                                          "classes": [
-                                            "fa",
-                                            "far",
-                                            "fa-check-square"
-                                          ],
-                                          "attributes": {
-                                            "aria-hidden": "true"
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "classes": [
-                                    "icon-box-content"
-                                  ],
-                                  "components": [
-                                    {
-                                      "tagName": "h4",
-                                      "classes": [
-                                        "icon-box-title"
-                                      ],
-                                      "components": [
-                                        {
-                                          "tagName": "span",
-                                          "type": "text",
-                                          "components": [
-                                            {
-                                              "type": "textnode",
-                                              "content": "Trustworthy"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tagName": "p",
-                                      "type": "text",
-                                      "classes": [
-                                        "icon-box-description"
-                                      ],
-                                      "attributes": {
-                                        "id": "i330e"
-                                      },
-                                      "components": [
-                                        {
-                                          "type": "textnode",
-                                          "content": "Bacs-approved Bureau with a robust reputation"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Cell",
-                          "draggable": ".gjs-row",
-                          "stylable-require": [
-                            "flex-basis"
-                          ],
-                          "unstylable": [
-                            "width"
-                          ],
-                          "resizable": {
-                            "tl": 0,
-                            "tc": 0,
-                            "tr": 0,
-                            "cl": 0,
-                            "cr": 1,
-                            "bl": 0,
-                            "br": 0,
-                            "minDim": 1,
-                            "bc": 0,
-                            "currentUnit": 1,
-                            "step": 0.2,
-                            "keyWidth": "flex-basis"
-                          },
-                          "classes": [
-                            {
-                              "name": "gjs-cell",
-                              "private": 1
-                            }
-                          ],
-                          "attributes": {
-                            "id": "ihz4n"
-                          },
-                          "components": [
-                            {
-                              "type": "icon-box-wrapper",
-                              "classes": [
-                                "icon-box-wrapper"
-                              ],
-                              "attributes": {
-                                "id": "ih7nw"
-                              },
-                              "components": [
-                                {
-                                  "classes": [
-                                    "icon-box-icon"
-                                  ],
-                                  "components": [
-                                    {
-                                      "tagName": "span",
-                                      "classes": [
-                                        "icon",
-                                        "animation-"
-                                      ],
-                                      "attributes": {
-                                        "id": "iwglg"
-                                      },
-                                      "components": [
-                                        {
-                                          "tagName": "i",
-                                          "classes": [
-                                            "fa",
-                                            "far",
-                                            "fa-check-square"
-                                          ],
-                                          "attributes": {
-                                            "aria-hidden": "true"
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "classes": [
-                                    "icon-box-content"
-                                  ],
-                                  "components": [
-                                    {
-                                      "tagName": "h4",
-                                      "classes": [
-                                        "icon-box-title"
-                                      ],
-                                      "components": [
-                                        {
-                                          "tagName": "span",
-                                          "type": "text",
-                                          "components": [
-                                            {
-                                              "type": "textnode",
-                                              "content": "Trustworthy"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tagName": "p",
-                                      "type": "text",
-                                      "classes": [
-                                        "icon-box-description"
-                                      ],
-                                      "components": [
-                                        {
-                                          "type": "textnode",
-                                          "content": "Bacs-approved Bureau with a robust reputation"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
                             }
                           ]
                         }
@@ -7247,8 +6368,8 @@
         ]
       },
       "pagesHtml": {
-        "html": "<body id=\"i33v\"><div id=\"iy4fg\" class=\"heading\"><h4 id=\"il8lq\" class=\"subtitle\">WHY CHOOSE US!</h4><h2 id=\"isgo9\" class=\"title\">We Let You Feel The Difference</h2></div><div id=\"i35fx\" class=\"gjs-row\"><div id=\"icyth\" class=\"gjs-cell\"><div id=\"irgdv\" class=\"icon-box-wrapper\"><div class=\"icon-box-icon\"><span class=\"icon animation-\"><i aria-hidden=\"true\" class=\"fa far fa-check-square\"></i></span></div><div class=\"icon-box-content\"><h4 class=\"icon-box-title\"><span>Trustworthy</span></h4><p class=\"icon-box-description\">Bacs-approved Bureau with a robust reputation</p></div></div><a href=\"javascript:void(0);\" class=\"button-link\" id=\"ibdm5\"><span class=\"button-content-wrapper\"><span class=\"button-icon align-icon-right\"><i aria-hidden=\"true\" class=\"fa fas fa-angle-double-right\"></i></span><span class=\"button-text\" id=\"ik1qk\">view more</span></span></a></div><div class=\"gjs-cell\" id=\"i26pa\"><div id=\"ihea1\" class=\"icon-box-wrapper\"><div class=\"icon-box-icon\"><span id=\"iafpv\" class=\"icon animation-\"><i aria-hidden=\"true\" class=\"fa far fa-check-square\"></i></span></div><div class=\"icon-box-content\"><h4 class=\"icon-box-title\"><span>Trustworthy</span></h4><p id=\"iflwg\" class=\"icon-box-description\">Bacs-approved Bureau with a robust reputation</p></div></div></div><div id=\"itx0i\" class=\"gjs-cell\"><div id=\"iblvo\" class=\"icon-box-wrapper\"><div class=\"icon-box-icon\"><span id=\"io6ll\" class=\"icon animation-\"><i aria-hidden=\"true\" class=\"fa far fa-check-square\"></i></span></div><div class=\"icon-box-content\"><h4 class=\"icon-box-title\"><span>Trustworthy</span></h4><p id=\"i330e\" class=\"icon-box-description\">Bacs-approved Bureau with a robust reputation</p></div></div></div><div id=\"ihz4n\" class=\"gjs-cell\"><div id=\"ih7nw\" class=\"icon-box-wrapper\"><div class=\"icon-box-icon\"><span id=\"iwglg\" class=\"icon animation-\"><i aria-hidden=\"true\" class=\"fa far fa-check-square\"></i></span></div><div class=\"icon-box-content\"><h4 class=\"icon-box-title\"><span>Trustworthy</span></h4><p class=\"icon-box-description\">Bacs-approved Bureau with a robust reputation</p></div></div></div></div></body>",
-        "css": "* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}.heading{padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;}.heading .subtitle{margin-top:0px;margin-bottom:15px;line-height:13px;font-size:14px;font-family:Mulish, Arial, Helvetica, sans-serif;color:rgb(63, 136, 232);text-transform:uppercase;letter-spacing:0.1px;}.heading .title{margin-top:0px;margin-bottom:15px;line-height:56px;font-size:53px;font-family:Teko, Arial, Helvetica, sans-serif;color:rgb(41, 40, 45);letter-spacing:0.1px;}.gjs-row{display:flex;justify-content:flex-start;align-items:stretch;flex-wrap:nowrap;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;}.gjs-cell{min-height:75px;flex-grow:1;flex-basis:100%;}.icon-box-wrapper .icon-box-icon{margin-right:15px;font-size:25px;color:rgb(0, 123, 255);}.icon-box-content{-webkit-box-flex:1;flex-grow:1;}.icon-box-title{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-family:Teko, Arial, Helvetica, sans-serif;font-weight:600;font-size:25px;line-height:35px;color:rgb(41, 40, 45);}.icon-box-description{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-family:Teko, Arial, Helvetica, sans-serif;}.button-link{font-size:13px;line-height:13px;padding-top:15px;padding-right:30px;padding-bottom:15px;padding-left:30px;display:inline-block;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;background-color:rgb(243, 78, 58);font-family:Muli, Arial, Helvetica, sans-serif;font-weight:800;text-transform:uppercase;position:relative;text-decoration-line:none;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;color:rgb(255, 255, 255);z-index:1;}.button-link:hover::before{left:0px;width:100%;right:auto;}.button-link::before{background-color:rgb(41, 40, 45);}.button-link.size-md{font-size:16px;line-height:16px;}.button-link:focus{color:rgb(255, 255, 255);}.button-link:hover{color:rgb(255, 255, 255);}.button-link:visited{color:rgb(255, 255, 255);}.button-content-wrapper{display:flex;-webkit-box-pack:center;justify-content:center;}.button-link .button-icon{-webkit-box-flex:0;flex-grow:0;-webkit-box-ordinal-group:6;order:5;}.button-link .align-icon-right{margin-left:10px;-webkit-box-ordinal-group:16;order:15;}.button-link span{text-decoration-line:inherit;text-decoration-thickness:inherit;text-decoration-style:inherit;text-decoration-color:inherit;}.button-link .button-text{-webkit-box-flex:1;flex-grow:1;-webkit-box-ordinal-group:11;order:10;display:inline-block;}.icon-box-wrapper.position-left{display:flex;-webkit-box-align:center;align-items:center;}.icon-box-wrapper.icon-md .icon{font-size:35px;}.icon-box-wrapper.icon-lg .icon{font-size:45px;}.button-link.button-outlined{border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(41, 40, 45);border-right-color:rgb(41, 40, 45);border-bottom-color:rgb(41, 40, 45);border-left-color:rgb(41, 40, 45);border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;color:rgb(41, 40, 45);background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:transparent;}.button-link.button-outlined:hover{color:rgb(255, 255, 255);}@media (max-width: 768px){.gjs-row{flex-wrap:wrap;}}@media (min-width: 768px){.icon-box-wrapper{display:flex;}.icon-box-wrapper .icon-box-icon, .icon-box-wrapper .icon-box-icon{display:inline-flex;-webkit-box-flex:0;flex-grow:0;flex-shrink:0;flex-basis:auto;}}"
+        "html": "<body id=\"i33v\"><div class=\"section-title\"><div class=\"title-header\"><h4 id=\"i17v\">LATEST BLOG POST!</h4><h2 id=\"igvi\" class=\"title\">What’s Happening Around Gym!</h2></div></div><div id=\"i52a\" class=\"gjs-row\"><div class=\"gjs-cell\"><div class=\"featured-icon-box icon-align-before-content\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-sm\"><i class=\"fa fa-check-square-o base-textcolor-skincolor\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3>Comprehensive</h3><p>A Clear and concise customer correspondence including.</p></div></div></div></div><div class=\"gjs-cell\"><div class=\"featured-icon-box icon-align-before-content\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-sm\"><i class=\"fa fas fa-house\" id=\"iy9zu\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3>Comprehensive</h3><p id=\"iib4j\">A Clear and concise customer correspondence including.</p></div></div></div></div><div class=\"gjs-cell\"></div></div></body>",
+        "css": "* { box-sizing: border-box; } body {margin: 0;}.gjs-row{display:flex;justify-content:flex-start;align-items:stretch;flex-wrap:nowrap;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;}.gjs-cell{min-height:75px;flex-grow:1;flex-basis:100%;}@media (max-width: 768px){.gjs-row{flex-wrap:wrap;}}"
       }
     }
   ]

@@ -3,8 +3,8 @@ import { isComponent } from '../utils'
 export default (editor, options = {}) => {
   const { category } = options
   const { Blocks, Components } = editor
-  const type = 'heading'
-  const componentName = 'Heading'
+  const type = 'section-title'
+  const componentName = 'Section Title'
   const defaultType = Components.getType('default')
 
   // Define custom component properties and traits
@@ -23,32 +23,10 @@ export default (editor, options = {}) => {
         attributes: { class: type },
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
-          <h4 class="subtitle">WHY CHOOSE US!</h4>
-          <h2 class="title">We Let You Feel The Difference</h2>
-        `,
-        styles: `
-          .${type}{
-            padding:10px;
-          }
-          .${type} .subtitle{
-            margin-top:0px;
-            margin-bottom:15px;
-            line-height:13px;
-            font-size:14px;
-            font-family:Mulish, Arial, Helvetica, sans-serif;
-            color:rgb(63, 136, 232);
-            text-transform:uppercase;
-            letter-spacing:0.1px;
-          }
-          .${type} .title{
-            margin-top:0px;
-            margin-bottom:15px;
-            line-height:56px;
-            font-size:53px;
-            font-family:Teko, Arial, Helvetica, sans-serif;
-            color:rgb(41, 40, 45);
-            letter-spacing:0.1px;
-          }
+          <div class="title-header">
+              <h4>LATEST BLOG POST!</h4>
+              <h2 class="title">What’s Happening Around Gym!</h2>
+          </div>
         `
       }
     }
