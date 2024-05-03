@@ -1,9 +1,9 @@
-import { isComponent } from '../utils'
+import { isComponent } from '../../utils'
 
 export default (editor, options = {}) => {
   const { category } = options
   const { Blocks, Components } = editor
-  const type = 'featured-icon-box'
+  const type = 'icon-box'
   const componentName = 'Icon Box'
   const defaultType = Components.getType('default')
 
@@ -20,19 +20,21 @@ export default (editor, options = {}) => {
       defaults: {
         ...defaultType.model.prototype.defaults,
         'custom-name': componentName,
-        attributes: { class: type + ' icon-align-before-content' },
+        attributes: { class: type },
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
-          <div class="featured-icon">
+          <div class="featured-icon-box icon-align-before-content">
+            <div class="featured-icon">
               <div class="base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-sm">
-                  <i class="fa fa-check-square base-textcolor-skincolor"></i>
+                <i class="fa fas fa-check-square base-textcolor-skincolor"></i>
               </div>
-          </div>
-          <div class="featured-content">
+            </div>
+            <div class="featured-content">
               <div class="featured-title">
-                  <h3>Comprehensive</h3>
-                  <p>A Clear and concise customer correspondence including.</p>
+                <h3>Comprehensive</h3>
+                <p>A Clear and concise customer correspondence including.</p>
               </div>
+            </div>
           </div>
         `
       }
@@ -43,7 +45,7 @@ export default (editor, options = {}) => {
   Blocks.add(`${type}-block`, {
     label: componentName,
     media:
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 64C0 46.3 14.3 32 32 32H80h48c17.7 0 32 14.3 32 32s-14.3 32-32 32H112V208H336V96H320c-17.7 0-32-14.3-32-32s14.3-32 32-32h48 48c17.7 0 32 14.3 32 32s-14.3 32-32 32H400V240 416h16c17.7 0 32 14.3 32 32s-14.3 32-32 32H368 320c-17.7 0-32-14.3-32-32s14.3-32 32-32h16V272H112V416h16c17.7 0 32 14.3 32 32s-14.3 32-32 32H80 32c-17.7 0-32-14.3-32-32s14.3-32 32-32H48V240 96H32C14.3 96 0 81.7 0 64z"/></svg>',
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zm256-32H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>',
     content: { type: type },
     category: category
   })

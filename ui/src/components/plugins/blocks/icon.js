@@ -8,7 +8,7 @@ export default (editor, options = {}) => {
   // Define custom component properties and traits
   Components.addType(type, {
     // You can update the isComponent logic or leave the one from `some-component`
-    isComponent: (el) => el.tagName === 'i',
+    isComponent: (el) => el.tagName == 'i',
     extend: 'default',
     model: {
       defaults: {

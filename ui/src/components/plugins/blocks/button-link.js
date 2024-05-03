@@ -27,12 +27,8 @@ export default (editor, options = {}) => {
         },
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
-          <span class="button-content-wrapper">
-            <span class="button-icon align-icon-right">
-              <i aria-hidden="true" class="fa fas fa-angle-double-right"></i>
-            </span>
-            <span class="button-text">view more</span>
-          </span>
+          <span>VIEW MORE</span>
+          <i class="fa fa-angle-double-right ml-10"></i>
         `
       }
     }

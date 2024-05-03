@@ -24,8 +24,8 @@ export default (editor, options = {}) => {
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
           <div class="title-header">
-              <h4>LATEST BLOG POST!</h4>
-              <h2 class="title">What’s Happening Around Gym!</h2>
+            <h4 class="subtitle">WHY CHOOSE US!</h4>
+            <h2 class="title">We Let You Feel The Difference</h2>
           </div>
         `
       }

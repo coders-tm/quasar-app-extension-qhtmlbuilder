@@ -5986,23 +5986,6 @@
         ],
         "styles": [
           {
-            "selectors": [],
-            "selectorsAdd": "*",
-            "style": {
-              "box-sizing": "border-box"
-            }
-          },
-          {
-            "selectors": [],
-            "selectorsAdd": "body",
-            "style": {
-              "margin-top": "0px",
-              "margin-right": "0px",
-              "margin-bottom": "0px",
-              "margin-left": "0px"
-            }
-          },
-          {
             "selectors": [
               {
                 "name": "gjs-row",
@@ -6023,6 +6006,19 @@
           {
             "selectors": [
               {
+                "name": "gjs-row",
+                "private": 1
+              }
+            ],
+            "style": {
+              "flex-wrap": "wrap"
+            },
+            "mediaText": "(max-width: 768px)",
+            "atRuleType": "media"
+          },
+          {
+            "selectors": [
+              {
                 "name": "gjs-cell",
                 "private": 1
               }
@@ -6035,16 +6031,49 @@
           },
           {
             "selectors": [
-              {
-                "name": "gjs-row",
-                "private": 1
-              }
+              "#ijai"
             ],
             "style": {
-              "flex-wrap": "wrap"
-            },
-            "mediaText": "(max-width: 768px)",
-            "atRuleType": "media"
+              "padding-top": "10px",
+              "padding-bottom": "10px",
+              "padding-right": "10px",
+              "padding-left": "10px"
+            }
+          },
+          {
+            "selectors": [
+              "#i08l"
+            ],
+            "style": {
+              "margin-top": "10px",
+              "margin-bottom": "10px",
+              "margin-right": "10px",
+              "margin-left": "10px"
+            }
+          },
+          {
+            "selectors": [
+              "#i1xfzw"
+            ],
+            "style": {
+              "width": "50%"
+            }
+          },
+          {
+            "selectors": [
+              "#i0nwsw"
+            ],
+            "style": {
+              "width": "90%"
+            }
+          },
+          {
+            "selectors": [
+              "#ipf71f"
+            ],
+            "style": {
+              "width": "70%"
+            }
           }
         ],
         "pages": [
@@ -6067,51 +6096,6 @@
                   },
                   "components": [
                     {
-                      "type": "section-title",
-                      "classes": [
-                        "section-title"
-                      ],
-                      "attributes": {},
-                      "components": [
-                        {
-                          "classes": [
-                            "title-header"
-                          ],
-                          "components": [
-                            {
-                              "tagName": "h4",
-                              "type": "text",
-                              "attributes": {
-                                "id": "i17v"
-                              },
-                              "components": [
-                                {
-                                  "type": "textnode",
-                                  "content": "LATEST BLOG POST!\n      "
-                                }
-                              ]
-                            },
-                            {
-                              "tagName": "h2",
-                              "type": "text",
-                              "classes": [
-                                "title"
-                              ],
-                              "attributes": {
-                                "id": "igvi"
-                              },
-                              "components": [
-                                {
-                                  "type": "textnode",
-                                  "content": "What’s Happening Around Gym!\n      "
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
                       "name": "Row",
                       "droppable": ".gjs-cell",
                       "resizable": {
@@ -6131,7 +6115,7 @@
                         }
                       ],
                       "attributes": {
-                        "id": "i9wni"
+                        "id": "i1uz"
                       },
                       "components": [
                         {
@@ -6162,35 +6146,656 @@
                               "name": "gjs-cell",
                               "private": 1
                             }
-                          ]
-                        },
-                        {
-                          "name": "Cell",
-                          "draggable": ".gjs-row",
-                          "stylable-require": [
-                            "flex-basis"
                           ],
-                          "unstylable": [
-                            "width"
-                          ],
-                          "resizable": {
-                            "tl": 0,
-                            "tc": 0,
-                            "tr": 0,
-                            "cl": 0,
-                            "cr": 1,
-                            "bl": 0,
-                            "br": 0,
-                            "minDim": 1,
-                            "bc": 0,
-                            "currentUnit": 1,
-                            "step": 0.2,
-                            "keyWidth": "flex-basis"
+                          "attributes": {
+                            "id": "ijai"
                           },
-                          "classes": [
+                          "components": [
                             {
-                              "name": "gjs-cell",
-                              "private": 1
+                              "type": "section-title",
+                              "classes": [
+                                "section-title"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "classes": [
+                                    "title-header"
+                                  ],
+                                  "components": [
+                                    {
+                                      "tagName": "h4",
+                                      "type": "text",
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "LATEST BLOG POST!"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tagName": "h2",
+                                      "type": "text",
+                                      "classes": [
+                                        "title"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "What’s Happening Around Gym!"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "widget-menu",
+                              "classes": [
+                                "widget-menu"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "type": "widget",
+                                  "classes": [
+                                    "widget",
+                                    "widget_nav_menu",
+                                    "clearfix"
+                                  ],
+                                  "attributes": {
+                                    "id": "i08l"
+                                  },
+                                  "components": [
+                                    {
+                                      "tagName": "h3",
+                                      "type": "text",
+                                      "classes": [
+                                        "widget-title"
+                                      ],
+                                      "attributes": {
+                                        "id": "ih3f"
+                                      },
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "Information"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tagName": "ul",
+                                      "classes": [
+                                        "menu"
+                                      ],
+                                      "attributes": {
+                                        "id": "menu-footer-quick-links"
+                                      },
+                                      "components": [
+                                        {
+                                          "tagName": "li",
+                                          "components": [
+                                            {
+                                              "type": "link",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "About Us"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "li",
+                                          "components": [
+                                            {
+                                              "type": "link",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Privacy Policy"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "li",
+                                          "components": [
+                                            {
+                                              "type": "link",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Pricing Plans"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "li",
+                                          "components": [
+                                            {
+                                              "type": "link",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Courses"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "li",
+                                          "components": [
+                                            {
+                                              "type": "link",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Weight Loss"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "li",
+                                          "components": [
+                                            {
+                                              "type": "link",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Clients"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "li",
+                                          "components": [
+                                            {
+                                              "type": "link",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Customers"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "li",
+                                          "components": [
+                                            {
+                                              "type": "link",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Our Trainers"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "li",
+                                          "components": [
+                                            {
+                                              "type": "link",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Diet Chart"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "progress-section",
+                              "classes": [
+                                "progress-section"
+                              ],
+                              "attributes": {
+                                "id": "iq0zze"
+                              },
+                              "components": [
+                                {
+                                  "classes": [
+                                    "base-progress-bar",
+                                    "clearfix"
+                                  ],
+                                  "attributes": {
+                                    "data-percent": "80%"
+                                  },
+                                  "components": [
+                                    {
+                                      "type": "text",
+                                      "classes": [
+                                        "progressbar-title"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "Weight Lifting"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "progress-bar-inner"
+                                      ],
+                                      "attributes": {
+                                        "id": "in9wtp"
+                                      },
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "progress-bar",
+                                            "progress-bar-color-bar_skincolor"
+                                          ],
+                                          "attributes": {
+                                            "id": "i1xfzw"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "classes": [
+                                        "progress-bar-percent"
+                                      ],
+                                      "attributes": {
+                                        "data-percentage": "95",
+                                        "id": "ivzn0k"
+                                      },
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "50%"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "classes": [
+                                    "base-progress-bar",
+                                    "clearfix"
+                                  ],
+                                  "attributes": {
+                                    "data-percent": "90%"
+                                  },
+                                  "components": [
+                                    {
+                                      "type": "text",
+                                      "classes": [
+                                        "progressbar-title"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "General Boxing"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "progress-bar-inner"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "progress-bar",
+                                            "progress-bar-color-bar_skincolor"
+                                          ],
+                                          "attributes": {
+                                            "id": "i0nwsw"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "classes": [
+                                        "progress-bar-percent"
+                                      ],
+                                      "attributes": {
+                                        "data-percentage": "90"
+                                      },
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "90%"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "classes": [
+                                    "base-progress-bar",
+                                    "clearfix"
+                                  ],
+                                  "attributes": {
+                                    "data-percent": "70%"
+                                  },
+                                  "components": [
+                                    {
+                                      "type": "text",
+                                      "classes": [
+                                        "progressbar-title"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "Body Building"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "progress-bar-inner"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "progress-bar",
+                                            "progress-bar-color-bar_skincolor"
+                                          ],
+                                          "attributes": {
+                                            "id": "ipf71f"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "classes": [
+                                        "progress-bar-percent"
+                                      ],
+                                      "attributes": {
+                                        "data-percentage": "70"
+                                      },
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "70%"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "icon-list",
+                              "classes": [
+                                "icon-list"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "tagName": "ul",
+                                  "classes": [
+                                    "base-list",
+                                    "base-list-style-icon",
+                                    "base-list-icon-color-skincolor"
+                                  ],
+                                  "components": [
+                                    {
+                                      "tagName": "li",
+                                      "components": [
+                                        {
+                                          "tagName": "i",
+                                          "classes": [
+                                            "fa",
+                                            "fa-long-arrow-right"
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "classes": [
+                                            "base-list-li-content"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "2,000+ locations open (and we're just getting started!)"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tagName": "li",
+                                      "components": [
+                                        {
+                                          "tagName": "i",
+                                          "classes": [
+                                            "fa",
+                                            "fa-long-arrow-right"
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "classes": [
+                                            "base-list-li-content"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Unique concept that combines fitness and technology"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tagName": "li",
+                                      "components": [
+                                        {
+                                          "tagName": "i",
+                                          "classes": [
+                                            "fa",
+                                            "fa-long-arrow-right"
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "classes": [
+                                            "base-list-li-content"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "We have small studios designed for the large groups"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tagName": "li",
+                                      "components": [
+                                        {
+                                          "tagName": "i",
+                                          "classes": [
+                                            "fa",
+                                            "fa-long-arrow-right"
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "classes": [
+                                            "base-list-li-content"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "1800+ franchises awarded in 30 countries worldwide"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "steps-box",
+                              "classes": [
+                                "steps-box"
+                              ],
+                              "attributes": {
+                                "id": "ih4ice"
+                              },
+                              "components": [
+                                {
+                                  "classes": [
+                                    "base-static-box-wrapper",
+                                    "base-steps-box",
+                                    "steps-style1"
+                                  ],
+                                  "attributes": {
+                                    "id": "ihj0jg"
+                                  },
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "base-static-box-content"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "base-steps-desc"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "h3",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "tagName": "span",
+                                                  "type": "text",
+                                                  "classes": [
+                                                    "base-static-steps-num"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "01."
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Membership Cards"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tagName": "p",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Discount on services and treatments at the Gimmer for all membership cards holders for allocate time.\n                "
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "steps-box",
+                              "classes": [
+                                "steps-box"
+                              ],
+                              "attributes": {
+                                "id": "i4dhac"
+                              },
+                              "components": [
+                                {
+                                  "classes": [
+                                    "base-static-box-wrapper",
+                                    "base-steps-box",
+                                    "steps-style1"
+                                  ],
+                                  "attributes": {
+                                    "id": "ir4gzg"
+                                  },
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "base-static-box-content"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "base-steps-desc"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "h3",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "tagName": "span",
+                                                  "type": "text",
+                                                  "classes": [
+                                                    "base-static-steps-num"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "01."
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Membership Cards"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tagName": "p",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Discount on services and treatments at the Gimmer for all membership cards holders for allocate time.\n                "
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -6224,54 +6829,193 @@
                             }
                           ],
                           "attributes": {
-                            "id": "i201h"
+                            "id": "i2e7"
                           },
                           "components": [
                             {
-                              "type": "button-link",
+                              "type": "widget-text",
                               "classes": [
-                                "button-link"
+                                "widget-text"
                               ],
-                              "attributes": {
-                                "href": "javascript:void(0);"
-                              },
+                              "attributes": {},
                               "components": [
                                 {
-                                  "tagName": "span",
                                   "classes": [
-                                    "button-content-wrapper"
+                                    "widget",
+                                    "widget_text",
+                                    "clearfix"
                                   ],
                                   "components": [
                                     {
-                                      "tagName": "span",
                                       "classes": [
-                                        "button-icon",
-                                        "align-icon-right"
+                                        "footer-logo"
                                       ],
                                       "components": [
                                         {
-                                          "tagName": "i",
+                                          "type": "image",
+                                          "resizable": {
+                                            "ratioDefault": 1
+                                          },
                                           "classes": [
-                                            "fa",
-                                            "fas",
-                                            "fa-angle-double-right"
+                                            "img-center"
                                           ],
                                           "attributes": {
-                                            "aria-hidden": "true"
+                                            "id": "footer-logo-img",
+                                            "src": "https://placehold.co/311x92",
+                                            "alt": ""
                                           }
                                         }
                                       ]
                                     },
                                     {
-                                      "tagName": "span",
-                                      "type": "text",
+                                      "type": "widget-text",
                                       "classes": [
-                                        "button-text"
+                                        "textwidget",
+                                        "widget-text"
+                                      ],
+                                      "attributes": {},
+                                      "components": [
+                                        {
+                                          "tagName": "p",
+                                          "type": "text",
+                                          "classes": [
+                                            "pb-10",
+                                            "pr-30"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "After you decide to start training we will make sure you get the best fitness\n                program."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "order-3"
                                       ],
                                       "components": [
                                         {
-                                          "type": "textnode",
-                                          "content": "view more"
+                                          "classes": [
+                                            "social-icons",
+                                            "square"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "ul",
+                                              "classes": [
+                                                "social-icons",
+                                                "list-inline"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "tagName": "li",
+                                                  "components": [
+                                                    {
+                                                      "type": "link",
+                                                      "classes": [
+                                                        "tooltip-top"
+                                                      ],
+                                                      "attributes": {
+                                                        "rel": "noopener",
+                                                        "aria-label": "facebook",
+                                                        "data-tooltip": "Facebook",
+                                                        "target": "_blank"
+                                                      },
+                                                      "components": [
+                                                        {
+                                                          "tagName": "i",
+                                                          "classes": [
+                                                            "fa",
+                                                            "fa-facebook"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tagName": "li",
+                                                  "components": [
+                                                    {
+                                                      "type": "link",
+                                                      "classes": [
+                                                        "tooltip-top"
+                                                      ],
+                                                      "attributes": {
+                                                        "rel": "noopener",
+                                                        "aria-label": "twitter",
+                                                        "data-tooltip": "Twitter",
+                                                        "target": "_blank"
+                                                      },
+                                                      "components": [
+                                                        {
+                                                          "tagName": "i",
+                                                          "classes": [
+                                                            "fa",
+                                                            "fa-twitter"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tagName": "li",
+                                                  "components": [
+                                                    {
+                                                      "type": "link",
+                                                      "classes": [
+                                                        "tooltip-top"
+                                                      ],
+                                                      "attributes": {
+                                                        "rel": "noopener",
+                                                        "aria-label": "flickr",
+                                                        "data-tooltip": "Flickr",
+                                                        "target": "_blank"
+                                                      },
+                                                      "components": [
+                                                        {
+                                                          "tagName": "i",
+                                                          "classes": [
+                                                            "fa",
+                                                            "fa-flickr"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tagName": "li",
+                                                  "components": [
+                                                    {
+                                                      "type": "link",
+                                                      "classes": [
+                                                        "tooltip-top"
+                                                      ],
+                                                      "attributes": {
+                                                        "rel": "noopener",
+                                                        "aria-label": "linkedin",
+                                                        "data-tooltip": "Linkedin",
+                                                        "target": "_blank"
+                                                      },
+                                                      "components": [
+                                                        {
+                                                          "tagName": "i",
+                                                          "classes": [
+                                                            "fa",
+                                                            "fa-linkedin"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -6280,46 +7024,1458 @@
                               ]
                             },
                             {
-                              "type": "featured-icon-box",
+                              "type": "icon-box5",
                               "classes": [
-                                "featured-icon-box",
-                                "icon-align-before-content"
+                                "icon-box5"
                               ],
                               "attributes": {},
                               "components": [
                                 {
                                   "classes": [
-                                    "featured-icon"
+                                    "featured-icon-box",
+                                    "left-icon",
+                                    "icon-align-top",
+                                    "style11",
+                                    "base-bgcolor-white"
                                   ],
                                   "components": [
                                     {
                                       "classes": [
-                                        "base-icon",
-                                        "base-icon_element-onlytxt",
-                                        "base-icon_element-color-skincolor",
-                                        "base-icon_element-size-sm"
+                                        "featured-icon"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "base-icon",
+                                            "base-icon_element-onlytxt",
+                                            "base-icon_element-color-skincolor",
+                                            "base-icon_element-size-lg"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "i",
+                                              "classes": [
+                                                "fa",
+                                                "fa-angle-double-right"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-content"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "featured-title",
+                                            "pb-15"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "h2",
+                                              "type": "text",
+                                              "classes": [
+                                                "title"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "653"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "classes": [
+                                        "featured-desc"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "Best Abs Ever, and more in the club with room to move for safety or on-demand on the\n              Gimmer app."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "link",
+                                      "classes": [
+                                        "base-btn",
+                                        "btn-inline",
+                                        "base-btn-size-md",
+                                        "base-btn-color-skincolor",
+                                        "mt-15"
+                                      ],
+                                      "attributes": {
+                                        "tabindex": "0"
+                                      },
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "VIEW MORE"
+                                        },
+                                        {
+                                          "tagName": "i",
+                                          "classes": [
+                                            "fa",
+                                            "fa-angle-double-right",
+                                            "ml-10"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "imagebox-services",
+                              "classes": [
+                                "imagebox-services"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "classes": [
+                                    "featured-imagebox",
+                                    "featured-imagebox-services",
+                                    "style1"
+                                  ],
+                                  "components": [
+                                    {
+                                      "type": "comment",
+                                      "content": " featured-thumbnail "
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-thumbnail"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "link",
+                                          "editable": false,
+                                          "attributes": {
+                                            "tabindex": "0"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "image",
+                                              "resizable": {
+                                                "ratioDefault": 1
+                                              },
+                                              "classes": [
+                                                "img-fluid"
+                                              ],
+                                              "attributes": {
+                                                "width": "742",
+                                                "height": "618",
+                                                "src": "https://placehold.co/742x618",
+                                                "alt": "image"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "base-blog-overlay-iconbox"
+                                          ],
+                                          "attributes": {
+                                            "id": "iyjyog"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "link",
+                                              "attributes": {
+                                                "tabindex": "0"
+                                              },
+                                              "components": [
+                                                {
+                                                  "tagName": "i",
+                                                  "classes": [
+                                                    "ti",
+                                                    "ti-plus"
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "cat_block-wrapper"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "span",
+                                              "classes": [
+                                                "cat_block"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "tagName": "time",
+                                                  "type": "text",
+                                                  "classes": [
+                                                    "entry-date",
+                                                    "published"
+                                                  ],
+                                                  "attributes": {
+                                                    "datetime": "2020-11-11T04:34:34+00:00"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "CARDIO"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " featured-thumbnail end"
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-content",
+                                        "featured-content-post"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "featured-title"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "h3",
+                                              "components": [
+                                                {
+                                                  "type": "link",
+                                                  "attributes": {
+                                                    "tabindex": "0"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "Fitness For Man"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "featured-desc"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "p",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Fitness For Man strong interest in gymnastics, training provides stress to the muscles."
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "link",
+                                          "classes": [
+                                            "base-btn",
+                                            "btn-inline",
+                                            "base-btn-size-md",
+                                            "base-btn-color-darkgrey",
+                                            "z-index-1"
+                                          ],
+                                          "attributes": {
+                                            "tabindex": "0"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Read More"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "base-boxbg-icon"
+                                          ],
+                                          "components": [
+                                            {
+                                              "classes": [
+                                                "base-service-iconbox"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "classes": [
+                                                    "base-icon",
+                                                    "base-icon_element-color-skincolor",
+                                                    "base-icon_element-size-md",
+                                                    "base-icon_element-style-rounded"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "tagName": "i",
+                                                      "classes": [
+                                                        "fa",
+                                                        "fa-check-square-o"
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Cell",
+                          "draggable": ".gjs-row",
+                          "stylable-require": [
+                            "flex-basis"
+                          ],
+                          "unstylable": [
+                            "width"
+                          ],
+                          "resizable": {
+                            "tl": 0,
+                            "tc": 0,
+                            "tr": 0,
+                            "cl": 0,
+                            "cr": 1,
+                            "bl": 0,
+                            "br": 0,
+                            "minDim": 1,
+                            "bc": 0,
+                            "currentUnit": 1,
+                            "step": 0.2,
+                            "keyWidth": "flex-basis"
+                          },
+                          "classes": [
+                            {
+                              "name": "gjs-cell",
+                              "private": 1
+                            }
+                          ],
+                          "attributes": {
+                            "id": "iehe"
+                          },
+                          "components": [
+                            {
+                              "type": "team",
+                              "classes": [
+                                "team"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "classes": [
+                                    "featured-imagebox",
+                                    "featured-imagebox-team",
+                                    "style1"
+                                  ],
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "base-box-view-overlay"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "featured-thumbnail"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "image",
+                                              "resizable": {
+                                                "ratioDefault": 1
+                                              },
+                                              "classes": [
+                                                "img-fluid"
+                                              ],
+                                              "attributes": {
+                                                "src": "https://placehold.co/450x470",
+                                                "alt": "image"
+                                              }
+                                            },
+                                            {
+                                              "classes": [
+                                                "featured-iconbox",
+                                                "base-media-link"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "classes": [
+                                                    "media-block"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "tagName": "ul",
+                                                      "classes": [
+                                                        "social-icons"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "li",
+                                                          "components": [
+                                                            {
+                                                              "type": "link",
+                                                              "classes": [
+                                                                "tooltip-top"
+                                                              ],
+                                                              "attributes": {
+                                                                "rel": "noopener",
+                                                                "aria-label": "facebook",
+                                                                "data-tooltip": "Facebook",
+                                                                "target": "_blank"
+                                                              },
+                                                              "components": [
+                                                                {
+                                                                  "tagName": "i",
+                                                                  "classes": [
+                                                                    "fa",
+                                                                    "fa-facebook"
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "tagName": "li",
+                                                          "components": [
+                                                            {
+                                                              "type": "link",
+                                                              "classes": [
+                                                                "tooltip-top"
+                                                              ],
+                                                              "attributes": {
+                                                                "rel": "noopener",
+                                                                "aria-label": "twitter",
+                                                                "data-tooltip": "Twitter",
+                                                                "target": "_blank"
+                                                              },
+                                                              "components": [
+                                                                {
+                                                                  "tagName": "i",
+                                                                  "classes": [
+                                                                    "fa",
+                                                                    "fa-twitter"
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "tagName": "li",
+                                                          "components": [
+                                                            {
+                                                              "type": "link",
+                                                              "classes": [
+                                                                "tooltip-top"
+                                                              ],
+                                                              "attributes": {
+                                                                "rel": "noopener",
+                                                                "aria-label": "flickr",
+                                                                "data-tooltip": "Flickr",
+                                                                "target": "_blank"
+                                                              },
+                                                              "components": [
+                                                                {
+                                                                  "tagName": "i",
+                                                                  "classes": [
+                                                                    "fa",
+                                                                    "fa-flickr"
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "tagName": "li",
+                                                          "components": [
+                                                            {
+                                                              "type": "link",
+                                                              "classes": [
+                                                                "tooltip-top"
+                                                              ],
+                                                              "attributes": {
+                                                                "rel": "noopener",
+                                                                "aria-label": "linkedin",
+                                                                "data-tooltip": "Linkedin",
+                                                                "target": "_blank"
+                                                              },
+                                                              "components": [
+                                                                {
+                                                                  "tagName": "i",
+                                                                  "classes": [
+                                                                    "fa",
+                                                                    "fa-linkedin"
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-content"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "featured-title"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "h3",
+                                              "components": [
+                                                {
+                                                  "type": "link",
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "David Smitgh"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "classes": [
+                                            "team-position"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Consultant"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "icon-box4",
+                              "classes": [
+                                "icon-box4"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "classes": [
+                                    "featured-icon-box",
+                                    "icon-align-before-content",
+                                    "icon-align-top"
+                                  ],
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "featured-icon"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "base-icon",
+                                            "base-icon_element-onlytxt",
+                                            "base-icon_element-color-skincolor",
+                                            "base-icon_element-size-md"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "i",
+                                              "classes": [
+                                                "fa",
+                                                "fa-check-square"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-content"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "featured-title"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "h3",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "01. Safety Measures"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "featured-desc"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "p",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "We've reimagined your club experience – from our new touch free club check-in system, distancing\n                  protocols"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "testimonial",
+                              "classes": [
+                                "testimonial"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "classes": [
+                                    "testimonials",
+                                    "base-testimonial-box-view-style3"
+                                  ],
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "testimonial-avatar",
+                                        "sm-mt-20"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "testimonial-img"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "image",
+                                              "resizable": {
+                                                "ratioDefault": 1
+                                              },
+                                              "classes": [
+                                                "img-fluid"
+                                              ],
+                                              "attributes": {
+                                                "src": "https://placehold.co/150x150",
+                                                "alt": "testimonial-img"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "testimonial-content",
+                                        "sm-mb-30"
+                                      ],
+                                      "components": [
+                                        {
+                                          "tagName": "blockquote",
+                                          "type": "text",
+                                          "classes": [
+                                            "testimonial-text"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "We highly recommend Anywhere Gimmer! My husband and I worked out with\n                them at our apartment gym for I worked out with them well over a year."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "testimonial-bottom"
+                                          ],
+                                          "components": [
+                                            {
+                                              "classes": [
+                                                "testimonial-caption"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "tagName": "h5",
+                                                  "type": "text",
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "Joan Thompson"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "label",
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "Athletic Trainers"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "classes": [
+                                                "star-ratings",
+                                                "text-right"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "tagName": "ul",
+                                                  "classes": [
+                                                    "rating"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "tagName": "li",
+                                                      "classes": [
+                                                        "active"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "i",
+                                                          "classes": [
+                                                            "fa",
+                                                            "fa-star"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tagName": "li",
+                                                      "classes": [
+                                                        "active"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "i",
+                                                          "classes": [
+                                                            "fa",
+                                                            "fa-star"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tagName": "li",
+                                                      "classes": [
+                                                        "active"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "i",
+                                                          "classes": [
+                                                            "fa",
+                                                            "fa-star"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tagName": "li",
+                                                      "classes": [
+                                                        "active"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "i",
+                                                          "classes": [
+                                                            "fa",
+                                                            "fa-star"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tagName": "li",
+                                                      "classes": [
+                                                        "active"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "i",
+                                                          "classes": [
+                                                            "fa",
+                                                            "fa-star"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "team",
+                              "classes": [
+                                "team"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "classes": [
+                                    "featured-imagebox",
+                                    "featured-imagebox-team",
+                                    "style1"
+                                  ],
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "base-box-view-overlay"
+                                      ],
+                                      "attributes": {
+                                        "id": "iaiq9p"
+                                      },
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "featured-thumbnail"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "image",
+                                              "resizable": {
+                                                "ratioDefault": 1
+                                              },
+                                              "classes": [
+                                                "img-fluid"
+                                              ],
+                                              "attributes": {
+                                                "src": "https://placehold.co/450x470",
+                                                "alt": "image",
+                                                "id": "i5nx5a"
+                                              },
+                                              "custom-name": "Image"
+                                            },
+                                            {
+                                              "classes": [
+                                                "featured-iconbox",
+                                                "base-media-link"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "classes": [
+                                                    "media-block"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "tagName": "ul",
+                                                      "classes": [
+                                                        "social-icons"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "li",
+                                                          "components": [
+                                                            {
+                                                              "type": "link",
+                                                              "classes": [
+                                                                "tooltip-top"
+                                                              ],
+                                                              "attributes": {
+                                                                "rel": "noopener",
+                                                                "aria-label": "facebook",
+                                                                "data-tooltip": "Facebook",
+                                                                "target": "_blank"
+                                                              },
+                                                              "components": [
+                                                                {
+                                                                  "tagName": "i",
+                                                                  "classes": [
+                                                                    "fa",
+                                                                    "fa-facebook"
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "tagName": "li",
+                                                          "components": [
+                                                            {
+                                                              "type": "link",
+                                                              "classes": [
+                                                                "tooltip-top"
+                                                              ],
+                                                              "attributes": {
+                                                                "rel": "noopener",
+                                                                "aria-label": "twitter",
+                                                                "data-tooltip": "Twitter",
+                                                                "target": "_blank"
+                                                              },
+                                                              "components": [
+                                                                {
+                                                                  "tagName": "i",
+                                                                  "classes": [
+                                                                    "fa",
+                                                                    "fa-twitter"
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "tagName": "li",
+                                                          "components": [
+                                                            {
+                                                              "type": "link",
+                                                              "classes": [
+                                                                "tooltip-top"
+                                                              ],
+                                                              "attributes": {
+                                                                "rel": "noopener",
+                                                                "aria-label": "flickr",
+                                                                "data-tooltip": "Flickr",
+                                                                "target": "_blank"
+                                                              },
+                                                              "components": [
+                                                                {
+                                                                  "tagName": "i",
+                                                                  "classes": [
+                                                                    "fa",
+                                                                    "fa-flickr"
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "tagName": "li",
+                                                          "components": [
+                                                            {
+                                                              "type": "link",
+                                                              "classes": [
+                                                                "tooltip-top"
+                                                              ],
+                                                              "attributes": {
+                                                                "rel": "noopener",
+                                                                "aria-label": "linkedin",
+                                                                "data-tooltip": "Linkedin",
+                                                                "target": "_blank"
+                                                              },
+                                                              "components": [
+                                                                {
+                                                                  "tagName": "i",
+                                                                  "classes": [
+                                                                    "fa",
+                                                                    "fa-linkedin"
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-content"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "featured-title"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "h3",
+                                              "components": [
+                                                {
+                                                  "type": "link",
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "David Smitgh"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "classes": [
+                                            "team-position"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Consultant"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Cell",
+                          "draggable": ".gjs-row",
+                          "stylable-require": [
+                            "flex-basis"
+                          ],
+                          "unstylable": [
+                            "width"
+                          ],
+                          "resizable": {
+                            "tl": 0,
+                            "tc": 0,
+                            "tr": 0,
+                            "cl": 0,
+                            "cr": 1,
+                            "bl": 0,
+                            "br": 0,
+                            "minDim": 1,
+                            "bc": 0,
+                            "currentUnit": 1,
+                            "step": 0.2,
+                            "keyWidth": "flex-basis"
+                          },
+                          "classes": [
+                            {
+                              "name": "gjs-cell",
+                              "private": 1
+                            }
+                          ],
+                          "attributes": {
+                            "id": "ilmv"
+                          },
+                          "components": [
+                            {
+                              "type": "button-link",
+                              "classes": [
+                                "button-link",
+                                "base-btn",
+                                "base-btn-size-md",
+                                "base-btn-shape-square",
+                                "base-btn-style-fill",
+                                "base-btn-color-skincolor",
+                                "z-index-1"
+                              ],
+                              "attributes": {
+                                "href": "javascript:void(0);",
+                                "id": "inoae"
+                              },
+                              "components": [
+                                {
+                                  "tagName": "span",
+                                  "type": "text",
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "VIEW MORE"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tagName": "i",
+                                  "classes": [
+                                    "fa",
+                                    "fa-angle-double-right",
+                                    "ml-10"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "icon-box",
+                              "classes": [
+                                "icon-box"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "classes": [
+                                    "featured-icon-box",
+                                    "icon-align-before-content"
+                                  ],
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "featured-icon"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "base-icon",
+                                            "base-icon_element-onlytxt",
+                                            "base-icon_element-color-skincolor",
+                                            "base-icon_element-size-sm"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "i",
+                                              "classes": [
+                                                "fa",
+                                                "fas",
+                                                "fa-check-square",
+                                                "base-textcolor-skincolor"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-content"
+                                      ],
+                                      "attributes": {
+                                        "id": "iknh5p"
+                                      },
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "featured-title"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "h3",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Comprehensive"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tagName": "p",
+                                              "type": "text",
+                                              "attributes": {
+                                                "id": "iuoxha"
+                                              },
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "A Clear and concise customer correspondence including."
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "icon-box2",
+                              "classes": [
+                                "icon-box2"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "classes": [
+                                    "featured-icon-box",
+                                    "style9"
+                                  ],
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "featured-icon"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "base-icon",
+                                            "base-icon_element-color-skincolor",
+                                            "base-icon_element-size-lg"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "h1",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "02"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-content"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "featured-title"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "h3",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Quality Equipment"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "featured-desc"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "p",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Let’s be honest skipping and running your workout, try to suss when quiet."
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "icon-box3",
+                              "classes": [
+                                "icon-box3"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "classes": [
+                                    "featured-icon-box",
+                                    "style4",
+                                    "icon-align-before-content",
+                                    "icon-ver_align-top"
+                                  ],
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "featured-icon"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "base-icon",
+                                            "base-icon_element-color-skincolor",
+                                            "base-icon_element-size-lg",
+                                            "base-icon_element-style-square"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "i",
+                                              "classes": [
+                                                "fa",
+                                                "fa-check-square"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-content"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "featured-title"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "h4",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Strong people"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tagName": "h3",
+                                              "type": "text",
+                                              "classes": [
+                                                "title"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Self Defence"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "base-horizontal_sep",
+                                        "width-100",
+                                        "mt-30",
+                                        "mb-20"
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-desc"
+                                      ],
+                                      "components": [
+                                        {
+                                          "tagName": "p",
+                                          "type": "text",
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "To strengthen & tone-up your muscles, keep you in shape and posture."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "link",
+                                      "classes": [
+                                        "base-btn",
+                                        "base-btn-size-sm",
+                                        "base-btn-color-darkgrey",
+                                        "btn-inline",
+                                        "base-icon-btn-right",
+                                        "z-index-1"
+                                      ],
+                                      "attributes": {
+                                        "tabindex": "0"
+                                      },
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "READ MORE\n            "
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "base-pricing-plan",
+                              "classes": [
+                                "base-pricing-plan"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "classes": [
+                                    "base-p_table-head"
+                                  ],
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "base-p_table-icon"
                                       ],
                                       "components": [
                                         {
                                           "tagName": "i",
                                           "classes": [
                                             "fa",
-                                            "fa-check-square",
-                                            "base-textcolor-skincolor"
+                                            "fa-check-square"
                                           ]
                                         }
                                       ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "classes": [
-                                    "featured-content"
-                                  ],
-                                  "components": [
+                                    },
                                     {
                                       "classes": [
-                                        "featured-title"
+                                        "base-p_table-title"
                                       ],
                                       "components": [
                                         {
@@ -6328,7 +8484,7 @@
                                           "components": [
                                             {
                                               "type": "textnode",
-                                              "content": "Comprehensive"
+                                              "content": "Standard Plan!"
                                             }
                                           ]
                                         },
@@ -6338,437 +8494,203 @@
                                           "components": [
                                             {
                                               "type": "textnode",
-                                              "content": "A Clear and concise customer correspondence including."
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "widget",
-                              "classes": [
-                                "widget",
-                                "widget_text",
-                                "clearfix"
-                              ],
-                              "attributes": {},
-                              "components": [
-                                {
-                                  "classes": [
-                                    "footer-logo"
-                                  ],
-                                  "components": [
-                                    {
-                                      "type": "image",
-                                      "resizable": {
-                                        "ratioDefault": 1
-                                      },
-                                      "classes": [
-                                        "img-center"
-                                      ],
-                                      "attributes": {
-                                        "id": "footer-logo-img",
-                                        "src": "https://placehold.co/311x92",
-                                        "alt": ""
-                                      }
-                                    }
-                                  ]
-                                },
-                                {
-                                  "classes": [
-                                    "textwidget",
-                                    "widget-text"
-                                  ],
-                                  "components": [
-                                    {
-                                      "tagName": "p",
-                                      "type": "text",
-                                      "classes": [
-                                        "pb-10",
-                                        "pr-30"
-                                      ],
-                                      "components": [
-                                        {
-                                          "type": "textnode",
-                                          "content": "After you decide to start training we will make sure you get the best fitness\n              program."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "classes": [
-                                    "order-3"
-                                  ],
-                                  "components": [
-                                    {
-                                      "classes": [
-                                        "social-icons",
-                                        "square"
-                                      ],
-                                      "components": [
-                                        {
-                                          "tagName": "ul",
-                                          "classes": [
-                                            "social-icons",
-                                            "list-inline"
-                                          ],
-                                          "components": [
-                                            {
-                                              "tagName": "li",
-                                              "components": [
-                                                {
-                                                  "type": "link",
-                                                  "classes": [
-                                                    "tooltip-top"
-                                                  ],
-                                                  "attributes": {
-                                                    "rel": "noopener",
-                                                    "aria-label": "facebook",
-                                                    "data-tooltip": "Facebook",
-                                                    "target": "_blank"
-                                                  },
-                                                  "components": [
-                                                    {
-                                                      "tagName": "i",
-                                                      "classes": [
-                                                        "fa",
-                                                        "fa-facebook"
-                                                      ]
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "tagName": "li",
-                                              "components": [
-                                                {
-                                                  "type": "link",
-                                                  "classes": [
-                                                    "tooltip-top"
-                                                  ],
-                                                  "attributes": {
-                                                    "rel": "noopener",
-                                                    "aria-label": "twitter",
-                                                    "data-tooltip": "Twitter",
-                                                    "target": "_blank"
-                                                  },
-                                                  "components": [
-                                                    {
-                                                      "tagName": "i",
-                                                      "classes": [
-                                                        "fa",
-                                                        "fa-twitter"
-                                                      ]
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "tagName": "li",
-                                              "components": [
-                                                {
-                                                  "type": "link",
-                                                  "classes": [
-                                                    "tooltip-top"
-                                                  ],
-                                                  "attributes": {
-                                                    "rel": "noopener",
-                                                    "aria-label": "flickr",
-                                                    "data-tooltip": "Flickr",
-                                                    "target": "_blank"
-                                                  },
-                                                  "components": [
-                                                    {
-                                                      "tagName": "i",
-                                                      "classes": [
-                                                        "fa",
-                                                        "fa-flickr"
-                                                      ]
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "tagName": "li",
-                                              "components": [
-                                                {
-                                                  "type": "link",
-                                                  "classes": [
-                                                    "tooltip-top"
-                                                  ],
-                                                  "attributes": {
-                                                    "rel": "noopener",
-                                                    "aria-label": "linkedin",
-                                                    "data-tooltip": "Linkedin",
-                                                    "target": "_blank"
-                                                  },
-                                                  "components": [
-                                                    {
-                                                      "tagName": "i",
-                                                      "classes": [
-                                                        "fa",
-                                                        "fa-linkedin"
-                                                      ]
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Cell",
-                          "draggable": ".gjs-row",
-                          "stylable-require": [
-                            "flex-basis"
-                          ],
-                          "unstylable": [
-                            "width"
-                          ],
-                          "resizable": {
-                            "tl": 0,
-                            "tc": 0,
-                            "tr": 0,
-                            "cl": 0,
-                            "cr": 1,
-                            "bl": 0,
-                            "br": 0,
-                            "minDim": 1,
-                            "bc": 0,
-                            "currentUnit": 1,
-                            "step": 0.2,
-                            "keyWidth": "flex-basis"
-                          },
-                          "classes": [
-                            {
-                              "name": "gjs-cell",
-                              "private": 1
-                            }
-                          ],
-                          "attributes": {
-                            "id": "iiq4z"
-                          },
-                          "components": [
-                            {
-                              "type": "team",
-                              "classes": [
-                                "team",
-                                "featured-imagebox-team",
-                                "featured-imagebox",
-                                "style1"
-                              ],
-                              "attributes": {
-                                "id": "igj1s"
-                              },
-                              "components": [
-                                {
-                                  "classes": [
-                                    "base-box-view-overlay"
-                                  ],
-                                  "components": [
-                                    {
-                                      "classes": [
-                                        "featured-thumbnail"
-                                      ],
-                                      "components": [
-                                        {
-                                          "type": "image",
-                                          "resizable": {
-                                            "ratioDefault": 1
-                                          },
-                                          "classes": [
-                                            "img-fluid"
-                                          ],
-                                          "attributes": {
-                                            "src": "https://placehold.co/450x470",
-                                            "alt": "image"
-                                          }
-                                        },
-                                        {
-                                          "classes": [
-                                            "featured-iconbox",
-                                            "base-media-link"
-                                          ],
-                                          "components": [
-                                            {
-                                              "classes": [
-                                                "media-block"
-                                              ],
-                                              "components": [
-                                                {
-                                                  "tagName": "ul",
-                                                  "classes": [
-                                                    "social-icons"
-                                                  ],
-                                                  "components": [
-                                                    {
-                                                      "tagName": "li",
-                                                      "components": [
-                                                        {
-                                                          "type": "link",
-                                                          "classes": [
-                                                            "tooltip-top"
-                                                          ],
-                                                          "attributes": {
-                                                            "rel": "noopener",
-                                                            "aria-label": "facebook",
-                                                            "data-tooltip": "Facebook",
-                                                            "target": "_blank"
-                                                          },
-                                                          "components": [
-                                                            {
-                                                              "tagName": "i",
-                                                              "classes": [
-                                                                "fa",
-                                                                "fa-facebook"
-                                                              ]
-                                                            }
-                                                          ]
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "tagName": "li",
-                                                      "components": [
-                                                        {
-                                                          "type": "link",
-                                                          "classes": [
-                                                            "tooltip-top"
-                                                          ],
-                                                          "attributes": {
-                                                            "rel": "noopener",
-                                                            "aria-label": "twitter",
-                                                            "data-tooltip": "Twitter",
-                                                            "target": "_blank"
-                                                          },
-                                                          "components": [
-                                                            {
-                                                              "tagName": "i",
-                                                              "classes": [
-                                                                "fa",
-                                                                "fa-twitter"
-                                                              ]
-                                                            }
-                                                          ]
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "tagName": "li",
-                                                      "components": [
-                                                        {
-                                                          "type": "link",
-                                                          "classes": [
-                                                            "tooltip-top"
-                                                          ],
-                                                          "attributes": {
-                                                            "rel": "noopener",
-                                                            "aria-label": "flickr",
-                                                            "data-tooltip": "Flickr",
-                                                            "target": "_blank"
-                                                          },
-                                                          "components": [
-                                                            {
-                                                              "tagName": "i",
-                                                              "classes": [
-                                                                "fa",
-                                                                "fa-flickr"
-                                                              ]
-                                                            }
-                                                          ]
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "tagName": "li",
-                                                      "components": [
-                                                        {
-                                                          "type": "link",
-                                                          "classes": [
-                                                            "tooltip-top"
-                                                          ],
-                                                          "attributes": {
-                                                            "rel": "noopener",
-                                                            "aria-label": "linkedin",
-                                                            "data-tooltip": "Linkedin",
-                                                            "target": "_blank"
-                                                          },
-                                                          "components": [
-                                                            {
-                                                              "tagName": "i",
-                                                              "classes": [
-                                                                "fa",
-                                                                "fa-linkedin"
-                                                              ]
-                                                            }
-                                                          ]
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "classes": [
-                                    "featured-content"
-                                  ],
-                                  "attributes": {
-                                    "id": "i4s2y"
-                                  },
-                                  "components": [
-                                    {
-                                      "classes": [
-                                        "featured-title"
-                                      ],
-                                      "components": [
-                                        {
-                                          "tagName": "h3",
-                                          "components": [
-                                            {
-                                              "type": "link",
-                                              "components": [
-                                                {
-                                                  "type": "textnode",
-                                                  "content": "David Smitgh"
-                                                }
-                                              ]
+                                              "content": "Salary Level Up To $50k"
                                             }
                                           ]
                                         }
                                       ]
                                     },
                                     {
+                                      "classes": [
+                                        "base-p_table-box-desc"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tagName": "ul",
+                                  "classes": [
+                                    "base-list",
+                                    "base-list-style-icon",
+                                    "base-list-icon-color-darkgrey",
+                                    "pt-15",
+                                    "pb-15"
+                                  ],
+                                  "components": [
+                                    {
+                                      "tagName": "li",
+                                      "components": [
+                                        {
+                                          "tagName": "i",
+                                          "classes": [
+                                            "fa",
+                                            "fa-long-arrow-right"
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "span",
+                                          "type": "text",
+                                          "classes": [
+                                            "base-list-li-content",
+                                            "text-left"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Unique concept fitness & technology"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tagName": "li",
+                                      "components": [
+                                        {
+                                          "tagName": "i",
+                                          "classes": [
+                                            "fa",
+                                            "fa-long-arrow-right"
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "span",
+                                          "type": "text",
+                                          "classes": [
+                                            "base-list-li-content",
+                                            "text-left"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Gym franchises & awarded in worlds"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tagName": "li",
+                                      "components": [
+                                        {
+                                          "tagName": "i",
+                                          "classes": [
+                                            "fa",
+                                            "fa-long-arrow-right"
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "span",
+                                          "type": "text",
+                                          "classes": [
+                                            "base-list-li-content",
+                                            "text-left"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Gym run by Certified & professionals"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tagName": "li",
+                                      "components": [
+                                        {
+                                          "tagName": "i",
+                                          "classes": [
+                                            "fa",
+                                            "fa-long-arrow-right",
+                                            "text-left"
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "span",
+                                          "type": "text",
+                                          "classes": [
+                                            "base-list-li-content"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "We are running successfully 20 years"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "classes": [
+                                    "base-p_table-amount"
+                                  ],
+                                  "components": [
+                                    {
+                                      "tagName": "span",
                                       "type": "text",
                                       "classes": [
-                                        "team-position"
+                                        "cur_symbol"
                                       ],
                                       "components": [
                                         {
                                           "type": "textnode",
-                                          "content": "Consultant"
+                                          "content": "$"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tagName": "span",
+                                      "type": "text",
+                                      "classes": [
+                                        "base-ptablebox-price"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "99"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tagName": "span",
+                                      "type": "text",
+                                      "classes": [
+                                        "pac_frequency"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "/Per Month"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "classes": [
+                                    "base-p_table-footer"
+                                  ],
+                                  "components": [
+                                    {
+                                      "type": "link",
+                                      "classes": [
+                                        "base-btn",
+                                        "base-btn-size-md",
+                                        "base-btn-shape-square",
+                                        "base-btn-style-fill",
+                                        "base-icon-btn-right",
+                                        "base-btn-color-skincolor",
+                                        "text-center",
+                                        "mt-30",
+                                        "z-index-1"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "GET STARTED"
                                         }
                                       ]
                                     }
@@ -6791,8 +8713,8 @@
         ]
       },
       "pagesHtml": {
-        "html": "<body id=\"i33v\"><div class=\"section-title\"><div class=\"title-header\"><h4 id=\"i17v\">LATEST BLOG POST!\n      </h4><h2 id=\"igvi\" class=\"title\">What’s Happening Around Gym!\n      </h2></div></div><div id=\"i9wni\" class=\"gjs-row\"><div class=\"gjs-cell\"></div><div class=\"gjs-cell\"></div><div id=\"i201h\" class=\"gjs-cell\"><a href=\"javascript:void(0);\" class=\"button-link\"><span class=\"button-content-wrapper\"><span class=\"button-icon align-icon-right\"><i aria-hidden=\"true\" class=\"fa fas fa-angle-double-right\"></i></span><span class=\"button-text\">view more</span></span></a><div class=\"featured-icon-box icon-align-before-content\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-sm\"><i class=\"fa fa-check-square base-textcolor-skincolor\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3>Comprehensive</h3><p>A Clear and concise customer correspondence including.</p></div></div></div><div class=\"widget widget_text clearfix\"><div class=\"footer-logo\"><img id=\"footer-logo-img\" src=\"https://placehold.co/311x92\" alt=\"\" class=\"img-center\"/></div><div class=\"textwidget widget-text\"><p class=\"pb-10 pr-30\">After you decide to start training we will make sure you get the best fitness\n              program.</p></div><div class=\"order-3\"><div class=\"social-icons square\"><ul class=\"social-icons list-inline\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-facebook\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-twitter\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-flickr\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-linkedin\"></i></a></li></ul></div></div></div></div><div id=\"iiq4z\" class=\"gjs-cell\"><div id=\"igj1s\" class=\"team featured-imagebox-team featured-imagebox style1\"><div class=\"base-box-view-overlay\"><div class=\"featured-thumbnail\"><img src=\"https://placehold.co/450x470\" alt=\"image\" class=\"img-fluid\"/><div class=\"featured-iconbox base-media-link\"><div class=\"media-block\"><ul class=\"social-icons\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-facebook\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-twitter\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-flickr\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-linkedin\"></i></a></li></ul></div></div></div></div><div id=\"i4s2y\" class=\"featured-content\"><div class=\"featured-title\"><h3><a>David Smitgh</a></h3></div><div class=\"team-position\">Consultant</div></div></div></div></div></body>",
-        "css": "* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}.gjs-row{display:flex;justify-content:flex-start;align-items:stretch;flex-wrap:nowrap;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;}.gjs-cell{min-height:75px;flex-grow:1;flex-basis:100%;}@media (max-width: 768px){.gjs-row{flex-wrap:wrap;}}"
+        "html": "<body id=\"i33v\"><div id=\"i1uz\" class=\"gjs-row\"><div id=\"ijai\" class=\"gjs-cell\"><div class=\"section-title\"><div class=\"title-header\"><h4>LATEST BLOG POST!</h4><h2 class=\"title\">What’s Happening Around Gym!</h2></div></div><div class=\"widget-menu\"><div id=\"i08l\" class=\"widget widget_nav_menu clearfix\"><h3 id=\"ih3f\" class=\"widget-title\">Information</h3><ul id=\"menu-footer-quick-links\" class=\"menu\"><li><a>About Us</a></li><li><a>Privacy Policy</a></li><li><a>Pricing Plans</a></li><li><a>Courses</a></li><li><a>Weight Loss</a></li><li><a>Clients</a></li><li><a>Customers</a></li><li><a>Our Trainers</a></li><li><a>Diet Chart</a></li></ul></div></div><div id=\"iq0zze\" class=\"progress-section\"><div data-percent=\"80%\" class=\"base-progress-bar clearfix\"><div class=\"progressbar-title\">Weight Lifting</div><div id=\"in9wtp\" class=\"progress-bar-inner\"><div id=\"i1xfzw\" class=\"progress-bar progress-bar-color-bar_skincolor\"></div></div><div data-percentage=\"95\" id=\"ivzn0k\" class=\"progress-bar-percent\">50%</div></div><div data-percent=\"90%\" class=\"base-progress-bar clearfix\"><div class=\"progressbar-title\">General Boxing</div><div class=\"progress-bar-inner\"><div id=\"i0nwsw\" class=\"progress-bar progress-bar-color-bar_skincolor\"></div></div><div data-percentage=\"90\" class=\"progress-bar-percent\">90%</div></div><div data-percent=\"70%\" class=\"base-progress-bar clearfix\"><div class=\"progressbar-title\">Body Building</div><div class=\"progress-bar-inner\"><div id=\"ipf71f\" class=\"progress-bar progress-bar-color-bar_skincolor\"></div></div><div data-percentage=\"70\" class=\"progress-bar-percent\">70%</div></div></div><div class=\"icon-list\"><ul class=\"base-list base-list-style-icon base-list-icon-color-skincolor\"><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">2,000+ locations open (and we're just getting started!)</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">Unique concept that combines fitness and technology</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">We have small studios designed for the large groups</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">1800+ franchises awarded in 30 countries worldwide</div></li></ul></div><div id=\"ih4ice\" class=\"steps-box\"><div id=\"ihj0jg\" class=\"base-static-box-wrapper base-steps-box steps-style1\"><div class=\"base-static-box-content\"><div class=\"base-steps-desc\"><h3><span class=\"base-static-steps-num\">01.</span>Membership Cards</h3><p>Discount on services and treatments at the Gimmer for all membership cards holders for allocate time.\n                </p></div></div></div></div><div id=\"i4dhac\" class=\"steps-box\"><div id=\"ir4gzg\" class=\"base-static-box-wrapper base-steps-box steps-style1\"><div class=\"base-static-box-content\"><div class=\"base-steps-desc\"><h3><span class=\"base-static-steps-num\">01.</span>Membership Cards</h3><p>Discount on services and treatments at the Gimmer for all membership cards holders for allocate time.\n                </p></div></div></div></div></div><div id=\"i2e7\" class=\"gjs-cell\"><div class=\"widget-text\"><div class=\"widget widget_text clearfix\"><div class=\"footer-logo\"><img id=\"footer-logo-img\" src=\"https://placehold.co/311x92\" alt=\"\" class=\"img-center\"/></div><div class=\"textwidget widget-text\"><p class=\"pb-10 pr-30\">After you decide to start training we will make sure you get the best fitness\n                program.</p></div><div class=\"order-3\"><div class=\"social-icons square\"><ul class=\"social-icons list-inline\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-facebook\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-twitter\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-flickr\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-linkedin\"></i></a></li></ul></div></div></div></div><div class=\"icon-box5\"><div class=\"featured-icon-box left-icon icon-align-top style11 base-bgcolor-white\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-lg\"><i class=\"fa fa-angle-double-right\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title pb-15\"><h2 class=\"title\">653</h2></div></div><div class=\"featured-desc\">Best Abs Ever, and more in the club with room to move for safety or on-demand on the\n              Gimmer app.</div><a tabindex=\"0\" class=\"base-btn btn-inline base-btn-size-md base-btn-color-skincolor mt-15\">VIEW MORE<i class=\"fa fa-angle-double-right ml-10\"></i></a></div></div><div class=\"imagebox-services\"><div class=\"featured-imagebox featured-imagebox-services style1\"><!-- featured-thumbnail --><div class=\"featured-thumbnail\"><a tabindex=\"0\"><img width=\"742\" height=\"618\" src=\"https://placehold.co/742x618\" alt=\"image\" class=\"img-fluid\"/></a><div class=\"base-blog-overlay-iconbox\" id=\"iyjyog\"><a tabindex=\"0\"><i class=\"ti ti-plus\"></i></a></div><div class=\"cat_block-wrapper\"><span class=\"cat_block\"><time datetime=\"2020-11-11T04:34:34+00:00\" class=\"entry-date published\">CARDIO</time></span></div></div><!-- featured-thumbnail end--><div class=\"featured-content featured-content-post\"><div class=\"featured-title\"><h3><a tabindex=\"0\">Fitness For Man</a></h3></div><div class=\"featured-desc\"><p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p></div><a tabindex=\"0\" class=\"base-btn btn-inline base-btn-size-md base-btn-color-darkgrey z-index-1\">Read More</a><div class=\"base-boxbg-icon\"><div class=\"base-service-iconbox\"><div class=\"base-icon base-icon_element-color-skincolor base-icon_element-size-md base-icon_element-style-rounded\"><i class=\"fa fa-check-square-o\"></i></div></div></div></div></div></div></div><div id=\"iehe\" class=\"gjs-cell\"><div class=\"team\"><div class=\"featured-imagebox featured-imagebox-team style1\"><div class=\"base-box-view-overlay\"><div class=\"featured-thumbnail\"><img src=\"https://placehold.co/450x470\" alt=\"image\" class=\"img-fluid\"/><div class=\"featured-iconbox base-media-link\"><div class=\"media-block\"><ul class=\"social-icons\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-facebook\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-twitter\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-flickr\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-linkedin\"></i></a></li></ul></div></div></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3><a>David Smitgh</a></h3></div><div class=\"team-position\">Consultant</div></div></div></div><div class=\"icon-box4\"><div class=\"featured-icon-box icon-align-before-content icon-align-top\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-md\"><i class=\"fa fa-check-square\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3>01. Safety Measures</h3></div><div class=\"featured-desc\"><p>We've reimagined your club experience – from our new touch free club check-in system, distancing\n                  protocols</p></div></div></div></div><div class=\"testimonial\"><div class=\"testimonials base-testimonial-box-view-style3\"><div class=\"testimonial-avatar sm-mt-20\"><div class=\"testimonial-img\"><img src=\"https://placehold.co/150x150\" alt=\"testimonial-img\" class=\"img-fluid\"/></div></div><div class=\"testimonial-content sm-mb-30\"><blockquote class=\"testimonial-text\">We highly recommend Anywhere Gimmer! My husband and I worked out with\n                them at our apartment gym for I worked out with them well over a year.</blockquote><div class=\"testimonial-bottom\"><div class=\"testimonial-caption\"><h5>Joan Thompson</h5><label>Athletic Trainers</label></div><div class=\"star-ratings text-right\"><ul class=\"rating\"><li class=\"active\"><i class=\"fa fa-star\"></i></li><li class=\"active\"><i class=\"fa fa-star\"></i></li><li class=\"active\"><i class=\"fa fa-star\"></i></li><li class=\"active\"><i class=\"fa fa-star\"></i></li><li class=\"active\"><i class=\"fa fa-star\"></i></li></ul></div></div></div></div></div><div class=\"team\"><div class=\"featured-imagebox featured-imagebox-team style1\"><div class=\"base-box-view-overlay\" id=\"iaiq9p\"><div class=\"featured-thumbnail\"><img src=\"https://placehold.co/450x470\" alt=\"image\" class=\"img-fluid\" id=\"i5nx5a\"/><div class=\"featured-iconbox base-media-link\"><div class=\"media-block\"><ul class=\"social-icons\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-facebook\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-twitter\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-flickr\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-linkedin\"></i></a></li></ul></div></div></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3><a>David Smitgh</a></h3></div><div class=\"team-position\">Consultant</div></div></div></div></div><div id=\"ilmv\" class=\"gjs-cell\"><a href=\"javascript:void(0);\" id=\"inoae\" class=\"button-link base-btn base-btn-size-md base-btn-shape-square base-btn-style-fill base-btn-color-skincolor z-index-1\"><span>VIEW MORE</span><i class=\"fa fa-angle-double-right ml-10\"></i></a><div class=\"icon-box\"><div class=\"featured-icon-box icon-align-before-content\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-sm\"><i class=\"fa fas fa-check-square base-textcolor-skincolor\"></i></div></div><div class=\"featured-content\" id=\"iknh5p\"><div class=\"featured-title\"><h3>Comprehensive</h3><p id=\"iuoxha\">A Clear and concise customer correspondence including.</p></div></div></div></div><div class=\"icon-box2\"><div class=\"featured-icon-box style9\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-color-skincolor base-icon_element-size-lg\"><h1>02</h1></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3>Quality Equipment</h3></div><div class=\"featured-desc\"><p>Let’s be honest skipping and running your workout, try to suss when quiet.</p></div></div></div></div><div class=\"icon-box3\"><div class=\"featured-icon-box style4 icon-align-before-content icon-ver_align-top\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-color-skincolor base-icon_element-size-lg base-icon_element-style-square\"><i class=\"fa fa-check-square\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h4>Strong people</h4><h3 class=\"title\">Self Defence</h3></div></div><div class=\"base-horizontal_sep width-100 mt-30 mb-20\"></div><div class=\"featured-desc\"><p>To strengthen &amp; tone-up your muscles, keep you in shape and posture.</p></div><a tabindex=\"0\" class=\"base-btn base-btn-size-sm base-btn-color-darkgrey btn-inline base-icon-btn-right z-index-1\">READ MORE\n            </a></div></div><div class=\"base-pricing-plan\"><div class=\"base-p_table-head\"><div class=\"base-p_table-icon\"><i class=\"fa fa-check-square\"></i></div><div class=\"base-p_table-title\"><h3>Standard Plan!</h3><p>Salary Level Up To $50k</p></div><div class=\"base-p_table-box-desc\"></div></div><ul class=\"base-list base-list-style-icon base-list-icon-color-darkgrey pt-15 pb-15\"><li><i class=\"fa fa-long-arrow-right\"></i><span class=\"base-list-li-content text-left\">Unique concept fitness &amp; technology</span></li><li><i class=\"fa fa-long-arrow-right\"></i><span class=\"base-list-li-content text-left\">Gym franchises &amp; awarded in worlds</span></li><li><i class=\"fa fa-long-arrow-right\"></i><span class=\"base-list-li-content text-left\">Gym run by Certified &amp; professionals</span></li><li><i class=\"fa fa-long-arrow-right text-left\"></i><span class=\"base-list-li-content\">We are running successfully 20 years</span></li></ul><div class=\"base-p_table-amount\"><span class=\"cur_symbol\">$</span><span class=\"base-ptablebox-price\">99</span><span class=\"pac_frequency\">/Per Month</span></div><div class=\"base-p_table-footer\"><a class=\"base-btn base-btn-size-md base-btn-shape-square base-btn-style-fill base-icon-btn-right base-btn-color-skincolor text-center mt-30 z-index-1\">GET STARTED</a></div></div></div></div></body>",
+        "css": "* { box-sizing: border-box; } body {margin: 0;}.gjs-row{display:flex;justify-content:flex-start;align-items:stretch;flex-wrap:nowrap;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;}.gjs-cell{min-height:75px;flex-grow:1;flex-basis:100%;}#ijai{padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;}#i08l{margin-top:10px;margin-bottom:10px;margin-right:10px;margin-left:10px;}#i1xfzw{width:50%;}#i0nwsw{width:90%;}#ipf71f{width:70%;}@media (max-width: 768px){.gjs-row{flex-wrap:wrap;}}"
       }
     }
   ]

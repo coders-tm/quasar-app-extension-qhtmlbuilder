@@ -20,43 +20,43 @@ export default (editor, options = {}) => {
       defaults: {
         ...defaultType.model.prototype.defaults,
         'custom-name': componentName,
-        attributes: {
-          class: type + ' featured-imagebox-team featured-imagebox style1'
-        },
+        attributes: { class: type },
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
-          <div class="base-box-view-overlay">
-            <div class="featured-thumbnail">
-              <img class="img-fluid" src="https://placehold.co/450x470" alt="image">
-              <div class="featured-iconbox base-media-link">
-                <div class="media-block">
-                  <ul class="social-icons">
-                    <li>
-                      <a class="tooltip-top" href="javascript:void(0);" rel="noopener" aria-label="facebook"
-                        data-tooltip="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                      <a class="tooltip-top" href="javascript:void(0);" rel="noopener" aria-label="twitter"
-                        data-tooltip="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a class="tooltip-top" href="javascript:void(0);" rel="noopener" aria-label="flickr"
-                        data-tooltip="Flickr" target="_blank"><i class="fa fa-flickr"></i></a>
-                    </li>
-                    <li>
-                      <a class="tooltip-top" href="javascript:void(0);" rel="noopener" aria-label="linkedin"
-                        data-tooltip="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
-                    </li>
-                  </ul>
+          <div class="featured-imagebox featured-imagebox-team style1">
+            <div class="base-box-view-overlay">
+              <div class="featured-thumbnail">
+                <img class="img-fluid" src="https://placehold.co/450x470" alt="image">
+                <div class="featured-iconbox base-media-link">
+                  <div class="media-block">
+                    <ul class="social-icons">
+                      <li>
+                        <a class="tooltip-top" href="javascript:void(0);" rel="noopener" aria-label="facebook"
+                          data-tooltip="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                      </li>
+                      <li>
+                        <a class="tooltip-top" href="javascript:void(0);" rel="noopener" aria-label="twitter"
+                          data-tooltip="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                      </li>
+                      <li>
+                        <a class="tooltip-top" href="javascript:void(0);" rel="noopener" aria-label="flickr"
+                          data-tooltip="Flickr" target="_blank"><i class="fa fa-flickr"></i></a>
+                      </li>
+                      <li>
+                        <a class="tooltip-top" href="javascript:void(0);" rel="noopener" aria-label="linkedin"
+                          data-tooltip="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="featured-content">
-            <div class="featured-title">
-              <h3><a href="javascript:void(0);">David Smitgh</a></h3>
+            <div class="featured-content">
+              <div class="featured-title">
+                <h3><a href="javascript:void(0);">David Smitgh</a></h3>
+              </div>
+              <div class="team-position">Consultant</div>
             </div>
-            <div class="team-position">Consultant</div>
           </div>
         `
       }
@@ -67,7 +67,7 @@ export default (editor, options = {}) => {
   Blocks.add(`${type}-block`, {
     label: componentName,
     media:
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 64C0 46.3 14.3 32 32 32H80h48c17.7 0 32 14.3 32 32s-14.3 32-32 32H112V208H336V96H320c-17.7 0-32-14.3-32-32s14.3-32 32-32h48 48c17.7 0 32 14.3 32 32s-14.3 32-32 32H400V240 416h16c17.7 0 32 14.3 32 32s-14.3 32-32 32H368 320c-17.7 0-32-14.3-32-32s14.3-32 32-32h16V272H112V416h16c17.7 0 32 14.3 32 32s-14.3 32-32 32H80 32c-17.7 0-32-14.3-32-32s14.3-32 32-32H48V240 96H32C14.3 96 0 81.7 0 64z"/></svg>',
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>',
     content: { type: type },
     category: category
   })
