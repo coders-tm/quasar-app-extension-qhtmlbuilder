@@ -22,7 +22,9 @@ export default (editor, options = {}) => {
         tag: 'a',
         'custom-name': componentName,
         attributes: {
-          class: type,
+          class:
+            type +
+            ' base-btn base-btn-size-md base-btn-shape-square base-btn-style-fill base-btn-color-skincolor z-index-1',
           href: 'javascript:void(0);'
         },
         traits: [...defaultType.model.prototype.defaults.traits],
