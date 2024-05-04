@@ -1,12 +1,6 @@
 <template>
   <q-page>
-    <QHtmlBuilder
-      @load="onLoad"
-      @store="onStore"
-      @delete="onDelete"
-      ref="editor"
-      :config="config"
-    />
+    <QHtmlBuilder ref="editor" :config="config" :remote="remote" />
   </q-page>
 </template>
 
@@ -29,6 +23,7 @@ const loadTemplates = (type) => {
       })
   })
 }
+
 const loadData = (id) => {
   return new Promise((resolve, reject) => {
     axios
@@ -70,31 +65,6 @@ const deleteData = (id) => {
   })
 }
 
-const config = {
-  height: 'calc(100vh - 50px)',
-  storageManager: {
-    type: 'remote',
-    options: {
-      remote: {
-        onStore: (data, editor) => {
-          const pagesHtml = {
-            html: editor.getHtml(),
-            css: editor.getCss()
-          }
-          return { id: 1, data, pagesHtml }
-        },
-        onLoad: (result) => result.data
-      }
-    }
-  },
-  canvas: {
-    styles: [
-      'https://cdn.coderstm.com/fontawesome/css/all.min.css',
-      'https://cdn.coderstm.com/css/styles.min.css'
-    ]
-  }
-}
-
 async function onLoad(payload) {
   return loadTemplates(payload)
 }
@@ -119,15 +89,50 @@ function onDelete(payload) {
     })
 }
 
-onMounted(() => {
-  editor.value.addRemote({
-    async load() {
-      return await loadData(1)
-    },
+const remote = {
+  async load() {
+    return await loadData(1)
+  },
+  async store(data) {
+    return await storeData(1, data)
+  }
+}
 
-    async store(data) {
-      return await storeData(1, data)
+const config = {
+  height: 'calc(100vh - 50px)',
+  storageManager: {
+    type: 'remote',
+    options: {
+      remote: {
+        onStore: (data, editor) => {
+          const pagesHtml = {
+            html: editor.getHtml(),
+            css: editor.getCss()
+          }
+          return { id: 1, data, pagesHtml }
+        },
+        onLoad: (result) => result.data
+      }
     }
-  })
-})
+  },
+  canvas: {
+    styles: [
+      'https://cdn.coderstm.com/fontawesome/css/all.min.css',
+      'https://cdn.coderstm.com/css/styles.min.css'
+    ]
+  },
+  pluginsOpts: {
+    templates: {
+      onLoad,
+      onStore,
+      onDelete
+    },
+    base: {
+      headers: [
+        { id: 'classic', label: 'Classic' },
+        { id: 'overlay', label: 'Overlay' }
+      ]
+    }
+  }
+}
 </script>

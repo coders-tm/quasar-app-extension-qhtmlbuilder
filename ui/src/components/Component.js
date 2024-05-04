@@ -35,9 +35,7 @@ export default {
   props: {
     config: Object, // Configuration options for GrapesJS
     pages: Array,
-    onLoad: Function,
-    onStore: Function,
-    onDelete: Function
+    remote: Object
   },
   setup(props, { attrs, expose, emit }) {
     const editorRef = ref(null)
@@ -102,14 +100,14 @@ export default {
               return editor.getHtml() + '<style>' + editor.getCss() + '</style>'
             }
           },
-          [templates]: {
-            onLoad: props.onLoad,
-            onStore: props.onStore,
-            onDelete: props.onDelete
-          },
-          [plugins]: {}
+          [templates]: { ...props.config?.pluginsOpts?.templates },
+          [plugins]: { ...props.config?.pluginsOpts?.base }
         }
       })
+
+      if (props.remote) {
+        addRemote(props.remote)
+      }
 
       Pages = editor.Pages
 
