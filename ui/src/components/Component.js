@@ -1,5 +1,5 @@
 import { styleManager } from './config'
-import { h, ref, onMounted, onBeforeUnmount, computed } from 'vue'
+import { h, ref, onMounted, onBeforeUnmount } from 'vue'
 import { Dialog } from 'quasar'
 import grapesjs from 'grapesjs'
 import webpage from 'grapesjs-preset-webpage'
@@ -100,8 +100,8 @@ export default {
               return editor.getHtml() + '<style>' + editor.getCss() + '</style>'
             }
           },
-          [templates]: { ...templatesPlugin.value },
-          [plugins]: { ...basePlugin.value }
+          [templates]: { ...pluginOptions('templates') },
+          [plugins]: { ...pluginOptions('base') }
         }
       })
 
@@ -174,18 +174,13 @@ export default {
       })
     }
 
-    const basePlugin = computed(() =>
-      props.config && props.config.pluginsOpts && props.config.pluginsOpts.base
-        ? props.config.pluginsOpts.base
-        : {}
-    )
-    const templatesPlugin = computed(() =>
-      props.config &&
-      props.config.pluginsOpts &&
-      props.config.pluginsOpts.templates
-        ? props.config.pluginsOpts.templates
-        : {}
-    )
+    function pluginOptions(key) {
+      try {
+        return props.config.pluginsOpts[base]
+      } catch (error) {
+        return {}
+      }
+    }
 
     expose({
       editor,
