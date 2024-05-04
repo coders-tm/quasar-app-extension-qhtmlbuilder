@@ -1,3 +1,7 @@
+import footer from './footer'
+import header from './header'
+
 export default (editor, options = {}) => {
-  const { Blocks } = editor
+  header(editor, options)
+  footer(editor, options)
 }
