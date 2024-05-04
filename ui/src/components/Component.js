@@ -176,7 +176,7 @@ export default {
 
     function pluginOptions(key) {
       try {
-        return props.config.pluginsOpts[base]
+        return props.config.pluginsOpts[key]
       } catch (error) {
         return {}
       }
