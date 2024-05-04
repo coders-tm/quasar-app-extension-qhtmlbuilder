@@ -36,19 +36,19 @@ export default (editor, options = {}) => {
                 <ul class="social-icons list-inline">
                   <li>
                     <a class="tooltip-top" href="javascript:void(0);" rel="noopener" aria-label="facebook"
-                      data-tooltip="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                      data-tooltip="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
                   </li>
                   <li>
                     <a class="tooltip-top" href="javascript:void(0);" rel="noopener" aria-label="twitter" data-tooltip="Twitter"
-                      target="_blank"><i class="fa fa-twitter"></i></a>
+                      target="_blank"><i class="fab fa-twitter"></i></a>
                   </li>
                   <li>
                     <a class="tooltip-top" href="javascript:void(0);" rel="noopener" aria-label="flickr" data-tooltip="Flickr"
-                      target="_blank"><i class="fa fa-flickr"></i></a>
+                      target="_blank"><i class="fab fa-flickr"></i></a>
                   </li>
                   <li>
                     <a class="tooltip-top" href="javascript:void(0);" rel="noopener" aria-label="linkedin"
-                      data-tooltip="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+                      data-tooltip="Linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
                   </li>
                 </ul>
               </div>
