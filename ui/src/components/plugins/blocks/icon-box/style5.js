@@ -36,7 +36,7 @@ export default (editor, options = {}) => {
             </div>
             <div class="featured-desc">Best Abs Ever, and more in the club with room to move for safety or on-demand on the
               Gimmer app.</div>
-            <a class="base-btn btn-inline base-btn-size-md base-btn-color-skincolor mt-15" href="javascript:void(0);"
+            <a class="base-btn btn-inline base-btn-md base-btn-primary mt-15" href="javascript:void(0);"
               tabindex="0">VIEW MORE<i class="fa fa-angle-double-right ml-10"></i></a>
           </div>
         `

@@ -15,7 +15,6 @@ import planCard from './plan-card'
 export default (editor, options = {}) => {
   icon(editor, options)
   sectionTitle(editor, options)
-  iconBox(editor, options)
   buttonLink(editor, options)
   team(editor, options)
   widget(editor, options)
@@ -26,4 +25,5 @@ export default (editor, options = {}) => {
   stepsBox(editor, options)
   testimonial(editor, options)
   planCard(editor, options)
+  iconBox(editor, options)
 }

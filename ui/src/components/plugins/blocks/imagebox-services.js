@@ -47,7 +47,7 @@ export default (editor, options = {}) => {
               <div class="featured-desc">
                 <p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p>
               </div>
-              <a class="base-btn btn-inline base-btn-size-md base-btn-color-darkgrey z-index-1" href="javascript:void(0);"
+              <a class="base-btn btn-inline base-btn-md base-btn-color-darkgrey z-index-1" href="javascript:void(0);"
                 tabindex="0">Read More</a>
               <div class="base-boxbg-icon">
                 <div class="base-service-iconbox">

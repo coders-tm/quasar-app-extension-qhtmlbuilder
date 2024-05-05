@@ -24,7 +24,7 @@ export default (editor, options = {}) => {
         attributes: {
           class:
             type +
-            ' base-btn base-btn-size-md base-btn-shape-square base-btn-style-fill base-btn-color-skincolor z-index-1',
+            ' base-btn base-btn-md base-btn-square base-btn-fill base-btn-primary z-index-1',
           href: 'javascript:void(0);'
         },
         traits: [...defaultType.model.prototype.defaults.traits],

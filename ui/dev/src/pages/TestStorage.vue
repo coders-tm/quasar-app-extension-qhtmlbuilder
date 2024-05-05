@@ -118,7 +118,7 @@ const config = {
   canvas: {
     styles: [
       'https://cdn.coderstm.com/fontawesome/css/all.min.css',
-      'https://cdn.coderstm.com/css/styles.min.css'
+      'https://cdn.coderstm.com/gimmer/css/styles.min.css'
     ]
   },
   pluginsOpts: {

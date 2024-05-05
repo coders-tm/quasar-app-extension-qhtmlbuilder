@@ -39,7 +39,7 @@ export default (editor, options = {}) => {
             <div class="featured-desc">
               <p>To strengthen &amp; tone-up your muscles, keep you in shape and posture.</p>
             </div>
-            <a class="base-btn base-btn-size-sm base-btn-color-darkgrey btn-inline base-icon-btn-right z-index-1"
+            <a class="base-btn base-btn-size-sm base-btn-color-darkgrey btn-inline base-btn-icon-right z-index-1"
               href="javascript:void(0);" tabindex="0">READ MORE
             </a>
           </div>
