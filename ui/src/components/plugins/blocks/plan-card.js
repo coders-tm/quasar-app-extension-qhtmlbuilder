@@ -57,7 +57,7 @@ export default (editor, options = {}) => {
             <span class="pac_frequency">/Per Month</span>
           </div>
           <div class="ct-plan-footer">
-            <a class="ct-btn btn--md btn--square btn--fill btn--icon-right btn--primary text-center mt-30 z-index-1"
+            <a class="btn btn--md btn--square btn--fill btn--icon-right btn--primary text-center mt-30 z-index-1"
               href="javascript:void(0);">GET STARTED</a>
           </div>
         `

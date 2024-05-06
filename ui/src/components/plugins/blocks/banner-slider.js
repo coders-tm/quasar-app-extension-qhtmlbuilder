@@ -47,7 +47,7 @@ export default (editor, options = {}) => {
                         </h2>
                         <div class="mt-30 align-items-center xs--mt-20" data-animation="fadeInUp text-md-left text-center"
                           data-delay="1.4">
-                          <a class="ct-btn btn--md btn--square btn--fill btn--icon-right btn--primary"
+                          <a class="btn btn--md btn--square btn--fill btn--icon-right btn--primary"
                             href="javascript:void(0);">GET STARTED</a>
                         </div>
                       </div>
@@ -81,7 +81,7 @@ export default (editor, options = {}) => {
                         </h2>
                         <div class="mt-30 align-items-center xs--mt-20 text-md-left text-center" data-animation="fadeInUp"
                           data-delay="1.4">
-                          <a class="ct-btn btn--md btn--square btn--fill btn--icon-right btn--primary"
+                          <a class="btn btn--md btn--square btn--fill btn--icon-right btn--primary"
                             href="javascript:void(0);">CONTACT US</a>
                         </div>
                       </div>

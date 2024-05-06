@@ -23,8 +23,7 @@ export default (editor, options = {}) => {
         'custom-name': componentName,
         attributes: {
           class:
-            type +
-            ' ct-btn btn--md btn--square btn--fill btn--primary z-index-1',
+            type + ' btn btn--md btn--square btn--fill btn--primary z-index-1',
           href: 'javascript:void(0);'
         },
         traits: [...defaultType.model.prototype.defaults.traits],
