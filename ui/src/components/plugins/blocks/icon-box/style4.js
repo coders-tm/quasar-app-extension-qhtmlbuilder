@@ -25,7 +25,7 @@ export default (editor, options = {}) => {
         components: `
           <div class="featured-icon-box icon-align-before-content icon-align-top">
             <div class="featured-icon">
-              <div class="base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-md">
+              <div class="ct-icon ct-icon--onlytxt ct-icon--primary ct-icon--md">
                 <i class="fa fa-check-square"></i>
               </div>
             </div>

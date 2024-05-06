@@ -25,7 +25,7 @@ export default (editor, options = {}) => {
         components: `
           <div class="featured-icon-box style4 icon-align-before-content icon-ver_align-top">
             <div class="featured-icon">
-              <div class="base-icon base-icon_element-color-skincolor base-icon_element-size-lg base-icon_element-style-square">
+              <div class="ct-icon ct-icon--primary ct-icon--lg ct-icon--style-square">
                 <i class="fa fa-check-square"></i>
               </div>
             </div>
@@ -35,11 +35,11 @@ export default (editor, options = {}) => {
                 <h3 class="title">Self Defence</h3>
               </div>
             </div>
-            <div class="base-horizontal_sep width-100 mt-30 mb-20"></div>
+            <div class="ct-horizontal_sep width-100 mt-30 mb-20"></div>
             <div class="featured-desc">
               <p>To strengthen &amp; tone-up your muscles, keep you in shape and posture.</p>
             </div>
-            <a class="base-btn base-btn-size-sm base-btn-color-darkgrey btn-inline base-btn-icon-right z-index-1"
+            <a class="ct-btn btn--sm btn--color-darkgrey btn-inline btn--icon-right z-index-1"
               href="javascript:void(0);" tabindex="0">READ MORE
             </a>
           </div>

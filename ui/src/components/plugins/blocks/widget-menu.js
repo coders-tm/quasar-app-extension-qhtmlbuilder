@@ -23,8 +23,8 @@ export default (editor, options = {}) => {
         attributes: { class: type },
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
-          <div class="widget widget_nav_menu clearfix">
-            <h3 class="widget-title">Information</h3>
+          <div class="widget widget--nav-menu clearfix">
+            <h3 class="widget--title">Information</h3>
             <ul id="menu-footer-quick-links" class="menu">
               <li>
                 <a href="javascript:void(0);">About Us</a>

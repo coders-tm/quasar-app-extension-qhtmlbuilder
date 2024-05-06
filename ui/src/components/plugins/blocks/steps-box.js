@@ -23,10 +23,10 @@ export default (editor, options = {}) => {
         attributes: { class: type },
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
-          <div class="base-static-box-wrapper base-steps-box steps-style1">
-            <div class="base-static-box-content">
-              <div class="base-steps-desc">
-                <h3><span class="base-static-steps-num">01.</span>Membership Cards</h3>
+          <div class="ct-steps-box steps-box--style1">
+            <div class="steps-box--content">
+              <div class="steps-box--desc">
+                <h3><span class="ct-static-steps-box--num">01.</span>Membership Cards</h3>
                 <p>Discount on services and treatments at the Gimmer for all membership cards holders for allocate time.
                 </p>
               </div>

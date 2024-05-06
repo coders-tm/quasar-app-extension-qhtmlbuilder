@@ -24,13 +24,13 @@ export default (editor, options = {}) => {
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
           <div class="slide" style="background: grey; display:flex; justify-content:space-around;">
-            <div class="slide-content base-textcolor-white main-display text-right banner-slider--style1">
+            <div class="slide-content text-white main-display text-right banner-slider--style1">
               <div class="container">
                 <div class="row">
                   <div class="col-lg-12">
                     <div class="slide-content--headings d-md-flex d-block text-md-left text-center padding-left-space">
-                      <div data-animation="fadeInLeft" class="fade-main base-bgcolor-white"></div>
-                      <div data-animation="fadeInLeft" class="fade-in-main base-bg-primary">
+                      <div data-animation="fadeInLeft" class="fade-main bg-white"></div>
+                      <div data-animation="fadeInLeft" class="fade-in-main bg-primary">
                       </div>
                       <div class="pt-10 pb-10">
                         <h3 data-animation="fadeInDown" class="text-md-left text-center">Different
@@ -47,8 +47,8 @@ export default (editor, options = {}) => {
                         </h2>
                         <div class="mt-30 align-items-center xs--mt-20" data-animation="fadeInUp text-md-left text-center"
                           data-delay="1.4">
-                          <a class="base-btn base-btn-md base-btn-square base-btn-fill base-btn-icon-right base-btn-primary"
-                            href="#">GET STARTED</a>
+                          <a class="ct-btn btn--md btn--square btn--fill btn--icon-right btn--primary"
+                            href="javascript:void(0);">GET STARTED</a>
                         </div>
                       </div>
                     </div>
@@ -58,13 +58,13 @@ export default (editor, options = {}) => {
             </div>
           </div>
           <div class="slide" style="background: grey; display:flex; justify-content:space-around;">
-            <div class="slide-content base-textcolor-white text-left banner-slider--style1">
+            <div class="slide-content text-white text-left banner-slider--style1">
               <div class="container">
                 <div class="row">
                   <div class="col-lg-12">
                     <div class="slide-content--headings d-md-flex d-block text-md-left text-center">
-                      <div data-animation="fadeInLeft" class="fade-main base-bgcolor-white"></div>
-                      <div data-animation="fadeInLeft" class="fade-in-main base-bg-primary">
+                      <div data-animation="fadeInLeft" class="fade-main bg-white"></div>
+                      <div data-animation="fadeInLeft" class="fade-in-main bg-primary">
                       </div>
                       <div class="pt-10 pb-10">
                         <h3 data-animation="fadeInDown" class="text-md-left text-center">The Best
@@ -81,8 +81,8 @@ export default (editor, options = {}) => {
                         </h2>
                         <div class="mt-30 align-items-center xs--mt-20 text-md-left text-center" data-animation="fadeInUp"
                           data-delay="1.4">
-                          <a class="base-btn base-btn-md base-btn-square base-btn-fill base-btn-icon-right base-btn-primary"
-                            href="#">CONTACT US</a>
+                          <a class="ct-btn btn--md btn--square btn--fill btn--icon-right btn--primary"
+                            href="javascript:void(0);">CONTACT US</a>
                         </div>
                       </div>
                     </div>

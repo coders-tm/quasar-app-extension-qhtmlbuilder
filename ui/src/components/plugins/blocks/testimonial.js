@@ -23,7 +23,7 @@ export default (editor, options = {}) => {
         attributes: { class: type },
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
-          <div class="testimonials base-testimonial-box-view-style3">
+          <div class="testimonials ct-testimonial-box-view-style3">
             <div class="testimonial-avatar sm-mt-20">
               <div class="testimonial-img">
                 <img class="img-fluid" src="https://placehold.co/150x150" alt="testimonial-img">

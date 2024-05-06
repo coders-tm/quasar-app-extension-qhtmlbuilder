@@ -23,24 +23,24 @@ export default (editor, options = {}) => {
         attributes: { class: type },
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
-          <div class="base-progress-bar clearfix" data-percent="80%">
+          <div class="progress-bar--container clearfix" data-percent="80%">
             <div class="progressbar-title">Weight Lifting</div>
             <div class="progress-bar-inner">
-              <div class="progress-bar progress-bar-color-bar_skincolor" style="width: 80%;"></div>
+              <div class="progress-bar bg-primary" style="width: 80%;"></div>
             </div>
             <div class="progress-bar-percent" data-percentage="95">95%</div>
           </div>
-          <div class="base-progress-bar clearfix" data-percent="90%">
+          <div class="progress-bar--container clearfix" data-percent="90%">
             <div class="progressbar-title">General Boxing</div>
             <div class="progress-bar-inner">
-              <div class="progress-bar progress-bar-color-bar_skincolor" style="width: 90%;"></div>
+              <div class="progress-bar bg-primary" style="width: 90%;"></div>
             </div>
             <div class="progress-bar-percent" data-percentage="90">90%</div>
           </div>
-          <div class="base-progress-bar clearfix" data-percent="70%">
+          <div class="progress-bar--container clearfix" data-percent="70%">
             <div class="progressbar-title">Body Building</div>
             <div class="progress-bar-inner">
-              <div class="progress-bar progress-bar-color-bar_skincolor" style="width: 70%;"></div>
+              <div class="progress-bar bg-primary" style="width: 70%;"></div>
             </div>
             <div class="progress-bar-percent" data-percentage="70">70%</div>
           </div>

@@ -24,10 +24,10 @@ export default (editor, options = {}) => {
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
           <div class="featured-imagebox featured-imagebox-team style1">
-            <div class="base-box-view-overlay">
+            <div class="ct-box-view-overlay">
               <div class="featured-thumbnail">
                 <img class="img-fluid" src="https://placehold.co/450x470" alt="image">
-                <div class="featured-iconbox base-media-link">
+                <div class="featured-iconbox ct-media-link">
                   <div class="media-block">
                     <ul class="social-icons">
                       <li>

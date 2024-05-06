@@ -23,22 +23,22 @@ export default (editor, options = {}) => {
         attributes: { class: type },
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
-          <ul class="base-list base-list-style-icon base-list-icon-color-skincolor">
+          <ul class="ct-list ct-list--icon ct-list-icon-primary">
             <li>
               <i class="fa fa-long-arrow-right"></i>
-              <div class="base-list-li-content">2,000+ locations open (and we're just getting started!)</div>
+              <div class="list-content">2,000+ locations open (and we're just getting started!)</div>
             </li>
             <li>
               <i class="fa fa-long-arrow-right"></i>
-              <div class="base-list-li-content">Unique concept that combines fitness and technology</div>
+              <div class="list-content">Unique concept that combines fitness and technology</div>
             </li>
             <li>
               <i class="fa fa-long-arrow-right"></i>
-              <div class="base-list-li-content">We have small studios designed for the large groups</div>
+              <div class="list-content">We have small studios designed for the large groups</div>
             </li>
             <li>
               <i class="fa fa-long-arrow-right"></i>
-              <div class="base-list-li-content">1800+ franchises awarded in 30 countries worldwide</div>
+              <div class="list-content">1800+ franchises awarded in 30 countries worldwide</div>
             </li>
           </ul>
         `

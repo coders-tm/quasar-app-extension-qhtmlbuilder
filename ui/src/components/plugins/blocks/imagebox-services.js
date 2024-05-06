@@ -29,7 +29,7 @@ export default (editor, options = {}) => {
               <a href="javascript:void(0);" tabindex="0">
                 <img width="742" height="618" class="img-fluid" src="https://placehold.co/742x618" alt="image">
               </a>
-              <div class="base-blog-overlay-iconbox">
+              <div class="ct-blog-overlay-iconbox">
                 <a href="javascript:void(0);" tabindex="0">
                   <i class="ti ti-plus"></i>
                 </a>
@@ -47,12 +47,12 @@ export default (editor, options = {}) => {
               <div class="featured-desc">
                 <p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p>
               </div>
-              <a class="base-btn btn-inline base-btn-md base-btn-color-darkgrey z-index-1" href="javascript:void(0);"
+              <a class="ct-btn btn-inline btn--md btn--color-darkgrey z-index-1" href="javascript:void(0);"
                 tabindex="0">Read More</a>
-              <div class="base-boxbg-icon">
-                <div class="base-service-iconbox">
+              <div class="ct-boxbg-icon">
+                <div class="ct-service-iconbox">
                   <div
-                    class="base-icon base-icon_element-color-skincolor base-icon_element-size-md base-icon_element-style-rounded">
+                    class="ct-icon ct-icon--primary ct-icon--md ct-icon--style-rounded">
                     <i class="fa fa-check-square-o"></i>
                   </div>
                 </div>

@@ -23,9 +23,9 @@ export default (editor, options = {}) => {
         attributes: { class: type },
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
-          <div class="featured-icon-box left-icon icon-align-top style11 base-bgcolor-white">
+          <div class="featured-icon-box left-icon icon-align-top style11 bg-white">
             <div class="featured-icon">
-              <div class="base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-lg">
+              <div class="ct-icon ct-icon--onlytxt ct-icon--primary ct-icon--lg">
                 <i class="fa fa-check-square"></i>
               </div>
             </div>
@@ -36,7 +36,7 @@ export default (editor, options = {}) => {
             </div>
             <div class="featured-desc">Best Abs Ever, and more in the club with room to move for safety or on-demand on the
               Gimmer app.</div>
-            <a class="base-btn btn-inline base-btn-md base-btn-primary mt-15" href="javascript:void(0);"
+            <a class="ct-btn btn-inline btn--md btn--primary mt-15" href="javascript:void(0);"
               tabindex="0">VIEW MORE<i class="fa fa-angle-double-right ml-10"></i></a>
           </div>
         `

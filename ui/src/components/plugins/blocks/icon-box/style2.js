@@ -25,7 +25,7 @@ export default (editor, options = {}) => {
         components: `
           <div class="featured-icon-box style9">
             <div class="featured-icon">
-              <div class="base-icon base-icon_element-color-skincolor base-icon_element-size-lg">
+              <div class="ct-icon ct-icon--primary ct-icon--lg">
                 <h1>02</h1>
               </div>
             </div>

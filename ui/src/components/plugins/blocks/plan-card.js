@@ -3,7 +3,7 @@ import { isComponent } from '../utils'
 export default (editor, options = {}) => {
   const { category } = options
   const { Blocks, Components } = editor
-  const type = 'base-pricing-plan'
+  const type = 'ct-pricing-plan'
   const componentName = 'Plan Card'
   const defaultType = Components.getType('default')
 
@@ -23,41 +23,41 @@ export default (editor, options = {}) => {
         attributes: { class: type },
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
-          <div class="base-plan-head">
-            <div class="base-plan-icon">
+          <div class="ct-plan-head">
+            <div class="ct-plan-icon">
               <i class="fa fa-check-square"></i>
             </div>
-            <div class="base-plan-title">
+            <div class="ct-plan-title">
               <h3>Standard Plan!</h3>
               <p>Salary Level Up To $50k</p>
             </div>
-            <div class="base-plan-box-desc"></div>
+            <div class="ct-plan-box-desc"></div>
           </div>
-          <ul class="base-list base-list-style-icon base-list-icon-color-darkgrey pt-15 pb-15">
+          <ul class="ct-list ct-list--icon color-darkgrey pt-15 pb-15">
             <li>
               <i class="fa fa-long-arrow-right"></i>
-              <span class="base-list-li-content text-left">Unique concept fitness &amp; technology</span>
+              <span class="list-content text-left">Unique concept fitness &amp; technology</span>
             </li>
             <li>
               <i class="fa fa-long-arrow-right"></i>
-              <span class="base-list-li-content text-left">Gym franchises &amp; awarded in worlds</span>
+              <span class="list-content text-left">Gym franchises &amp; awarded in worlds</span>
             </li>
             <li>
               <i class="fa fa-long-arrow-right"></i>
-              <span class="base-list-li-content text-left">Gym run by Certified &amp; professionals</span>
+              <span class="list-content text-left">Gym run by Certified &amp; professionals</span>
             </li>
             <li>
               <i class="fa fa-long-arrow-right text-left"></i>
-              <span class="base-list-li-content">We are running successfully 20 years</span>
+              <span class="list-content">We are running successfully 20 years</span>
             </li>
           </ul>
-          <div class="base-plan-amount">
+          <div class="ct-plan-amount">
             <span class="cur_symbol">$</span>
-            <span class="base-ptablebox-price">99</span>
+            <span class="ct-ptablebox-price">99</span>
             <span class="pac_frequency">/Per Month</span>
           </div>
-          <div class="base-plan-footer">
-            <a class="base-btn base-btn-md base-btn-square base-btn-fill base-btn-icon-right base-btn-primary text-center mt-30 z-index-1"
+          <div class="ct-plan-footer">
+            <a class="ct-btn btn--md btn--square btn--fill btn--icon-right btn--primary text-center mt-30 z-index-1"
               href="javascript:void(0);">GET STARTED</a>
           </div>
         `
