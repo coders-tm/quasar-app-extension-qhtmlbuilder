@@ -40,9 +40,7 @@ export default (editor, options = {}) => {
         this.set('shortcode', shortcode)
       },
       toHTML() {
-        const attributes = this.getDataAttributes().join(' ')
-        const shortcode = this.get('shortcode')
-        return `<div class="${type}" data-type="${type}" ${attributes}>${shortcode}</div>`
+        return this.get('shortcode')
       }
     },
     view: defaultType.view.prototype
