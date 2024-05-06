@@ -25,7 +25,7 @@ export default (editor, options = {}) => {
         components: `
           <div class="widget widget--nav-menu clearfix">
             <h3 class="widget--title">Information</h3>
-            <ul id="menu-footer-quick-links" class="menu">
+            <ul class="menu">
               <li>
                 <a href="javascript:void(0);">About Us</a>
               </li>

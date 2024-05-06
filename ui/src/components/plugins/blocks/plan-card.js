@@ -33,7 +33,7 @@ export default (editor, options = {}) => {
             </div>
             <div class="ct-plan-box-desc"></div>
           </div>
-          <ul class="ct-list ct-list--icon color-darkgrey pt-15 pb-15">
+          <ul class="list list--icon color-darkgrey pt-15 pb-15">
             <li>
               <i class="fa fa-long-arrow-right"></i>
               <span class="list-content text-left">Unique concept fitness &amp; technology</span>

@@ -23,7 +23,7 @@ export default (editor, options = {}) => {
         attributes: { class: type },
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
-          <ul class="ct-list ct-list--icon ct-list-icon-primary">
+          <ul class="list list--icon list-icon-primary">
             <li>
               <i class="fa fa-long-arrow-right"></i>
               <div class="list-content">2,000+ locations open (and we're just getting started!)</div>
