@@ -12,8 +12,10 @@ import stepsBox from './steps-box'
 import testimonial from './testimonial'
 import planCard from './plan-card'
 import bannerSlider from './banner-slider'
+import pageTitle from './page-title'
 
 export default (editor, options = {}) => {
+  pageTitle(editor, options)
   icon(editor, options)
   sectionTitle(editor, options)
   buttonLink(editor, options)
