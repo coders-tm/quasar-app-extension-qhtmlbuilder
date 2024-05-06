@@ -48,7 +48,7 @@ export default (editor, options = {}) => {
                         <div class="mt-30 align-items-center xs--mt-20" data-animation="fadeInUp text-md-left text-center"
                           data-delay="1.4">
                           <a class="base-btn base-btn-md base-btn-square base-btn-fill base-btn-icon-right base-btn-primary"
-                            href="contact-us.html">GET STARTED</a>
+                            href="#">GET STARTED</a>
                         </div>
                       </div>
                     </div>
@@ -82,7 +82,7 @@ export default (editor, options = {}) => {
                         <div class="mt-30 align-items-center xs--mt-20 text-md-left text-center" data-animation="fadeInUp"
                           data-delay="1.4">
                           <a class="base-btn base-btn-md base-btn-square base-btn-fill base-btn-icon-right base-btn-primary"
-                            href="contact-us.html">CONTACT US</a>
+                            href="#">CONTACT US</a>
                         </div>
                       </div>
                     </div>
