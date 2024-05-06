@@ -20,9 +20,6 @@ export default (editor, options = {}) => {
       defaults: {
         ...defaultType.model.prototype.defaults,
         'custom-name': componentName,
-        attributes: {
-          class: type
-        },
         content: `[${type}]`,
         traits: [
           {
