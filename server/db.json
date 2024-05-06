@@ -6074,6 +6074,24 @@
             "style": {
               "width": "70%"
             }
+          },
+          {
+            "selectors": [
+              "#iy2wck"
+            ],
+            "style": {
+              "background": "grey",
+              "display": "flex",
+              "justify-content": "space-around"
+            }
+          },
+          {
+            "selectors": [
+              "#ido5e1"
+            ],
+            "style": {
+              "background": "grey"
+            }
           }
         ],
         "pages": [
@@ -6107,6 +6125,398 @@
                       },
                       "shortcode": "[header layout=\"classic\"]",
                       "layout": "classic"
+                    },
+                    {
+                      "type": "banner-slider",
+                      "classes": [
+                        "banner-slider",
+                        "slick-slider"
+                      ],
+                      "attributes": {},
+                      "components": [
+                        {
+                          "classes": [
+                            "slide"
+                          ],
+                          "attributes": {
+                            "id": "iy2wck"
+                          },
+                          "components": [
+                            {
+                              "classes": [
+                                "slide-content",
+                                "base-textcolor-white",
+                                "main-display",
+                                "text-right",
+                                "banner-slider--style1"
+                              ],
+                              "attributes": {
+                                "id": "iuok"
+                              },
+                              "components": [
+                                {
+                                  "classes": [
+                                    "container"
+                                  ],
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "row"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "col-lg-12"
+                                          ],
+                                          "attributes": {
+                                            "id": "icfh"
+                                          },
+                                          "components": [
+                                            {
+                                              "classes": [
+                                                "slide-content--headings",
+                                                "d-md-flex",
+                                                "d-block",
+                                                "text-md-left",
+                                                "text-center",
+                                                "padding-left-space"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "classes": [
+                                                    "fade-main",
+                                                    "base-bgcolor-white"
+                                                  ],
+                                                  "attributes": {
+                                                    "data-animation": "fadeInLeft"
+                                                  }
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "classes": [
+                                                    "fade-in-main",
+                                                    "base-bg-primary"
+                                                  ],
+                                                  "attributes": {
+                                                    "data-animation": "fadeInLeft"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "\n                      "
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "classes": [
+                                                    "pt-10",
+                                                    "pb-10"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "tagName": "h3",
+                                                      "type": "text",
+                                                      "classes": [
+                                                        "text-md-left",
+                                                        "text-center"
+                                                      ],
+                                                      "attributes": {
+                                                        "data-animation": "fadeInDown"
+                                                      },
+                                                      "components": [
+                                                        {
+                                                          "type": "textnode",
+                                                          "content": "Different\n                          From Others!\n                        "
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tagName": "h2",
+                                                      "type": "text",
+                                                      "classes": [
+                                                        "text-md-left",
+                                                        "text-center"
+                                                      ],
+                                                      "attributes": {
+                                                        "data-animation": "fadeInDown"
+                                                      },
+                                                      "components": [
+                                                        {
+                                                          "type": "textnode",
+                                                          "content": "Book\n                          Appointment\n                        "
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tagName": "h2",
+                                                      "type": "text",
+                                                      "classes": [
+                                                        "text-md-left",
+                                                        "text-center"
+                                                      ],
+                                                      "attributes": {
+                                                        "data-animation": "fadeInDown"
+                                                      },
+                                                      "components": [
+                                                        {
+                                                          "type": "textnode",
+                                                          "content": "To Join Our\n                          Online\n                        "
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tagName": "h2",
+                                                      "type": "text",
+                                                      "classes": [
+                                                        "text-md-left",
+                                                        "text-center"
+                                                      ],
+                                                      "attributes": {
+                                                        "data-animation": "fadeInDown"
+                                                      },
+                                                      "components": [
+                                                        {
+                                                          "type": "textnode",
+                                                          "content": "Health\n                          Courses.\n                        "
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "classes": [
+                                                        "mt-30",
+                                                        "align-items-center",
+                                                        "xs--mt-20"
+                                                      ],
+                                                      "attributes": {
+                                                        "data-animation": "fadeInUp text-md-left text-center",
+                                                        "data-delay": "1.4"
+                                                      },
+                                                      "components": [
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "base-btn",
+                                                            "base-btn-md",
+                                                            "base-btn-square",
+                                                            "base-btn-fill",
+                                                            "base-btn-icon-right",
+                                                            "base-btn-primary"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "contact-us.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "GET STARTED"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "classes": [
+                            "slide"
+                          ],
+                          "attributes": {
+                            "id": "ido5e1"
+                          },
+                          "components": [
+                            {
+                              "classes": [
+                                "slide-content",
+                                "base-textcolor-white",
+                                "text-left",
+                                "banner-slider--style1"
+                              ],
+                              "components": [
+                                {
+                                  "classes": [
+                                    "container"
+                                  ],
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "row"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "col-lg-12"
+                                          ],
+                                          "components": [
+                                            {
+                                              "classes": [
+                                                "slide-content--headings",
+                                                "d-md-flex",
+                                                "d-block",
+                                                "text-md-left",
+                                                "text-center"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "classes": [
+                                                    "fade-main",
+                                                    "base-bgcolor-white"
+                                                  ],
+                                                  "attributes": {
+                                                    "data-animation": "fadeInLeft"
+                                                  }
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "classes": [
+                                                    "fade-in-main",
+                                                    "base-bg-primary"
+                                                  ],
+                                                  "attributes": {
+                                                    "data-animation": "fadeInLeft"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "\n                      "
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "classes": [
+                                                    "pt-10",
+                                                    "pb-10"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "tagName": "h3",
+                                                      "type": "text",
+                                                      "classes": [
+                                                        "text-md-left",
+                                                        "text-center"
+                                                      ],
+                                                      "attributes": {
+                                                        "data-animation": "fadeInDown"
+                                                      },
+                                                      "components": [
+                                                        {
+                                                          "type": "textnode",
+                                                          "content": "The Best\n                          Fitness Studio.\n                        "
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tagName": "h2",
+                                                      "type": "text",
+                                                      "classes": [
+                                                        "text-md-left",
+                                                        "text-center"
+                                                      ],
+                                                      "attributes": {
+                                                        "data-animation": "fadeInDown"
+                                                      },
+                                                      "components": [
+                                                        {
+                                                          "type": "textnode",
+                                                          "content": "Making\n                          Different\n                        "
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tagName": "h2",
+                                                      "type": "text",
+                                                      "classes": [
+                                                        "text-md-left",
+                                                        "text-center"
+                                                      ],
+                                                      "attributes": {
+                                                        "data-animation": "fadeInDown"
+                                                      },
+                                                      "components": [
+                                                        {
+                                                          "type": "textnode",
+                                                          "content": "From Other\n                          Builds\n                        "
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tagName": "h2",
+                                                      "type": "text",
+                                                      "classes": [
+                                                        "text-md-left",
+                                                        "text-center"
+                                                      ],
+                                                      "attributes": {
+                                                        "data-animation": "fadeInDown"
+                                                      },
+                                                      "components": [
+                                                        {
+                                                          "type": "textnode",
+                                                          "content": "Perfect\n                          Health.\n                        "
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "classes": [
+                                                        "mt-30",
+                                                        "align-items-center",
+                                                        "xs--mt-20",
+                                                        "text-md-left",
+                                                        "text-center"
+                                                      ],
+                                                      "attributes": {
+                                                        "data-animation": "fadeInUp",
+                                                        "data-delay": "1.4"
+                                                      },
+                                                      "components": [
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "base-btn",
+                                                            "base-btn-md",
+                                                            "base-btn-square",
+                                                            "base-btn-fill",
+                                                            "base-btn-icon-right",
+                                                            "base-btn-primary"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "contact-us.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "CONTACT US"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     },
                     {
                       "name": "Row",
@@ -6192,6 +6602,9 @@
                                       "classes": [
                                         "title"
                                       ],
+                                      "attributes": {
+                                        "id": "i7ff"
+                                      },
                                       "components": [
                                         {
                                           "type": "textnode",
@@ -7066,6 +7479,9 @@
                                             "pb-10",
                                             "pr-30"
                                           ],
+                                          "attributes": {
+                                            "id": "io3aki"
+                                          },
                                           "components": [
                                             {
                                               "type": "textnode",
@@ -7927,9 +8343,6 @@
                                       "classes": [
                                         "base-box-view-overlay"
                                       ],
-                                      "attributes": {
-                                        "id": "ikas1h"
-                                      },
                                       "components": [
                                         {
                                           "classes": [
@@ -7946,8 +8359,7 @@
                                               ],
                                               "attributes": {
                                                 "src": "https://placehold.co/450x470",
-                                                "alt": "image",
-                                                "id": "iiii3y"
+                                                "alt": "image"
                                               }
                                             },
                                             {
@@ -7985,8 +8397,8 @@
                                                                 {
                                                                   "tagName": "i",
                                                                   "classes": [
-                                                                    "fa",
-                                                                    "fa-facebook-f"
+                                                                    "fab",
+                                                                    "fa-facebook"
                                                                   ]
                                                                 }
                                                               ]
@@ -8011,7 +8423,7 @@
                                                                 {
                                                                   "tagName": "i",
                                                                   "classes": [
-                                                                    "fa",
+                                                                    "fab",
                                                                     "fa-twitter"
                                                                   ]
                                                                 }
@@ -8037,7 +8449,7 @@
                                                                 {
                                                                   "tagName": "i",
                                                                   "classes": [
-                                                                    "fa",
+                                                                    "fab",
                                                                     "fa-flickr"
                                                                   ]
                                                                 }
@@ -8063,7 +8475,7 @@
                                                                 {
                                                                   "tagName": "i",
                                                                   "classes": [
-                                                                    "fa",
+                                                                    "fab",
                                                                     "fa-linkedin"
                                                                   ]
                                                                 }
@@ -8231,6 +8643,9 @@
                                           "classes": [
                                             "testimonial-img"
                                           ],
+                                          "attributes": {
+                                            "id": "i0t5au"
+                                          },
                                           "components": [
                                             {
                                               "type": "image",
@@ -8836,6 +9251,9 @@
                                             {
                                               "tagName": "h3",
                                               "type": "text",
+                                              "attributes": {
+                                                "id": "i593k2"
+                                              },
                                               "components": [
                                                 {
                                                   "type": "textnode",
@@ -8873,7 +9291,9 @@
                               "classes": [
                                 "icon-box3"
                               ],
-                              "attributes": {},
+                              "attributes": {
+                                "id": "iur6cp"
+                              },
                               "components": [
                                 {
                                   "classes": [
@@ -9577,8 +9997,8 @@
         ]
       },
       "pagesHtml": {
-        "html": "<body id=\"i33v\"><div class=\"header\" data-type=\"header\" data-layout=\"classic\">[header layout=\"classic\"]</div><div id=\"i1uz\" class=\"gjs-row\"><div id=\"ijai\" class=\"gjs-cell\"><div class=\"section-title\"><div class=\"title-header\"><h4>LATEST BLOG POST!</h4><h2 class=\"title\">What’s Happening Around Gym!</h2></div></div><div class=\"widget-menu\"><div id=\"i08l\" class=\"widget widget_nav_menu clearfix\"><h3 id=\"ih3f\" class=\"widget-title\">Information</h3><ul id=\"menu-footer-quick-links\" class=\"menu\"><li><a>About Us</a></li><li><a>Privacy Policy</a></li><li><a>Pricing Plans</a></li><li><a>Courses</a></li><li><a>Weight Loss</a></li><li><a>Clients</a></li><li><a>Customers</a></li><li><a>Our Trainers</a></li><li><a>Diet Chart</a></li></ul></div></div><div id=\"iq0zze\" class=\"progress-section\"><div data-percent=\"80%\" class=\"base-progress-bar clearfix\"><div class=\"progressbar-title\">Weight Lifting</div><div id=\"in9wtp\" class=\"progress-bar-inner\"><div id=\"i1xfzw\" class=\"progress-bar progress-bar-color-bar_skincolor\"></div></div><div data-percentage=\"95\" id=\"ivzn0k\" class=\"progress-bar-percent\">50%</div></div><div data-percent=\"90%\" class=\"base-progress-bar clearfix\"><div class=\"progressbar-title\">General Boxing</div><div class=\"progress-bar-inner\"><div id=\"i0nwsw\" class=\"progress-bar progress-bar-color-bar_skincolor\"></div></div><div data-percentage=\"90\" class=\"progress-bar-percent\">90%</div></div><div data-percent=\"70%\" class=\"base-progress-bar clearfix\"><div class=\"progressbar-title\">Body Building</div><div class=\"progress-bar-inner\"><div id=\"ipf71f\" class=\"progress-bar progress-bar-color-bar_skincolor\"></div></div><div data-percentage=\"70\" class=\"progress-bar-percent\">70%</div></div></div><div class=\"icon-list\"><ul class=\"base-list base-list-style-icon base-list-icon-color-skincolor\"><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">2,000+ locations open (and we're just getting started!)</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">Unique concept that combines fitness and technology</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">We have small studios designed for the large groups</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">1800+ franchises awarded in 30 countries worldwide</div></li></ul></div><div id=\"ih4ice\" class=\"steps-box\"><div id=\"ihj0jg\" class=\"base-static-box-wrapper base-steps-box steps-style1\"><div class=\"base-static-box-content\"><div class=\"base-steps-desc\"><h3><span class=\"base-static-steps-num\">01.</span>Membership Cards</h3><p>Discount on services and treatments at the Gimmer for all membership cards holders for allocate time.\n                </p></div></div></div></div><div id=\"i4dhac\" class=\"steps-box\"><div id=\"ir4gzg\" class=\"base-static-box-wrapper base-steps-box steps-style1\"><div class=\"base-static-box-content\"><div class=\"base-steps-desc\"><h3><span class=\"base-static-steps-num\">01.</span>Membership Cards</h3><p>Discount on services and treatments at the Gimmer for all membership cards holders for allocate time.\n                </p></div></div></div></div><div class=\"widget-menu\"><div class=\"widget widget_nav_menu clearfix\"><h3 class=\"widget-title\">Information</h3><ul id=\"menu-footer-quick-links-2\" class=\"menu\"><li><a>About Us</a></li><li><a>Privacy Policy</a></li><li><a>Pricing Plans</a></li><li><a>Courses</a></li><li><a>Weight Loss</a></li><li><a>Clients</a></li><li><a>Customers</a></li><li><a>Our Trainers</a></li><li><a>Diet Chart</a></li></ul></div></div></div><div id=\"i2e7\" class=\"gjs-cell\"><div class=\"widget-text\"><div id=\"iya39x\" class=\"widget widget_text clearfix\"><div class=\"footer-logo\"><img id=\"footer-logo-img\" src=\"https://placehold.co/311x92\" alt=\"\" class=\"img-center\"/></div><div class=\"textwidget widget-text\"><p class=\"pb-10 pr-30\">After you decide to start training we will make sure you get the best fitness\n                program.</p></div><div class=\"order-3\"><div class=\"social-icons square\"><ul id=\"i94tf2\" class=\"social-icons list-inline\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i id=\"iedz1o\" class=\"fa-facebook-f fab\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i id=\"i4axc6\" class=\"fa-twitter fab\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i id=\"iyomgj\" class=\"fa-flickr fab\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i id=\"iwlsid\" class=\"fa fa-linkedin fab\"></i></a></li></ul></div></div></div></div><div class=\"icon-box5\"><div class=\"featured-icon-box left-icon icon-align-top style11 base-bgcolor-white\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-lg\"><i class=\"fa fa-angle-double-right\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title pb-15\"><h2 class=\"title\">653</h2></div></div><div class=\"featured-desc\">Best Abs Ever, and more in the club with room to move for safety or on-demand on the\n              Gimmer app.</div><a tabindex=\"0\" class=\"base-btn btn-inline base-btn--md base-btn-primary mt-15\">VIEW MORE<i class=\"fa fa-angle-double-right ml-10\"></i></a></div></div><div class=\"imagebox-services\"><div class=\"featured-imagebox featured-imagebox-services style1\"><!-- featured-thumbnail --><div class=\"featured-thumbnail\"><a tabindex=\"0\"><img width=\"742\" height=\"618\" src=\"https://placehold.co/742x618\" alt=\"image\" class=\"img-fluid\"/></a><div id=\"iyjyog\" class=\"base-blog-overlay-iconbox\"><a tabindex=\"0\"><i class=\"ti ti-plus\"></i></a></div><div class=\"cat_block-wrapper\"><span class=\"cat_block\"><time datetime=\"2020-11-11T04:34:34+00:00\" class=\"entry-date published\">CARDIO</time></span></div></div><!-- featured-thumbnail end--><div class=\"featured-content featured-content-post\"><div class=\"featured-title\"><h3><a tabindex=\"0\">Fitness For Man</a></h3></div><div class=\"featured-desc\"><p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p></div><a tabindex=\"0\" class=\"base-btn btn-inline base-btn--md base-btn-color-darkgrey z-index-1\">Read More</a><div class=\"base-boxbg-icon\"><div class=\"base-service-iconbox\"><div class=\"base-icon base-icon_element-color-skincolor base-icon_element-size-md base-icon_element-style-rounded\"><i class=\"fa fa-check-square-o\"></i></div></div></div></div></div></div><div class=\"icon-list\"><ul class=\"base-list base-list-style-icon base-list-icon-color-skincolor\"><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">2,000+ locations open (and we're just getting started!)</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">Unique concept that combines fitness and technology</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">We have small studios designed for the large groups</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">1800+ franchises awarded in 30 countries worldwide</div></li></ul></div><div class=\"team\"><div class=\"featured-imagebox featured-imagebox-team style1\"><div class=\"base-box-view-overlay\"><div class=\"featured-thumbnail\"><img src=\"https://placehold.co/450x470\" alt=\"image\" class=\"img-fluid\"/><div class=\"featured-iconbox base-media-link\"><div class=\"media-block\"><ul class=\"social-icons\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-facebook\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-twitter\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-flickr\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-linkedin\"></i></a></li></ul></div></div></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3><a>David Smitgh</a></h3></div><div class=\"team-position\">Consultant</div></div></div></div></div><div id=\"iehe\" class=\"gjs-cell\"><div class=\"team\"><div class=\"featured-imagebox featured-imagebox-team style1\"><div id=\"ikas1h\" class=\"base-box-view-overlay\"><div class=\"featured-thumbnail\"><img src=\"https://placehold.co/450x470\" alt=\"image\" id=\"iiii3y\" class=\"img-fluid\"/><div class=\"featured-iconbox base-media-link\"><div class=\"media-block\"><ul class=\"social-icons\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-facebook-f\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-twitter\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-flickr\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fa fa-linkedin\"></i></a></li></ul></div></div></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3><a>David Smitgh</a></h3></div><div class=\"team-position\">Consultant</div></div></div></div><div class=\"icon-box4\"><div class=\"featured-icon-box icon-align-before-content icon-align-top\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-md\"><i class=\"fa fa-check-square\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3>01. Safety Measures</h3></div><div class=\"featured-desc\"><p>We've reimagined your club experience – from our new touch free club check-in system, distancing\n                  protocols</p></div></div></div></div><div class=\"testimonial\"><div class=\"testimonials base-testimonial-box-view-style3\"><div class=\"testimonial-avatar sm-mt-20\"><div class=\"testimonial-img\"><img src=\"https://placehold.co/150x150\" alt=\"testimonial-img\" class=\"img-fluid\"/></div></div><div class=\"testimonial-content sm-mb-30\"><blockquote class=\"testimonial-text\">We highly recommend Anywhere Gimmer! My husband and I worked out with\n                them at our apartment gym for I worked out with them well over a year.</blockquote><div class=\"testimonial-bottom\"><div class=\"testimonial-caption\"><h5>Joan Thompson</h5><label>Athletic Trainers</label></div><div class=\"star-ratings text-right\"><ul class=\"rating\"><li class=\"active\"><i class=\"fa fa-star\"></i></li><li class=\"active\"><i class=\"fa fa-star\"></i></li><li class=\"active\"><i class=\"fa fa-star\"></i></li><li class=\"active\"><i class=\"fa fa-star\"></i></li><li class=\"active\"><i class=\"fa fa-star\"></i></li></ul></div></div></div></div></div><div class=\"team\"><div class=\"featured-imagebox featured-imagebox-team style1\"><div id=\"iaiq9p\" class=\"base-box-view-overlay\"><div class=\"featured-thumbnail\"><img src=\"https://placehold.co/450x470\" alt=\"image\" id=\"i5nx5a\" class=\"img-fluid\"/><div class=\"featured-iconbox base-media-link\"><div class=\"media-block\"><ul class=\"social-icons\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i id=\"iyxxna\" class=\"fa-facebook-f fab\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i id=\"i9binx\" class=\"fa-twitter fab\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" id=\"ia1hmf\" class=\"tooltip-top\"><i id=\"it1khy\" class=\"fa-flickr fab\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i id=\"igmx4i\" class=\"fa-linkedin fab\"></i></a></li></ul></div></div></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3><a>David Smitgh</a></h3></div><div class=\"team-position\">Consultant</div></div></div></div></div><div id=\"ilmv\" class=\"gjs-cell\"><a href=\"javascript:void(0);\" id=\"ii045z\" class=\"button-link base-btn base-btn-md base-btn-square base-btn-fill base-btn-primary z-index-1\"><span>VIEW MORE</span><i class=\"fa fa-angle-double-right ml-10\"></i></a><div class=\"icon-box\"><div class=\"featured-icon-box icon-align-before-content\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-sm\"><i id=\"iwa263\" class=\"fa-check-square base-textcolor-skincolor fas\"></i></div></div><div id=\"iknh5p\" class=\"featured-content\"><div class=\"featured-title\"><h3>Comprehensive</h3><p id=\"iuoxha\">A Clear and concise customer correspondence including.</p></div></div></div></div><div class=\"icon-box2\"><div class=\"featured-icon-box style9\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-color-skincolor base-icon_element-size-lg\"><h1>02</h1></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3>Quality Equipment</h3></div><div class=\"featured-desc\"><p>Let’s be honest skipping and running your workout, try to suss when quiet.</p></div></div></div></div><div class=\"icon-box3\"><div class=\"featured-icon-box style4 icon-align-before-content icon-ver_align-top\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-color-skincolor base-icon_element-size-lg base-icon_element-style-square\"><i class=\"fa fa-check-square\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h4>Strong people</h4><h3 class=\"title\">Self Defence</h3></div></div><div class=\"base-horizontal_sep width-100 mt-30 mb-20\"></div><div class=\"featured-desc\"><p>To strengthen &amp; tone-up your muscles, keep you in shape and posture.</p></div><a tabindex=\"0\" class=\"base-btn base-btn-size-sm base-btn-color-darkgrey btn-inline base-icon-btn-right z-index-1\">READ MORE\n            </a></div></div><div class=\"icon-list\"><ul class=\"base-list base-list-style-icon base-list-icon-color-skincolor\"><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">2,000+ locations open (and we're just getting started!)</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">Unique concept that combines fitness and technology</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">We have small studios designed for the large groups</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">1800+ franchises awarded in 30 countries worldwide</div></li></ul></div><div class=\"widget-text\"><div class=\"widget widget_text clearfix\"><div class=\"footer-logo\"><img id=\"footer-logo-img-2\" src=\"https://placehold.co/311x92\" alt=\"\" class=\"img-center\"/></div><div class=\"textwidget widget-text\"><p class=\"pb-10 pr-30\">After you decide to start training we will make sure you get the best fitness\n                program.</p></div><div class=\"order-3\"><div class=\"social-icons square\"><ul class=\"social-icons list-inline\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-facebook\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-twitter\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-flickr\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-linkedin\"></i></a></li></ul></div></div></div></div><div class=\"base-pricing-plan\"><div class=\"base-plan-head\"><div class=\"base-plan-icon\"><i class=\"fa fa-check-square\"></i></div><div class=\"base-plan-title\"><h3>Standard Plan!</h3><p>Salary Level Up To $50k</p></div><div class=\"base-plan-box-desc\"></div></div><ul class=\"base-list base-list-style-icon base-list-icon-color-darkgrey pt-15 pb-15\"><li><i class=\"fa fa-long-arrow-right\"></i><span class=\"base-list-li-content text-left\">Unique concept fitness &amp; technology</span></li><li><i class=\"fa fa-long-arrow-right\"></i><span class=\"base-list-li-content text-left\">Gym franchises &amp; awarded in worlds</span></li><li><i class=\"fa fa-long-arrow-right\"></i><span class=\"base-list-li-content text-left\">Gym run by Certified &amp; professionals</span></li><li><i class=\"fa fa-long-arrow-right text-left\"></i><span class=\"base-list-li-content\">We are running successfully 20 years</span></li></ul><div class=\"base-plan-amount\"><span class=\"cur_symbol\">$</span><span class=\"base-ptablebox-price\">99</span><span class=\"pac_frequency\">/Per Month</span></div><div class=\"base-plan-footer\"><a class=\"base-btn base-btn-md base-btn-square base-btn-fill base-btn-icon-right base-btn-primary text-center mt-30 z-index-1\">GET STARTED</a></div></div></div></div><div class=\"footer\" data-type=\"footer\" data-layout=\"default\">[footer layout=\"default\"]</div></body>",
-        "css": "* { box-sizing: border-box; } body {margin: 0;}.gjs-row{display:flex;justify-content:flex-start;align-items:stretch;flex-wrap:nowrap;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;}.gjs-cell{min-height:75px;flex-grow:1;flex-basis:100%;}#ijai{padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;}#i08l{margin-top:10px;margin-bottom:10px;margin-right:10px;margin-left:10px;}#i1xfzw{width:50%;}#i0nwsw{width:90%;}#ipf71f{width:70%;}@media (max-width: 768px){.gjs-row{flex-wrap:wrap;}}"
+        "html": "<body id=\"i33v\"><div class=\"header\" data-type=\"header\" data-layout=\"classic\">[header layout=\"classic\"]</div><div class=\"banner-slider slick-slider\"><div id=\"iy2wck\" class=\"slide\"><div class=\"slide-content base-textcolor-white main-display text-right banner-slider--style1\" id=\"iuok\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-12\" id=\"icfh\"><div class=\"slide-content--headings d-md-flex d-block text-md-left text-center padding-left-space\"><div data-animation=\"fadeInLeft\" class=\"fade-main base-bgcolor-white\"></div><div data-animation=\"fadeInLeft\" class=\"fade-in-main base-bg-primary\">\n                      </div><div class=\"pt-10 pb-10\"><h3 data-animation=\"fadeInDown\" class=\"text-md-left text-center\">Different\n                          From Others!\n                        </h3><h2 data-animation=\"fadeInDown\" class=\"text-md-left text-center\">Book\n                          Appointment\n                        </h2><h2 data-animation=\"fadeInDown\" class=\"text-md-left text-center\">To Join Our\n                          Online\n                        </h2><h2 data-animation=\"fadeInDown\" class=\"text-md-left text-center\">Health\n                          Courses.\n                        </h2><div data-animation=\"fadeInUp text-md-left text-center\" data-delay=\"1.4\" class=\"mt-30 align-items-center xs--mt-20\"><a href=\"contact-us.html\" class=\"base-btn base-btn-md base-btn-square base-btn-fill base-btn-icon-right base-btn-primary\">GET STARTED</a></div></div></div></div></div></div></div></div><div id=\"ido5e1\" class=\"slide\"><div class=\"slide-content base-textcolor-white text-left banner-slider--style1\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-12\"><div class=\"slide-content--headings d-md-flex d-block text-md-left text-center\"><div data-animation=\"fadeInLeft\" class=\"fade-main base-bgcolor-white\"></div><div data-animation=\"fadeInLeft\" class=\"fade-in-main base-bg-primary\">\n                      </div><div class=\"pt-10 pb-10\"><h3 data-animation=\"fadeInDown\" class=\"text-md-left text-center\">The Best\n                          Fitness Studio.\n                        </h3><h2 data-animation=\"fadeInDown\" class=\"text-md-left text-center\">Making\n                          Different\n                        </h2><h2 data-animation=\"fadeInDown\" class=\"text-md-left text-center\">From Other\n                          Builds\n                        </h2><h2 data-animation=\"fadeInDown\" class=\"text-md-left text-center\">Perfect\n                          Health.\n                        </h2><div data-animation=\"fadeInUp\" data-delay=\"1.4\" class=\"mt-30 align-items-center xs--mt-20 text-md-left text-center\"><a href=\"contact-us.html\" class=\"base-btn base-btn-md base-btn-square base-btn-fill base-btn-icon-right base-btn-primary\">CONTACT US</a></div></div></div></div></div></div></div></div></div><div id=\"i1uz\" class=\"gjs-row\"><div id=\"ijai\" class=\"gjs-cell\"><div class=\"section-title\"><div class=\"title-header\"><h4>LATEST BLOG POST!</h4><h2 id=\"i7ff\" class=\"title\">What’s Happening Around Gym!</h2></div></div><div class=\"widget-menu\"><div id=\"i08l\" class=\"widget widget_nav_menu clearfix\"><h3 id=\"ih3f\" class=\"widget-title\">Information</h3><ul id=\"menu-footer-quick-links\" class=\"menu\"><li><a>About Us</a></li><li><a>Privacy Policy</a></li><li><a>Pricing Plans</a></li><li><a>Courses</a></li><li><a>Weight Loss</a></li><li><a>Clients</a></li><li><a>Customers</a></li><li><a>Our Trainers</a></li><li><a>Diet Chart</a></li></ul></div></div><div id=\"iq0zze\" class=\"progress-section\"><div data-percent=\"80%\" class=\"base-progress-bar clearfix\"><div class=\"progressbar-title\">Weight Lifting</div><div id=\"in9wtp\" class=\"progress-bar-inner\"><div id=\"i1xfzw\" class=\"progress-bar progress-bar-color-bar_skincolor\"></div></div><div data-percentage=\"95\" id=\"ivzn0k\" class=\"progress-bar-percent\">50%</div></div><div data-percent=\"90%\" class=\"base-progress-bar clearfix\"><div class=\"progressbar-title\">General Boxing</div><div class=\"progress-bar-inner\"><div id=\"i0nwsw\" class=\"progress-bar progress-bar-color-bar_skincolor\"></div></div><div data-percentage=\"90\" class=\"progress-bar-percent\">90%</div></div><div data-percent=\"70%\" class=\"base-progress-bar clearfix\"><div class=\"progressbar-title\">Body Building</div><div class=\"progress-bar-inner\"><div id=\"ipf71f\" class=\"progress-bar progress-bar-color-bar_skincolor\"></div></div><div data-percentage=\"70\" class=\"progress-bar-percent\">70%</div></div></div><div class=\"icon-list\"><ul class=\"base-list base-list-style-icon base-list-icon-color-skincolor\"><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">2,000+ locations open (and we're just getting started!)</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">Unique concept that combines fitness and technology</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">We have small studios designed for the large groups</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">1800+ franchises awarded in 30 countries worldwide</div></li></ul></div><div id=\"ih4ice\" class=\"steps-box\"><div id=\"ihj0jg\" class=\"base-static-box-wrapper base-steps-box steps-style1\"><div class=\"base-static-box-content\"><div class=\"base-steps-desc\"><h3><span class=\"base-static-steps-num\">01.</span>Membership Cards</h3><p>Discount on services and treatments at the Gimmer for all membership cards holders for allocate time.\n                </p></div></div></div></div><div id=\"i4dhac\" class=\"steps-box\"><div id=\"ir4gzg\" class=\"base-static-box-wrapper base-steps-box steps-style1\"><div class=\"base-static-box-content\"><div class=\"base-steps-desc\"><h3><span class=\"base-static-steps-num\">01.</span>Membership Cards</h3><p>Discount on services and treatments at the Gimmer for all membership cards holders for allocate time.\n                </p></div></div></div></div><div class=\"widget-menu\"><div class=\"widget widget_nav_menu clearfix\"><h3 class=\"widget-title\">Information</h3><ul id=\"menu-footer-quick-links-2\" class=\"menu\"><li><a>About Us</a></li><li><a>Privacy Policy</a></li><li><a>Pricing Plans</a></li><li><a>Courses</a></li><li><a>Weight Loss</a></li><li><a>Clients</a></li><li><a>Customers</a></li><li><a>Our Trainers</a></li><li><a>Diet Chart</a></li></ul></div></div></div><div id=\"i2e7\" class=\"gjs-cell\"><div class=\"widget-text\"><div id=\"iya39x\" class=\"widget widget_text clearfix\"><div class=\"footer-logo\"><img id=\"footer-logo-img\" src=\"https://placehold.co/311x92\" alt=\"\" class=\"img-center\"/></div><div class=\"textwidget widget-text\"><p id=\"io3aki\" class=\"pb-10 pr-30\">After you decide to start training we will make sure you get the best fitness\n                program.</p></div><div class=\"order-3\"><div class=\"social-icons square\"><ul id=\"i94tf2\" class=\"social-icons list-inline\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i id=\"iedz1o\" class=\"fa-facebook-f fab\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i id=\"i4axc6\" class=\"fa-twitter fab\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i id=\"iyomgj\" class=\"fa-flickr fab\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i id=\"iwlsid\" class=\"fa fa-linkedin fab\"></i></a></li></ul></div></div></div></div><div class=\"icon-box5\"><div class=\"featured-icon-box left-icon icon-align-top style11 base-bgcolor-white\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-lg\"><i class=\"fa fa-angle-double-right\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title pb-15\"><h2 class=\"title\">653</h2></div></div><div class=\"featured-desc\">Best Abs Ever, and more in the club with room to move for safety or on-demand on the\n              Gimmer app.</div><a tabindex=\"0\" class=\"base-btn btn-inline base-btn--md base-btn-primary mt-15\">VIEW MORE<i class=\"fa fa-angle-double-right ml-10\"></i></a></div></div><div class=\"imagebox-services\"><div class=\"featured-imagebox featured-imagebox-services style1\"><!-- featured-thumbnail --><div class=\"featured-thumbnail\"><a tabindex=\"0\"><img width=\"742\" height=\"618\" src=\"https://placehold.co/742x618\" alt=\"image\" class=\"img-fluid\"/></a><div id=\"iyjyog\" class=\"base-blog-overlay-iconbox\"><a tabindex=\"0\"><i class=\"ti ti-plus\"></i></a></div><div class=\"cat_block-wrapper\"><span class=\"cat_block\"><time datetime=\"2020-11-11T04:34:34+00:00\" class=\"entry-date published\">CARDIO</time></span></div></div><!-- featured-thumbnail end--><div class=\"featured-content featured-content-post\"><div class=\"featured-title\"><h3><a tabindex=\"0\">Fitness For Man</a></h3></div><div class=\"featured-desc\"><p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p></div><a tabindex=\"0\" class=\"base-btn btn-inline base-btn--md base-btn-color-darkgrey z-index-1\">Read More</a><div class=\"base-boxbg-icon\"><div class=\"base-service-iconbox\"><div class=\"base-icon base-icon_element-color-skincolor base-icon_element-size-md base-icon_element-style-rounded\"><i class=\"fa fa-check-square-o\"></i></div></div></div></div></div></div><div class=\"icon-list\"><ul class=\"base-list base-list-style-icon base-list-icon-color-skincolor\"><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">2,000+ locations open (and we're just getting started!)</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">Unique concept that combines fitness and technology</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">We have small studios designed for the large groups</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">1800+ franchises awarded in 30 countries worldwide</div></li></ul></div><div class=\"team\"><div class=\"featured-imagebox featured-imagebox-team style1\"><div class=\"base-box-view-overlay\"><div class=\"featured-thumbnail\"><img src=\"https://placehold.co/450x470\" alt=\"image\" class=\"img-fluid\"/><div class=\"featured-iconbox base-media-link\"><div class=\"media-block\"><ul class=\"social-icons\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-facebook\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-twitter\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-flickr\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-linkedin\"></i></a></li></ul></div></div></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3><a>David Smitgh</a></h3></div><div class=\"team-position\">Consultant</div></div></div></div></div><div id=\"iehe\" class=\"gjs-cell\"><div class=\"team\"><div class=\"featured-imagebox featured-imagebox-team style1\"><div class=\"base-box-view-overlay\"><div class=\"featured-thumbnail\"><img src=\"https://placehold.co/450x470\" alt=\"image\" class=\"img-fluid\"/><div class=\"featured-iconbox base-media-link\"><div class=\"media-block\"><ul class=\"social-icons\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-facebook\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-twitter\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-flickr\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-linkedin\"></i></a></li></ul></div></div></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3><a>David Smitgh</a></h3></div><div class=\"team-position\">Consultant</div></div></div></div><div class=\"icon-box4\"><div class=\"featured-icon-box icon-align-before-content icon-align-top\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-md\"><i class=\"fa fa-check-square\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3>01. Safety Measures</h3></div><div class=\"featured-desc\"><p>We've reimagined your club experience – from our new touch free club check-in system, distancing\n                  protocols</p></div></div></div></div><div class=\"testimonial\"><div class=\"testimonials base-testimonial-box-view-style3\"><div class=\"testimonial-avatar sm-mt-20\"><div id=\"i0t5au\" class=\"testimonial-img\"><img src=\"https://placehold.co/150x150\" alt=\"testimonial-img\" class=\"img-fluid\"/></div></div><div class=\"testimonial-content sm-mb-30\"><blockquote class=\"testimonial-text\">We highly recommend Anywhere Gimmer! My husband and I worked out with\n                them at our apartment gym for I worked out with them well over a year.</blockquote><div class=\"testimonial-bottom\"><div class=\"testimonial-caption\"><h5>Joan Thompson</h5><label>Athletic Trainers</label></div><div class=\"star-ratings text-right\"><ul class=\"rating\"><li class=\"active\"><i class=\"fa fa-star\"></i></li><li class=\"active\"><i class=\"fa fa-star\"></i></li><li class=\"active\"><i class=\"fa fa-star\"></i></li><li class=\"active\"><i class=\"fa fa-star\"></i></li><li class=\"active\"><i class=\"fa fa-star\"></i></li></ul></div></div></div></div></div><div class=\"team\"><div class=\"featured-imagebox featured-imagebox-team style1\"><div id=\"iaiq9p\" class=\"base-box-view-overlay\"><div class=\"featured-thumbnail\"><img src=\"https://placehold.co/450x470\" alt=\"image\" id=\"i5nx5a\" class=\"img-fluid\"/><div class=\"featured-iconbox base-media-link\"><div class=\"media-block\"><ul class=\"social-icons\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i id=\"iyxxna\" class=\"fa-facebook-f fab\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i id=\"i9binx\" class=\"fa-twitter fab\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" id=\"ia1hmf\" class=\"tooltip-top\"><i id=\"it1khy\" class=\"fa-flickr fab\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i id=\"igmx4i\" class=\"fa-linkedin fab\"></i></a></li></ul></div></div></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3><a>David Smitgh</a></h3></div><div class=\"team-position\">Consultant</div></div></div></div></div><div id=\"ilmv\" class=\"gjs-cell\"><a href=\"javascript:void(0);\" id=\"ii045z\" class=\"button-link base-btn base-btn-md base-btn-square base-btn-fill base-btn-primary z-index-1\"><span>VIEW MORE</span><i class=\"fa fa-angle-double-right ml-10\"></i></a><div class=\"icon-box\"><div class=\"featured-icon-box icon-align-before-content\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-onlytxt base-icon_element-color-skincolor base-icon_element-size-sm\"><i id=\"iwa263\" class=\"fa-check-square base-textcolor-skincolor fas\"></i></div></div><div id=\"iknh5p\" class=\"featured-content\"><div class=\"featured-title\"><h3>Comprehensive</h3><p id=\"iuoxha\">A Clear and concise customer correspondence including.</p></div></div></div></div><div class=\"icon-box2\"><div class=\"featured-icon-box style9\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-color-skincolor base-icon_element-size-lg\"><h1>02</h1></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h3 id=\"i593k2\">Quality Equipment</h3></div><div class=\"featured-desc\"><p>Let’s be honest skipping and running your workout, try to suss when quiet.</p></div></div></div></div><div id=\"iur6cp\" class=\"icon-box3\"><div class=\"featured-icon-box style4 icon-align-before-content icon-ver_align-top\"><div class=\"featured-icon\"><div class=\"base-icon base-icon_element-color-skincolor base-icon_element-size-lg base-icon_element-style-square\"><i class=\"fa fa-check-square\"></i></div></div><div class=\"featured-content\"><div class=\"featured-title\"><h4>Strong people</h4><h3 class=\"title\">Self Defence</h3></div></div><div class=\"base-horizontal_sep width-100 mt-30 mb-20\"></div><div class=\"featured-desc\"><p>To strengthen &amp; tone-up your muscles, keep you in shape and posture.</p></div><a tabindex=\"0\" class=\"base-btn base-btn-size-sm base-btn-color-darkgrey btn-inline base-icon-btn-right z-index-1\">READ MORE\n            </a></div></div><div class=\"icon-list\"><ul class=\"base-list base-list-style-icon base-list-icon-color-skincolor\"><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">2,000+ locations open (and we're just getting started!)</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">Unique concept that combines fitness and technology</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">We have small studios designed for the large groups</div></li><li><i class=\"fa fa-long-arrow-right\"></i><div class=\"base-list-li-content\">1800+ franchises awarded in 30 countries worldwide</div></li></ul></div><div class=\"widget-text\"><div class=\"widget widget_text clearfix\"><div class=\"footer-logo\"><img id=\"footer-logo-img-2\" src=\"https://placehold.co/311x92\" alt=\"\" class=\"img-center\"/></div><div class=\"textwidget widget-text\"><p class=\"pb-10 pr-30\">After you decide to start training we will make sure you get the best fitness\n                program.</p></div><div class=\"order-3\"><div class=\"social-icons square\"><ul class=\"social-icons list-inline\"><li><a rel=\"noopener\" aria-label=\"facebook\" data-tooltip=\"Facebook\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-facebook\"></i></a></li><li><a rel=\"noopener\" aria-label=\"twitter\" data-tooltip=\"Twitter\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-twitter\"></i></a></li><li><a rel=\"noopener\" aria-label=\"flickr\" data-tooltip=\"Flickr\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-flickr\"></i></a></li><li><a rel=\"noopener\" aria-label=\"linkedin\" data-tooltip=\"Linkedin\" target=\"_blank\" class=\"tooltip-top\"><i class=\"fab fa-linkedin\"></i></a></li></ul></div></div></div></div><div class=\"base-pricing-plan\"><div class=\"base-plan-head\"><div class=\"base-plan-icon\"><i class=\"fa fa-check-square\"></i></div><div class=\"base-plan-title\"><h3>Standard Plan!</h3><p>Salary Level Up To $50k</p></div><div class=\"base-plan-box-desc\"></div></div><ul class=\"base-list base-list-style-icon base-list-icon-color-darkgrey pt-15 pb-15\"><li><i class=\"fa fa-long-arrow-right\"></i><span class=\"base-list-li-content text-left\">Unique concept fitness &amp; technology</span></li><li><i class=\"fa fa-long-arrow-right\"></i><span class=\"base-list-li-content text-left\">Gym franchises &amp; awarded in worlds</span></li><li><i class=\"fa fa-long-arrow-right\"></i><span class=\"base-list-li-content text-left\">Gym run by Certified &amp; professionals</span></li><li><i class=\"fa fa-long-arrow-right text-left\"></i><span class=\"base-list-li-content\">We are running successfully 20 years</span></li></ul><div class=\"base-plan-amount\"><span class=\"cur_symbol\">$</span><span class=\"base-ptablebox-price\">99</span><span class=\"pac_frequency\">/Per Month</span></div><div class=\"base-plan-footer\"><a class=\"base-btn base-btn-md base-btn-square base-btn-fill base-btn-icon-right base-btn-primary text-center mt-30 z-index-1\">GET STARTED</a></div></div></div></div><div class=\"footer\" data-type=\"footer\" data-layout=\"default\">[footer layout=\"default\"]</div></body>",
+        "css": "* { box-sizing: border-box; } body {margin: 0;}.gjs-row{display:flex;justify-content:flex-start;align-items:stretch;flex-wrap:nowrap;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;}.gjs-cell{min-height:75px;flex-grow:1;flex-basis:100%;}#ijai{padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;}#i08l{margin-top:10px;margin-bottom:10px;margin-right:10px;margin-left:10px;}#i1xfzw{width:50%;}#i0nwsw{width:90%;}#ipf71f{width:70%;}#iy2wck{background:grey;display:flex;justify-content:space-around;}#ido5e1{background:grey;}@media (max-width: 768px){.gjs-row{flex-wrap:wrap;}}"
       }
     }
   ]

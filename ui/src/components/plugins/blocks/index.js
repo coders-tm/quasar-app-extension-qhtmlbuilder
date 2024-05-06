@@ -11,6 +11,7 @@ import iconList from './icon-list'
 import stepsBox from './steps-box'
 import testimonial from './testimonial'
 import planCard from './plan-card'
+import bannerSlider from './banner-slider'
 
 export default (editor, options = {}) => {
   icon(editor, options)
@@ -26,4 +27,5 @@ export default (editor, options = {}) => {
   testimonial(editor, options)
   planCard(editor, options)
   iconBox(editor, options)
+  bannerSlider(editor, options)
 }
