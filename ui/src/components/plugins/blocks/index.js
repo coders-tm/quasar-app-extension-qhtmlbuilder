@@ -13,8 +13,10 @@ import testimonial from './testimonial'
 import planCard from './plan-card'
 import bannerSlider from './banner-slider'
 import pageTitle from './page-title'
+import columns from './columns'
 
 export default (editor, options = {}) => {
+  columns(editor, options)
   pageTitle(editor, options)
   icon(editor, options)
   sectionTitle(editor, options)

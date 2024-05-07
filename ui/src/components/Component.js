@@ -69,7 +69,10 @@ export default {
           plugins
         ],
         pluginsOpts: {
-          [blocksBasic]: { flexGrid: true },
+          [blocksBasic]: {
+            flexGrid: true,
+            blocks: ['text', 'link', 'image', 'video', 'map']
+          },
           [tabs]: { tabsBlock: { category: 'Extra' } },
           [imageEditor]: {
             script: [
