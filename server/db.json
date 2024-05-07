@@ -5987,28 +5987,15 @@
         "styles": [
           {
             "selectors": [
-              "#iu0c"
+              "#iby5"
             ],
             "style": {
-              "padding": "90px 0px"
+              "padding": "15px"
             }
           },
           {
             "selectors": [
-              "container"
-            ],
-            "selectorsAdd": "[class^=\"container-\"]",
-            "style": {
-              "padding-top": "15px",
-              "padding-right": "15px",
-              "padding-bottom": "15px",
-              "padding-left": "15px"
-            },
-            "group": "cmp:container"
-          },
-          {
-            "selectors": [
-              "#i088"
+              "#iskk"
             ],
             "style": {
               "margin": "15px 0px"
@@ -6035,42 +6022,25 @@
                   },
                   "components": [
                     {
-                      "type": "header",
-                      "classes": [
-                        "shortcode"
-                      ],
-                      "attributes": {},
-                      "shortcode": "[header]"
-                    },
-                    {
-                      "type": "section",
+                      "type": "container",
                       "style": "",
                       "classes": [
-                        "clearfix"
+                        "container"
                       ],
                       "attributes": {
-                        "id": "iu0c"
+                        "id": "iby5"
                       },
                       "components": [
                         {
-                          "type": "container",
-                          "classes": [
-                            "container"
-                          ],
-                          "attributes": {},
+                          "tagName": "p",
+                          "type": "text",
+                          "attributes": {
+                            "id": "iskk"
+                          },
                           "components": [
                             {
-                              "tagName": "p",
-                              "type": "text",
-                              "attributes": {
-                                "id": "i088"
-                              },
-                              "components": [
-                                {
-                                  "type": "textnode",
-                                  "content": "Container"
-                                }
-                              ]
+                              "type": "textnode",
+                              "content": "Container"
                             }
                           ]
                         }
@@ -6087,8 +6057,8 @@
         ]
       },
       "pagesHtml": {
-        "html": "<body id=\"i33v\">[header]<div class=\"clearfix\" id=\"iu0c\"><div class=\"container\"><p id=\"i088\">Container</p></div></div></body>",
-        "css": "* { box-sizing: border-box; } body {margin: 0;}#iu0c{padding:90px 0px;}.container, [class^=\"container-\"]{padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;}#i088{margin:15px 0px;}"
+        "html": "<body id=\"i33v\"><div class=\"container\" id=\"iby5\"><p id=\"iskk\">Container</p></div></body>",
+        "css": "* { box-sizing: border-box; } body {margin: 0;}#iby5{padding:15px;}#iskk{margin:15px 0px;}"
       }
     }
   ]
