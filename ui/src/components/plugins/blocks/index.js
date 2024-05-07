@@ -14,8 +14,10 @@ import planCard from './plan-card'
 import bannerSlider from './banner-slider'
 import pageTitle from './page-title'
 import columns from './columns'
+import section from './section'
 
 export default (editor, options = {}) => {
+  section(editor, options)
   columns(editor, options)
   pageTitle(editor, options)
   icon(editor, options)

@@ -5984,7 +5984,37 @@
             "name": "logo.png"
           }
         ],
-        "styles": [],
+        "styles": [
+          {
+            "selectors": [
+              "#iu0c"
+            ],
+            "style": {
+              "padding": "90px 0px"
+            }
+          },
+          {
+            "selectors": [
+              "container"
+            ],
+            "selectorsAdd": "[class^=\"container-\"]",
+            "style": {
+              "padding-top": "15px",
+              "padding-right": "15px",
+              "padding-bottom": "15px",
+              "padding-left": "15px"
+            },
+            "group": "cmp:container"
+          },
+          {
+            "selectors": [
+              "#i088"
+            ],
+            "style": {
+              "margin": "15px 0px"
+            }
+          }
+        ],
         "pages": [
           {
             "frames": [
@@ -6011,6 +6041,40 @@
                       ],
                       "attributes": {},
                       "shortcode": "[header]"
+                    },
+                    {
+                      "type": "section",
+                      "style": "",
+                      "classes": [
+                        "clearfix"
+                      ],
+                      "attributes": {
+                        "id": "iu0c"
+                      },
+                      "components": [
+                        {
+                          "type": "container",
+                          "classes": [
+                            "container"
+                          ],
+                          "attributes": {},
+                          "components": [
+                            {
+                              "tagName": "p",
+                              "type": "text",
+                              "attributes": {
+                                "id": "i088"
+                              },
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "Container"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
@@ -6023,8 +6087,8 @@
         ]
       },
       "pagesHtml": {
-        "html": "<body id=\"i33v\">[header]</body>",
-        "css": "* { box-sizing: border-box; } body {margin: 0;}"
+        "html": "<body id=\"i33v\">[header]<div class=\"clearfix\" id=\"iu0c\"><div class=\"container\"><p id=\"i088\">Container</p></div></div></body>",
+        "css": "* { box-sizing: border-box; } body {margin: 0;}#iu0c{padding:90px 0px;}.container, [class^=\"container-\"]{padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;}#i088{margin:15px 0px;}"
       }
     }
   ]
