@@ -47,14 +47,10 @@ export default (editor, options = {}) => {
               <div class="featured-desc">
                 <p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p>
               </div>
-              <a class="btn btn-inline btn--md btn--color-darkgrey z-index-1" href="javascript:void(0);"
-                tabindex="0">Read More</a>
+              <a class="btn btn-inline btn--md btn--color-darkgrey z-index-1" href="javascript:void(0);" tabindex="0">Read More</a>
               <div class="ct-boxbg-icon">
-                <div class="ct-service-iconbox">
-                  <div
-                    class="ct-icon ct-icon--primary ct-icon--md ct-icon--style-rounded">
-                    <i class="fa fa-check-square-o"></i>
-                  </div>
+                <div class="ct-icon">
+                  <img src="https://placehold.co/75x30"/>
                 </div>
               </div>
             </div>

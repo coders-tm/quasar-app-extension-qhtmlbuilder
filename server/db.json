@@ -5987,18 +5987,10 @@
         "styles": [
           {
             "selectors": [
-              "#iby5"
+              "#i2pdu"
             ],
             "style": {
-              "padding": "15px"
-            }
-          },
-          {
-            "selectors": [
-              "#iskk"
-            ],
-            "style": {
-              "margin": "15px 0px"
+              "font-size": "45px"
             }
           }
         ],
@@ -6022,25 +6014,686 @@
                   },
                   "components": [
                     {
-                      "type": "container",
-                      "style": "",
+                      "type": "row",
                       "classes": [
-                        "container"
+                        "row"
                       ],
                       "attributes": {
-                        "id": "iby5"
+                        "id": "ilff"
                       },
                       "components": [
                         {
-                          "tagName": "p",
-                          "type": "text",
-                          "attributes": {
-                            "id": "iskk"
-                          },
+                          "type": "column",
+                          "classes": [
+                            "col-sm-4"
+                          ],
+                          "attributes": {},
                           "components": [
                             {
-                              "type": "textnode",
-                              "content": "Container"
+                              "tagName": "p",
+                              "type": "text",
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "col-sm-4"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "imagebox-services",
+                              "classes": [
+                                "imagebox-services"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "classes": [
+                                    "featured-imagebox",
+                                    "featured-imagebox-services",
+                                    "style1"
+                                  ],
+                                  "components": [
+                                    {
+                                      "type": "comment",
+                                      "content": " featured-thumbnail "
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-thumbnail"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "link",
+                                          "editable": false,
+                                          "attributes": {
+                                            "tabindex": "0"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "image",
+                                              "resizable": {
+                                                "ratioDefault": 1
+                                              },
+                                              "classes": [
+                                                "img-fluid"
+                                              ],
+                                              "attributes": {
+                                                "width": "742",
+                                                "height": "618",
+                                                "src": "https://placehold.co/742x618",
+                                                "alt": "image"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "ct-blog-overlay-iconbox"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "link",
+                                              "attributes": {
+                                                "tabindex": "0"
+                                              },
+                                              "components": [
+                                                {
+                                                  "tagName": "i",
+                                                  "classes": [
+                                                    "ti",
+                                                    "ti-plus"
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "cat_block-wrapper"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "span",
+                                              "classes": [
+                                                "cat_block"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "tagName": "time",
+                                                  "type": "text",
+                                                  "classes": [
+                                                    "entry-date",
+                                                    "published"
+                                                  ],
+                                                  "attributes": {
+                                                    "datetime": "2020-11-11T04:34:34+00:00"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "CARDIO"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " featured-thumbnail end"
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-content",
+                                        "featured-content-post"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "featured-title"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "h3",
+                                              "components": [
+                                                {
+                                                  "type": "link",
+                                                  "attributes": {
+                                                    "tabindex": "0"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "Fitness For Man"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "featured-desc"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "p",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Fitness For Man strong interest in gymnastics, training provides stress to the muscles."
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "link",
+                                          "classes": [
+                                            "btn",
+                                            "btn-inline",
+                                            "btn--md",
+                                            "btn--color-darkgrey",
+                                            "z-index-1"
+                                          ],
+                                          "attributes": {
+                                            "tabindex": "0"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Read More"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "ct-boxbg-icon"
+                                          ],
+                                          "components": [
+                                            {
+                                              "classes": [
+                                                "ct-icon"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "type": "image",
+                                                  "resizable": {
+                                                    "ratioDefault": 1
+                                                  },
+                                                  "attributes": {
+                                                    "src": "https://placehold.co/75x30"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "column",
+                          "classes": [
+                            "col-sm-4"
+                          ],
+                          "attributes": {},
+                          "components": [
+                            {
+                              "tagName": "p",
+                              "type": "text",
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "col-sm-4"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "imagebox-services",
+                              "classes": [
+                                "imagebox-services"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "classes": [
+                                    "featured-imagebox",
+                                    "featured-imagebox-services",
+                                    "style1"
+                                  ],
+                                  "components": [
+                                    {
+                                      "type": "comment",
+                                      "content": " featured-thumbnail "
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-thumbnail"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "link",
+                                          "editable": false,
+                                          "attributes": {
+                                            "tabindex": "0"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "image",
+                                              "resizable": {
+                                                "ratioDefault": 1
+                                              },
+                                              "classes": [
+                                                "img-fluid"
+                                              ],
+                                              "attributes": {
+                                                "width": "742",
+                                                "height": "618",
+                                                "src": "https://placehold.co/742x618",
+                                                "alt": "image"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "ct-blog-overlay-iconbox"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "link",
+                                              "attributes": {
+                                                "tabindex": "0"
+                                              },
+                                              "components": [
+                                                {
+                                                  "tagName": "i",
+                                                  "classes": [
+                                                    "ti",
+                                                    "ti-plus"
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "cat_block-wrapper"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "span",
+                                              "classes": [
+                                                "cat_block"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "tagName": "time",
+                                                  "type": "text",
+                                                  "classes": [
+                                                    "entry-date",
+                                                    "published"
+                                                  ],
+                                                  "attributes": {
+                                                    "datetime": "2020-11-11T04:34:34+00:00"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "CARDIO"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " featured-thumbnail end"
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-content",
+                                        "featured-content-post"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "featured-title"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "h3",
+                                              "components": [
+                                                {
+                                                  "type": "link",
+                                                  "attributes": {
+                                                    "tabindex": "0"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "Fitness For Man"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "featured-desc"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "p",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Fitness For Man strong interest in gymnastics, training provides stress to the muscles."
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "link",
+                                          "classes": [
+                                            "btn",
+                                            "btn-inline",
+                                            "btn--md",
+                                            "btn--color-darkgrey",
+                                            "z-index-1"
+                                          ],
+                                          "attributes": {
+                                            "tabindex": "0"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Read More"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "ct-boxbg-icon"
+                                          ],
+                                          "components": [
+                                            {
+                                              "classes": [
+                                                "ct-icon"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "type": "image",
+                                                  "resizable": {
+                                                    "ratioDefault": 1
+                                                  },
+                                                  "attributes": {
+                                                    "src": "https://placehold.co/55x20",
+                                                    "id": "ipmbd"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "column",
+                          "classes": [
+                            "col-sm-4"
+                          ],
+                          "attributes": {},
+                          "components": [
+                            {
+                              "tagName": "p",
+                              "type": "text",
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "col-sm-4"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "imagebox-services",
+                              "classes": [
+                                "imagebox-services"
+                              ],
+                              "attributes": {},
+                              "components": [
+                                {
+                                  "classes": [
+                                    "featured-imagebox",
+                                    "featured-imagebox-services",
+                                    "style1"
+                                  ],
+                                  "components": [
+                                    {
+                                      "type": "comment",
+                                      "content": " featured-thumbnail "
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-thumbnail"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "link",
+                                          "editable": false,
+                                          "attributes": {
+                                            "tabindex": "0"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "image",
+                                              "resizable": {
+                                                "ratioDefault": 1
+                                              },
+                                              "classes": [
+                                                "img-fluid"
+                                              ],
+                                              "attributes": {
+                                                "width": "742",
+                                                "height": "618",
+                                                "src": "https://placehold.co/742x618",
+                                                "alt": "image"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "ct-blog-overlay-iconbox"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "link",
+                                              "attributes": {
+                                                "tabindex": "0"
+                                              },
+                                              "components": [
+                                                {
+                                                  "tagName": "i",
+                                                  "classes": [
+                                                    "ti",
+                                                    "ti-plus"
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "cat_block-wrapper"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "span",
+                                              "classes": [
+                                                "cat_block"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "tagName": "time",
+                                                  "type": "text",
+                                                  "classes": [
+                                                    "entry-date",
+                                                    "published"
+                                                  ],
+                                                  "attributes": {
+                                                    "datetime": "2020-11-11T04:34:34+00:00"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "CARDIO"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " featured-thumbnail end"
+                                    },
+                                    {
+                                      "classes": [
+                                        "featured-content",
+                                        "featured-content-post"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "featured-title"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "h3",
+                                              "components": [
+                                                {
+                                                  "type": "link",
+                                                  "attributes": {
+                                                    "tabindex": "0"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "type": "textnode",
+                                                      "content": "Fitness For Man"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "featured-desc"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "p",
+                                              "type": "text",
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Fitness For Man strong interest in gymnastics, training provides stress to the muscles."
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "link",
+                                          "classes": [
+                                            "btn",
+                                            "btn-inline",
+                                            "btn--md",
+                                            "btn--color-darkgrey",
+                                            "z-index-1"
+                                          ],
+                                          "attributes": {
+                                            "tabindex": "0"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Read More"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "ct-boxbg-icon"
+                                          ],
+                                          "components": [
+                                            {
+                                              "classes": [
+                                                "ct-service-iconbox"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "classes": [
+                                                    "ct-icon",
+                                                    "ct-icon--primary"
+                                                  ],
+                                                  "attributes": {
+                                                    "id": "i2pdu"
+                                                  },
+                                                  "components": [
+                                                    {
+                                                      "type": "image",
+                                                      "resizable": {
+                                                        "ratioDefault": 1
+                                                      },
+                                                      "attributes": {
+                                                        "src": "https://placehold.co/55x20"
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         }
@@ -6057,8 +6710,8 @@
         ]
       },
       "pagesHtml": {
-        "html": "<body id=\"i33v\"><div class=\"container\" id=\"iby5\"><p id=\"iskk\">Container</p></div></body>",
-        "css": "* { box-sizing: border-box; } body {margin: 0;}#iby5{padding:15px;}#iskk{margin:15px 0px;}"
+        "html": "<body id=\"i33v\"><div id=\"ilff\" class=\"row\"><div class=\"col-sm-4\"><p>col-sm-4</p><div class=\"imagebox-services\"><div class=\"featured-imagebox featured-imagebox-services style1\"><!-- featured-thumbnail --><div class=\"featured-thumbnail\"><a tabindex=\"0\"><img width=\"742\" height=\"618\" src=\"https://placehold.co/742x618\" alt=\"image\" class=\"img-fluid\"/></a><div class=\"ct-blog-overlay-iconbox\"><a tabindex=\"0\"><i class=\"ti ti-plus\"></i></a></div><div class=\"cat_block-wrapper\"><span class=\"cat_block\"><time datetime=\"2020-11-11T04:34:34+00:00\" class=\"entry-date published\">CARDIO</time></span></div></div><!-- featured-thumbnail end--><div class=\"featured-content featured-content-post\"><div class=\"featured-title\"><h3><a tabindex=\"0\">Fitness For Man</a></h3></div><div class=\"featured-desc\"><p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p></div><a tabindex=\"0\" class=\"btn btn-inline btn--md btn--color-darkgrey z-index-1\">Read More</a><div class=\"ct-boxbg-icon\"><div class=\"ct-icon\"><img src=\"https://placehold.co/75x30\"/></div></div></div></div></div></div><div class=\"col-sm-4\"><p>col-sm-4</p><div class=\"imagebox-services\"><div class=\"featured-imagebox featured-imagebox-services style1\"><!-- featured-thumbnail --><div class=\"featured-thumbnail\"><a tabindex=\"0\"><img width=\"742\" height=\"618\" src=\"https://placehold.co/742x618\" alt=\"image\" class=\"img-fluid\"/></a><div class=\"ct-blog-overlay-iconbox\"><a tabindex=\"0\"><i class=\"ti ti-plus\"></i></a></div><div class=\"cat_block-wrapper\"><span class=\"cat_block\"><time datetime=\"2020-11-11T04:34:34+00:00\" class=\"entry-date published\">CARDIO</time></span></div></div><!-- featured-thumbnail end--><div class=\"featured-content featured-content-post\"><div class=\"featured-title\"><h3><a tabindex=\"0\">Fitness For Man</a></h3></div><div class=\"featured-desc\"><p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p></div><a tabindex=\"0\" class=\"btn btn-inline btn--md btn--color-darkgrey z-index-1\">Read More</a><div class=\"ct-boxbg-icon\"><div class=\"ct-icon\"><img src=\"https://placehold.co/55x20\" id=\"ipmbd\"/></div></div></div></div></div></div><div class=\"col-sm-4\"><p>col-sm-4</p><div class=\"imagebox-services\"><div class=\"featured-imagebox featured-imagebox-services style1\"><!-- featured-thumbnail --><div class=\"featured-thumbnail\"><a tabindex=\"0\"><img width=\"742\" height=\"618\" src=\"https://placehold.co/742x618\" alt=\"image\" class=\"img-fluid\"/></a><div class=\"ct-blog-overlay-iconbox\"><a tabindex=\"0\"><i class=\"ti ti-plus\"></i></a></div><div class=\"cat_block-wrapper\"><span class=\"cat_block\"><time datetime=\"2020-11-11T04:34:34+00:00\" class=\"entry-date published\">CARDIO</time></span></div></div><!-- featured-thumbnail end--><div class=\"featured-content featured-content-post\"><div class=\"featured-title\"><h3><a tabindex=\"0\">Fitness For Man</a></h3></div><div class=\"featured-desc\"><p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p></div><a tabindex=\"0\" class=\"btn btn-inline btn--md btn--color-darkgrey z-index-1\">Read More</a><div class=\"ct-boxbg-icon\"><div class=\"ct-service-iconbox\"><div id=\"i2pdu\" class=\"ct-icon ct-icon--primary\"><img src=\"https://placehold.co/55x20\"/></div></div></div></div></div></div></div></div></body>",
+        "css": "* { box-sizing: border-box; } body {margin: 0;}#i2pdu{font-size:45px;}"
       }
     }
   ]

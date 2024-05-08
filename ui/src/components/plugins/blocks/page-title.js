@@ -28,7 +28,7 @@ export default (editor, options = {}) => {
                   <div class="row align-items-center">
                       <div class="col-lg-12">
                           <div class="page-title-heading">
-                              <h2 class="title">Page Title</h2>
+                              <h2 style="color: #ffff" class="title">Page Title</h2>
                           </div>
                       </div>
                   </div>
