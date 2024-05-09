@@ -38,8 +38,7 @@ export default (editor, opt = {}) => {
     navbar(editor, options)
   }
 
-  const { templates } = options
-  templateManager(editor, templates)
+  templateManager(editor, options)
 
   blocks(editor, options)
 }

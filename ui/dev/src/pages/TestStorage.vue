@@ -66,11 +66,11 @@ const deleteData = (id) => {
   })
 }
 
-async function onLoad(payload) {
+async function onLoadTemplate(payload) {
   return loadTemplates(payload)
 }
 
-function onStore(payload) {
+function onStoreTemplate(payload) {
   return storeData(payload.id, payload)
     .then(() => {
       return true
@@ -80,7 +80,7 @@ function onStore(payload) {
     })
 }
 
-function onDelete(payload) {
+function onDeleteTemplate(payload) {
   return deleteData(payload)
     .then(() => {
       return true
@@ -129,10 +129,11 @@ const config = {
         { id: 'classic', label: 'Classic' },
         { id: 'overlay', label: 'Overlay' }
       ],
-      templates: {
-        onLoad,
-        onStore,
-        onDelete
+      onLoadTemplate,
+      onStoreTemplate,
+      onDeleteTemplate,
+      onLoadShortCode: (el, shortcode) => {
+        console.log(el, shortcode)
       }
     }
   }

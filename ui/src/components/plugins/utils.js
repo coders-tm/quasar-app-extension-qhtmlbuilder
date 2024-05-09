@@ -71,9 +71,9 @@ export const storeProjects = (payload, opts) => {
           .catch((error) => {
             reject(error)
           })
-      } else if (typeof opts?.onStore == 'function') {
+      } else if (typeof opts?.onStoreTemplate == 'function') {
         try {
-          const results = await opts.onStore(payload)
+          const results = await opts.onStoreTemplate(payload)
           resolve(results)
         } catch (error) {
           reject(error)
@@ -106,9 +106,9 @@ export const removeProjects = (payload, opts) => {
           .catch((error) => {
             reject(error)
           })
-      } else if (typeof opts?.onDelete == 'function') {
+      } else if (typeof opts?.onDeleteTemplate == 'function') {
         try {
-          const results = await opts.onDelete(payload)
+          const results = await opts.onDeleteTemplate(payload)
           resolve(results)
         } catch (error) {
           reject(error)
@@ -135,11 +135,11 @@ export const fetchTemplates = (type, opts) => {
 
     let apiEndpoint = opts?.templates
     let results = []
-    const onLoad = opts?.onLoad
+    const onLoadTemplate = opts?.onLoadTemplate
 
-    if (typeof onLoad == 'function') {
+    if (typeof onLoadTemplate == 'function') {
       try {
-        results = await onLoad(type)
+        results = await onLoadTemplate(type)
         return resolve(results)
       } catch (error) {
         console.error(error)
