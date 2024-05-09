@@ -1,5 +1,5 @@
-import blocks from './blocks'
 import _default from './default'
+import blocks from './blocks'
 import layouts from './layouts'
 import navbar from './navbar'
 import shortcodes from './shortcodes'
