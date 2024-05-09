@@ -5,8 +5,6 @@ import templates from './templates'
 import commands from './commands'
 import panels from './panels'
 
-import './styles/main.scss'
-
 export const makeThumbnail = (el, options = {}) => {
   return new Promise(async (resolve, reject) => {
     try {

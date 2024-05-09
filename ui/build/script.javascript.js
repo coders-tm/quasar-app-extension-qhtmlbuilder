@@ -9,7 +9,6 @@ const json = require('@rollup/plugin-json')
 const { nodeResolve } = require('@rollup/plugin-node-resolve')
 const replace = require('@rollup/plugin-replace')
 const commonjs = require('@rollup/plugin-commonjs')
-const postcss = require('rollup-plugin-postcss')
 
 const { version } = require('../package.json')
 
@@ -38,11 +37,6 @@ const rollupPlugins = [
       '@babel/plugin-transform-runtime',
       '@babel/plugin-transform-regenerator'
     ]
-  }),
-  postcss({
-    extract: true,
-    modules: false,
-    use: ['sass']
   })
 ]
 
