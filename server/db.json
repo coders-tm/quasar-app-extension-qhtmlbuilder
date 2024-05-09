@@ -6027,7 +6027,9 @@
                           "classes": [
                             "col-sm-4"
                           ],
-                          "attributes": {},
+                          "attributes": {
+                            "id": "i7v1"
+                          },
                           "components": [
                             {
                               "tagName": "p",
@@ -6221,6 +6223,9 @@
                                               "classes": [
                                                 "ct-icon"
                                               ],
+                                              "attributes": {
+                                                "id": "ifntc"
+                                              },
                                               "components": [
                                                 {
                                                   "type": "image",
@@ -6228,7 +6233,8 @@
                                                     "ratioDefault": 1
                                                   },
                                                   "attributes": {
-                                                    "src": "https://placehold.co/75x30"
+                                                    "src": "https://placehold.co/75x30",
+                                                    "id": "iqpql"
                                                   }
                                                 }
                                               ]
@@ -6248,7 +6254,9 @@
                           "classes": [
                             "col-sm-4"
                           ],
-                          "attributes": {},
+                          "attributes": {
+                            "id": "ipir2"
+                          },
                           "components": [
                             {
                               "tagName": "p",
@@ -6470,15 +6478,55 @@
                           "classes": [
                             "col-sm-4"
                           ],
-                          "attributes": {},
+                          "attributes": {
+                            "id": "i4z6y"
+                          },
                           "components": [
                             {
-                              "tagName": "p",
-                              "type": "text",
+                              "type": "section-title",
+                              "classes": [
+                                "section-title"
+                              ],
+                              "attributes": {},
                               "components": [
                                 {
-                                  "type": "textnode",
-                                  "content": "col-sm-4"
+                                  "classes": [
+                                    "title-header"
+                                  ],
+                                  "components": [
+                                    {
+                                      "tagName": "h4",
+                                      "type": "text",
+                                      "classes": [
+                                        "subtitle"
+                                      ],
+                                      "attributes": {
+                                        "id": "iiw436"
+                                      },
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "WHY CHOOSE US!"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tagName": "h2",
+                                      "type": "text",
+                                      "classes": [
+                                        "title"
+                                      ],
+                                      "attributes": {
+                                        "id": "ir30yf"
+                                      },
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "We Let You Feel The Difference"
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -6710,7 +6758,7 @@
         ]
       },
       "pagesHtml": {
-        "html": "<body id=\"i33v\"><div id=\"ilff\" class=\"row\"><div class=\"col-sm-4\"><p>col-sm-4</p><div class=\"imagebox-services\"><div class=\"featured-imagebox featured-imagebox-services style1\"><!-- featured-thumbnail --><div class=\"featured-thumbnail\"><a tabindex=\"0\"><img width=\"742\" height=\"618\" src=\"https://placehold.co/742x618\" alt=\"image\" class=\"img-fluid\"/></a><div class=\"ct-blog-overlay-iconbox\"><a tabindex=\"0\"><i class=\"ti ti-plus\"></i></a></div><div class=\"cat_block-wrapper\"><span class=\"cat_block\"><time datetime=\"2020-11-11T04:34:34+00:00\" class=\"entry-date published\">CARDIO</time></span></div></div><!-- featured-thumbnail end--><div class=\"featured-content featured-content-post\"><div class=\"featured-title\"><h3><a tabindex=\"0\">Fitness For Man</a></h3></div><div class=\"featured-desc\"><p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p></div><a tabindex=\"0\" class=\"btn btn-inline btn--md btn--color-darkgrey z-index-1\">Read More</a><div class=\"ct-boxbg-icon\"><div class=\"ct-icon\"><img src=\"https://placehold.co/75x30\"/></div></div></div></div></div></div><div class=\"col-sm-4\"><p>col-sm-4</p><div class=\"imagebox-services\"><div class=\"featured-imagebox featured-imagebox-services style1\"><!-- featured-thumbnail --><div class=\"featured-thumbnail\"><a tabindex=\"0\"><img width=\"742\" height=\"618\" src=\"https://placehold.co/742x618\" alt=\"image\" class=\"img-fluid\"/></a><div class=\"ct-blog-overlay-iconbox\"><a tabindex=\"0\"><i class=\"ti ti-plus\"></i></a></div><div class=\"cat_block-wrapper\"><span class=\"cat_block\"><time datetime=\"2020-11-11T04:34:34+00:00\" class=\"entry-date published\">CARDIO</time></span></div></div><!-- featured-thumbnail end--><div class=\"featured-content featured-content-post\"><div class=\"featured-title\"><h3><a tabindex=\"0\">Fitness For Man</a></h3></div><div class=\"featured-desc\"><p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p></div><a tabindex=\"0\" class=\"btn btn-inline btn--md btn--color-darkgrey z-index-1\">Read More</a><div class=\"ct-boxbg-icon\"><div class=\"ct-icon\"><img src=\"https://placehold.co/55x20\" id=\"ipmbd\"/></div></div></div></div></div></div><div class=\"col-sm-4\"><p>col-sm-4</p><div class=\"imagebox-services\"><div class=\"featured-imagebox featured-imagebox-services style1\"><!-- featured-thumbnail --><div class=\"featured-thumbnail\"><a tabindex=\"0\"><img width=\"742\" height=\"618\" src=\"https://placehold.co/742x618\" alt=\"image\" class=\"img-fluid\"/></a><div class=\"ct-blog-overlay-iconbox\"><a tabindex=\"0\"><i class=\"ti ti-plus\"></i></a></div><div class=\"cat_block-wrapper\"><span class=\"cat_block\"><time datetime=\"2020-11-11T04:34:34+00:00\" class=\"entry-date published\">CARDIO</time></span></div></div><!-- featured-thumbnail end--><div class=\"featured-content featured-content-post\"><div class=\"featured-title\"><h3><a tabindex=\"0\">Fitness For Man</a></h3></div><div class=\"featured-desc\"><p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p></div><a tabindex=\"0\" class=\"btn btn-inline btn--md btn--color-darkgrey z-index-1\">Read More</a><div class=\"ct-boxbg-icon\"><div class=\"ct-service-iconbox\"><div id=\"i2pdu\" class=\"ct-icon ct-icon--primary\"><img src=\"https://placehold.co/55x20\"/></div></div></div></div></div></div></div></div></body>",
+        "html": "<body id=\"i33v\"><div id=\"ilff\" class=\"row\"><div class=\"col-sm-4\" id=\"i7v1\"><p>col-sm-4</p><div class=\"imagebox-services\"><div class=\"featured-imagebox featured-imagebox-services style1\"><!-- featured-thumbnail --><div class=\"featured-thumbnail\"><a tabindex=\"0\"><img width=\"742\" height=\"618\" src=\"https://placehold.co/742x618\" alt=\"image\" class=\"img-fluid\"/></a><div class=\"ct-blog-overlay-iconbox\"><a tabindex=\"0\"><i class=\"ti ti-plus\"></i></a></div><div class=\"cat_block-wrapper\"><span class=\"cat_block\"><time datetime=\"2020-11-11T04:34:34+00:00\" class=\"entry-date published\">CARDIO</time></span></div></div><!-- featured-thumbnail end--><div class=\"featured-content featured-content-post\"><div class=\"featured-title\"><h3><a tabindex=\"0\">Fitness For Man</a></h3></div><div class=\"featured-desc\"><p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p></div><a tabindex=\"0\" class=\"btn btn-inline btn--md btn--color-darkgrey z-index-1\">Read More</a><div class=\"ct-boxbg-icon\"><div class=\"ct-icon\" id=\"ifntc\"><img src=\"https://placehold.co/75x30\" id=\"iqpql\"/></div></div></div></div></div></div><div class=\"col-sm-4\" id=\"ipir2\"><p>col-sm-4</p><div class=\"imagebox-services\"><div class=\"featured-imagebox featured-imagebox-services style1\"><!-- featured-thumbnail --><div class=\"featured-thumbnail\"><a tabindex=\"0\"><img width=\"742\" height=\"618\" src=\"https://placehold.co/742x618\" alt=\"image\" class=\"img-fluid\"/></a><div class=\"ct-blog-overlay-iconbox\"><a tabindex=\"0\"><i class=\"ti ti-plus\"></i></a></div><div class=\"cat_block-wrapper\"><span class=\"cat_block\"><time datetime=\"2020-11-11T04:34:34+00:00\" class=\"entry-date published\">CARDIO</time></span></div></div><!-- featured-thumbnail end--><div class=\"featured-content featured-content-post\"><div class=\"featured-title\"><h3><a tabindex=\"0\">Fitness For Man</a></h3></div><div class=\"featured-desc\"><p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p></div><a tabindex=\"0\" class=\"btn btn-inline btn--md btn--color-darkgrey z-index-1\">Read More</a><div class=\"ct-boxbg-icon\"><div class=\"ct-icon\"><img src=\"https://placehold.co/55x20\" id=\"ipmbd\"/></div></div></div></div></div></div><div class=\"col-sm-4\" id=\"i4z6y\"><div class=\"section-title\"><div class=\"title-header\"><h4 class=\"subtitle\" id=\"iiw436\">WHY CHOOSE US!</h4><h2 class=\"title\" id=\"ir30yf\">We Let You Feel The Difference</h2></div></div><div class=\"imagebox-services\"><div class=\"featured-imagebox featured-imagebox-services style1\"><!-- featured-thumbnail --><div class=\"featured-thumbnail\"><a tabindex=\"0\"><img width=\"742\" height=\"618\" src=\"https://placehold.co/742x618\" alt=\"image\" class=\"img-fluid\"/></a><div class=\"ct-blog-overlay-iconbox\"><a tabindex=\"0\"><i class=\"ti ti-plus\"></i></a></div><div class=\"cat_block-wrapper\"><span class=\"cat_block\"><time datetime=\"2020-11-11T04:34:34+00:00\" class=\"entry-date published\">CARDIO</time></span></div></div><!-- featured-thumbnail end--><div class=\"featured-content featured-content-post\"><div class=\"featured-title\"><h3><a tabindex=\"0\">Fitness For Man</a></h3></div><div class=\"featured-desc\"><p>Fitness For Man strong interest in gymnastics, training provides stress to the muscles.</p></div><a tabindex=\"0\" class=\"btn btn-inline btn--md btn--color-darkgrey z-index-1\">Read More</a><div class=\"ct-boxbg-icon\"><div class=\"ct-service-iconbox\"><div id=\"i2pdu\" class=\"ct-icon ct-icon--primary\"><img src=\"https://placehold.co/55x20\"/></div></div></div></div></div></div></div></div></body>",
         "css": "* { box-sizing: border-box; } body {margin: 0;}#i2pdu{font-size:45px;}"
       }
     }

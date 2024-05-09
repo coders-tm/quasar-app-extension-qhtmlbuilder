@@ -23,7 +23,7 @@ export default (editor, options = {}) => {
         attributes: { class: type },
         traits: [...defaultType.model.prototype.defaults.traits],
         components: `
-          <div class="widget widget_text clearfix">
+          <div class="widget widget--text clearfix">
             <div class="footer-logo">
               <img id="footer-logo-img" class="img-center" src="https://placehold.co/311x92" alt="">
             </div>

@@ -16,7 +16,6 @@ import touch from 'grapesjs-touch'
 import imageEditor from 'grapesjs-tui-image-editor'
 import typed from 'grapesjs-typed'
 import styleBg from 'grapesjs-style-bg'
-import templates from 'grapesjs-templates'
 import plugins from './plugins'
 
 export const defaultConfig = {
@@ -65,7 +64,6 @@ export default {
           typed,
           styleBg,
           webpage,
-          templates,
           plugins
         ],
         pluginsOpts: {
@@ -103,8 +101,7 @@ export default {
               return editor.getHtml() + '<style>' + editor.getCss() + '</style>'
             }
           },
-          [templates]: { ...pluginOptions('templates') },
-          [plugins]: { ...pluginOptions('base') }
+          [plugins]: { ...pluginOptions('core') }
         }
       })
 
