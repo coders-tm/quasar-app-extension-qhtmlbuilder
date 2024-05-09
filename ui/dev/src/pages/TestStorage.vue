@@ -124,16 +124,16 @@ const config = {
     ]
   },
   pluginsOpts: {
-    templates: {
-      onLoad,
-      onStore,
-      onDelete
-    },
-    base: {
+    core: {
       headers: [
         { id: 'classic', label: 'Classic' },
         { id: 'overlay', label: 'Overlay' }
-      ]
+      ],
+      templates: {
+        onLoad,
+        onStore,
+        onDelete
+      }
     }
   }
 }

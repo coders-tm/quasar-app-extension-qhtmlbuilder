@@ -3,7 +3,7 @@ import blocks from './blocks'
 import layouts from './layouts'
 import navbar from './navbar'
 import shortcodes from './shortcodes'
-import templates from './templates'
+import templateManager from './template-manager'
 
 export default (editor, opt = {}) => {
   const options = {
@@ -38,7 +38,8 @@ export default (editor, opt = {}) => {
     navbar(editor, options)
   }
 
-  templates(editor, options)
+  const { templates } = options
+  templateManager(editor, templates)
 
   blocks(editor, options)
 }

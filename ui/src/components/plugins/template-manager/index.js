@@ -21,11 +21,9 @@ export const makeThumbnail = (el, options = {}) => {
 
 export default (editor, opts = {}) => {
   const options = {
-    ...{
-      i18n: {},
-      templates: null,
-      projects: null
-    },
+    i18n: {},
+    templates: null,
+    projects: null,
     ...opts
   }
 
