@@ -3,13 +3,23 @@ export default (editor, opts = {}) => {
 
   const dropdownMenu = `
     <ul data-offset="-55,15" class="gjs-dropdown-menu">
-      <li data-command="save-templates" class="gjs-menu-item">
+      <li data-command="save-page" class="gjs-menu-item">
         <i class="fa fa-save"></i>
-        <span class="gjs-menu-label">${editor.I18n.t('grapesjs-templates.save-template')}</span>
+        <span class="gjs-menu-label">${editor.I18n.t(
+          'grapesjs-templates.save-page'
+        )}</span>
+      </li>
+      <li data-command="save-templates" class="gjs-menu-item">
+        <i class="fa fa-bookmark"></i>
+        <span class="gjs-menu-label">${editor.I18n.t(
+          'grapesjs-templates.save-template'
+        )}</span>
       </li>
       <li data-command="open-templates" class="gjs-menu-item">
         <i class="fa fa-folder-o"></i>
-        <span class="gjs-menu-label">${editor.I18n.t('grapesjs-templates.load-template')}</span>
+        <span class="gjs-menu-label">${editor.I18n.t(
+          'grapesjs-templates.load-template'
+        )}</span>
       </li>
     </ul>
   `
@@ -75,7 +85,10 @@ export default (editor, opts = {}) => {
 
     // Event listener to hide dropdown when clicking outside of it
     $(document).on('click', function (event) {
-      if (!$(event.target).closest('.gjs-dropdown').length && !$(event.target).closest('#popper-container').length) {
+      if (
+        !$(event.target).closest('.gjs-dropdown').length &&
+        !$(event.target).closest('#popper-container').length
+      ) {
         active = false
         container.attr('data-show', active)
       }

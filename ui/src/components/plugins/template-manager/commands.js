@@ -1,3 +1,4 @@
+import { Dialog } from 'quasar'
 import {
   mapTemplates,
   fetchTemplates,
@@ -133,16 +134,65 @@ export default (editor, options = {}) => {
 
   Commands.add('save-templates', {
     async run(editor) {
-      const name = prompt(
-        editor.I18n.t('grapesjs-templates.enter-template-name')
-      )
-      if (name) {
+      Dialog.create({
+        title: 'Save template',
+        message: 'What is your template name?',
+        prompt: {
+          model: '',
+          type: 'text',
+          dense: true,
+          outlined: true
+        },
+        cancel: true,
+        persistent: true
+      }).onOk(async (name) => {
+        const notif = editor.runCommand('notify', {
+          type: 'ongoing',
+          message: 'Saving in progress...'
+        })
         const data = editor.getProjectData()
         const thumbnail = await editor.makeThumbnail(
           editor.getWrapper().getEl()
         )
         return storeProjects({ id: Date.now(), data, name, thumbnail }, options)
-      }
+          .then(() => {
+            notif({
+              type: 'positive',
+              message: 'Template Saved Successfully!'
+            })
+          })
+          .catch(({ message }) => {
+            notif({
+              type: 'negative',
+              message:
+                message || 'An error occurred while saving. Please try again.'
+            })
+          })
+      })
+    }
+  })
+
+  Commands.add('save-page', {
+    async run(editor) {
+      const notif = editor.runCommand('notify', {
+        type: 'ongoing',
+        message: 'Saving in progress...'
+      })
+      editor
+        .store()
+        .then(() => {
+          notif({
+            type: 'positive',
+            message: 'Page Saved Successfully!'
+          })
+        })
+        .catch(({ message }) => {
+          notif({
+            type: 'negative',
+            message:
+              message || 'An error occurred while saving. Please try again.'
+          })
+        })
     }
   })
 }

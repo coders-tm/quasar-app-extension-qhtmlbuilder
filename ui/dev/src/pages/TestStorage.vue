@@ -52,6 +52,20 @@ const storeData = (id, data) => {
   })
 }
 
+const createProject = (payload) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .post(`http://localhost:3000/projects`, payload)
+      .then(({ data }) => {
+        resolve(data.data)
+      })
+      .catch((error) => {
+        console.error(error)
+        reject(error)
+      })
+  })
+}
+
 const deleteData = (id) => {
   return new Promise((resolve, reject) => {
     axios
@@ -71,13 +85,15 @@ async function onLoadTemplate(payload) {
 }
 
 function onStoreTemplate(payload) {
-  return storeData(payload.id, payload)
-    .then(() => {
-      return true
-    })
-    .catch(() => {
-      return false
-    })
+  return new Promise((resolve, reject) => {
+    createProject(payload)
+      .then(() => {
+        resolve(true)
+      })
+      .catch((error) => {
+        reject(error)
+      })
+  })
 }
 
 function onDeleteTemplate(payload) {

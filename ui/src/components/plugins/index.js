@@ -4,6 +4,7 @@ import layouts from './layouts'
 import navbar from './navbar'
 import shortcodes from './shortcodes'
 import templateManager from './template-manager'
+import notify from './notify'
 
 export default (editor, opt = {}) => {
   const options = {
@@ -23,6 +24,8 @@ export default (editor, opt = {}) => {
     contactFormsTraits: [],
     ...opt
   }
+
+  notify(editor, options)
 
   _default(editor, options)
 
