@@ -1,6 +1,6 @@
 {
   "name": "quasar-app-extension-qhtmlbuilder",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "description": "A Quasar app extension for integrating GrapesJS HTML builder into Quasar applications.",
   "author": "Dipak Sarkar <hello@dipaksarkar.in>",
   "license": "MIT",
@@ -12,7 +12,7 @@
   "bugs": "https://github.com/coders-tm/quasar-app-extension-qhtmlbuilder",
   "homepage": "https://github.com/coders-tm/quasar-app-extension-qhtmlbuilder",
   "dependencies": {
-    "quasar-ui-qhtmlbuilder": "^1.0.33"
+    "quasar-ui-qhtmlbuilder": "^1.0.34"
   },
   "engines": {
     "node": ">= 8.9.0",
