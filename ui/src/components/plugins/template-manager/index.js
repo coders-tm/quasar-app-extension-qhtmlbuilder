@@ -1,4 +1,4 @@
-import domtoimage from 'dom-to-image'
+import html2canvas from 'html2canvas'
 import { createPopper } from '@popperjs/core'
 import en from './locale/en'
 import templates from './templates'
@@ -8,8 +8,10 @@ import panels from './panels'
 export const makeThumbnail = (el, options = {}) => {
   return new Promise(async (resolve, reject) => {
     try {
-      const dataUrl = await domtoimage.toJpeg(el, options)
-      resolve(dataUrl)
+      await html2canvas(el, options).then(async function (canvas) {
+        const image = await canvas.toDataURL('image/png')
+        resolve(image)
+      })
     } catch (error) {
       console.error(error)
       resolve(null)

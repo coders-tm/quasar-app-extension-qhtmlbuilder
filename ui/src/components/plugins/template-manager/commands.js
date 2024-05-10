@@ -139,16 +139,7 @@ export default (editor, options = {}) => {
       if (name) {
         const data = editor.getProjectData()
         const thumbnail = await editor.makeThumbnail(
-          editor.getWrapper().getEl(),
-          {
-            quality: 0.5,
-            height: 1000,
-            cacheBust: true,
-            style: {
-              'background-color': 'white',
-              ...editor.getWrapper().getStyle()
-            }
-          }
+          editor.getWrapper().getEl()
         )
         return storeProjects({ id: Date.now(), data, name, thumbnail }, options)
       }
