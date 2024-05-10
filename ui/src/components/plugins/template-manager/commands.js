@@ -153,8 +153,7 @@ export default (editor, options = {}) => {
         const data = editor.getProjectData()
         const el = editor.getWrapper().getEl()
         const thumbnail = await editor.makeThumbnail(el, {
-          height: 900,
-          useCORS: true
+          height: 900
         })
         storeProjects({ id: Date.now(), data, name, thumbnail }, options)
           .then(() => {
