@@ -6,7 +6,7 @@
 
 <script setup>
 import axios from 'axios'
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
 const editor = ref(null)
 
@@ -27,7 +27,7 @@ const loadTemplates = (type) => {
 const loadData = (id) => {
   return new Promise((resolve, reject) => {
     axios
-      .get(`http://localhost:3000/projects/${id}`)
+      .get(`http://localhost:3000/pages/${id}`)
       .then(({ data }) => {
         resolve(data.data)
       })
@@ -41,7 +41,7 @@ const loadData = (id) => {
 const storeData = (id, data) => {
   return new Promise((resolve, reject) => {
     axios
-      .put(`http://localhost:3000/projects/${id}`, data)
+      .put(`http://localhost:3000/pages/${id}`, data)
       .then(({ data }) => {
         resolve(data.data)
       })

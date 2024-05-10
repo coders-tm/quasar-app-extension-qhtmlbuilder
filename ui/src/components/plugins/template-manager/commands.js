@@ -150,15 +150,13 @@ export default (editor, options = {}) => {
           type: 'ongoing',
           message: 'Saving in progress...'
         })
-
         const data = editor.getProjectData()
         const el = editor.getWrapper().getEl()
-
         const thumbnail = await editor.makeThumbnail(el, {
           height: 900,
           useCORS: true
         })
-        return storeProjects({ id: Date.now(), data, name, thumbnail }, options)
+        storeProjects({ id: Date.now(), data, name, thumbnail }, options)
           .then(() => {
             notif({
               type: 'positive',

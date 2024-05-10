@@ -6,16 +6,13 @@ import commands from './commands'
 import panels from './panels'
 
 export const makeThumbnail = (el, options = {}) => {
-  return new Promise((resolve) => {
-    html2canvas(el, options)
-      .then(async function (canvas) {
-        const dataUrl = await canvas.toDataURL('image/png')
-        resolve(dataUrl)
-      })
-      .catch(() => {
-        resolve(null)
-      })
-  })
+  return html2canvas(el, options)
+    .then(function (canvas) {
+      return canvas.toDataURL('image/png')
+    })
+    .catch(() => {
+      return null
+    })
 }
 
 export default (editor, opts = {}) => {
