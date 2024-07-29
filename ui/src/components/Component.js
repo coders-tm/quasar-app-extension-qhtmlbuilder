@@ -17,6 +17,7 @@ import imageEditor from 'grapesjs-tui-image-editor'
 import typed from 'grapesjs-typed'
 import styleBg from 'grapesjs-style-bg'
 import plugins from './plugins'
+import 'grapick/dist/grapick.min.css'
 
 export const defaultConfig = {
   fromElement: true,

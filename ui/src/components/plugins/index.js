@@ -44,4 +44,17 @@ export default (editor, opt = {}) => {
   templateManager(editor, options)
 
   blocks(editor, options)
+
+  editor.I18n.addMessages({
+    en: {
+      styleManager: {
+        properties: {
+          'background-repeat': 'Repeat',
+          'background-position': 'Position',
+          'background-attachment': 'Attachment',
+          'background-size': 'Size'
+        }
+      }
+    }
+  })
 }
