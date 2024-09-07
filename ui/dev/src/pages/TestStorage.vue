@@ -142,8 +142,32 @@ const config = {
   pluginsOpts: {
     core: {
       headers: [
-        { id: 'classic', label: 'Classic' },
-        { id: 'overlay', label: 'Overlay' }
+        {
+          type: 'select',
+          name: 'layout',
+          label: 'Layout',
+          changeProp: 1,
+          options: [
+            { id: '', label: 'Select' },
+            { id: 'classic', label: 'Classic' },
+            { id: 'overlay', label: 'Overlay' }
+          ],
+          default: ''
+        },
+        {
+          type: 'input',
+          name: 'menu',
+          label: 'Main menu',
+          changeProp: 1,
+          default: ''
+        },
+        {
+          type: 'input',
+          name: 'right',
+          label: 'Right menu',
+          changeProp: 1,
+          default: ''
+        }
       ],
       onLoadTemplate,
       onStoreTemplate,

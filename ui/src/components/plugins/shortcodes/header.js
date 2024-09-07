@@ -21,17 +21,7 @@ export default (editor, options = {}) => {
         ...defaultType.model.prototype.defaults,
         'custom-name': componentName,
         content: `[${type}]`,
-        traits: [
-          {
-            type: 'select',
-            name: 'layout',
-            label: 'Layout',
-            changeProp: 1,
-            options: [{ id: '', label: 'Select' }, ...headers],
-            default: ''
-          },
-          ...defaultType.model.prototype.defaults.traits
-        ]
+        traits: [...headers, ...defaultType.model.prototype.defaults.traits]
       },
       handlePropChange() {
         const attributes = this.getShortCodeProps().join(' ')

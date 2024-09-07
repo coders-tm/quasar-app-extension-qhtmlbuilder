@@ -9,7 +9,16 @@ import notify from './notify'
 export default (editor, opt = {}) => {
   const options = {
     category: 'Basic',
-    headers: [{ id: 'default', label: 'Default' }],
+    headers: [
+      {
+        type: 'select',
+        name: 'layout',
+        label: 'Layout',
+        changeProp: 1,
+        options: [{ id: '', label: 'Select' }],
+        default: ''
+      }
+    ],
     footers: [{ id: 'default', label: 'Default' }],
     shortcodes: true,
     layouts: true,
