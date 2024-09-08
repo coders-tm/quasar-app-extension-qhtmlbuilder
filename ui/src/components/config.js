@@ -604,7 +604,7 @@ export const deviceManager = {
       id: 'laptop',
       name: 'Laptop',
       width: '1366px', // Common laptop resolution
-      widthMedia: '1024px' // Media query for typical laptops
+      widthMedia: '1440px' // Media query for typical laptops
     },
     {
       id: 'tablet',
