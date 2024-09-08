@@ -591,3 +591,38 @@ export const styleManager = {
     }
   ]
 }
+
+export const deviceManager = {
+  default: '',
+  devices: [
+    {
+      id: 'desktop',
+      name: 'Desktop',
+      width: ''
+    },
+    {
+      id: 'laptop',
+      name: 'Laptop',
+      width: '1366px', // Common laptop resolution
+      widthMedia: '1024px' // Media query for typical laptops
+    },
+    {
+      id: 'tablet',
+      name: 'Tablet',
+      width: '768px', // Typical tablet width in portrait mode
+      widthMedia: '992px' // Media query for tablets
+    },
+    {
+      id: 'mobileLandscape',
+      name: 'Mobile landscape',
+      width: '568px', // Typical mobile width in landscape mode
+      widthMedia: '768px' // Media query for mobile devices in landscape
+    },
+    {
+      id: 'mobilePortrait',
+      name: 'Mobile portrait',
+      width: '375px', // Common width for modern smartphones in portrait mode
+      widthMedia: '480px' // Media query for small mobile devices
+    }
+  ]
+}

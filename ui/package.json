@@ -26,7 +26,7 @@
   "homepage": "https://github.com/coders-tm/quasar-app-extension-qhtmlbuilder",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "grapesjs": "^0.21.12",
+    "grapesjs": "^0.21.13",
     "grapesjs-blocks-basic": "^1.0.2",
     "grapesjs-component-countdown": "^1.0.2",
     "grapesjs-custom-code": "^1.0.2",

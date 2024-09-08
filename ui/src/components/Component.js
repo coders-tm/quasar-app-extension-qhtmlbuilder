@@ -1,4 +1,4 @@
-import { styleManager } from './config'
+import { styleManager, deviceManager } from './config'
 import { h, ref, onMounted, onBeforeUnmount } from 'vue'
 import { Dialog } from 'quasar'
 import grapesjs from 'grapesjs'
@@ -26,7 +26,8 @@ export const defaultConfig = {
     assets: []
   },
   selectorManager: { componentFirst: true },
-  styleManager
+  styleManager,
+  deviceManager
 }
 
 export default {
