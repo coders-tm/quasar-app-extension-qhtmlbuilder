@@ -616,7 +616,7 @@ export const deviceManager = {
       id: 'mobileLandscape',
       name: 'Mobile landscape',
       width: '568px', // Typical mobile width in landscape mode
-      widthMedia: '768px' // Media query for mobile devices in landscape
+      widthMedia: '640px' // Media query for mobile devices in landscape
     },
     {
       id: 'mobilePortrait',
