@@ -101,6 +101,17 @@ export default {
               return editor.getHtml() + '<style>' + editor.getCss() + '</style>'
             }
           },
+          [styleBg]: {
+            styleGradientOpts: {
+              colorPicker: (handler) => {
+                const el = handler.getEl().querySelector('input')
+                editor.$(el).change((event) => {
+                  const color = event.target.value
+                  handler.setColor(color)
+                })
+              }
+            }
+          },
           ...props.pluginsOpts
         }
       })
