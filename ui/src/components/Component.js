@@ -1,6 +1,6 @@
 import { styleManager, deviceManager } from './config'
 import { h, ref, onMounted, onBeforeUnmount } from 'vue'
-import LayerTitle from './LayerTitle.vue'
+import LayerTitle from './LayerTitle'
 import { Dialog } from 'quasar'
 import grapesjs from 'grapesjs'
 import webpage from 'grapesjs-preset-webpage'
