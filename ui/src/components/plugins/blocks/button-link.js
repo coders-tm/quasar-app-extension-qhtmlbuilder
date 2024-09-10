@@ -10,11 +10,7 @@ export default (editor, options = {}) => {
   // Define custom component properties and traits
   Components.addType(type, {
     // You can update the isComponent logic or leave the one from `some-component`
-    isComponent: (el) => {
-      if (isComponent(el, type)) {
-        return { type }
-      }
-    },
+    isComponent: (el) => isComponent(el, type),
     extend: 'link',
     model: {
       defaults: {

@@ -8,11 +8,53 @@ export const thumbnail =
   'https://raw.githubusercontent.com/dipaksarkar/grapesjs-templates/main/assets/placeholder.png'
 
 export const isComponent = (el, type) => {
-  return (
-    el &&
-    ((el.dataset && el.dataset.type === type) ||
-      (el.classList && el.classList.contains(type)))
-  )
+  const datasetType = (el) => el.dataset && el.dataset.type === type
+  const containsClass = (el) => {
+    if (!el.classList) return false
+    return Array.from(el.classList).some((cls) => cls.startsWith(type))
+  }
+
+  // General return condition for other types
+  return el && (datasetType(el) || containsClass(el))
+}
+
+export const isShortcodeComponent = (el, type) => {
+  // Check if `el` is an HTML element with `innerHTML`
+  if (el && el.innerHTML && typeof el.innerHTML === 'string') {
+    const content = el.innerHTML.trim()
+    const shortcodeData = parseShortcode(content)
+    if (shortcodeData && shortcodeData.attrs) {
+      Object.keys(shortcodeData.attrs).forEach((attr) => {
+        el.setAttribute(`data-gjs-${attr}`, shortcodeData.attrs[attr])
+      })
+    }
+
+    if (shortcodeData && shortcodeData.type === type) {
+      return { type }
+    }
+  }
+
+  return isComponent(el, type)
+}
+
+// Utility function to parse shortcode string and extract attributes
+export const parseShortcode = (shortcode) => {
+  const regex = /\[(\w+)([^\]]*)\]/ // Match shortcode [name attr="value"]
+  const match = shortcode.match(regex)
+  if (!match) return null
+
+  const type = match[1] // shortcode name/type
+  const attrsString = match[2].trim() // attributes string
+
+  // Extract key-value pairs from attributes
+  const attrs = {}
+  const attrsRegex = /(\w+)="([^"]*)"/g
+  let attrMatch
+  while ((attrMatch = attrsRegex.exec(attrsString)) !== null) {
+    attrs[attrMatch[1]] = attrMatch[2]
+  }
+
+  return { type, attrs }
 }
 
 export const mapTemplates = (editor, templates, removeable = false) => {

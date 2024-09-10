@@ -19,7 +19,19 @@ export default (editor, opt = {}) => {
         default: ''
       }
     ],
-    footers: [{ id: 'default', label: 'Default' }],
+    footers: [
+      {
+        type: 'select',
+        name: 'layout',
+        label: 'Layout',
+        changeProp: 1,
+        options: [
+          { id: '', label: 'Select' },
+          { id: 'default', label: 'Default' }
+        ],
+        default: ''
+      }
+    ],
     shortcodes: true,
     layouts: true,
     navbar: true,

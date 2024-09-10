@@ -10,29 +10,25 @@ export default (editor, options = {}) => {
   // Define custom component properties and traits
   Components.addType(type, {
     // You can update the isComponent logic or leave the one from `some-component`
-    isComponent: (el) => {
-      if (isComponent(el, type)) {
-        return { type }
-      }
-    },
+    isComponent: (el) => isComponent(el, type),
     extend: 'default',
     model: {
       defaults: {
         name: componentName,
-        attributes: { class: type },
+        attributes: {
+          class: type + ' featured-icon-box icon-align-before-content'
+        },
         traits: defaultType.model.prototype.defaults.traits,
         components: `
-          <div class="featured-icon-box icon-align-before-content">
-            <div class="featured-icon">
-              <div class="ct-icon ct-icon--onlytxt ct-icon--primary ct-icon--sm">
-                <i class="fa fas fa-check-square text-primary"></i>
-              </div>
+          <div class="featured-icon">
+            <div class="ct-icon ct-icon--onlytxt ct-icon--primary ct-icon--sm">
+              <i class="fa fas fa-check-square text-primary"></i>
             </div>
-            <div class="featured-content">
-              <div class="featured-title">
-                <h3>Comprehensive</h3>
-                <p>A Clear and concise customer correspondence including.</p>
-              </div>
+          </div>
+          <div class="featured-content">
+            <div class="featured-title">
+              <h3>Comprehensive</h3>
+              <p>A Clear and concise customer correspondence including.</p>
             </div>
           </div>
         `

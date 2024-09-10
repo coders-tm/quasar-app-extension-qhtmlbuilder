@@ -11,6 +11,7 @@ export default (editor, options = {}) => {
     model: {
       defaults: {
         name: componentName,
+        tagName: type,
         attributes: { class: 'clearfix' },
         traits: defaultType.model.prototype.defaults.traits,
         style: { padding: '90px 0px' }

@@ -1,4 +1,4 @@
-import { isComponent } from '../utils'
+import { isShortcodeComponent } from '../utils'
 
 export default (editor, options = {}) => {
   const { footers } = options
@@ -10,37 +10,20 @@ export default (editor, options = {}) => {
   // Define custom component properties and traits
   Components.addType(type, {
     // You can update the isComponent logic or leave the one from `some-component`
-    isComponent: (el) => {
-      if (isComponent(el, type)) {
-        return { type }
-      }
-    },
+    isComponent: (el) => isShortcodeComponent(el, type),
     extend: 'shortcode',
     model: {
       defaults: {
         ...defaultType.model.prototype.defaults,
         'custom-name': componentName,
         content: `[${type}]`,
-        traits: [
-          {
-            type: 'select',
-            name: 'layout',
-            label: 'Layout',
-            changeProp: 1,
-            options: [{ id: '', label: 'Select' }, ...footers],
-            default: ''
-          },
-          ...defaultType.model.prototype.defaults.traits
-        ]
+        traits: [...footers, ...defaultType.model.prototype.defaults.traits]
       },
       handlePropChange() {
         const attributes = this.getShortCodeProps().join(' ')
         const shortcode = `[${type}${attributes ? ` ${attributes}` : ''}]`
         this.set('content', shortcode)
         this.set('shortcode', shortcode)
-      },
-      toHTML() {
-        return this.get('shortcode')
       }
     },
     view: defaultType.view.prototype

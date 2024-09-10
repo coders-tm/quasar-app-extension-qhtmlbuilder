@@ -603,8 +603,8 @@ export const deviceManager = {
     {
       id: 'laptop',
       name: 'Laptop',
-      width: '1366px', // Common laptop resolution
-      widthMedia: '1440px' // Media query for typical laptops
+      width: '1024px', // Common laptop resolution
+      widthMedia: '1200px' // Media query for typical laptops
     },
     {
       id: 'tablet',

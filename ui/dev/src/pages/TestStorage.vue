@@ -1,12 +1,18 @@
 <template>
   <q-page>
-    <QHtmlBuilder ref="editor" :config="config" :remote="remote" />
+    <QHtmlBuilder
+      ref="editor"
+      :plugins-opts="pluginsOpts"
+      :config="config"
+      :remote="remote"
+    />
   </q-page>
 </template>
 
 <script setup>
 import axios from 'axios'
 import { ref } from 'vue'
+import { plugins } from 'ui'
 
 const editor = ref(null)
 
@@ -138,43 +144,44 @@ const config = {
       'https://cdn.coderstm.com/gimmer/css/styles.min.css',
       'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css'
     ]
-  },
-  pluginsOpts: {
-    core: {
-      headers: [
-        {
-          type: 'select',
-          name: 'layout',
-          label: 'Layout',
-          changeProp: 1,
-          options: [
-            { id: '', label: 'Select' },
-            { id: 'classic', label: 'Classic' },
-            { id: 'overlay', label: 'Overlay' }
-          ],
-          default: ''
-        },
-        {
-          type: 'input',
-          name: 'menu',
-          label: 'Main menu',
-          changeProp: 1,
-          default: ''
-        },
-        {
-          type: 'input',
-          name: 'right',
-          label: 'Right menu',
-          changeProp: 1,
-          default: ''
-        }
-      ],
-      onLoadTemplate,
-      onStoreTemplate,
-      onDeleteTemplate,
-      onLoadShortCode: (el, shortcode) => {
-        console.log(el, shortcode)
+  }
+}
+
+const pluginsOpts = {
+  [plugins]: {
+    headers: [
+      {
+        type: 'select',
+        name: 'layout',
+        label: 'Layout',
+        changeProp: 1,
+        options: [
+          { id: '', label: 'Select' },
+          { id: 'classic', label: 'Classic' },
+          { id: 'overlay', label: 'Overlay' }
+        ],
+        default: ''
+      },
+      {
+        type: 'input',
+        name: 'menu',
+        label: 'Main menu',
+        changeProp: 1,
+        default: ''
+      },
+      {
+        type: 'input',
+        name: 'right',
+        label: 'Right menu',
+        changeProp: 1,
+        default: ''
       }
+    ],
+    onLoadTemplate,
+    onStoreTemplate,
+    onDeleteTemplate,
+    onLoadShortCode: (el, shortcode) => {
+      console.log(el, shortcode)
     }
   }
 }

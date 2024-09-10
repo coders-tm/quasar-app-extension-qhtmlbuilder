@@ -1,4 +1,4 @@
-import { isComponent } from '../utils'
+import { isShortcodeComponent } from '../utils'
 
 export default (editor, options = {}) => {
   const { onLoadShortCode } = options
@@ -8,12 +8,7 @@ export default (editor, options = {}) => {
 
   // Define custom component properties and traits
   Components.addType(type, {
-    // You can update the isComponent logic or leave the one from `some-component`
-    isComponent: (el) => {
-      if (isComponent(el, type)) {
-        return { type }
-      }
-    },
+    isComponent: (el) => isShortcodeComponent(el, type),
     model: {
       defaults: {
         'custom-name': 'Shortcode',
@@ -45,12 +40,14 @@ export default (editor, options = {}) => {
       getDataAttributes() {
         return this.get('traits')
           .filter((trait) => this.get(trait.id))
-          .map((trait) => `data-${trait.id}="${this.get(trait.id)}"`)
+          .map((trait) => `data-gjs-${trait.id}="${this.get(trait.id)}"`)
       },
       toHTML() {
         const attributes = this.getDataAttributes().join(' ')
         const shortcode = this.get('shortcode')
-        return `<div class="${type}" data-type="${type}" ${attributes}>${shortcode}</div>`
+        const type = this.get('type')
+
+        return `<div data-gjs-type="${type}" ${attributes}>${shortcode}</div>`
       }
     },
     view: {

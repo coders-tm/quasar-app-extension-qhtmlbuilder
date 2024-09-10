@@ -185,3 +185,23 @@
   input[type=color]
     opacity: 0
     cursor: pointer
+.gjs-pn-views
+  border-bottom: 1px solid var(--gjs-main-light-color)
+  border-left: 1px solid var(--gjs-main-light-color)
+  padding: 3px
+
+.htmlbuilder__container
+  display: flex
+  justify-content: flex-start
+  align-items: stretch
+  flex-wrap: nowrap
+  > *
+    min-height: 75px
+    flex-grow: 1
+    flex-basis: 100%
+    overflow: auto
+  .htmlbuilder__left-panel
+    flex-basis: var(--gjs-left-width)
+    border-right: 1px solid var(--gjs-main-light-color)
+.htmlbuilder__layers-title
+  border-bottom: 1px solid var(--gjs-main-light-color)

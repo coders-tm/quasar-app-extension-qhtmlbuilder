@@ -1,18 +1,16 @@
 import { styleManager, deviceManager } from './config'
 import { h, ref, onMounted, onBeforeUnmount } from 'vue'
+import LayerTitle from './LayerTitle.vue'
 import { Dialog } from 'quasar'
 import grapesjs from 'grapesjs'
 import webpage from 'grapesjs-preset-webpage'
 import forms from 'grapesjs-plugin-forms'
-// import ckeditor from "grapesjs-plugin-ckeditor";
-// import postCss from 'grapesjs-parser-postcss';
 import blocksBasic from 'grapesjs-blocks-basic'
 import countdown from 'grapesjs-component-countdown'
 import pluginExport from 'grapesjs-plugin-export'
 import tabs from 'grapesjs-tabs'
 import customCode from 'grapesjs-custom-code'
 import touch from 'grapesjs-touch'
-// import tooltip from 'grapesjs-tooltip'
 import imageEditor from 'grapesjs-tui-image-editor'
 import typed from 'grapesjs-typed'
 import styleBg from 'grapesjs-style-bg'
@@ -26,6 +24,9 @@ export const defaultConfig = {
     assets: []
   },
   selectorManager: { componentFirst: true },
+  layerManager: {
+    appendTo: '#htmlbuilder__layers-container'
+  },
   styleManager,
   deviceManager
 }
@@ -34,6 +35,7 @@ export default {
   name: 'QHtmlBuilder',
   props: {
     config: Object, // Configuration options for GrapesJS
+    pluginsOpts: { type: Object, default: () => ({}) }, // Plugins options for GrapesJS
     pages: Array,
     remote: Object
   },
@@ -49,24 +51,21 @@ export default {
       editor = grapesjs.init({
         container: editorRef.value,
         ...defaultConfig,
-        ...props.config,
         plugins: [
           blocksBasic,
           forms,
-          // ckeditor,
           countdown,
           pluginExport,
           tabs,
           customCode,
           touch,
-          // postCss,
-          // tooltip,
           imageEditor,
           typed,
           styleBg,
           webpage,
           plugins
         ],
+        ...props.config,
         pluginsOpts: {
           [blocksBasic]: {
             flexGrid: true,
@@ -102,7 +101,7 @@ export default {
               return editor.getHtml() + '<style>' + editor.getCss() + '</style>'
             }
           },
-          [plugins]: { ...pluginOptions('core') }
+          ...props.pluginsOpts
         }
       })
 
@@ -175,14 +174,6 @@ export default {
       })
     }
 
-    function pluginOptions(key) {
-      try {
-        return props.config.pluginsOpts[key]
-      } catch (error) {
-        return {}
-      }
-    }
-
     expose({
       editor,
       addRemote,
@@ -196,10 +187,20 @@ export default {
 
     return () =>
       h('div', { class: 'htmlbuilder__container' }, [
-        h('div', {
-          id: 'htmlbuilder__left-panel',
-          class: 'htmlbuilder__left-panel'
-        }),
+        h(
+          'div',
+          {
+            id: 'htmlbuilder__left-panel',
+            class: 'htmlbuilder__left-panel gjs-one-bg gjs-two-color'
+          },
+          [
+            h(LayerTitle, { class: 'htmlbuilder__layers-title' }),
+            h('div', {
+              id: 'htmlbuilder__layers-container',
+              class: 'htmlbuilder__layers-container'
+            })
+          ]
+        ),
         h('div', {
           id: 'htmlbuilder__editor',
           class: 'htmlbuilder__editor',
