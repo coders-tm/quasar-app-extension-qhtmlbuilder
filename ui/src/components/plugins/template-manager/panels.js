@@ -9,6 +9,12 @@ export default (editor, opts = {}) => {
           'grapesjs-templates.save-page'
         )}</span>
       </li>
+      <li data-command="gjs-open-import-webpage" class="gjs-menu-item">
+        <i class="fa fa-upload"></i>
+        <span class="gjs-menu-label">${editor.I18n.t(
+          'grapesjs-templates.import-webpage'
+        )}</span>
+      </li>
       <li data-command="save-templates" class="gjs-menu-item">
         <i class="fa fa-bookmark"></i>
         <span class="gjs-menu-label">${editor.I18n.t(

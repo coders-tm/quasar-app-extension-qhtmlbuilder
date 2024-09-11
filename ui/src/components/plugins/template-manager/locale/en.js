@@ -6,6 +6,7 @@ export default {
     'save-template': 'Save template',
     'load-template': 'Load templates',
     'template-settings': 'Template settings',
+    'import-webpage': 'Import from HTML',
     loading: 'Loading...',
     select: 'Select',
     'enter-template-name': 'Enter template name:',

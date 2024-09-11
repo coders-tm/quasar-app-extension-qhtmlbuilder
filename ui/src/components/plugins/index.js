@@ -5,6 +5,7 @@ import navbar from './navbar'
 import shortcodes from './shortcodes'
 import templateManager from './template-manager'
 import notify from './notify'
+import styleEditor from './style-editor'
 
 export default (editor, opt = {}) => {
   const options = {
@@ -43,10 +44,17 @@ export default (editor, opt = {}) => {
     openingTimesTraits: [],
     contactForms: [],
     contactFormsTraits: [],
+    styleEditor: {
+      codeViewerConfig: {},
+      styleLabel:
+        '<div style="margin-bottom: 10px; font-size: 13px;">Edit your CSS and click Update</div>'
+    },
     ...opt
   }
 
   notify(editor, options)
+
+  styleEditor(editor, options.styleEditor)
 
   _default(editor, options)
 
