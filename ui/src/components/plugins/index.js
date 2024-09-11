@@ -7,6 +7,8 @@ import templateManager from './template-manager'
 import notify from './notify'
 import styleEditor from './style-editor'
 
+const category = ['Layout', 'Basic', 'Short Codes']
+
 export default (editor, opt = {}) => {
   const options = {
     category: 'Basic',
@@ -52,6 +54,8 @@ export default (editor, opt = {}) => {
     ...opt
   }
 
+  const { BlockManager } = editor
+
   notify(editor, options)
 
   styleEditor(editor, options.styleEditor)
@@ -86,4 +90,32 @@ export default (editor, opt = {}) => {
       }
     }
   })
+
+  // Get all blocks from BlockManager
+  const defaultBlocks = BlockManager.getAll()
+
+  // Convert the blocks to an array if they aren't already
+  const blocksArray = [...defaultBlocks.models] // Extract block models from the collection
+
+  // Sort blocks based on category array
+  const sortedBlocks = blocksArray.sort((a, b) => {
+    const indexA = category.indexOf(a.attributes.category.id)
+    const indexB = category.indexOf(b.attributes.category.id)
+
+    // If both categories are in the category array, sort by their index
+    if (indexA !== -1 && indexB !== -1) {
+      return indexA - indexB
+    }
+
+    // If only one of the categories is in the category array, sort it first
+    if (indexA !== -1) return -1
+    if (indexB !== -1) return 1
+
+    // If neither category is in the array, keep the original order
+    return 0
+  })
+
+  editor.config.blockManager.blocks = sortedBlocks
+
+  BlockManager.constructor(editor)
 }
