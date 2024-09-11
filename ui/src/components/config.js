@@ -161,37 +161,6 @@ export const styleManager = {
       ]
     },
     {
-      id: 'size',
-      name: 'Size',
-      properties: [
-        { extend: 'width' },
-        { extend: 'min-width' },
-        { extend: 'max-width' },
-        { extend: 'height' },
-        { extend: 'min-height' },
-        { extend: 'max-height' }
-      ]
-    },
-    {
-      id: 'space',
-      name: 'Space',
-      properties: [
-        { extend: 'padding', detached: true },
-        { extend: 'margin', detached: true }
-      ]
-    },
-    {
-      id: 'position',
-      name: 'Position',
-      properties: [
-        { extend: 'top' },
-        { extend: 'right' },
-        { extend: 'bottom' },
-        { extend: 'left' },
-        { extend: 'z-index', type: 'integer', default: '0' }
-      ]
-    },
-    {
       id: 'typography',
       name: 'Typography',
       properties: [
@@ -246,6 +215,37 @@ export const styleManager = {
             { id: 'break-spaces', label: 'Break spaces' }
           ]
         }
+      ]
+    },
+    {
+      id: 'size',
+      name: 'Size',
+      properties: [
+        { extend: 'width' },
+        { extend: 'min-width' },
+        { extend: 'max-width' },
+        { extend: 'height' },
+        { extend: 'min-height' },
+        { extend: 'max-height' }
+      ]
+    },
+    {
+      id: 'space',
+      name: 'Space',
+      properties: [
+        { extend: 'padding', detached: true },
+        { extend: 'margin', detached: true }
+      ]
+    },
+    {
+      id: 'position',
+      name: 'Position',
+      properties: [
+        { extend: 'top' },
+        { extend: 'right' },
+        { extend: 'bottom' },
+        { extend: 'left' },
+        { extend: 'z-index', type: 'integer', default: '0' }
       ]
     },
     {
