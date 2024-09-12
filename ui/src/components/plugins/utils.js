@@ -7,15 +7,6 @@ export const TEMPLATES = 'templates'
 export const thumbnail =
   'https://raw.githubusercontent.com/dipaksarkar/grapesjs-templates/main/assets/placeholder.png'
 
-export function isValidUrl(string) {
-  try {
-    new URL(string)
-    return true
-  } catch (_) {
-    return false
-  }
-}
-
 export const isComponent = (el, type) => {
   const datasetType = (el) => el.dataset && el.dataset.type === type
   const containsClass = (el) => {
@@ -167,13 +158,12 @@ export const fetchTemplates = (type, opts) => {
     const requestopts = {
       method: 'GET',
       headers: opts?.headers || [],
-      redirect: 'follow',
-      mode: 'no-cors'
+      redirect: 'follow'
     }
 
     const apiEndpoint = type == PROJECTS ? opts?.projects : opts?.templates
 
-    if (!isValidUrl(apiEndpoint)) {
+    if (!apiEndpoint) {
       if (type == PROJECTS) {
         return resolve(loadProjects())
       }
@@ -185,8 +175,8 @@ export const fetchTemplates = (type, opts) => {
       .then((result) => {
         resolve(result)
       })
-      .catch((err) => {
-        console.error(err)
+      .catch((error) => {
+        console.error(error)
         resolve(null)
       })
   })

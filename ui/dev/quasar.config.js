@@ -60,6 +60,14 @@ module.exports = function (ctx) {
       open: true, // opens browser window automatically
       headers: {
         'Access-Control-Allow-Origin': '*'
+      },
+      proxy: {
+        // Using the proxy instance
+        '/api/': {
+          target: 'http://localhost:3000/',
+          secure: false,
+          changeOrigin: true
+        }
       }
     },
 
