@@ -60,19 +60,32 @@ export default (editor, options = {}) => {
 
   const updateBtnEvent = () => {
     $el.find('.gjs-template-card .select').on('click', function () {
-      const id = $(this).attr('data-template')
-      const template = findTemplate(id, editor.tab)
+      Dialog.create({
+        title: 'Confirm',
+        message: 'Are you sure you want to load this template?',
+        cancel: true
+      }).onOk(() => {
+        const id = $(this).attr('data-template')
+        const template = findTemplate(id, editor.tab)
 
-      if (template?.data) editor.loadProjectData(template.data)
+        if (template?.data) editor.loadProjectData(template.data)
 
-      Modal.close()
+        Modal.close()
+      })
     })
 
     $el.find('.gjs-template-card .remove').on('click', function () {
-      const id = $(this).attr('data-template')
-      $(this).attr('disabled', true)
-      removeProjects(id, options).then(() => {
-        renderList(editor.tab)
+      Dialog.create({
+        title: 'Confirm',
+        message: 'Are you sure you want to delete this template?',
+        cancel: true,
+        persistent: true
+      }).onOk(() => {
+        const id = $(this).attr('data-template')
+        $(this).attr('disabled', true)
+        removeProjects(id, options).then(() => {
+          renderList(editor.tab)
+        })
       })
     })
   }

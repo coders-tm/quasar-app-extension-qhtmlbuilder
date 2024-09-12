@@ -84,8 +84,7 @@ const pluginsOpts = {
     projects: 'http://localhost:3000/projects',
     templates: 'http://localhost:3000/templates',
     headers: {
-      'Content-Type': 'application/json',
-      Foo: 'Bar'
+      // 'Content-Type': 'application/json',
     },
     shortcodes: {
       loader: (el, shortcode) => {
