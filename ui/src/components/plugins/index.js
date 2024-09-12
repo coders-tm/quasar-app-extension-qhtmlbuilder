@@ -115,7 +115,8 @@ export default (editor, opt = {}) => {
     return 0
   })
 
+  // updated new blocks to block manager
   editor.config.blockManager.blocks = sortedBlocks
 
-  BlockManager.constructor(editor)
+  // BlockManager.constructor(editor)
 }

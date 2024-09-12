@@ -4,6 +4,7 @@ import en from './locale/en'
 import templates from './templates'
 import commands from './commands'
 import panels from './panels'
+import component from './component'
 
 export const makeThumbnail = (el, options = {}) => {
   return html2canvas(el, options)
@@ -40,4 +41,6 @@ export default (editor, opts = {}) => {
 
   // Add panels
   panels(editor, options)
+
+  component(editor, options)
 }

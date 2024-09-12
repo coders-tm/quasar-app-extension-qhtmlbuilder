@@ -1,6 +1,7 @@
 export default (editor, options = {}) => {
   const { Components } = editor
   const imageType = Components.getType('image')
+
   Components.addType('image', {
     model: {
       defaults: {

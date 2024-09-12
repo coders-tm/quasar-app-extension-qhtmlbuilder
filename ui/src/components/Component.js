@@ -15,6 +15,7 @@ import imageEditor from 'grapesjs-tui-image-editor'
 import typed from 'grapesjs-typed'
 import styleBg from 'grapesjs-style-bg'
 import plugins from './plugins'
+import extendDefault from './plugins/extend-default'
 
 export const defaultConfig = {
   fromElement: true,
@@ -52,6 +53,7 @@ export default {
         container: editorRef.value,
         ...defaultConfig,
         plugins: [
+          extendDefault,
           blocksBasic,
           forms,
           countdown,

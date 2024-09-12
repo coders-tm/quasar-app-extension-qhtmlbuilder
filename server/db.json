@@ -7297,7 +7297,7 @@
               "#im41"
             ],
             "style": {
-              "color": "white"
+              "color": "#2f1919"
             }
           },
           {
@@ -7390,6 +7390,35 @@
               "background-size": "auto",
               "background-image": "radial-gradient(circle at right, black 0%, #c93636 22%, #a11717 60%, #e0e0e0 98%, white 100%)"
             }
+          },
+          {
+            "selectors": [
+              "#ivuvp"
+            ],
+            "style": {
+              "color": "#2f1919"
+            }
+          },
+          {
+            "selectors": [
+              "#ifqea"
+            ],
+            "style": {
+              "padding": "15px"
+            }
+          },
+          {
+            "selectors": [
+              "#ispwh"
+            ],
+            "style": {
+              "__background-type": "grad",
+              "background-repeat": "repeat",
+              "background-position": "left top",
+              "background-attachment": "scroll",
+              "background-size": "auto",
+              "background-image": "radial-gradient(circle at right, black 0%, #c93636 22%, #a11717 60%, #e0e0e0 98%, white 100%)"
+            }
           }
         ],
         "pages": [
@@ -7444,6 +7473,7 @@
                           "attributes": {
                             "id": "i3pl"
                           },
+                          "__symbol": "ispwh",
                           "components": [
                             {
                               "type": "container",
@@ -7454,6 +7484,7 @@
                               "attributes": {
                                 "id": "ibgp"
                               },
+                              "__symbol": "ifqea",
                               "components": [
                                 {
                                   "type": "row",
@@ -7461,21 +7492,30 @@
                                     "row",
                                     "align-items-center"
                                   ],
-                                  "attributes": {},
+                                  "attributes": {
+                                    "id": "ixd4"
+                                  },
+                                  "__symbol": "i1t77",
                                   "components": [
                                     {
                                       "type": "column",
                                       "classes": [
                                         "col-lg-12"
                                       ],
-                                      "attributes": {},
+                                      "attributes": {
+                                        "id": "ijof"
+                                      },
+                                      "__symbol": "ippx2",
                                       "components": [
                                         {
                                           "type": "page-title",
                                           "classes": [
                                             "page-title-heading"
                                           ],
-                                          "attributes": {},
+                                          "attributes": {
+                                            "id": "idivo"
+                                          },
+                                          "__symbol": "ir2jk",
                                           "components": [
                                             {
                                               "tagName": "h2",
@@ -7486,10 +7526,15 @@
                                               "attributes": {
                                                 "id": "im41"
                                               },
+                                              "__symbol": "ivuvp",
                                               "components": [
                                                 {
                                                   "type": "textnode",
-                                                  "content": "About Us\n              "
+                                                  "content": "About Us\n              ",
+                                                  "attributes": {
+                                                    "id": "ibuvj"
+                                                  },
+                                                  "__symbol": "ibfqo"
                                                 }
                                               ]
                                             }
@@ -7501,7 +7546,8 @@
                                 }
                               ]
                             }
-                          ]
+                          ],
+                          "custom-name": "Banner"
                         }
                       ]
                     },
@@ -7704,11 +7750,109 @@
             "id": "2sdIkkIWFRA6eEpG"
           }
         ],
-        "symbols": []
+        "symbols": [
+          {
+            "classes": [
+              "ct-page-title-row-inner"
+            ],
+            "attributes": {
+              "id": "ispwh"
+            },
+            "__symbols": [
+              "i3pl"
+            ],
+            "components": [
+              {
+                "type": "container",
+                "style": "",
+                "classes": [
+                  "container"
+                ],
+                "attributes": {
+                  "id": "ifqea"
+                },
+                "__symbols": [
+                  "ibgp"
+                ],
+                "components": [
+                  {
+                    "type": "row",
+                    "classes": [
+                      "row",
+                      "align-items-center"
+                    ],
+                    "attributes": {
+                      "id": "i1t77"
+                    },
+                    "__symbols": [
+                      "ixd4"
+                    ],
+                    "components": [
+                      {
+                        "type": "column",
+                        "classes": [
+                          "col-lg-12"
+                        ],
+                        "attributes": {
+                          "id": "ippx2"
+                        },
+                        "__symbols": [
+                          "ijof"
+                        ],
+                        "components": [
+                          {
+                            "type": "page-title",
+                            "classes": [
+                              "page-title-heading"
+                            ],
+                            "attributes": {
+                              "id": "ir2jk"
+                            },
+                            "__symbols": [
+                              "idivo"
+                            ],
+                            "components": [
+                              {
+                                "tagName": "h2",
+                                "type": "text",
+                                "classes": [
+                                  "title"
+                                ],
+                                "attributes": {
+                                  "id": "ivuvp"
+                                },
+                                "__symbols": [
+                                  "im41"
+                                ],
+                                "components": [
+                                  {
+                                    "type": "textnode",
+                                    "content": "About Us\n              ",
+                                    "attributes": {
+                                      "id": "ibfqo"
+                                    },
+                                    "__symbols": [
+                                      "ibuvj"
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "custom-name": "Banner"
+          }
+        ]
       },
       "pagesHtml": {
-        "html": "<body id=\"i33v\"><div data-gjs-type=\"header\" data-gjs-layout=\"overlay\">[header layout=\"overlay\"]</div><div id=\"i0u2\" class=\"page-title ct-page-title-row-6\"><div id=\"i3pl\" class=\"ct-page-title-row-inner\"><div id=\"ibgp\" class=\"container\"><div class=\"row align-items-center\"><div class=\"col-lg-12\"><div class=\"page-title-heading\"><h2 id=\"im41\" class=\"title\">About Us\n              </h2></div></div></div></div></div></div><div id=\"icwya\" class=\"clearfix\"><div id=\"ip0xi\" class=\"container\"><div id=\"iu4k4\" class=\"row\"><div id=\"igmji\" class=\"col-lg-6 col-md-12\"><img id=\"iv43s\" src=\"https://placehold.co/633x688\"/></div><div id=\"i8237\" class=\"col-lg-6 col-md-12\"><div id=\"ipj9i\" class=\"section-title\"><div class=\"title-header\"><h4 id=\"ichmi\" class=\"subtitle\">ABOUT US\n                <br/></h4><h2 id=\"ic0ch\" class=\"title\">Introducing NitroFIT28 a different Fitness Centre\n                <br/></h2></div></div><div id=\"i7caw\">Insert your text hereOur Gym, Studios, Fitness Centre is based in our wonderful Grade II building with modern facilities throughout the three floor layout. We focus on providing the best members experience possible which start with our well maintained private grounds and car parking through to our fitness and wellbeing areas within the building.\n          </div><a href=\"javascript:void(0);\" id=\"ikwn9\" class=\"button-link btn btn--md btn--square btn--fill btn--primary z-index-1\"><span>VIEW MORE</span><i class=\"fa fa-angle-double-right ml-10\">\n            </i></a></div></div></div></div>[footer]\n\n</body>",
-        "css": "* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}#ibgp{padding:15px;}#im41{color:white;}#icwya{padding-top:90px;padding-right:0px;padding-bottom:90px;padding-left:0px;}#ip0xi{padding:15px;}#i8237{padding-top:25px;padding-left:55px;}#iv43s{color:black;width:100%;}#ic0ch{font-size:50px;}#i7caw{margin-bottom:25px;}#i0u2{background-size:auto;background-color:rgb(44, 44, 44);background-image:url(\"https://placehold.co/1920x550/grey/gery\");background-origin:padding-box;background-repeat:no-repeat;background-position-x:50%;background-position-y:50%;background-attachment:scroll;}#i3pl{background-repeat:repeat;background-position:left top;background-attachment:scroll;background-size:auto;background-image:radial-gradient(circle at right, black 0%, #c93636 22%, #a11717 60%, #e0e0e0 98%, white 100%);}@media (max-width: 992px){#i8237{padding-left:15px;}}"
+        "html": "<body id=\"i33v\"><div data-gjs-type=\"header\" data-gjs-layout=\"overlay\">[header layout=\"overlay\"]</div><div id=\"i0u2\" class=\"page-title ct-page-title-row-6\"><div id=\"i3pl\" class=\"ct-page-title-row-inner\"><div id=\"ibgp\" class=\"container\"><div class=\"row align-items-center\" id=\"ixd4\"><div class=\"col-lg-12\" id=\"ijof\"><div class=\"page-title-heading\" id=\"idivo\"><h2 id=\"im41\" class=\"title\">About Us\n              </h2></div></div></div></div></div></div><div id=\"icwya\" class=\"clearfix\"><div id=\"ip0xi\" class=\"container\"><div id=\"iu4k4\" class=\"row\"><div id=\"igmji\" class=\"col-lg-6 col-md-12\"><img id=\"iv43s\" src=\"https://placehold.co/633x688\"/></div><div id=\"i8237\" class=\"col-lg-6 col-md-12\"><div id=\"ipj9i\" class=\"section-title\"><div class=\"title-header\"><h4 id=\"ichmi\" class=\"subtitle\">ABOUT US\n                <br/></h4><h2 id=\"ic0ch\" class=\"title\">Introducing NitroFIT28 a different Fitness Centre\n                <br/></h2></div></div><div id=\"i7caw\">Insert your text hereOur Gym, Studios, Fitness Centre is based in our wonderful Grade II building with modern facilities throughout the three floor layout. We focus on providing the best members experience possible which start with our well maintained private grounds and car parking through to our fitness and wellbeing areas within the building.\n          </div><a href=\"javascript:void(0);\" id=\"ikwn9\" class=\"button-link btn btn--md btn--square btn--fill btn--primary z-index-1\"><span>VIEW MORE</span><i class=\"fa fa-angle-double-right ml-10\">\n            </i></a></div></div></div></div>[footer]\n\n</body>",
+        "css": "* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}#ibgp{padding:15px;}#im41{color:#2f1919;}#icwya{padding-top:90px;padding-right:0px;padding-bottom:90px;padding-left:0px;}#ip0xi{padding:15px;}#i8237{padding-top:25px;padding-left:55px;}#iv43s{color:black;width:100%;}#ic0ch{font-size:50px;}#i7caw{margin-bottom:25px;}#i0u2{background-size:auto;background-color:rgb(44, 44, 44);background-image:url(\"https://placehold.co/1920x550/grey/gery\");background-origin:padding-box;background-repeat:no-repeat;background-position-x:50%;background-position-y:50%;background-attachment:scroll;}#i3pl{background-repeat:repeat;background-position:left top;background-attachment:scroll;background-size:auto;background-image:radial-gradient(circle at right, black 0%, #c93636 22%, #a11717 60%, #e0e0e0 98%, white 100%);}@media (max-width: 992px){#i8237{padding-left:15px;}}"
       }
     }
   ]
