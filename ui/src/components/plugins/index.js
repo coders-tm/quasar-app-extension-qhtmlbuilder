@@ -2,50 +2,20 @@ import _default from './default'
 import blocks from './blocks'
 import layouts from './layouts'
 import navbar from './navbar'
-import shortcodes from './shortcodes'
+import shortcodes, { shortcodeOptions } from './shortcodes'
 import templateManager from './template-manager'
 import notify from './notify'
 import styleEditor from './style-editor'
 import { category } from '../config'
 
+const { Layout, Basic, ShortCodes, Extra } = category
+
 export default (editor, opt = {}) => {
   const options = {
-    category: category.Basic,
-    categoryLayout: category.Layout,
-    headers: [
-      {
-        type: 'select',
-        name: 'layout',
-        label: 'Layout',
-        changeProp: 1,
-        options: [{ id: '', label: 'Select' }],
-        default: ''
-      }
-    ],
-    footers: [
-      {
-        type: 'select',
-        name: 'layout',
-        label: 'Layout',
-        changeProp: 1,
-        options: [
-          { id: '', label: 'Select' },
-          { id: 'default', label: 'Default' }
-        ],
-        default: ''
-      }
-    ],
-    shortcodes: true,
-    layouts: true,
-    navbar: true,
-    announcementsTraits: [],
-    blogsTraits: [],
-    productsTraits: [],
-    plansTratis: [],
-    calendarTraits: [],
-    openingTimesTraits: [],
-    contactForms: [],
-    contactFormsTraits: [],
+    category: Basic,
+    categoryLayout: Layout,
+    layouts: { category: Layout },
+    navbar: { category: Extra },
     styleEditor: {
       codeViewerConfig: {},
       styleLabel:
@@ -61,11 +31,15 @@ export default (editor, opt = {}) => {
   _default(editor, options)
 
   if (options.layouts) {
-    layouts(editor, { ...options, category: options.categoryLayout })
+    layouts(editor, options.layouts)
   }
 
   if (options.shortcodes) {
-    shortcodes(editor, { ...options, category: category.ShortCodes })
+    shortcodes(editor, {
+      ...shortcodeOptions,
+      category: ShortCodes,
+      ...options.shortcodes
+    })
   }
 
   if (options.navbar) {

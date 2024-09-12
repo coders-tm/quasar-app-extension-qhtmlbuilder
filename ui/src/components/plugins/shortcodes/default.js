@@ -1,7 +1,7 @@
 import { isShortcodeComponent } from '../utils'
 
 export default (editor, options = {}) => {
-  const { onLoadShortCode } = options
+  const onLoadShortCode = options.loader
   const { Components } = editor
   const type = 'shortcode'
   const defaultType = Components.getType('default')
@@ -28,6 +28,7 @@ export default (editor, options = {}) => {
       },
       handlePropChange() {
         const attributes = this.getShortCodeProps().join(' ')
+        const type = this.get('type')
         const shortcode = `[${type}${attributes ? ` ${attributes}` : ''}]`
         this.set('content', shortcode)
         this.set('shortcode', shortcode)

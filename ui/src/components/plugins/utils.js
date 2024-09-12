@@ -7,6 +7,15 @@ export const TEMPLATES = 'templates'
 export const thumbnail =
   'https://raw.githubusercontent.com/dipaksarkar/grapesjs-templates/main/assets/placeholder.png'
 
+export function isValidUrl(string) {
+  try {
+    new URL(string)
+    return true
+  } catch (_) {
+    return false
+  }
+}
+
 export const isComponent = (el, type) => {
   const datasetType = (el) => el.dataset && el.dataset.type === type
   const containsClass = (el) => {
@@ -113,13 +122,6 @@ export const storeProjects = (payload, opts) => {
           .catch((error) => {
             reject(error)
           })
-      } else if (typeof opts?.onStoreTemplate == 'function') {
-        try {
-          const results = await opts.onStoreTemplate(payload)
-          resolve(results)
-        } catch (error) {
-          reject(error)
-        }
       } else {
         const projects = loadProjects() || []
         projects.push(payload)
@@ -148,13 +150,6 @@ export const removeProjects = (payload, opts) => {
           .catch((error) => {
             reject(error)
           })
-      } else if (typeof opts?.onDeleteTemplate == 'function') {
-        try {
-          const results = await opts.onDeleteTemplate(payload)
-          resolve(results)
-        } catch (error) {
-          reject(error)
-        }
       } else {
         const projects = loadProjects() || []
         const results = projects.filter((item) => item.id != payload)
@@ -172,26 +167,13 @@ export const fetchTemplates = (type, opts) => {
     const requestopts = {
       method: 'GET',
       headers: opts?.headers || [],
-      redirect: 'follow'
+      redirect: 'follow',
+      mode: 'no-cors'
     }
 
-    let apiEndpoint = opts?.templates
-    let results = []
-    const onLoadTemplate = opts?.onLoadTemplate
+    const apiEndpoint = type == PROJECTS ? opts?.projects : opts?.templates
 
-    if (typeof onLoadTemplate == 'function') {
-      try {
-        results = await onLoadTemplate(type)
-        return resolve(results)
-      } catch (error) {
-        console.error(error)
-        return resolve(null)
-      }
-    }
-
-    if (type == PROJECTS) apiEndpoint = opts?.projects
-
-    if (!apiEndpoint) {
+    if (!isValidUrl(apiEndpoint)) {
       if (type == PROJECTS) {
         return resolve(loadProjects())
       }
@@ -203,8 +185,8 @@ export const fetchTemplates = (type, opts) => {
       .then((result) => {
         resolve(result)
       })
-      .catch((error) => {
-        console.error(error)
+      .catch((err) => {
+        console.error(err)
         resolve(null)
       })
   })

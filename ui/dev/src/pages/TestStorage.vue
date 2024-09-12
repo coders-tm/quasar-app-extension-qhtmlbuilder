@@ -16,20 +16,6 @@ import { plugins } from 'ui'
 
 const editor = ref(null)
 
-const loadTemplates = (type) => {
-  return new Promise((resolve, reject) => {
-    axios
-      .get(`http://localhost:3000/${type}`)
-      .then(({ data }) => {
-        resolve(data)
-      })
-      .catch((error) => {
-        console.error(error)
-        reject(error)
-      })
-  })
-}
-
 const loadData = (id) => {
   return new Promise((resolve, reject) => {
     axios
@@ -56,60 +42,6 @@ const storeData = (id, data) => {
         reject(error)
       })
   })
-}
-
-const createProject = (payload) => {
-  return new Promise((resolve, reject) => {
-    axios
-      .post(`http://localhost:3000/projects`, payload)
-      .then(({ data }) => {
-        resolve(data.data)
-      })
-      .catch((error) => {
-        console.error(error)
-        reject(error)
-      })
-  })
-}
-
-const deleteData = (id) => {
-  return new Promise((resolve, reject) => {
-    axios
-      .delete(`http://localhost:3000/projects/${id}`)
-      .then(({ data }) => {
-        resolve(data)
-      })
-      .catch((error) => {
-        console.error(error)
-        reject(error)
-      })
-  })
-}
-
-async function onLoadTemplate(payload) {
-  return loadTemplates(payload)
-}
-
-function onStoreTemplate(payload) {
-  return new Promise((resolve, reject) => {
-    createProject(payload)
-      .then(() => {
-        resolve(true)
-      })
-      .catch((error) => {
-        reject(error)
-      })
-  })
-}
-
-function onDeleteTemplate(payload) {
-  return deleteData(payload)
-    .then(() => {
-      return true
-    })
-    .catch(() => {
-      return false
-    })
 }
 
 const remote = {
@@ -149,39 +81,15 @@ const config = {
 
 const pluginsOpts = {
   [plugins]: {
-    headers: [
-      {
-        type: 'select',
-        name: 'layout',
-        label: 'Layout',
-        changeProp: 1,
-        options: [
-          { id: '', label: 'Select' },
-          { id: 'classic', label: 'Classic' },
-          { id: 'overlay', label: 'Overlay' }
-        ],
-        default: ''
-      },
-      {
-        type: 'input',
-        name: 'menu',
-        label: 'Main menu',
-        changeProp: 1,
-        default: ''
-      },
-      {
-        type: 'input',
-        name: 'right',
-        label: 'Right menu',
-        changeProp: 1,
-        default: ''
+    projects: 'http://localhost:3000/projects',
+    templates: 'http://localhost:3000/templates',
+    headers: {
+      Foo: 'Bar'
+    },
+    shortcodes: {
+      loader: (el, shortcode) => {
+        el.innerHTML = `<div style="text-align: center; padding: 20px">Loaded: ${shortcode}</div>`
       }
-    ],
-    onLoadTemplate,
-    onStoreTemplate,
-    onDeleteTemplate,
-    onLoadShortCode: (el, shortcode) => {
-      console.log(el, shortcode)
     }
   }
 }
