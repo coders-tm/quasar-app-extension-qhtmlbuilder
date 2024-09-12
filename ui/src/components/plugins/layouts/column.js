@@ -24,7 +24,7 @@ export default (cm, options = {}) => {
 }
 
 export const columnBlock = (bm, options = {}) => {
-  const { category } = options.layout
+  const { category } = options
 
   // Create a block for the Plans component
   bm.add(`${type}-block`, {

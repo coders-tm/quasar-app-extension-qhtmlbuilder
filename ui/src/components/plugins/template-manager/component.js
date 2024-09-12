@@ -11,24 +11,6 @@ export const convertToSlug = (blockName) => {
   ) // Remove all non-word characters except hyphen
 }
 
-export const getComponentWithStylesRecursive = (component, cssComposer) => {
-  const componentJson = component.toJSON()
-
-  // Get inline styles
-  const style = component.getStyle()
-
-  // Process child components recursively
-  const childComponents = component
-    .components()
-    .map((child) => getComponentWithStylesRecursive(child, cssComposer))
-
-  return {
-    ...componentJson,
-    style: style,
-    components: childComponents
-  }
-}
-
 export const saveAsCustomBlock = (editor, blockName) => {
   // Get the selected component's JSON and styles
   const component = editor.getSelected()
@@ -87,12 +69,6 @@ export default (editor, options = {}) => {
         })
 
         try {
-          const cssComposer = editor.CssComposer
-          const componentData = getComponentWithStylesRecursive(
-            component,
-            cssComposer
-          )
-
           // Usage
           saveAsCustomBlock(editor, name)
 

@@ -1,7 +1,6 @@
-const category = 'Layout'
-
 export default (editor, options = {}) => {
   const { BlockManager } = editor
+  const { categoryLayout } = options
 
   BlockManager.add('column1', {
     label: 'One Column',
@@ -9,7 +8,7 @@ export default (editor, options = {}) => {
       '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3.75 5C3.33579 5 3 5.33579 3 5.75C3 6.16421 3.33579 6.5 3.75 6.5H20.25C20.6642 6.5 21 6.16421 21 5.75C21 5.33579 20.6642 5 20.25 5H3.75Z"></path> <path d="M3.75 9C3.33579 9 3 9.33579 3 9.75C3 10.1642 3.33579 10.5 3.75 10.5H20.25C20.6642 10.5 21 10.1642 21 9.75C21 9.33579 20.6642 9 20.25 9H3.75Z"></path> <path d="M3 13.75C3 13.3358 3.33579 13 3.75 13H20.25C20.6642 13 21 13.3358 21 13.75C21 14.1642 20.6642 14.5 20.25 14.5H3.75C3.33579 14.5 3 14.1642 3 13.75Z"></path> <path d="M3.75 17C3.33579 17 3 17.3358 3 17.75C3 18.1642 3.33579 18.5 3.75 18.5H20.25C20.6642 18.5 21 18.1642 21 17.75C21 17.3358 20.6642 17 20.25 17H3.75Z"></path> </g></svg>',
     content: { type: 'row', components: [{ type: 'column' }] },
     select: true,
-    category
+    category: categoryLayout
   })
 
   BlockManager.add('column2', {
@@ -32,7 +31,7 @@ export default (editor, options = {}) => {
       ]
     },
     select: true,
-    category
+    category: categoryLayout
   })
 
   BlockManager.add('column3', {
@@ -60,7 +59,7 @@ export default (editor, options = {}) => {
       ]
     },
     select: true,
-    category
+    category: categoryLayout
   })
 
   BlockManager.add('column2-48', {
@@ -83,7 +82,7 @@ export default (editor, options = {}) => {
       ]
     },
     select: true,
-    category
+    category: categoryLayout
   })
 
   BlockManager.add('column2-84', {
@@ -106,6 +105,6 @@ export default (editor, options = {}) => {
       ]
     },
     select: true,
-    category
+    category: categoryLayout
   })
 }

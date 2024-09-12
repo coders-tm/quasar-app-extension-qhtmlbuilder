@@ -6,7 +6,6 @@ import traits from './traits'
 
 export const layout = {
   id: 'layout',
-  category: 'Layout',
   block: {},
   classPrefix: 'layout'
 }
@@ -14,7 +13,11 @@ export const layout = {
 export default (editor, options = {}) => {
   const { Components } = editor
 
-  const opts = { layout, ...options, defaultModel: Components.getType('default').model }
+  const opts = {
+    layout,
+    ...options,
+    defaultModel: Components.getType('default').model
+  }
 
   traits(editor, opts)
   container(Components, opts)

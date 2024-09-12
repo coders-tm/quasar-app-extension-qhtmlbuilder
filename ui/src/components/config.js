@@ -626,3 +626,11 @@ export const deviceManager = {
     }
   ]
 }
+
+export const category = {
+  Layout: { label: 'Layout', id: 'Layout', order: 1 },
+  Basic: { label: 'Basic', id: 'Basic', order: 2 },
+  ShortCodes: { label: 'Short codes', id: 'Short codes', order: 3 },
+  Forms: { label: 'Forms', id: 'Forms', order: 4 },
+  Extra: { label: 'Extra', id: 'Extra', order: 5 }
+}

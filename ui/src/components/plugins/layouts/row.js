@@ -21,8 +21,7 @@ export default (cm, options = {}) => {
 }
 
 export const rowBlock = (bm, options = {}) => {
-  const { layout } = options
-  const { category } = layout
+  const { category } = options
 
   // Create a block for the Plans component
   bm.add(type, {

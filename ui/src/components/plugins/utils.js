@@ -464,3 +464,21 @@ export const colTraits = [
     label: 'Extra large'
   }
 ]
+
+export const getComponentWithStyles = (component, cssComposer) => {
+  const componentJson = component.toJSON()
+
+  // Get inline styles
+  const style = component.getStyle()
+
+  // Process child components recursively
+  const childComponents = component
+    .components()
+    .map((child) => getComponentWithStyles(child, cssComposer))
+
+  return {
+    ...componentJson,
+    style: style,
+    components: childComponents
+  }
+}
