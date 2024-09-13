@@ -19,7 +19,7 @@ const editor = ref(null)
 const loadData = (id) => {
   return new Promise((resolve, reject) => {
     axios
-      .get(`http://localhost:3000/pages/${id}`)
+      .get(`/api/pages/${id}`)
       .then(({ data }) => {
         resolve(data.data)
       })
@@ -33,7 +33,7 @@ const loadData = (id) => {
 const storeData = (id, data) => {
   return new Promise((resolve, reject) => {
     axios
-      .put(`http://localhost:3000/pages/${id}`, data)
+      .put(`/api/pages/${id}`, data)
       .then(({ data }) => {
         resolve(data.data)
       })
@@ -81,8 +81,9 @@ const config = {
 
 const pluginsOpts = {
   [plugins]: {
-    projects: 'http://localhost:3000/projects',
-    templates: 'http://localhost:3000/templates',
+    projects: '/api/projects',
+    templates: '/api/templates',
+    blocks: '/api/blocks',
     headers: {
       // 'Content-Type': 'application/json',
     },

@@ -1,5 +1,7 @@
 export const PROJECTS_KEY = 'gjs-projects'
 
+export const BLOCKS_KEY = 'gjs-blocks'
+
 export const PROJECTS = 'projects'
 
 export const TEMPLATES = 'templates'
@@ -88,27 +90,106 @@ export const mapTemplates = (editor, templates, removeable = false) => {
   )}</div>`
 }
 
-const loadProjects = () => {
+const local = (key) => {
   try {
-    return JSON.parse(localStorage.getItem(PROJECTS_KEY))
+    return JSON.parse(localStorage.getItem(key))
   } catch (error) {
     return null
   }
+}
+
+const loadProjects = () => {
+  return local(PROJECTS_KEY)
+}
+
+const loadBlocks = () => {
+  return local(BLOCKS_KEY) || []
+}
+
+export function get(endpoint, opts) {
+  return new Promise(async (resolve) => {
+    const requestopts = {
+      method: 'GET',
+      headers: opts?.headers || [],
+      redirect: 'follow'
+    }
+
+    fetch(endpoint, requestopts)
+      .then((response) => response.json())
+      .then((result) => {
+        resolve(result)
+      })
+      .catch((error) => {
+        console.error(error)
+        resolve(null)
+      })
+  })
+}
+
+export function post(endpoint, opts) {
+  return new Promise(async (resolve, reject) => {
+    fetch(endpoint, {
+      method: 'POST',
+      headers: opts?.headers || [],
+      body: JSON.stringify(opts?.payload || {}),
+      redirect: 'follow'
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        resolve(result)
+      })
+      .catch((error) => {
+        reject(error)
+      })
+  })
+}
+
+export function destroy(endpoint, opts) {
+  return new Promise(async (resolve, reject) => {
+    fetch(endpoint, {
+      method: 'DELETE',
+      headers: opts?.headers || [],
+      redirect: 'follow'
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        resolve(result)
+      })
+      .catch((error) => {
+        reject(error)
+      })
+  })
+}
+
+export const fetchTemplates = (type, opts) => {
+  return new Promise(async (resolve) => {
+    const endpoint = type == PROJECTS ? opts?.projects : opts?.templates
+
+    if (!endpoint) {
+      if (type == PROJECTS) {
+        return resolve(loadProjects())
+      }
+      return resolve(null)
+    }
+
+    get(endpoint, opts)
+      .then((result) => {
+        resolve(result)
+      })
+      .catch((error) => {
+        console.error(error)
+        resolve(null)
+      })
+  })
 }
 
 export const storeProjects = (payload, opts) => {
   return new Promise(async (resolve, reject) => {
     try {
       if (opts?.projects) {
-        fetch(opts.projects, {
-          method: 'POST',
-          headers: opts?.headers || [],
-          body: JSON.stringify(payload),
-          redirect: 'follow'
-        })
-          .then((response) => response.json())
-          .then((result) => {
-            resolve(result)
+        post(opts.projects, { ...opts, payload })
+          .then((response) => {
+            resolve(response)
           })
           .catch((error) => {
             reject(error)
@@ -129,14 +210,9 @@ export const removeProjects = (payload, opts) => {
   return new Promise(async (resolve, reject) => {
     try {
       if (opts?.projects) {
-        fetch(`${opts.projects}/${payload}`, {
-          method: 'DELETE',
-          headers: opts?.headers || [],
-          redirect: 'follow'
-        })
-          .then((response) => response.json())
-          .then((result) => {
-            resolve(result)
+        destroy(`${opts.projects}/${payload}`, opts)
+          .then((response) => {
+            resolve(response)
           })
           .catch((error) => {
             reject(error)
@@ -153,32 +229,65 @@ export const removeProjects = (payload, opts) => {
   })
 }
 
-export const fetchTemplates = (type, opts) => {
+export const fetchBlocks = (opts) => {
   return new Promise(async (resolve) => {
-    const requestopts = {
-      method: 'GET',
-      headers: opts?.headers || [],
-      redirect: 'follow'
+    if (!opts?.blocks) {
+      return resolve(loadBlocks())
     }
 
-    const apiEndpoint = type == PROJECTS ? opts?.projects : opts?.templates
-
-    if (!apiEndpoint) {
-      if (type == PROJECTS) {
-        return resolve(loadProjects())
-      }
-      return resolve(null)
-    }
-
-    fetch(apiEndpoint, requestopts)
-      .then((response) => response.json())
+    get(opts?.blocks, opts)
       .then((result) => {
         resolve(result)
       })
       .catch((error) => {
         console.error(error)
-        resolve(null)
       })
+  })
+}
+
+export const storeBlocks = (payload, opts) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      if (opts?.blocks) {
+        post(opts.blocks, { ...opts, payload })
+          .then((response) => {
+            resolve(response)
+          })
+          .catch((error) => {
+            reject(error)
+          })
+      } else {
+        const blocks = loadBlocks()
+        blocks.push(payload)
+        localStorage.setItem(BLOCKS_KEY, JSON.stringify(blocks))
+        resolve(true)
+      }
+    } catch (error) {
+      reject(error)
+    }
+  })
+}
+
+export const removeBlocks = (payload, opts) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      if (opts?.blocks) {
+        destroy(`${opts.blocks}/${payload}`, opts)
+          .then((response) => {
+            resolve(response)
+          })
+          .catch((error) => {
+            reject(error)
+          })
+      } else {
+        const blocks = loadBlocks()
+        const results = blocks.filter((item) => item.id != payload)
+        localStorage.setItem(BLOCKS_KEY, JSON.stringify(results))
+        resolve(true)
+      }
+    } catch (error) {
+      reject(error)
+    }
   })
 }
 

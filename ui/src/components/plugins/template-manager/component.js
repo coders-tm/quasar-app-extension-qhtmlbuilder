@@ -1,4 +1,5 @@
 import { Dialog } from 'quasar'
+import { fetchBlocks, storeBlocks } from '../utils'
 
 // Utility function to convert a string to slug
 export const convertToSlug = (blockName) => {
@@ -11,38 +12,13 @@ export const convertToSlug = (blockName) => {
   ) // Remove all non-word characters except hyphen
 }
 
-export const saveAsCustomBlock = (editor, blockName) => {
-  // Get the selected component's JSON and styles
-  const component = editor.getSelected()
-
-  if (!component) {
-    console.log('No component selected')
-    return
-  }
-
-  // Convert blockName to slug and add prefix
-  const blockId = convertToSlug(blockName)
-
-  // Create the HTML content by converting the component to HTML
-  const html = editor.getHtml({ component })
-
-  // Create the CSS content from the inline styles
-  const css = editor.getCss({ component })
-
-  // Define a new block in the Blocks manager
-  editor.Blocks.add(blockId, {
-    label: blockName, // Label for the block
-    content: `
-      <style>${css}</style>
-      ${html}
-    `,
-    category: 'Custom Blocks', // Optional: Define a category for the block
-    attributes: { class: 'fa fa-cube', name: blockName } // Block icon (Font Awesome in this case)
-  })
-}
-
 export default (editor, options = {}) => {
-  const { Commands } = editor
+  const { Commands, Blocks } = editor
+  const { category } = options
+
+  const addBlock = (data = {}) => {
+    Blocks.add(data.key, data.options)
+  }
 
   Commands.add('add-component', {
     async run(editor) {
@@ -70,14 +46,17 @@ export default (editor, options = {}) => {
 
         try {
           // Usage
-          saveAsCustomBlock(editor, name)
+          const data = this.toBlock(editor, name)
 
-          setTimeout(() => {
+          storeBlocks({ data, id: Date.now() }, options).then(() => {
+            // Define a new block in the Blocks manager
+            addBlock(data)
+
             notif({
               type: 'positive',
               message: 'Template Saved Successfully!'
             })
-          }, 1000)
+          })
         } catch (error) {
           notif({
             type: 'negative',
@@ -87,6 +66,41 @@ export default (editor, options = {}) => {
           })
         }
       })
+    },
+
+    toBlock(editor, blockName) {
+      // Get the selected component's JSON and styles
+      const component = editor.getSelected()
+
+      if (!component) {
+        console.log('No component selected')
+        return
+      }
+
+      // Convert blockName to slug and add prefix
+      const blockId = convertToSlug(blockName)
+
+      // Create the HTML content by converting the component to HTML
+      const html = editor.getHtml({ component })
+
+      // Create the CSS content from the inline styles
+      const css = editor.getCss({ component })
+
+      return {
+        key: blockId,
+        options: {
+          label: blockName,
+          content: `<style>${css}</style>${html}`,
+          category,
+          attributes: { class: 'fa fa-cube', name: blockName }
+        }
+      }
     }
+  })
+
+  fetchBlocks(options).then((blocks) => {
+    blocks.forEach(({ data }) => {
+      addBlock(data)
+    })
   })
 }

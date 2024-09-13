@@ -8,7 +8,7 @@ import notify from './notify'
 import styleEditor from './style-editor'
 import { category } from '../config'
 
-const { Layout, Basic, ShortCodes, Extra } = category
+const { Layout, Basic, ShortCodes, Extra, CustomBlocks } = category
 
 export default (editor, opt = {}) => {
   const options = {
@@ -46,7 +46,7 @@ export default (editor, opt = {}) => {
     navbar(editor, { ...options, category: category.Extra })
   }
 
-  templateManager(editor, options)
+  templateManager(editor, { ...options, category: category.CustomBlocks })
 
   blocks(editor, options)
 
