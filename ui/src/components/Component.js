@@ -1,4 +1,4 @@
-import { styleManager, deviceManager, category } from './config'
+import { styleManager, deviceManager } from './config'
 import { h, ref, onMounted, onBeforeUnmount } from 'vue'
 import LayerTitle from './LayerTitle'
 import { Dialog } from 'quasar'
@@ -71,17 +71,7 @@ export default {
         pluginsOpts: {
           [blocksBasic]: {
             flexGrid: true,
-            blocks: ['text', 'link', 'image', 'video', 'map'],
-            category: category.Basic
-          },
-          [forms]: {
-            category: category.Forms
-          },
-          [countdown]: {
-            block: { category: category.Extra }
-          },
-          [tabs]: {
-            tabsBlock: { category: category.Extra }
+            blocks: ['text', 'link', 'image', 'video', 'map']
           },
           [imageEditor]: {
             script: [
@@ -94,9 +84,12 @@ export default {
               'https://uicdn.toast.com/tui-image-editor/v3.15.2/tui-image-editor.min.css'
             ]
           },
+          [tabs]: {
+            tabsBlock: { category: 'Extra' }
+          },
           [typed]: {
             block: {
-              category: category.Extra,
+              category: 'Extra',
               content: {
                 type: 'typed',
                 'type-speed': 40,
