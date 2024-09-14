@@ -45,17 +45,18 @@ export default (editor, options = {}) => {
         })
 
         try {
-          // Usage
+          // Convert the selected component to a block object
           const data = this.toBlock(editor, name)
 
-          storeBlocks({ data, id: Date.now() }, options).then(() => {
-            // Define a new block in the Blocks manager
-            addBlock(data)
+          // Store the block
+          await storeBlocks({ data, id: Date.now() }, options)
 
-            notif({
-              type: 'positive',
-              message: 'Template Saved Successfully!'
-            })
+          // Define a new block in the Blocks manager
+          addBlock(data)
+
+          notif({
+            type: 'positive',
+            message: 'Block Saved Successfully!'
           })
         } catch (error) {
           notif({

@@ -147,6 +147,7 @@ export default (editor, options = {}) => {
 
   Commands.add('save-templates', {
     async run(editor) {
+      // Open a dialog to prompt for the template name
       Dialog.create({
         title: 'Save template',
         message: 'What is your template name?',
@@ -159,31 +160,36 @@ export default (editor, options = {}) => {
         cancel: true,
         persistent: true
       }).onOk(async (name) => {
+        // Notify the user that the saving process has started
         const notif = editor.runCommand('notify', {
           type: 'ongoing',
           message: 'Saving in progress...'
         })
 
-        const data = editor.getProjectData()
-        const el = editor.getWrapper().getEl()
-        const thumbnail = await editor.makeThumbnail(el, {
-          height: 900
-        })
+        try {
+          // Get project data and create a thumbnail
+          const data = editor.getProjectData()
+          const el = editor.getWrapper().getEl()
+          const thumbnail = await editor.makeThumbnail(el, { height: 900 })
 
-        return storeProjects({ id: Date.now(), data, name, thumbnail }, options)
-          .then(() => {
-            notif({
-              type: 'positive',
-              message: 'Template Saved Successfully!'
-            })
+          // Store the project using storeProjects function
+          await storeProjects(
+            { id: Date.now(), data, name, thumbnail },
+            options
+          )
+
+          // Notify success
+          notif({
+            type: 'positive',
+            message: 'Template Saved Successfully!'
           })
-          .catch(({ message }) => {
-            notif({
-              type: 'negative',
-              message:
-                message || 'An error occurred while saving. Please try again.'
-            })
+        } catch (err) {
+          // Notify error
+          notif({
+            type: 'negative',
+            message: err.toString()
           })
+        }
       })
     }
   })
@@ -205,8 +211,7 @@ export default (editor, options = {}) => {
         .catch(({ message }) => {
           notif({
             type: 'negative',
-            message:
-              message || 'An error occurred while saving. Please try again.'
+            message
           })
         })
     }
