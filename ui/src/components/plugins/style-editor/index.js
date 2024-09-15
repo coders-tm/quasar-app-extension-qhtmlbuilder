@@ -43,7 +43,7 @@ export default (editor, opts = {}) => {
         const btnImp = document.createElement('button')
         btnImp.type = 'button'
         btnImp.innerHTML = 'Update'
-        btnImp.className = `btn-prim btn-import`
+        btnImp.className = `gjs-btn-prim gjs-btn-import`
         btnImp.onclick = () => {
           editor.setStyle(codeViewer.getContent().trim())
           Modal.close()
