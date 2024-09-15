@@ -1,6 +1,6 @@
 {
   "name": "quasar-ui-qhtmlbuilder",
-  "version": "1.0.54",
+  "version": "1.0.55",
   "author": "Dipak Sarkar <hello@dipaksarkar.in>",
   "description": "A Quasar app extension for integrating GrapesJS HTML builder into Quasar applications.",
   "license": "MIT",
