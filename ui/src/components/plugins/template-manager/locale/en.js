@@ -1,11 +1,11 @@
 export default {
   'grapesjs-templates': {
     'save-page': 'Save',
-    projects: 'My projects',
+    projects: 'My Projects',
     templates: 'Templates',
-    'save-template': 'Save template',
-    'load-template': 'Load templates',
-    'template-settings': 'Template settings',
+    'save-template': 'Save as Template',
+    'load-template': 'Load Templates',
+    'template-settings': 'Template Settings',
     'import-webpage': 'Import from HTML',
     loading: 'Loading...',
     select: 'Select',

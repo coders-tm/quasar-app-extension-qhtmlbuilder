@@ -82,7 +82,6 @@ const config = {
 const pluginsOpts = {
   [plugins]: {
     projects: '/api/projects',
-    templates: '/api/templates',
     blocks: '/api/blocks',
     headers: {
       // 'Content-Type': 'application/json',

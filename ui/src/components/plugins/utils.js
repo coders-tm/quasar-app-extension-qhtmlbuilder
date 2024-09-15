@@ -106,17 +106,28 @@ const loadBlocks = () => {
   return local(BLOCKS_KEY) || []
 }
 
+const parseResponse = (response) => {
+  if (!response.ok) {
+    // Check if response contains JSON before trying to parse it
+    const contentType = response.headers.get('content-type')
+    if (contentType && contentType.includes('application/json')) {
+      return response.json().then(({ message }) => {
+        throw new Error(message)
+      })
+    } else {
+      // If it's not JSON, reject with the status text or status code
+      throw new Error(response.statusText || `Error ${response.status}`)
+    }
+  }
+  return response.json() // Parse the response normally if response is OK
+}
+
 export function get(endpoint, opts) {
   return fetch(endpoint, {
     method: 'GET',
     headers: opts?.headers || {}
   })
-    .then((response) => {
-      if (!response.ok) {
-        return response.json().then((err) => Promise.reject(err))
-      }
-      return response.json()
-    })
+    .then(parseResponse)
     .catch((error) => {
       throw error
     })
@@ -131,12 +142,7 @@ export function post(endpoint, opts) {
     },
     body: JSON.stringify(opts?.payload || {})
   })
-    .then((response) => {
-      if (!response.ok) {
-        return response.json().then((err) => Promise.reject(err))
-      }
-      return response.json()
-    })
+    .then(parseResponse)
     .catch((error) => {
       throw error
     })
@@ -147,12 +153,7 @@ export function destroy(endpoint, opts) {
     method: 'DELETE',
     headers: opts?.headers || {}
   })
-    .then((response) => {
-      if (!response.ok) {
-        return response.json().then((err) => Promise.reject(err))
-      }
-      return response.json()
-    })
+    .then(parseResponse)
     .catch((error) => {
       throw error
     })
