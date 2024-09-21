@@ -11,7 +11,7 @@
 
 <script setup>
 import axios from 'axios'
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { plugins } from 'ui'
 
 const editor = ref(null)
@@ -93,4 +93,9 @@ const pluginsOpts = {
     }
   }
 }
+
+onMounted(() => {
+  const _editor = editor.value.getEditor()
+  console.log(_editor)
+})
 </script>

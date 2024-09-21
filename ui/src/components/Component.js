@@ -46,8 +46,12 @@ export default {
     let Pages = null
 
     onMounted(() => {
-      // Initialize GrapesJS editor when the component is mounted
-      if (!editorRef.value) return
+      if (!editorRef.value) {
+        console.error(
+          'The editorRef is not initialized. Make sure the QHtmlBuilder component is mounted before accessing the editor instance.'
+        )
+        return
+      }
 
       editor = grapesjs.init({
         container: editorRef.value,
@@ -138,6 +142,10 @@ export default {
       editor.destroy()
     })
 
+    function getEditor() {
+      return editor
+    }
+
     function loadProjectData(data) {
       editor.loadProjectData(data)
     }
@@ -190,7 +198,7 @@ export default {
     }
 
     expose({
-      editor,
+      getEditor,
       addRemote,
       addPage,
       removePage,
