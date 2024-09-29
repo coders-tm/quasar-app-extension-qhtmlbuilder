@@ -16,7 +16,6 @@ import typed from 'grapesjs-typed'
 import styleBg from 'grapesjs-style-bg'
 import plugins from './plugins'
 import extendDefault from './plugins/extend-default'
-import Loading from './Loading'
 
 export const defaultConfig = {
   fromElement: true,
@@ -40,15 +39,15 @@ export default {
     plugins: { type: Array, default: () => [] },
     pluginsOpts: { type: Object, default: () => ({}) }, // Plugins options for GrapesJS
     pages: Array,
-    remote: Object
+    remote: Object,
+    custom: Boolean
   },
   setup(props, { attrs, expose, emit }) {
     const editorRef = ref(null)
-    const loading = ref(true)
     let editor = null
     let Pages = null
 
-    onMounted(async () => {
+    onMounted(() => {
       if (!editorRef.value) {
         console.error(
           'The editorRef is not initialized. Make sure the QHtmlBuilder component is mounted before accessing the editor instance.'
@@ -56,22 +55,26 @@ export default {
         return
       }
 
-      const { config } = props
-      let canvas = {}
-
-      if (typeof config?.canvas === 'function') {
-        canvas = await config?.canvas()
-      } else if (config?.canvas) {
-        canvas = config?.canvas
+      if (!props.custom) {
+        render()
       }
+    })
 
-      loading.value = false
+    onBeforeUnmount(() => {
+      try {
+        // Destroy GrapesJS editor when the component is destroyed
+        editor.destroy()
+      } catch (error) {
+        console.error(error)
+      }
+    })
 
+    function render(config = {}) {
       editor = grapesjs.init({
         container: editorRef.value,
         ...defaultConfig,
+        ...props.config,
         ...config,
-        ...canvas,
         plugins: [
           extendDefault,
           blocksBasic,
@@ -150,13 +153,12 @@ export default {
         emit('update:pages', [...Pages.getAll()])
       })
 
-      emit('update:pages', [...Pages.getAll()])
-    })
+      editor.onReady((editor) => emit('ready', editor))
 
-    onBeforeUnmount(() => {
-      // Destroy GrapesJS editor when the component is destroyed
-      editor.destroy()
-    })
+      emit('update:pages', [...Pages.getAll()])
+
+      return editor
+    }
 
     function getEditor() {
       return editor
@@ -214,6 +216,7 @@ export default {
     }
 
     expose({
+      render,
       getEditor,
       addRemote,
       addPage,
@@ -245,8 +248,7 @@ export default {
           class: 'htmlbuilder__editor',
           ref: editorRef,
           ...attrs
-        }),
-        h(Loading, { loading: loading.value })
+        })
       ])
   }
 }

@@ -1,10 +1,12 @@
 <template>
   <q-page>
     <QHtmlBuilder
+      custom
       ref="editor"
       :plugins-opts="pluginsOpts"
       :config="config"
       :remote="remote"
+      @ready="ready"
     />
   </q-page>
 </template>
@@ -22,6 +24,10 @@ const canvas = () => {
       resolve({ styles: ['https://example.com/css/app.css'] })
     }, 1000)
   })
+}
+
+const ready = (editor) => {
+  console.log('ready', editor)
 }
 
 const loadData = (id) => {
@@ -77,8 +83,7 @@ const config = {
         onLoad: (result) => result.data
       }
     }
-  },
-  canvas
+  }
 }
 
 const pluginsOpts = {
@@ -96,8 +101,9 @@ const pluginsOpts = {
   }
 }
 
-onMounted(() => {
-  const _editor = editor.value.getEditor()
-  console.log(_editor)
+onMounted(async () => {
+  const _editor = editor.value
+  const grepes = _editor.render({ canvas: await canvas() })
+  console.log('grepes', grepes)
 })
 </script>
