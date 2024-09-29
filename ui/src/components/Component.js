@@ -16,6 +16,7 @@ import typed from 'grapesjs-typed'
 import styleBg from 'grapesjs-style-bg'
 import plugins from './plugins'
 import extendDefault from './plugins/extend-default'
+import Loading from './Loading'
 
 export const defaultConfig = {
   fromElement: true,
@@ -36,16 +37,18 @@ export default {
   name: 'QHtmlBuilder',
   props: {
     config: Object, // Configuration options for GrapesJS
+    plugins: { type: Array, default: () => [] },
     pluginsOpts: { type: Object, default: () => ({}) }, // Plugins options for GrapesJS
     pages: Array,
     remote: Object
   },
   setup(props, { attrs, expose, emit }) {
     const editorRef = ref(null)
+    const loading = ref(true)
     let editor = null
     let Pages = null
 
-    onMounted(() => {
+    onMounted(async () => {
       if (!editorRef.value) {
         console.error(
           'The editorRef is not initialized. Make sure the QHtmlBuilder component is mounted before accessing the editor instance.'
@@ -53,9 +56,22 @@ export default {
         return
       }
 
+      const { config } = props
+      let canvas = {}
+
+      if (typeof config?.canvas === 'function') {
+        canvas = await config?.canvas()
+      } else if (config?.canvas) {
+        canvas = config?.canvas
+      }
+
+      loading.value = false
+
       editor = grapesjs.init({
         container: editorRef.value,
         ...defaultConfig,
+        ...config,
+        ...canvas,
         plugins: [
           extendDefault,
           blocksBasic,
@@ -69,9 +85,9 @@ export default {
           typed,
           styleBg,
           webpage,
-          plugins
+          plugins,
+          ...props.plugins
         ],
-        ...props.config,
         pluginsOpts: {
           [blocksBasic]: {
             flexGrid: true,
@@ -229,7 +245,8 @@ export default {
           class: 'htmlbuilder__editor',
           ref: editorRef,
           ...attrs
-        })
+        }),
+        h(Loading, { loading: loading.value })
       ])
   }
 }

@@ -16,6 +16,14 @@ import { plugins } from 'ui'
 
 const editor = ref(null)
 
+const canvas = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({ styles: ['https://example.com/css/app.css'] })
+    }, 1000)
+  })
+}
+
 const loadData = (id) => {
   return new Promise((resolve, reject) => {
     axios
@@ -70,13 +78,7 @@ const config = {
       }
     }
   },
-  canvas: {
-    styles: [
-      'https://cdn.coderstm.com/fontawesome/css/all.min.css',
-      'https://cdn.coderstm.com/gimmer/css/styles.min.css',
-      'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css'
-    ]
-  }
+  canvas
 }
 
 const pluginsOpts = {
