@@ -17,7 +17,7 @@ export default (editor, options = {}) => {
   const { category } = options
 
   const addBlock = (data = {}) => {
-    Blocks.add(data.key, data.options)
+    Blocks.add(data.id, { ...data, category })
   }
 
   Commands.add('add-component', {
@@ -49,7 +49,7 @@ export default (editor, options = {}) => {
           const data = this.toBlock(editor, name)
 
           // Store the block
-          await storeBlocks({ data, id: Date.now() }, options)
+          await storeBlocks(data, options)
 
           // Define a new block in the Blocks manager
           addBlock(data)
@@ -88,19 +88,16 @@ export default (editor, options = {}) => {
       const css = editor.getCss({ component })
 
       return {
-        key: blockId,
-        options: {
-          label: blockName,
-          content: `<style>${css}</style>${html}`,
-          category,
-          attributes: { class: 'fa fa-cube', name: blockName }
-        }
+        id: blockId,
+        label: blockName,
+        content: `<style>${css}</style>${html}`,
+        attributes: { class: 'fa fa-cube' }
       }
     }
   })
 
   fetchBlocks(options).then((blocks) => {
-    blocks.forEach(({ data }) => {
+    blocks.forEach((data) => {
       addBlock(data)
     })
   })
