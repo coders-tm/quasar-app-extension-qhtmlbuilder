@@ -24,7 +24,15 @@ export const isShortcodeComponent = (el, type) => {
   // Check if `el` is an HTML element with `innerHTML`
   if (el && el.innerHTML && typeof el.innerHTML === 'string') {
     const content = el.innerHTML.trim()
+
+    // Early return if content doesn't start with a shortcode
+    if (!content.startsWith('[')) {
+      return false
+    }
+
     const shortcodeData = parseShortcode(content)
+
+    // Validate if parsed shortcode matches the given type
     if (shortcodeData && shortcodeData.attrs) {
       Object.keys(shortcodeData.attrs).forEach((attr) => {
         el.setAttribute(`data-gjs-${attr}`, shortcodeData.attrs[attr])
@@ -36,6 +44,7 @@ export const isShortcodeComponent = (el, type) => {
     }
   }
 
+  // Fallback to isComponent if not identified as a shortcode component
   return isComponent(el, type)
 }
 
