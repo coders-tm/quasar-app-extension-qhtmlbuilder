@@ -195,6 +195,8 @@
   justify-content: flex-start
   align-items: stretch
   flex-wrap: nowrap
+  position: relative
+  overflow: hidden
   > *
     min-height: 75px
     flex-grow: 1
@@ -205,3 +207,13 @@
     border-right: 1px solid var(--gjs-main-light-color)
 .htmlbuilder__layers-title
   border-bottom: 1px solid var(--gjs-main-light-color)
+
+.htmlbuilder__layers-container
+  height: calc(-40px + 100%)
+  overflow: auto
+  &::-webkit-scrollbar
+    width: 7px
+  &::-webkit-scrollbar-track
+    background: #3f3437
+  &::-webkit-scrollbar-thumb
+    background: #6a6264

@@ -228,27 +228,34 @@ export default {
     })
 
     return () =>
-      h('div', { class: 'htmlbuilder__container' }, [
-        h(
-          'div',
-          {
-            id: 'htmlbuilder__left-panel',
-            class: 'htmlbuilder__left-panel gjs-one-bg gjs-two-color'
-          },
-          [
-            h(LayerTitle, { class: 'htmlbuilder__layers-title' }),
-            h('div', {
-              id: 'htmlbuilder__layers-container',
-              class: 'htmlbuilder__layers-container'
-            })
-          ]
-        ),
-        h('div', {
-          id: 'htmlbuilder__editor',
-          class: 'htmlbuilder__editor',
-          ref: editorRef,
-          ...attrs
-        })
-      ])
+      h(
+        'div',
+        {
+          class: 'htmlbuilder__container',
+          style: { height: props.config.height || '100%' }
+        },
+        [
+          h(
+            'div',
+            {
+              id: 'htmlbuilder__left-panel',
+              class: 'htmlbuilder__left-panel gjs-one-bg gjs-two-color'
+            },
+            [
+              h(LayerTitle, { class: 'htmlbuilder__layers-title' }),
+              h('div', {
+                id: 'htmlbuilder__layers-container',
+                class: 'htmlbuilder__layers-container'
+              })
+            ]
+          ),
+          h('div', {
+            id: 'htmlbuilder__editor',
+            class: 'htmlbuilder__editor',
+            ref: editorRef,
+            ...attrs
+          })
+        ]
+      )
   }
 }
