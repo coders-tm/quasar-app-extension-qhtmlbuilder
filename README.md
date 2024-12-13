@@ -9,7 +9,7 @@ Compatible with Quasar UI v2 and Vue 3.
 
 * [/app-extension](app-extension) - Quasar app extension
 
-## Support me
+# Support me
 
 If you find my work helpful, or you want to support the development, star the repo or buy me a coffee:
 
