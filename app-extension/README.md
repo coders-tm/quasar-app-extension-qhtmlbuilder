@@ -27,7 +27,7 @@ quasar ext remove qhtmlbuilder
 # Other Info
 > Add other information that's not as important to know
 
-## Support me
+# Support me
 
 If you find my work helpful, or you want to support the development, star the repo or buy me a coffee:
 
