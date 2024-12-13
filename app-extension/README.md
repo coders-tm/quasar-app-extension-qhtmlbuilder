@@ -4,6 +4,7 @@
 
 [![npm](https://img.shields.io/npm/v/quasar-app-extension-qhtmlbuilder.svg?label=quasar-app-extension-qhtmlbuilder)](https://www.npmjs.com/package/quasar-app-extension-qhtmlbuilder)
 [![npm](https://img.shields.io/npm/dt/quasar-app-extension-qhtmlbuilder.svg)](https://www.npmjs.com/package/quasar-app-extension-qhtmlbuilder)
+[![Sponsor Me on GitHub](https://img.shields.io/badge/sponsor-me-blue?logo=github)](https://github.com/sponsors/dipaksarkar)
 
 # Install
 ```bash
@@ -25,6 +26,12 @@ quasar ext remove qhtmlbuilder
 
 # Other Info
 > Add other information that's not as important to know
+
+## Support me
+
+If you find my work helpful, or you want to support the development, star the repo or buy me a coffee:
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/dipaksarkar)
 
 # Donate
 If you appreciate the work that went into this App Extension, please consider [donating to Quasar](https://donate.quasar.dev).
