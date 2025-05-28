@@ -4,6 +4,7 @@
       custom
       ref="editor"
       :plugins-opts="pluginsOpts"
+      :plugins="pluginsList"
       :config="config"
       :remote="remote"
       @ready="ready"
@@ -15,6 +16,7 @@
 import axios from 'axios'
 import { onMounted, ref } from 'vue'
 import { plugins } from 'ui'
+import blocks from '../plugins/blocks'
 
 const editor = ref(null)
 
@@ -106,4 +108,6 @@ onMounted(async () => {
   const grepes = _editor.render({ canvas: await canvas() })
   console.log('grepes', grepes)
 })
+
+const pluginsList = [blocks]
 </script>

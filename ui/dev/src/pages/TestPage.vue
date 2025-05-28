@@ -98,13 +98,18 @@
       </div>
     </q-drawer>
 
-    <QHtmlBuilder v-model:pages="pages" ref="editor" :config="config" />
+    <QHtmlBuilder
+      v-model:pages="pages"
+      :plugins="plugins"
+      ref="editor"
+      :config="config"
+    />
   </q-page>
 </template>
 
 <script setup>
-import axios from 'axios'
 import { ref, onMounted, computed } from 'vue'
+import blocks from '../plugins/blocks'
 
 const editor = ref(null)
 const pages = ref([])
@@ -154,6 +159,8 @@ const config = {
 }
 
 const canDelete = computed(() => pages.value.length > 1)
+
+const plugins = [blocks]
 
 onMounted(() => {
   //
