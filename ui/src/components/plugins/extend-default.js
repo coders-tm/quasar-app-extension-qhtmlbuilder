@@ -1,6 +1,7 @@
 export default (editor, options = {}) => {
   const { Components } = editor
   const componentCmd = 'add-component'
+  const defaultType = Components.getType('default')
 
   // Define custom component properties and traits
   Components.addType('default', {
@@ -19,6 +20,26 @@ export default (editor, options = {}) => {
 
           this.set('toolbar', toolbar)
         }
+      },
+      defaults: {
+        ...defaultType.model.prototype.defaults,
+        traits: [
+          ...defaultType.model.prototype.defaults.traits,
+          {
+            type: 'text',
+            label: 'onChange',
+            name: 'onchange',
+            changeProp: true,
+            placeholder: 'function (e) { console.log(e.target.value) }'
+          },
+          {
+            type: 'text',
+            label: 'onClick',
+            name: 'onclick',
+            changeProp: true,
+            placeholder: 'function (e) { console.log(e.target.value) }'
+          }
+        ]
       }
     }
   })
