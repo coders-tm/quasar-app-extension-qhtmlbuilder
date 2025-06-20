@@ -4,7 +4,6 @@ import LayerTitle from './LayerTitle'
 import { Dialog } from 'quasar'
 import grapesjs from 'grapesjs'
 import webpage from 'grapesjs-preset-webpage'
-import forms from 'grapesjs-plugin-forms'
 import blocksBasic from 'grapesjs-blocks-basic'
 import countdown from 'grapesjs-component-countdown'
 import pluginExport from 'grapesjs-plugin-export'
@@ -79,7 +78,6 @@ export default {
         plugins: [
           extendDefault,
           blocksBasic,
-          forms,
           countdown,
           pluginExport,
           tabs,
