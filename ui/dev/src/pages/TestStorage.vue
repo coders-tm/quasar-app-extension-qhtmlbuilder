@@ -85,6 +85,15 @@ const config = {
         onLoad: (result) => result.data
       }
     }
+  },
+  assetManager: {
+    assets: [],
+    embedAsBase64: false,
+    uploadName: 'file',
+    upload: '/files/upload',
+    onUploaded: (editor, response) => {
+      editor.assetManager.add(response.data[0])
+    }
   }
 }
 
@@ -100,6 +109,9 @@ const pluginsOpts = {
         el.innerHTML = `<div style="text-align: center; padding: 20px">Loaded: ${shortcode}</div>`
       }
     }
+  },
+  imageEditorOpts: {
+    upload: true
   }
 }
 

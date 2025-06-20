@@ -68,6 +68,11 @@ module.exports = function (ctx) {
           secure: false,
           changeOrigin: true,
           pathRewrite: { '^/api/': '/' } // Remove /api/ from the request path
+        },
+        '/files/': {
+          target: 'http://localhost:3001/',
+          secure: false,
+          changeOrigin: true
         }
       }
     },

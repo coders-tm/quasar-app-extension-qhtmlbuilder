@@ -70,6 +70,7 @@ export default {
     })
 
     function render(config = {}) {
+      const imageEditorOpts = props.pluginsOpts?.imageEditorOpts || {}
       editor = grapesjs.init({
         container: editorRef.value,
         ...defaultConfig,
@@ -105,7 +106,8 @@ export default {
             style: [
               'https://uicdn.toast.com/tui-color-picker/v2.2.7/tui-color-picker.min.css',
               'https://uicdn.toast.com/tui-image-editor/v3.15.2/tui-image-editor.min.css'
-            ]
+            ],
+            ...imageEditorOpts
           },
           [tabs]: {
             tabsBlock: { category: 'Extra' }
