@@ -156,38 +156,8 @@ export const styleManager = {
               min: 0
             }
           ]
-        }
-      ]
-    },
-    {
-      id: 'size',
-      name: 'Size',
-      properties: [
-        { extend: 'width' },
-        { extend: 'min-width' },
-        { extend: 'max-width' },
-        { extend: 'height' },
-        { extend: 'min-height' },
-        { extend: 'max-height' }
-      ]
-    },
-    {
-      id: 'space',
-      name: 'Space',
-      properties: [
-        { extend: 'padding', detached: true },
-        { extend: 'margin', detached: true }
-      ]
-    },
-    {
-      id: 'position',
-      name: 'Position',
-      properties: [
-        { extend: 'top' },
-        { extend: 'right' },
-        { extend: 'bottom' },
-        { extend: 'left' },
-        { extend: 'z-index', type: 'integer', default: '0' }
+        },
+        'background'
       ]
     },
     {
@@ -248,105 +218,34 @@ export const styleManager = {
       ]
     },
     {
-      id: 'background',
-      name: 'Background',
+      id: 'size',
+      name: 'Size',
       properties: [
-        {
-          property: 'background',
-          type: 'stack',
-          layerSeparator: {},
-          layerJoin: ', ',
-          detached: true,
-          properties: [
-            {
-              property: '__background-type',
-              type: 'radio',
-              default: 'image',
-              options: [{ id: 'image' }, { id: 'gradient' }, { id: 'color' }]
-            },
-            { property: 'background-image', default: 'none', type: 'base' },
-            {
-              property: 'background-position',
-              type: 'composite',
-              properties: [
-                {
-                  type: 'integer',
-                  property: 'background-position-x',
-                  units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
-                  default: '0px'
-                },
-                {
-                  type: 'integer',
-                  property: 'background-position-y',
-                  units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
-                  default: '0px'
-                }
-              ]
-            },
-            {
-              property: 'background-size',
-              type: 'composite',
-              properties: [
-                {
-                  type: 'integer',
-                  property: 'background-size-x',
-                  units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
-                  default: 'auto'
-                },
-                {
-                  type: 'integer',
-                  property: 'background-size-y',
-                  units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
-                  default: 'auto'
-                }
-              ]
-            },
-            {
-              property: 'background-repeat',
-              default: 'repeat',
-              type: 'select',
-              options: [
-                { id: 'repeat', label: 'Repeat' },
-                { id: 'repeat-x', label: 'Repeat x' },
-                { id: 'repeat-y', label: 'Repeat y' },
-                { id: 'no-repeat', label: 'No repeat' },
-                { id: 'space', label: 'Space' },
-                { id: 'round', label: 'Round' }
-              ]
-            },
-            {
-              property: 'background-attachment',
-              default: 'scroll',
-              type: 'select',
-              options: [
-                { id: 'scroll', label: 'Scroll' },
-                { id: 'fixed', label: 'Fixed' }
-              ]
-            },
-            {
-              property: 'background-origin',
-              default: 'padding-box',
-              type: 'select',
-              options: [
-                { id: 'padding-box', label: 'Padding box' },
-                { id: 'border-box', label: 'Border box' },
-                { id: 'content-box', label: 'Content box' }
-              ]
-            }
-          ]
-        },
-        { property: 'background-color', type: 'color', default: 'none' },
-        {
-          property: 'background-clip',
-          default: 'border-box',
-          type: 'select',
-          options: [
-            { id: 'border-box', label: 'Border box' },
-            { id: 'padding-box', label: 'Padding box' },
-            { id: 'content-box', label: 'Content box' },
-            { id: 'text', label: 'Text' }
-          ]
-        }
+        { extend: 'width' },
+        { extend: 'min-width' },
+        { extend: 'max-width' },
+        { extend: 'height' },
+        { extend: 'min-height' },
+        { extend: 'max-height' }
+      ]
+    },
+    {
+      id: 'space',
+      name: 'Space',
+      properties: [
+        { extend: 'padding', detached: true },
+        { extend: 'margin', detached: true }
+      ]
+    },
+    {
+      id: 'position',
+      name: 'Position',
+      properties: [
+        { extend: 'top' },
+        { extend: 'right' },
+        { extend: 'bottom' },
+        { extend: 'left' },
+        { extend: 'z-index', type: 'integer', default: '0' }
       ]
     },
     {
@@ -692,3 +591,54 @@ export const styleManager = {
     }
   ]
 }
+
+export const deviceManager = {
+  default: '',
+  devices: [
+    {
+      id: 'desktop',
+      name: 'Desktop',
+      width: ''
+    },
+    {
+      id: 'laptop',
+      name: 'Laptop',
+      width: '1024px', // Common laptop resolution
+      widthMedia: '1200px' // Media query for typical laptops
+    },
+    {
+      id: 'tablet',
+      name: 'Tablet',
+      width: '768px', // Typical tablet width in portrait mode
+      widthMedia: '992px' // Media query for tablets
+    },
+    {
+      id: 'mobileLandscape',
+      name: 'Mobile landscape',
+      width: '568px', // Typical mobile width in landscape mode
+      widthMedia: '640px' // Media query for mobile devices in landscape
+    },
+    {
+      id: 'mobilePortrait',
+      name: 'Mobile portrait',
+      width: '375px', // Common width for modern smartphones in portrait mode
+      widthMedia: '480px' // Media query for small mobile devices
+    }
+  ]
+}
+
+export const category = {
+  Layout: 'Layout',
+  Basic: 'Basic',
+  ShortCodes: 'Short codes',
+  CustomBlocks: 'Custom blocks'
+}
+
+export const categories = [
+  'Layout',
+  'Basic',
+  'Short codes',
+  'Custom blocks',
+  'Forms',
+  'Extra'
+]

@@ -1,23 +1,20 @@
-import { styleManager } from './config'
+import { styleManager, deviceManager } from './config'
 import { h, ref, onMounted, onBeforeUnmount } from 'vue'
+import LayerTitle from './LayerTitle'
 import { Dialog } from 'quasar'
 import grapesjs from 'grapesjs'
 import webpage from 'grapesjs-preset-webpage'
-import forms from 'grapesjs-plugin-forms'
-// import ckeditor from "grapesjs-plugin-ckeditor";
-// import postCss from 'grapesjs-parser-postcss';
 import blocksBasic from 'grapesjs-blocks-basic'
 import countdown from 'grapesjs-component-countdown'
 import pluginExport from 'grapesjs-plugin-export'
 import tabs from 'grapesjs-tabs'
 import customCode from 'grapesjs-custom-code'
 import touch from 'grapesjs-touch'
-// import tooltip from 'grapesjs-tooltip'
 import imageEditor from 'grapesjs-tui-image-editor'
 import typed from 'grapesjs-typed'
 import styleBg from 'grapesjs-style-bg'
-import templates from 'grapesjs-templates'
 import plugins from './plugins'
+import extendDefault from './plugins/extend-default'
 
 export const defaultConfig = {
   fromElement: true,
@@ -27,15 +24,22 @@ export const defaultConfig = {
     assets: []
   },
   selectorManager: { componentFirst: true },
-  styleManager
+  layerManager: {
+    appendTo: '#htmlbuilder__layers-container'
+  },
+  styleManager,
+  deviceManager
 }
 
 export default {
   name: 'QHtmlBuilder',
   props: {
     config: Object, // Configuration options for GrapesJS
+    plugins: { type: Array, default: () => [] },
+    pluginsOpts: { type: Object, default: () => ({}) }, // Plugins options for GrapesJS
     pages: Array,
-    remote: Object
+    remote: Object,
+    custom: Boolean
   },
   setup(props, { attrs, expose, emit }) {
     const editorRef = ref(null)
@@ -43,34 +47,54 @@ export default {
     let Pages = null
 
     onMounted(() => {
-      // Initialize GrapesJS editor when the component is mounted
-      if (!editorRef.value) return
+      if (!editorRef.value) {
+        console.error(
+          'The editorRef is not initialized. Make sure the QHtmlBuilder component is mounted before accessing the editor instance.'
+        )
+        return
+      }
 
+      if (!props.custom) {
+        render()
+      }
+    })
+
+    onBeforeUnmount(() => {
+      try {
+        // Destroy GrapesJS editor when the component is destroyed
+        editor.destroy()
+      } catch (error) {
+        console.error(error)
+      }
+    })
+
+    function render(config = {}) {
+      const imageEditorOpts = props.pluginsOpts?.imageEditorOpts || {}
       editor = grapesjs.init({
         container: editorRef.value,
         ...defaultConfig,
         ...props.config,
+        ...config,
         plugins: [
+          extendDefault,
           blocksBasic,
-          forms,
-          // ckeditor,
           countdown,
           pluginExport,
           tabs,
           customCode,
           touch,
-          // postCss,
-          // tooltip,
           imageEditor,
           typed,
           styleBg,
           webpage,
-          templates,
-          plugins
+          plugins,
+          ...props.plugins
         ],
         pluginsOpts: {
-          [blocksBasic]: { flexGrid: true },
-          [tabs]: { tabsBlock: { category: 'Extra' } },
+          [blocksBasic]: {
+            flexGrid: true,
+            blocks: ['text', 'link', 'image', 'video', 'map']
+          },
           [imageEditor]: {
             script: [
               'https://uicdn.toast.com/tui.code-snippet/v1.5.2/tui-code-snippet.min.js',
@@ -80,7 +104,11 @@ export default {
             style: [
               'https://uicdn.toast.com/tui-color-picker/v2.2.7/tui-color-picker.min.css',
               'https://uicdn.toast.com/tui-image-editor/v3.15.2/tui-image-editor.min.css'
-            ]
+            ],
+            ...imageEditorOpts
+          },
+          [tabs]: {
+            tabsBlock: { category: 'Extra' }
           },
           [typed]: {
             block: {
@@ -100,8 +128,18 @@ export default {
               return editor.getHtml() + '<style>' + editor.getCss() + '</style>'
             }
           },
-          [templates]: { ...pluginOptions('templates') },
-          [plugins]: { ...pluginOptions('base') }
+          [styleBg]: {
+            styleGradientOpts: {
+              colorPicker: (handler) => {
+                const el = handler.getEl().querySelector('input')
+                editor.$(el).change((event) => {
+                  const color = event.target.value
+                  handler.setColor(color)
+                })
+              }
+            }
+          },
+          ...props.pluginsOpts
         }
       })
 
@@ -115,13 +153,16 @@ export default {
         emit('update:pages', [...Pages.getAll()])
       })
 
-      emit('update:pages', [...Pages.getAll()])
-    })
+      editor.onReady((editor) => emit('ready', editor))
 
-    onBeforeUnmount(() => {
-      // Destroy GrapesJS editor when the component is destroyed
-      editor.destroy()
-    })
+      emit('update:pages', [...Pages.getAll()])
+
+      return editor
+    }
+
+    function getEditor() {
+      return editor
+    }
 
     function loadProjectData(data) {
       editor.loadProjectData(data)
@@ -174,16 +215,9 @@ export default {
       })
     }
 
-    function pluginOptions(key) {
-      try {
-        return props.config.pluginsOpts[key]
-      } catch (error) {
-        return {}
-      }
-    }
-
     expose({
-      editor,
+      render,
+      getEditor,
       addRemote,
       addPage,
       removePage,
@@ -194,17 +228,34 @@ export default {
     })
 
     return () =>
-      h('div', { class: 'htmlbuilder__container' }, [
-        h('div', {
-          id: 'htmlbuilder__left-panel',
-          class: 'htmlbuilder__left-panel'
-        }),
-        h('div', {
-          id: 'htmlbuilder__editor',
-          class: 'htmlbuilder__editor',
-          ref: editorRef,
-          ...attrs
-        })
-      ])
+      h(
+        'div',
+        {
+          class: 'htmlbuilder__container',
+          style: { height: props.config.height || '100%' }
+        },
+        [
+          h(
+            'div',
+            {
+              id: 'htmlbuilder__left-panel',
+              class: 'htmlbuilder__left-panel gjs-one-bg gjs-two-color'
+            },
+            [
+              h(LayerTitle, { class: 'htmlbuilder__layers-title' }),
+              h('div', {
+                id: 'htmlbuilder__layers-container',
+                class: 'htmlbuilder__layers-container'
+              })
+            ]
+          ),
+          h('div', {
+            id: 'htmlbuilder__editor',
+            class: 'htmlbuilder__editor',
+            ref: editorRef,
+            ...attrs
+          })
+        ]
+      )
   }
 }

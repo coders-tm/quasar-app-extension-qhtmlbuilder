@@ -98,13 +98,18 @@
       </div>
     </q-drawer>
 
-    <QHtmlBuilder v-model:pages="pages" ref="editor" :config="config" />
+    <QHtmlBuilder
+      v-model:pages="pages"
+      :plugins="plugins"
+      ref="editor"
+      :config="config"
+    />
   </q-page>
 </template>
 
 <script setup>
-import axios from 'axios'
 import { ref, onMounted, computed } from 'vue'
+import blocks from '../plugins/blocks'
 
 const editor = ref(null)
 const pages = ref([])
@@ -119,34 +124,6 @@ const onRename = (page) => {
 const onRenameDone = () => {
   editor.value.renamePage(rename.value.id, originalName.value)
   rename.value = {}
-}
-
-const loadData = (id) => {
-  return new Promise((resolve, reject) => {
-    axios
-      .get(`http://localhost:3000/projects/${id}`)
-      .then(({ data }) => {
-        resolve(data.data)
-      })
-      .catch((error) => {
-        console.error(error)
-        reject(error)
-      })
-  })
-}
-
-const storeData = (id, data) => {
-  return new Promise((resolve, reject) => {
-    axios
-      .put(`http://localhost:3000/projects/${id}`, data)
-      .then(({ data }) => {
-        resolve(data.data)
-      })
-      .catch((error) => {
-        console.error(error)
-        reject(error)
-      })
-  })
 }
 
 const config = {
@@ -182,6 +159,8 @@ const config = {
 }
 
 const canDelete = computed(() => pages.value.length > 1)
+
+const plugins = [blocks]
 
 onMounted(() => {
   //

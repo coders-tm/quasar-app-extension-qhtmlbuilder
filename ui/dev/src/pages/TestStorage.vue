@@ -1,33 +1,41 @@
 <template>
   <q-page>
-    <QHtmlBuilder ref="editor" :config="config" :remote="remote" />
+    <QHtmlBuilder
+      custom
+      ref="editor"
+      :plugins-opts="pluginsOpts"
+      :plugins="pluginsList"
+      :config="config"
+      :remote="remote"
+      @ready="ready"
+    />
   </q-page>
 </template>
 
 <script setup>
 import axios from 'axios'
-import { ref, onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
+import { plugins } from 'ui'
+import blocks from '../plugins/blocks'
 
 const editor = ref(null)
 
-const loadTemplates = (type) => {
+const canvas = () => {
   return new Promise((resolve, reject) => {
-    axios
-      .get(`http://localhost:3000/${type}`)
-      .then(({ data }) => {
-        resolve(data)
-      })
-      .catch((error) => {
-        console.error(error)
-        reject(error)
-      })
+    setTimeout(() => {
+      resolve({ styles: ['https://example.com/css/app.css'] })
+    }, 1000)
   })
+}
+
+const ready = (editor) => {
+  console.log('ready', editor)
 }
 
 const loadData = (id) => {
   return new Promise((resolve, reject) => {
     axios
-      .get(`http://localhost:3000/projects/${id}`)
+      .get(`/api/pages/${id}`)
       .then(({ data }) => {
         resolve(data.data)
       })
@@ -41,7 +49,7 @@ const loadData = (id) => {
 const storeData = (id, data) => {
   return new Promise((resolve, reject) => {
     axios
-      .put(`http://localhost:3000/projects/${id}`, data)
+      .put(`/api/pages/${id}`, data)
       .then(({ data }) => {
         resolve(data.data)
       })
@@ -50,43 +58,6 @@ const storeData = (id, data) => {
         reject(error)
       })
   })
-}
-const deleteData = (id) => {
-  return new Promise((resolve, reject) => {
-    axios
-      .delete(`http://localhost:3000/projects/${id}`)
-      .then(({ data }) => {
-        resolve(data)
-      })
-      .catch((error) => {
-        console.error(error)
-        reject(error)
-      })
-  })
-}
-
-async function onLoad(payload) {
-  return loadTemplates(payload)
-}
-
-function onStore(payload) {
-  return storeData(payload.id, payload)
-    .then(() => {
-      return true
-    })
-    .catch(() => {
-      return false
-    })
-}
-
-function onDelete(payload) {
-  return deleteData(payload)
-    .then(() => {
-      return true
-    })
-    .catch(() => {
-      return false
-    })
 }
 
 const remote = {
@@ -115,24 +86,40 @@ const config = {
       }
     }
   },
-  canvas: {
-    styles: [
-      'https://cdn.coderstm.com/fontawesome/css/all.min.css',
-      'https://cdn.coderstm.com/css/styles.min.css'
-    ]
-  },
-  pluginsOpts: {
-    templates: {
-      onLoad,
-      onStore,
-      onDelete
-    },
-    base: {
-      headers: [
-        { id: 'classic', label: 'Classic' },
-        { id: 'overlay', label: 'Overlay' }
-      ]
+  assetManager: {
+    assets: [],
+    embedAsBase64: false,
+    uploadName: 'file',
+    upload: '/files/upload',
+    onUploaded: (editor, response) => {
+      editor.assetManager.add(response.data[0])
     }
   }
 }
+
+const pluginsOpts = {
+  [plugins]: {
+    projects: '/api/projects',
+    blocks: '/api/blocks',
+    headers: {
+      // 'Content-Type': 'application/json',
+    },
+    shortcodes: {
+      loader: (el, shortcode) => {
+        el.innerHTML = `<div style="text-align: center; padding: 20px">Loaded: ${shortcode}</div>`
+      }
+    }
+  },
+  imageEditorOpts: {
+    upload: true
+  }
+}
+
+onMounted(async () => {
+  const _editor = editor.value
+  const grepes = _editor.render({ canvas: await canvas() })
+  console.log('grepes', grepes)
+})
+
+const pluginsList = [blocks]
 </script>

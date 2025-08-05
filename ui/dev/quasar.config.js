@@ -32,7 +32,7 @@ module.exports = function (ctx) {
       config: {},
 
       // Quasar plugins
-      plugins: ['Dialog']
+      plugins: ['Dialog', 'Notify']
     },
 
     // animations: 'all', // --- includes all animations
@@ -60,6 +60,20 @@ module.exports = function (ctx) {
       open: true, // opens browser window automatically
       headers: {
         'Access-Control-Allow-Origin': '*'
+      },
+      proxy: {
+        // Using the proxy instance
+        '/api/': {
+          target: 'http://localhost:3000/',
+          secure: false,
+          changeOrigin: true,
+          pathRewrite: { '^/api/': '/' } // Remove /api/ from the request path
+        },
+        '/files/': {
+          target: 'http://localhost:3001/',
+          secure: false,
+          changeOrigin: true
+        }
       }
     },
 
