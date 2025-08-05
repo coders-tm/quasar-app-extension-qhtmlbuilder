@@ -202,7 +202,7 @@ export default {
         h('div', {
           id: 'htmlbuilder__editor',
           class: 'htmlbuilder__editor',
-          ref: editorRef,
+          ref: (el) => { editorRef.value = el },
           ...attrs
         })
       ])
