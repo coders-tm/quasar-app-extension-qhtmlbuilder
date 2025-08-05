@@ -1,10 +1,10 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
 
-const path = require('path')
-const webpack = require('webpack')
+import path from 'path'
+import webpack from 'webpack'
 
-module.exports = function (ctx) {
+export default function (ctx) {
   return {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"

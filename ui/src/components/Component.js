@@ -1,22 +1,6 @@
 import { styleManager } from './config'
 import { h, ref, onMounted, onBeforeUnmount } from 'vue'
 import { Dialog } from 'quasar'
-import grapesjs from 'grapesjs'
-import webpage from 'grapesjs-preset-webpage'
-import forms from 'grapesjs-plugin-forms'
-// import ckeditor from "grapesjs-plugin-ckeditor";
-// import postCss from 'grapesjs-parser-postcss';
-import blocksBasic from 'grapesjs-blocks-basic'
-import countdown from 'grapesjs-component-countdown'
-import pluginExport from 'grapesjs-plugin-export'
-import tabs from 'grapesjs-tabs'
-import customCode from 'grapesjs-custom-code'
-import touch from 'grapesjs-touch'
-// import tooltip from 'grapesjs-tooltip'
-import imageEditor from 'grapesjs-tui-image-editor'
-import typed from 'grapesjs-typed'
-import styleBg from 'grapesjs-style-bg'
-import templates from 'grapesjs-templates'
 import plugins from './plugins'
 
 export const defaultConfig = {
@@ -42,9 +26,35 @@ export default {
     let editor = null
     let Pages = null
 
-    onMounted(() => {
+    onMounted(async () => {
       // Initialize GrapesJS editor when the component is mounted
       if (!editorRef.value) return
+
+      // Only initialize on client side (browser)
+      if (typeof window === 'undefined') return
+
+      // Dynamic imports for client-side only
+      const { default: grapesjs } = await import('grapesjs')
+      const { default: webpage } = await import('grapesjs-preset-webpage')
+      const { default: forms } = await import('grapesjs-plugin-forms')
+      const { default: blocksBasic } = await import('grapesjs-blocks-basic')
+      const { default: countdown } = await import('grapesjs-component-countdown')
+      const { default: pluginExport } = await import('grapesjs-plugin-export')
+      const { default: tabs } = await import('grapesjs-tabs')
+      const { default: customCode } = await import('grapesjs-custom-code')
+      const { default: touch } = await import('grapesjs-touch')
+      const { default: imageEditor } = await import('grapesjs-tui-image-editor')
+      const { default: typed } = await import('grapesjs-typed')
+      const { default: styleBg } = await import('grapesjs-style-bg')
+      const { default: templates } = await import('grapesjs-templates')
+
+      // Load GrapesJS CSS dynamically
+      if (!document.querySelector('link[href*="grapesjs"]')) {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = 'https://unpkg.com/grapesjs/dist/css/grapes.min.css'
+        document.head.appendChild(link)
+      }
 
       editor = grapesjs.init({
         container: editorRef.value,
@@ -120,7 +130,10 @@ export default {
 
     onBeforeUnmount(() => {
       // Destroy GrapesJS editor when the component is destroyed
-      editor.destroy()
+      // Only destroy if editor exists (client-side only)
+      if (editor && typeof window !== 'undefined') {
+        editor.destroy()
+      }
     })
 
     function loadProjectData(data) {
