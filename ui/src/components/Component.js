@@ -2,19 +2,21 @@ import { styleManager, deviceManager } from './config'
 import { h, ref, onMounted, onBeforeUnmount } from 'vue'
 import LayerTitle from './LayerTitle'
 import { Dialog } from 'quasar'
-import grapesjs from 'grapesjs'
-import webpage from 'grapesjs-preset-webpage'
-import blocksBasic from 'grapesjs-blocks-basic'
-import countdown from 'grapesjs-component-countdown'
-import pluginExport from 'grapesjs-plugin-export'
-import tabs from 'grapesjs-tabs'
-import customCode from 'grapesjs-custom-code'
-import touch from 'grapesjs-touch'
-import imageEditor from 'grapesjs-tui-image-editor'
-import typed from 'grapesjs-typed'
-import styleBg from 'grapesjs-style-bg'
-import plugins from './plugins'
-import extendDefault from './plugins/extend-default'
+
+// Dynamic imports for client-side only
+let grapesjs = null
+let webpage = null
+let blocksBasic = null
+let countdown = null
+let pluginExport = null
+let tabs = null
+let customCode = null
+let touch = null
+let imageEditor = null
+let typed = null
+let styleBg = null
+let extendDefault = null
+let plugins = null
 
 export const defaultConfig = {
   fromElement: true,
@@ -29,6 +31,69 @@ export const defaultConfig = {
   },
   styleManager,
   deviceManager
+}
+
+// Function to dynamically load GrapesJS and its plugins (client-side only)
+async function loadGrapesJSDependencies() {
+  if (typeof window === 'undefined') {
+    return false // Skip loading on server-side
+  }
+
+  if (grapesjs) {
+    return true // Already loaded
+  }
+
+  try {
+    const [
+      grapesModule,
+      webpageModule,
+      blocksBasicModule,
+      countdownModule,
+      pluginExportModule,
+      tabsModule,
+      customCodeModule,
+      touchModule,
+      imageEditorModule,
+      typedModule,
+      styleBgModule,
+      extendDefaultModule,
+      pluginsModule
+    ] = await Promise.all([
+      import('grapesjs'),
+      import('grapesjs-preset-webpage'),
+      import('grapesjs-blocks-basic'),
+      import('grapesjs-component-countdown'),
+      import('grapesjs-plugin-export'),
+      import('grapesjs-tabs'),
+      import('grapesjs-custom-code'),
+      import('grapesjs-touch'),
+      import('grapesjs-tui-image-editor'),
+      import('grapesjs-typed'),
+      import('grapesjs-style-bg'),
+      import('./plugins/extend-default'),
+      import('./plugins')
+    ])
+
+    // Assign to module-level variables
+    grapesjs = grapesModule.default
+    webpage = webpageModule.default
+    blocksBasic = blocksBasicModule.default
+    countdown = countdownModule.default
+    pluginExport = pluginExportModule.default
+    tabs = tabsModule.default
+    customCode = customCodeModule.default
+    touch = touchModule.default
+    imageEditor = imageEditorModule.default
+    typed = typedModule.default
+    styleBg = styleBgModule.default
+    extendDefault = extendDefaultModule.default
+    plugins = pluginsModule.default
+
+    return true
+  } catch (error) {
+    console.error('Failed to load GrapesJS dependencies:', error)
+    return false
+  }
 }
 
 export default {
@@ -46,7 +111,7 @@ export default {
     let editor = null
     let Pages = null
 
-    onMounted(() => {
+    onMounted(async () => {
       if (!editorRef.value) {
         console.error(
           'The editorRef is not initialized. Make sure the QHtmlBuilder component is mounted before accessing the editor instance.'
@@ -55,20 +120,34 @@ export default {
       }
 
       if (!props.custom) {
-        render()
+        await render()
       }
     })
 
     onBeforeUnmount(() => {
       try {
         // Destroy GrapesJS editor when the component is destroyed
-        editor.destroy()
+        if (editor) {
+          editor.destroy()
+        }
       } catch (error) {
         console.error(error)
       }
     })
 
-    function render(config = {}) {
+    async function render(config = {}) {
+      // Skip rendering on server-side
+      if (typeof window === 'undefined') {
+        console.warn('QHtmlBuilder: Skipping initialization on server-side')
+        return null
+      }
+
+      const dependenciesLoaded = await loadGrapesJSDependencies()
+      if (!dependenciesLoaded) {
+        console.error('QHtmlBuilder: Failed to load dependencies')
+        return null
+      }
+
       const imageEditorOpts = props.pluginsOpts?.imageEditorOpts || {}
       editor = grapesjs.init({
         container: editorRef.value,
@@ -165,28 +244,51 @@ export default {
     }
 
     function loadProjectData(data) {
+      if (!editor) {
+        console.warn('QHtmlBuilder: Editor not initialized')
+        return
+      }
       editor.loadProjectData(data)
     }
 
     function addRemote(options) {
+      if (!editor) {
+        console.warn('QHtmlBuilder: Editor not initialized')
+        return
+      }
       const { Storage } = editor
       Storage.add('remote', options)
     }
 
     function isSelected(page) {
+      if (!Pages) {
+        return false
+      }
       return Pages.getSelected().id == page.id
     }
 
     function renamePage(pageId, name) {
+      if (!Pages) {
+        console.warn('QHtmlBuilder: Pages not initialized')
+        return
+      }
       const page = Pages.get(pageId)
       return page.setName(name)
     }
 
     function selectPage(pageId) {
+      if (!Pages) {
+        console.warn('QHtmlBuilder: Pages not initialized')
+        return
+      }
       return Pages.select(pageId)
     }
 
     function removePage(pageId) {
+      if (!Pages) {
+        console.warn('QHtmlBuilder: Pages not initialized')
+        return
+      }
       confirm('Are you sure, you want to delete?').then(() => {
         Pages.remove(pageId)
         const pages = [...Pages.getAll()]
@@ -195,6 +297,10 @@ export default {
     }
 
     function addPage() {
+      if (!Pages) {
+        console.warn('QHtmlBuilder: Pages not initialized')
+        return
+      }
       const len = Pages.getAll().length
       Pages.add({
         name: `Page ${len + 1}`,
@@ -227,12 +333,36 @@ export default {
       loadProjectData
     })
 
-    return () =>
-      h(
+    return () => {
+      // During SSR, render a placeholder
+      if (typeof window === 'undefined') {
+        return h(
+          'div',
+          {
+            class: 'htmlbuilder__container',
+            style: { height: props.config?.height || '100%' }
+          },
+          [
+            h('div', {
+              class: 'htmlbuilder__loading-placeholder',
+              style: { 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                height: '100%',
+                fontSize: '14px',
+                color: '#666'
+              }
+            }, 'Loading HTML Builder...')
+          ]
+        )
+      }
+
+      return h(
         'div',
         {
           class: 'htmlbuilder__container',
-          style: { height: props.config.height || '100%' }
+          style: { height: props.config?.height || '100%' }
         },
         [
           h(
@@ -257,5 +387,6 @@ export default {
           })
         ]
       )
+    }
   }
 }
