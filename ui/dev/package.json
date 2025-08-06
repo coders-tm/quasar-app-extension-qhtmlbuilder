@@ -46,6 +46,9 @@
     "grapesjs-tui-image-editor": "^1.0.2",
     "grapesjs-typed": "^2.0.1",
     "html2canvas": "^1.4.1",
-    "quasar": "^2.18.2"
+    "postcss": "^8.1.0",
+    "quasar": "^2.18.2",
+    "vue": "^3.2.29",
+    "vue-router": "^4.0.12"
   }
 }
