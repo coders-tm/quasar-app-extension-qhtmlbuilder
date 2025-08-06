@@ -1,10 +1,15 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
 
-const path = require('path')
-const webpack = require('webpack')
+import path from 'path'
+import webpack from 'webpack'
+import { readFileSync } from 'fs'
+import { fileURLToPath } from 'url'
 
-module.exports = function (ctx) {
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+export default function (ctx) {
   return {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
@@ -49,7 +54,7 @@ module.exports = function (ctx) {
 
         chain.plugin('define-ui').use(webpack.DefinePlugin, [
           {
-            __UI_VERSION__: `'${require('../package.json').version}'`
+            __UI_VERSION__: `'${JSON.parse(readFileSync(path.resolve(__dirname, '../package.json'), 'utf8')).version}'`
           }
         ])
       }
