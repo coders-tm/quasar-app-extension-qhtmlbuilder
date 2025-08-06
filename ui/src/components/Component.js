@@ -108,6 +108,7 @@ export default {
   },
   setup(props, { attrs, expose, emit }) {
     const editorRef = ref(null)
+    const isLoading = ref(true)
     let editor = null
     let Pages = null
 
@@ -122,6 +123,9 @@ export default {
       if (!props.custom) {
         await render()
       }
+      
+      // Set loading to false after render is complete
+      isLoading.value = false
     })
 
     onBeforeUnmount(() => {
@@ -232,7 +236,11 @@ export default {
         emit('update:pages', [...Pages.getAll()])
       })
 
-      editor.onReady((editor) => emit('ready', editor))
+      editor.onReady((editor) => {
+        emit('ready', editor)
+        // Update loading state when editor is ready
+        isLoading.value = false
+      })
 
       emit('update:pages', [...Pages.getAll()])
 
@@ -334,30 +342,6 @@ export default {
     })
 
     return () => {
-      // During SSR, render a placeholder
-      if (typeof window === 'undefined') {
-        return h(
-          'div',
-          {
-            class: 'htmlbuilder__container',
-            style: { height: props.config?.height || '100%' }
-          },
-          [
-            h('div', {
-              class: 'htmlbuilder__loading-placeholder',
-              style: { 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center',
-                height: '100%',
-                fontSize: '14px',
-                color: '#666'
-              }
-            }, 'Loading HTML Builder...')
-          ]
-        )
-      }
-
       return h(
         'div',
         {
@@ -365,11 +349,13 @@ export default {
           style: { height: props.config?.height || '100%' }
         },
         [
+          // Always render the same structure, but conditionally show content
           h(
             'div',
             {
               id: 'htmlbuilder__left-panel',
-              class: 'htmlbuilder__left-panel gjs-one-bg gjs-two-color'
+              class: 'htmlbuilder__left-panel gjs-one-bg gjs-two-color',
+              style: isLoading.value ? { display: 'none' } : {}
             },
             [
               h(LayerTitle, { class: 'htmlbuilder__layers-title' }),
@@ -383,8 +369,15 @@ export default {
             id: 'htmlbuilder__editor',
             class: 'htmlbuilder__editor',
             ref: editorRef,
+            style: isLoading.value ? { 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              fontSize: '14px',
+              color: '#666'
+            } : {},
             ...attrs
-          })
+          }, isLoading.value ? 'Loading HTML Builder...' : [])
         ]
       )
     }
