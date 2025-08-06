@@ -66,20 +66,21 @@ export default function (ctx) {
       headers: {
         'Access-Control-Allow-Origin': '*'
       },
-      proxy: {
-        // Using the proxy instance
-        '/api/': {
+      proxy: [
+        {
+          context: ['/api/'],
           target: 'http://localhost:3000/',
           secure: false,
           changeOrigin: true,
           pathRewrite: { '^/api/': '/' } // Remove /api/ from the request path
         },
-        '/files/': {
+        {
+          context: ['/files/'],
           target: 'http://localhost:3001/',
           secure: false,
           changeOrigin: true
         }
-      }
+      ]
     },
 
     ssr: {
