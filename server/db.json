@@ -7008,14 +7008,6 @@
             "style": {
               "font-size": "50px"
             }
-          },
-          {
-            "selectors": [
-              "#ivibc"
-            ],
-            "style": {
-              "padding": "90px 0px"
-            }
           }
         ],
         "pages": [
@@ -7037,16 +7029,6 @@
                     "id": "i33v"
                   },
                   "components": [
-                    {
-                      "type": "section",
-                      "style": "",
-                      "classes": [
-                        "clearfix"
-                      ],
-                      "attributes": {
-                        "id": "ivibc"
-                      }
-                    },
                     {
                       "type": "header",
                       "content": "[header layout=\"default\"]",
@@ -7510,8 +7492,8 @@
         ]
       },
       "pagesHtml": {
-        "html": "<body id=\"i33v\"><section id=\"ivibc\" class=\"clearfix\"></section><div data-gjs-type=\"header\" data-gjs-layout=\"default\">[header layout=\"default\"]</div><div id=\"i0u2\" class=\"page-title ct-page-title-row-6\"><div id=\"i3pl\" class=\"ct-page-title-row-inner\"><div id=\"ibgp\" class=\"container\"><div id=\"ixd4\" class=\"row align-items-center\"><div id=\"ijof\" class=\"col-lg-12\"><div id=\"idivo\" class=\"page-title-heading\"><h2 id=\"im41\" class=\"title\">About Us\n              </h2></div></div></div></div></div></div><div id=\"icwya\" class=\"clearfix\"><div id=\"i7sqz\" class=\"title-header\"><h4 id=\"ichmi-2\" class=\"subtitle\">ABOUT US\n                <br/></h4><h2 id=\"ic0ch-2\" class=\"title\">Introducing NitroFIT28 a different Fitness Centre\n                <br/></h2></div><div id=\"ip0xi\" class=\"container\"><div id=\"iu4k4\" class=\"row\"><div id=\"igmji\" class=\"col-lg-6 col-md-12\"><img id=\"iv43s\" src=\"http://localhost:3001/uploads/file[]-1750422441559-964727874\"/></div><div id=\"i8237\" class=\"col-lg-6 col-md-12\"><div id=\"ipj9i\" class=\"section-title\"><div class=\"title-header\"><h4 id=\"ichmi\" class=\"subtitle\">ABOUT US\n                <br/></h4><h2 id=\"ic0ch\" class=\"title\">Introducing NitroFIT28 a different Fitness Centre\n                <br/></h2></div></div><div id=\"i7caw\">Insert your text hereOur Gym, Studios, Fitness Centre is based in our wonderful Grade II building with modern facilities throughout the three floor layout. We focus on providing the best members experience possible which start with our well maintained private grounds and car parking through to our fitness and wellbeing areas within the building.\n          </div><a href=\"javascript:void(0);\" id=\"ikwn9\" class=\"button-link btn btn--md btn--square btn--fill btn--primary z-index-1\"><span>VIEW MORE</span><i class=\"fa fa-angle-double-right ml-10\">\n            </i></a></div></div></div></div>[footer]\n\n</body>",
-        "css": "* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}#ibgp{padding:15px;}#im41{color:#2f1919;}#icwya{padding-top:90px;padding-right:0px;padding-bottom:90px;padding-left:0px;}#ip0xi{padding:15px;}#i8237{padding-top:25px;padding-left:55px;}#iv43s{color:black;width:100%;}#ic0ch{font-size:50px;}#i7caw{margin-bottom:25px;}#i0u2{background-size:auto;background-color:rgb(44, 44, 44);background-image:url(\"https://placehold.co/1920x550/grey/gery\");background-origin:padding-box;background-repeat:no-repeat;background-position-x:50%;background-position-y:50%;background-attachment:scroll;}#i3pl{background-repeat:repeat;background-position:left top;background-attachment:scroll;background-size:auto;background-image:radial-gradient(circle at right, black 0%, #c93636 22%, #a11717 60%, #e0e0e0 98%, white 100%);}#ic0ch-2{font-size:50px;}#ivibc{padding:90px 0px;}@media (max-width: 992px){#i8237{padding-left:15px;}}"
+        "html": "<body id=\"i33v\"><div data-gjs-type=\"header\" data-gjs-layout=\"default\">[header layout=\"default\"]</div><div id=\"i0u2\" class=\"page-title ct-page-title-row-6\"><div id=\"i3pl\" class=\"ct-page-title-row-inner\"><div id=\"ibgp\" class=\"container\"><div id=\"ixd4\" class=\"row align-items-center\"><div id=\"ijof\" class=\"col-lg-12\"><div id=\"idivo\" class=\"page-title-heading\"><h2 id=\"im41\" class=\"title\">About Us\n              </h2></div></div></div></div></div></div><div id=\"icwya\" class=\"clearfix\"><div id=\"i7sqz\" class=\"title-header\"><h4 id=\"ichmi-2\" class=\"subtitle\">ABOUT US\n                <br/></h4><h2 id=\"ic0ch-2\" class=\"title\">Introducing NitroFIT28 a different Fitness Centre\n                <br/></h2></div><div id=\"ip0xi\" class=\"container\"><div id=\"iu4k4\" class=\"row\"><div id=\"igmji\" class=\"col-lg-6 col-md-12\"><img id=\"iv43s\" src=\"http://localhost:3001/uploads/file[]-1750422441559-964727874\"/></div><div id=\"i8237\" class=\"col-lg-6 col-md-12\"><div id=\"ipj9i\" class=\"section-title\"><div class=\"title-header\"><h4 id=\"ichmi\" class=\"subtitle\">ABOUT US\n                <br/></h4><h2 id=\"ic0ch\" class=\"title\">Introducing NitroFIT28 a different Fitness Centre\n                <br/></h2></div></div><div id=\"i7caw\">Insert your text hereOur Gym, Studios, Fitness Centre is based in our wonderful Grade II building with modern facilities throughout the three floor layout. We focus on providing the best members experience possible which start with our well maintained private grounds and car parking through to our fitness and wellbeing areas within the building.\n          </div><a href=\"javascript:void(0);\" id=\"ikwn9\" class=\"button-link btn btn--md btn--square btn--fill btn--primary z-index-1\"><span>VIEW MORE</span><i class=\"fa fa-angle-double-right ml-10\">\n            </i></a></div></div></div></div>[footer]\n\n</body>",
+        "css": "* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}#ibgp{padding:15px;}#im41{color:#2f1919;}#icwya{padding-top:90px;padding-right:0px;padding-bottom:90px;padding-left:0px;}#ip0xi{padding:15px;}#i8237{padding-top:25px;padding-left:55px;}#iv43s{color:black;width:100%;}#ic0ch{font-size:50px;}#i7caw{margin-bottom:25px;}#i0u2{background-size:auto;background-color:rgb(44, 44, 44);background-image:url(\"https://placehold.co/1920x550/grey/gery\");background-origin:padding-box;background-repeat:no-repeat;background-position-x:50%;background-position-y:50%;background-attachment:scroll;}#i3pl{background-repeat:repeat;background-position:left top;background-attachment:scroll;background-size:auto;background-image:radial-gradient(circle at right, black 0%, #c93636 22%, #a11717 60%, #e0e0e0 98%, white 100%);}#ic0ch-2{font-size:50px;}@media (max-width: 992px){#i8237{padding-left:15px;}}"
       }
     }
   ],

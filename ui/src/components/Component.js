@@ -41,6 +41,7 @@ export default {
     remote: Object,
     custom: Boolean
   },
+  emits: ['ready'],
   setup(props, { attrs, expose, emit }) {
     const editorRef = ref(null)
     let editor = null
@@ -139,7 +140,10 @@ export default {
               }
             }
           },
-          ...props.pluginsOpts
+          [plugins]: {
+            ...props.pluginsOpts || {},
+            ...config.pluginsOpts || {}
+          }
         }
       })
 
