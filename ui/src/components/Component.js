@@ -41,7 +41,7 @@ export default {
     remote: Object,
     custom: Boolean
   },
-  emits: ['ready'],
+  emits: ['ready', 'update:pages'],
   setup(props, { attrs, expose, emit }) {
     const editorRef = ref(null)
     let editor = null
